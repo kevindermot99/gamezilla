@@ -69,15 +69,15 @@ function Nav() {
                         </label>
 
                         <a href="#" className="relative transition hover:text-blue-600 max-lg:mx-4">
-                            <GoHeart className="h-5 w-5 mx-2 cursor-pointer relative" />
-                            <span className="absolute -right-0 -top-2 bg-red-600 font-normal rounded-full leading-normal h-4 w-4 text-xs flex justify-center items-center text-white">2</span>
+                            <GoHeart className="h-5 w-5 mx-2 max-lg:mx-0 cursor-pointer relative" />
+                            <span className="absolute -right-0 max-lg:-right-2 -top-2 bg-red-600 font-normal rounded-full leading-normal h-4 w-4 text-xs flex justify-center items-center text-white">2</span>
                         </a>
                         <a href="#" className="relative transition hover:text-blue-600 max-lg:mx-4">
                             <BsCart3 className="h-5 w-5 cursor-pointer relative" />
                             <span className="absolute -right-2 -top-2 bg-red-600 font-normal rounded-full leading-normal h-4 w-4 text-xs flex justify-center items-center text-white">2</span>
                         </a>
 
-                        <CgMenuRight onClick={toggleMenu} className="text-black text-2xl hidden max-lg:block cursor-pointer transition hover:text-blue-600" />
+                        <CgMenuRight onClick={toggleMenu} className="text-black ml-2 text-2xl hidden max-lg:block cursor-pointer transition hover:text-blue-600" />
 
                     </div>
 

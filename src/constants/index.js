@@ -12,8 +12,6 @@ export const navLinks = [
 ];
 
 export const bannerLinks = [
-    {href: "#", label: "Privacy policy"},
-    {href: "#", label: "/"},
     {href: "#", label: "Help"},
     {href: "#", label: "/"},
     {href: "#", label: "Sign in"},

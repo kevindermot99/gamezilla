@@ -13,12 +13,12 @@ const App = () => {
       setTimeout(() => {
         spinner.classList.add("loader-overlay-hidden");
         setLoading(false);
-      }, 1000);
+      }, 1500);
     }
   }, []);
 
   return (
-    !loading && (
+    // !loading && (
       <main className='relative'>
         <Nav />
         <section className='xl:padding-1 wide:padding-r padding-b'>
@@ -46,7 +46,7 @@ const App = () => {
           <Footer />
         </section>
       </main>
-    )
+    // )
   );
 };
 
