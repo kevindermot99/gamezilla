@@ -13,7 +13,7 @@ const App = () => {
       setTimeout(() => {
         spinner.classList.add("loader-overlay-hidden");
         setLoading(false);
-      }, 1000000);
+      }, 1000);
     }
   }, []);
 
