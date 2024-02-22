@@ -2,10 +2,27 @@ import { facebook, instagram, shieldTick, support, truckFast, twitter } from "..
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
-    { href: "#contact-us", label: "Contact Us" },
+    { href: "#home", label: "New & Featured" },
+    { href: "#about-us", label: "Men" },
+    { href: "#products", label: "Women" },
+    { href: "#products", label: "Kids" },
+    { href: "#products", label: "Accessories" },
+    { href: "#contact-us", label: "Sale" },
+    
+];
+
+export const bannerLinks = [
+    {href: "#", label: "Privacy policy"},
+    {href: "#", label: "/"},
+    {href: "#", label: "Cookies"},
+    {href: "#", label: "/"},
+    {href: "#", label: "Refund"},
+    {href: "#", label: "/"},
+    {href: "#", label: "Reviews"},
+    {href: "#", label: "/"},
+    {href: "#", label: "Sign in"},
+    {href: "#", label: "/"},
+    {href: "#", label: "Sign up"},
 ];
 
 export const shoes = [
