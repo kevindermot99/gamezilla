@@ -1,4 +1,4 @@
-import HeaderLogo from "../assets/images/favicon.png"
+import HeaderLogo from "../assets/images/logo.png"
 import { CgMenuRight } from "react-icons/cg";
 import { navLinks } from "../constants";
 import { bannerLinks } from "../constants";
