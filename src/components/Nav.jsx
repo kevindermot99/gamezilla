@@ -34,8 +34,8 @@ function Nav() {
                 ))}
             </div>
             <Headroom pinStart={36}>
-                <nav className="flex justify-between items-center max-container padding-x max-lg:px-5 max-lg:py-6 py-3 bg-white">
-                    <a href="/" className="flex justify-start items-center gap-2 text-base font-medium outline-none">
+                <nav className="flex justify-between items-center max-container padding-x max-lg:px-3 max-lg:pr-5 max-lg:py-6 py-3 bg-white">
+                    <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">
                         <img src={HeaderLogo}
                             alt="logo"
                             className="text-black w-7 h-7"
