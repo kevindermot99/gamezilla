@@ -30,11 +30,11 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   .banner-link{
-    @apply text-black leading-normal font-semibold text-xs outline-none transition hover:text-blue-600
+    @apply text-black leading-normal font-medium text-xs outline-none transition hover:text-blue-600 even:pointer-events-none
   }
 
   .search{
-    @apply text-black leading-normal font-medium text-sm outline-none bg-gray-50 rounded-full focus:ring-1 ring-gray-100 transition
+    @apply text-black leading-normal font-medium text-sm outline-none bg-gray-50 rounded-full focus:ring-1 ring-gray-200 transition
   }
 }
 
@@ -46,6 +46,7 @@ input[type="search"]::-webkit-search-results-decoration {
   min-width: 200px;
   width: 200px;
 }
+
 
 @layer utilities {
   .padding {
