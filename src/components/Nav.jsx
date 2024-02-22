@@ -5,8 +5,25 @@ import { bannerLinks } from "../constants";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { RiSearch2Line } from "react-icons/ri";
+import { GrClose } from "react-icons/gr";
+import { useState, useEffect } from "react";
 
 function Nav() {
+
+    const [isMini, setIsMini] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMini(true);
+        document.querySelector("body").classList.add("non-scrollable")
+    }
+
+    const closeMenu = () => {
+        setIsMini(false);
+        document.querySelector("body").classList.remove("non-scrollable")
+    }
+
+    
+
     return (
         <header className="font-montserrat w-full bg-white">
             <div className="flex justify-end items-center bg-gray-50 max-lg:hidden padding-x py-1 gap-4">
@@ -24,7 +41,10 @@ function Nav() {
                     />
                     <span className="text-black font-bold text-xl">Selected.</span>
                 </a>
-                <div className="responsive-menu">
+                <div className={`responsive-menu ${isMini ? "mini" : ""}`}>
+
+                    <GrClose onClick={closeMenu} className="absolute right-5 text-xl hidden max-lg:block cursor-pointer" />
+
                     <ul className="flex justify-center items-center gap-6 ">
                         {navLinks.map((item) => (
                             <li key={item.label}>
@@ -42,7 +62,7 @@ function Nav() {
 
 
                 <div className="flex justify-center items-center gap-3">
-                    <label className="relative responsive-search">
+                    <label className={`relative responsive-search ${isMini ? "mini" : ""} max-sm:hidden `}>
                         <input className="search" type="search" placeholder="Search.." />
                         <RiSearch2Line className="absolute top-0 bottom-0 m-auto left-4 size-5 text-slate-400" />
                     </label>
@@ -54,7 +74,7 @@ function Nav() {
                         <span className="absolute -right-2 -top-2 bg-red-600 font-normal rounded-full leading-normal h-5 w-5 text-xs flex justify-center items-center text-white">2</span>
                     </a>
 
-                    <CgMenuRight className="text-black text-2xl hidden max-lg:block cursor-pointer transition hover:text-blue-600" />
+                    <CgMenuRight onClick={toggleMenu} className="text-black text-2xl hidden max-lg:block cursor-pointer transition hover:text-blue-600" />
 
                 </div>
 
