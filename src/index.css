@@ -110,9 +110,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-body {
-  /* overflow-y: hidden; */
-}
 
 @layer utilities {
   .padding {
