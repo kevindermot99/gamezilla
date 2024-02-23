@@ -57,6 +57,10 @@
   .info-text {
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
+
+  .bg-default{
+    @apply bg-[#0d0b20]
+  }
 }
 
 * {
