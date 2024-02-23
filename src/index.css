@@ -16,11 +16,11 @@
   }
 
   .banner-link {
-    @apply text-black leading-normal font-medium text-xs outline-none transition hover:text-blue-600 even:pointer-events-none
+    @apply text-white leading-normal font-medium text-xs outline-none transition hover:text-blue-400 even:pointer-events-none
   }
 
   .search {
-    @apply text-black leading-normal font-medium text-sm outline-none bg-gray-50 rounded-full focus:ring-1 ring-gray-200 transition
+    @apply text-white leading-normal font-medium text-sm outline-none rounded-full ring-1 ring-slate-700 focus:ring-1 focus:ring-blue-400 transition
   }
 }
 
@@ -74,74 +74,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-
-/* Loader */
-.loader-overlay {
-  background-color: transparent;
-  z-index: 9999999;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-
-.loader-overlay-hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0s ease-out;
-}
-
-.loader-wrapper {
-  position: sticky;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.loader-wrapper img {
-  height: 65px;
-  width: 65px;
-}
-
-/* SPINNER */
-
-.loader {
-  width: 40px;
-  height: 40px;
-  border: 3px solid #000;
-  border-bottom-color: #e7e7e7;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation-loader .7s linear infinite;
-}
-
-@keyframes rotation-loader {
-  0% {
-      transform: rotate(0deg);
-  }
-
-  100% {
-      transform: rotate(360deg);
-  }
-}
-
 .search {
   padding-left: 45px;
   padding-right: 10px;
@@ -149,6 +81,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-bottom: 10px;
   min-width: 200px;
   width: 200px;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -170,7 +103,7 @@ input[type="search"]::-webkit-search-results-decoration {
     left: 0;
     right: 0;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: #0d0b20;
     height: 100vh;
     width: 100%;
     z-index: 12;
