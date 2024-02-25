@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     // !loading && (
-      <main className='relative bg-gray-50'>
+      <main className='relative bg-white'>
         <Nav />
         <section className='xl:padding-1 wide:padding-r padding-b'>
           <Browse />

@@ -11,9 +11,9 @@ function Nav() {
 
     return (
 
-        <header className="font-montserrat w-ful bg-gray-50 ">
+        <header className="font-montserrat w-ful ">
             <Headroom pinStart={36}>
-                <nav className="flex justify-between items-center max-container px-10 max-lg:px-5 max-lg:pr-5 py-4 bg-gray-50 ">
+                <nav className="flex justify-between items-center max-container px-10 max-lg:px-5 max-lg:pr-5 py-4 bg-white ">
                     <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">
                         <img src={pagesLogo} alt="logo" className=" h-9" />
                         <h1 className="text-black font-medium text-[19px] font-DMsans">Pagez</h1>
