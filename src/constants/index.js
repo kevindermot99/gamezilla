@@ -1,8 +1,9 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
+
 export const navLinks = [
-    { href: "#home", label: "New & Featured" },
+    { href: "#home", label: "" },
     { href: "#about-us", label: "Men" },
     { href: "#products", label: "Women" },
     { href: "#products", label: "Kids" },
@@ -11,13 +12,7 @@ export const navLinks = [
     
 ];
 
-export const bannerLinks = [
-    {href: "#", label: "Help"},
-    {href: "#", label: "/"},
-    {href: "#", label: "Sign in"},
-    {href: "#", label: "/"},
-    {href: "#", label: "Sign up"},
-];
+
 
 export const shoes = [
     {

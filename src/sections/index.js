@@ -6,6 +6,7 @@ import Services from "./Services"
 import SpecialOffer from "./SpecialOffer"
 import Subscribe from "./Subscribe"
 import SuperQuality from "./SuperQuality"
+import Browse from "./Browse"
 
 export {
     Hero,
@@ -15,5 +16,6 @@ export {
     Subscribe,
     PopularProducts,
     CustomerReviews,
-    SuperQuality
+    SuperQuality,
+    Browse
 }

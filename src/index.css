@@ -8,6 +8,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --main-color: #8C52FF;
+}
+
 @layer components {
   .max-container {
     max-width: 1500px;
@@ -23,7 +27,7 @@
   }
 
   .search {
-    @apply text-black leading-normal font-medium text-sm outline-none rounded-full bg-gray-50 transition
+    @apply text-black leading-normal font-medium text-sm outline-none rounded-xl bg-transparent  transition
   }
 }
 
@@ -81,6 +85,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+body{
+  max-width: 1500px;
+  margin: auto;
+}
 
 .search {
   padding-left: 45px;
@@ -88,69 +96,22 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 10px;
   padding-bottom: 10px;
   min-width: 200px;
-  width: 200px;
+  width: 100%;
 }
 
-@media only screen and (max-width: 1024px) {
-  .responsive-menu.mini{
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  body.non-scrollable{
-    overflow: hidden !important;
-  }
-
-  .responsive-menu {
-    opacity: 0;
-    visibility: hidden;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #fff;
-    height: 100vh;
-    width: 100%;
-    z-index: 12;
-    padding: 20px 0;
-    text-align: left;
-  }
-
-  .responsive-menu ul {
-    flex-direction: column;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0px;
-    border-radius: 15px;
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    margin-top: 130px;
-    overflow-y: auto;
-
-  }
-
-  .responsive-search.mini {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    z-index: 13;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .responsive-search.mini .search {
-    width: 100%;
-    margin: auto;
-    min-width: unset;
-  }
+.search:focus ~ svg {
+  color: var(--main-color);
 }
 
+.notification{
+  position: absolute;
+  left: 20px;
+  top: -5px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: flex;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
 

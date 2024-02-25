@@ -3,7 +3,7 @@ import bg2 from "../assets/images/2.jpg"
 
 function Hero() {
   return (
-    <section id="#home" className="bg-grey-50 bg-white grid-cols-2 ">
+    <section id="#home" className="bg-grey-50 bg-blue-100 grid-cols-2 ">
       <div>
         <h4 className=""></h4>
         <h1>Book Title</h1>
