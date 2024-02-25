@@ -3,7 +3,7 @@ import bg2 from "../assets/images/2.jpg"
 
 function Hero() {
   return (
-    <section id="#home" className="bg-grey-50 bg-default grid grid-cols-2 ">
+    <section id="#home" className="bg-grey-50 bg-white grid-cols-2 ">
       <div>
         <h4 className=""></h4>
         <h1>Book Title</h1>
@@ -11,7 +11,7 @@ function Hero() {
         <button>Read</button>
       </div>
       <div>
-        <img src="https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg" />
+        {/* <img src="https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg" /> */}
       </div>
 
     </section>
