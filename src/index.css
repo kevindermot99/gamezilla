@@ -94,8 +94,6 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  width: 95%;
-  margin: auto;
   position: relative;
   border-radius: 20px;
   display: flex;
@@ -104,6 +102,11 @@ body{
   text-align: center;
   flex-direction: column;
   gap: 20px;
+}
+
+.width-90{
+  width: 95%;
+  margin: auto;
 }
 
 .search-component::before{
