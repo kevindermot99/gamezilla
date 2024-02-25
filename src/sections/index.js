@@ -17,5 +17,5 @@ export {
     PopularProducts,
     CustomerReviews,
     SuperQuality,
-    Browse
+    Browse,
 }

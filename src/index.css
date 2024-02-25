@@ -26,9 +26,6 @@
     @apply text-black leading-normal font-medium text-xs outline-none transition hover:text-blue-400 even:pointer-events-none
   }
 
-  .search {
-    @apply text-black leading-normal font-medium text-sm outline-none rounded-xl bg-transparent  transition
-  }
 }
 
 
@@ -90,13 +87,39 @@ body{
   margin: auto;
 }
 
+
+.search-component{
+  min-height: 250px;
+  background-image: url("./assets/images/search-bg.jpg");
+  width: 95%;
+  margin: auto;
+  position: relative;
+  border-radius: 20px;
+}
+
+.search-component::after{
+  content: ;
+}
+
+.search-component span{
+  height: fit-content;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
 .search {
-  padding-left: 45px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: #fff;
+  padding: 10px 15px 10px 48px;
   min-width: 200px;
   width: 100%;
+  outline: none;
+  border-radius: 20px;
+  margin: auto;
 }
 
 .search:focus ~ svg {
@@ -114,4 +137,5 @@ body{
   font-weight: 700;
   color: white;
 }
+
 
