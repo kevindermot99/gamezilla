@@ -3,8 +3,8 @@ import { RiSearch2Line } from "react-icons/ri";
 
 function Search() {
   return (
-    <div className='search-component py-24 max-sm:py-16 width-90'>
-      <h1 className='relative text-white text-4xl font-DMsans drop-shadow-lg font-bold'>
+    <div className='search-component py-16 max-sm:py-16 width-90'>
+      <h1 className='relative text-white text-[40px] max-sm:text-[25px] font-DMsans drop-shadow-lg font-bold'>
       Up to 100 Free Books.
         </h1>
       <span className='relative '>
