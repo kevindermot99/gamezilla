@@ -26,7 +26,7 @@ function Nav() {
 
                 <div className="flex w-fit justify-end items-center gap-3    ">
 
-                    <a href="#" className="relative transition rounded-md hover:bg-gray-100 p-2">
+                    <a href="#" className="relative transition rounded-md hover:bg-gray-100 p-2 max-sm:hidden">
                         <RxEnterFullScreen className=" text-xl cursor-pointer relative transition text-black" />
                     </a>
 

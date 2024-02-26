@@ -66,7 +66,7 @@ function Browse() {
             </span>
           </div>
         </div>
-        <div className='h-it w-full pl-4 max-sm:pl-0 max-sm:pt-2 '>
+        <div className='h-it w-full pl-4 max-sm:pl-0 '>
           <h1 className='text-black text-[25px] font-bold flex gap-2 mb-4'>
             <button className={`bg-main-color text-white rounded-md text-lg p-2 ${buttonFilter ? 'block' : 'hidden'}`} onClick={toggleFilters}>
               <IoFilter />
@@ -74,7 +74,7 @@ function Browse() {
             Books
           </h1>
 
-          <div className='book-grid w-fit'>
+          <div className='book-grid w-fit max-sm:mt-7'>
             {Books.map((book) => (
               <div className='relative object-cover flex-grow '>
                 <div className='relative '>
