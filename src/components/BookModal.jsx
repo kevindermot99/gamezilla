@@ -4,13 +4,14 @@ import { MdCancel } from "react-icons/md";
 function BookModal({ selectedBook, closeModal }) {
 
   if (!selectedBook) {
+    // document.getElementById('book').classList.remove('active')
     return null;
   }
 
   return (
-    <div className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-80 overscroll-contain z-50 flex items-end justify-center'>
-      <div className='bg-white h-[85%] w-[100%] max-w-[900px] rounded-t-3xl p-6'>
-        <div className=' h-full w-full overflow-y-auto overscroll-contain flex flex-col read-only:'>
+    <div id='book' className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-80 overscroll-contain z-50 flex items-end justify-center animate-fade'>
+      <div className='bg-white h-[94%] w-[100%] max-w-[900px] rounded-t-3xl p-6 animate-goingTop'>
+        <div className=' h-full w-full overflow-y-auto overscroll-contain flex flex-col'>
           <MdCancel className=' self-end text-gray-300 transit hover:text-main-color cursor-pointer text-3xl' onClick={closeModal}/>
         </div>
       </div>
