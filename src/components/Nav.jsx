@@ -13,7 +13,7 @@ function Nav() {
 
         <header className="font-montserrat w-ful">
             {/* <Headroom pinStart={0}> */}
-                <nav className="flex justify-between items-center max-container px-[2.5%] py-4 bg-white sticky top-0 z-index-10">
+                <nav className="flex justify-between items-center max-container px-[2.5%] py-6 bg-white sticky top-0 z-index-10">
                     <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">
                         <img src={pagesLogo} alt="logo" className=" h-9" />
                         <h1 className="text-black font-medium text-[19px] font-DMsans">Pagez</h1>

@@ -3,17 +3,26 @@ import Search from '../components/Search'
 import Button from '../components/Button'
 import { Filters } from '../constants/data'
 import { IoFilter } from "react-icons/io5";
-
 import { Books } from '../constants/data';
+import BookModal from '../components/BookModal';
 
 
 function Browse() {
   const [isHidden, setIsHidden] = useState(false)
   const [buttonFilter, setButtonFilter] = useState(false)
+  const [selectedBook, setSelectedBook] = useState(null)
 
   const toggleFilters = () => {
     setIsHidden(!isHidden)
   }
+
+  const openModal = (book) => {
+    setSelectedBook(book);
+  };
+
+  const closeModal = () => {
+    setSelectedBook(null);
+  };
 
   useEffect(() => {
 
@@ -38,9 +47,10 @@ function Browse() {
   }, [])
 
   return (
-    <section className='space-y-10 max-sm:space-y-2 '>
+    <section className=' flex flex-col gap-6 '>
       <Search />
-      <div className='width-90 flex justify-start items-start max-sm:gap-2 relative'>
+
+      <div className='width-90 flex justify-start items-start max-sm:gap-0 relative'>
         <div className='max-h-dvh  stay-at-top'>
 
           <h1 className='text-black text-[25px] font-bold max-sm:hidden mb-4 '>
@@ -70,7 +80,7 @@ function Browse() {
                 <div className='relative '>
                   <img src={book.URL} loading='lazy' key={book.id} alt={book.id} className=' h-[230px] w-full object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 ' />
                   <div className='absolute h-full w-full bg-slate-900 bg-opacity-70 transition z-1 top-0 flex justify-center items-center flex-col gap-2 opacity-0 hover:opacity-100'>
-                    <button className='h-9 w-24 text-sm font-medium bg-white text-black capitalize rounded-md '>details</button>
+                    <button className='h-9 w-24 text-sm font-medium bg-white text-black capitalize rounded-md ' onClick={() => openModal(book)}>details</button>
                     <a href="#" className='h-9 w-24 flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
                   </div>
                 </div>
@@ -82,8 +92,12 @@ function Browse() {
             ))}
 
           </div>
+
         </div>
       </div>
+
+      {/* modal */}
+      <BookModal selectedBook={selectedBook} closeModal={closeModal}/>
     </section>
   )
 }

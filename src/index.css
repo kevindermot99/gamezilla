@@ -181,6 +181,8 @@ body {
 }
 
 
+
+
 /* CUSTOM SCROLL */
 
 ::-webkit-scrollbar {
@@ -195,7 +197,7 @@ body {
 ::-webkit-scrollbar-thumb {
   border: 3px solid #fff;
   background-clip: padding-box;
-  background: #dddddd;
+  background: #c2c2c2;
   border-radius: 50px;
 }
 
