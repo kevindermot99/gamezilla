@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Headroom from "react-headroom";
 import Notification from "./Notification";
 import { IoLanguage } from "react-icons/io5";
-import { TbMoonStars } from "react-icons/tb";
+import { TbSunMoon } from "react-icons/tb";
 import { RxEnterFullScreen } from "react-icons/rx";
 
 function Nav() {
@@ -31,7 +31,7 @@ function Nav() {
                     </a>
 
                     <a href="#" className="relative transition rounded-md hover:bg-gray-100 p-2">
-                        <TbMoonStars className="text-xl cursor-pointer relative transition text-black" />
+                        <TbSunMoon className="text-xl cursor-pointer relative transition text-black" />
                     </a>
 
                     <a href="#" className="relative transition rounded-md hover:bg-gray-100 p-2">
