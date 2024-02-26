@@ -78,7 +78,7 @@ function Browse() {
             {Books.map((book) => (
               <div className='relative object-cover flex-grow '>
                 <div className='relative '>
-                  <img src={book.URL} loading='lazy' key={book.id} alt={book.id} className=' h-[200px] w-full object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 ' />
+                  <img src={book.URL} loading='lazy' key={book.id} alt={book.id} className=' h-[200px] max-sm:h-[230px] w-full object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 ' />
                   <div className='absolute h-full w-full bg-slate-900 bg-opacity-70 transition z-1 top-0 flex justify-center items-center flex-col gap-2 opacity-0 hover:opacity-100'>
                     <button className='h-9 w-24 text-sm font-medium bg-white text-black capitalize rounded-md ' onClick={() => openModal(book)}>details</button>
                     <a href="#" className='h-9 w-24 flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
