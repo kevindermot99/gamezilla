@@ -47,7 +47,7 @@ function Browse() {
   }, [])
 
   return (
-    <section className=' flex flex-col gap-6 '>
+    <section className=' flex flex-col gap-5 '>
       <Search />
 
       <div className='width-90 flex justify-start items-start max-sm:gap-0 relative'>
