@@ -33,7 +33,6 @@ import book32 from '../assets/images/book32.jpg'
 import book33 from '../assets/images/book33.jpg'
 import book34 from '../assets/images/book34.jpg'
 import book35 from '../assets/images/book35.jpg'
-import book35 from '../assets/images/book35.jpg'
 
 
 export const Filters = [
