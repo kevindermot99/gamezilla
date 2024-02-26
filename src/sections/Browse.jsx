@@ -56,7 +56,7 @@ function Browse() {
             </span>
           </div>
         </div>
-        <div className='h-it w-full pl-4 max-sm:pl-0 '>
+        <div className='h-it w-full pl-4 max-sm:pl-0 max-sm:pt-2 '>
           <h1 className='text-black text-[25px] font-bold flex gap-2 mb-4'>
             <button className={`bg-main-color text-white rounded-md text-lg p-2 ${buttonFilter ? 'block' : 'hidden'}`} onClick={toggleFilters}>
               <IoFilter />
@@ -66,11 +66,19 @@ function Browse() {
 
           <div className='book-grid w-fit'>
             {Books.map((book) => (
-              <a href='#' className=' object-cover pb-10'>
-                <img src={book.URL} key={book.id} alt={book.id} className='h-auto min-h-[100%] w-full object-cover flex-1 rounded-lg cursor-pointer' />
-                <p className='truncate h-fit overflow-ellipsis font-medium text-sm text-center
-                pt-1 '>{book.title}</p>
-              </a>
+              <div className='relative object-cover flex-grow '>
+                <div className='relative '>
+                  <img src={book.URL} loading='lazy' key={book.id} alt={book.id} className=' h-[230px] w-full object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 ' />
+                  <div className='absolute h-full w-full bg-slate-900 bg-opacity-70 transition z-1 top-0 flex justify-center items-center flex-col gap-2 opacity-0 hover:opacity-100'>
+                    <button className='h-9 w-24 text-sm font-medium bg-white text-black capitalize rounded-md '>details</button>
+                    <a href="#" className='h-9 w-24 flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
+                  </div>
+                </div>
+                <p className='h-fit font-medium text-sm pt-3 pb-3 text-center'>
+                  {book.title}
+                </p>
+
+              </div>
             ))}
 
           </div>
