@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MdCancel } from "react-icons/md";
 
 function BookModal({ selectedBook, closeModal }) {
@@ -7,6 +7,21 @@ function BookModal({ selectedBook, closeModal }) {
     // document.getElementById('book').classList.remove('active')
     return null;
   }
+
+  const handleEscapeKey = (event) => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+
+    window.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      window.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, []);
 
   return (
     <div id='book' className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-40 overscroll-contain z-50 flex items-end justify-center animate-fade'>
