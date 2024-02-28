@@ -43,8 +43,8 @@ export default {
       },
       
       animation: {
-        fade: 'fadeIn .2s ease-in-out',
-        goingTop: 'goingTop .2s ease-out',
+        fade: 'fadeIn .3s ease-in-out',
+        goingTop: 'goingTop .3s ease-in-out',
       },
 
       // that is actual animation
@@ -54,8 +54,8 @@ export default {
           '100%': { opacity: '1' },
         },
         goingTop: {
-          '0%':{transform: 'translateY(50px) scale(.9)'},
-          '100%':{transform: 'translateY(0%) scale(1)'}
+          '0%':{transform: 'translateY(60vh) scale(.9)'},
+          '100%':{transform: 'translateY(0vh) scale(1)'}
         }
       }),
     },
