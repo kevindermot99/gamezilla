@@ -44,7 +44,7 @@ export default {
       
       animation: {
         fade: 'fadeIn .2s ease-in-out',
-        goingTop: 'goingTop .2s ease-in-out',
+        goingTop: 'goingTop .1s ease-in-out',
       },
 
       // that is actual animation
