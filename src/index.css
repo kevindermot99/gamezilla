@@ -105,9 +105,15 @@ body {
   gap: 20px;
 }
 
+
+
 .width-90 {
   width: 95%;
   margin: auto;
+}
+
+.zindex{
+  z-index: 10 !important;
 }
 
 .search-component::before {
@@ -143,6 +149,28 @@ body {
 
 .search::placeholder {
   color: #333;
+}
+
+@media only screen and (max-width: 640px) {
+  .search-component{
+    background-image: unset;
+    min-height: unset;
+  }
+
+  .search-component span{
+    width: 100%;
+    box-shadow: unset;
+    border-radius: 0px;
+    border-bottom: 2px solid #aaa;
+  }
+  
+  .search {
+    margin: unset;
+  }
+
+  .search-component::before{
+    display: none;
+  }
 }
 
 

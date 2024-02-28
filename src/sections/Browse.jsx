@@ -57,7 +57,7 @@ function Browse() {
             Filters
           </h1>
 
-          <div className={`max-h-[95vh] overflow-y-auto overflow-x-hidden flex flex-col items-start justify-start pl-0 pr-2 max-sm:border-2 max-sm:pt-3 max-sm:pl-3 max-sm:pb-3 max-sm:bg-white max-sm:absolute max-sm:left-0 max-sm:top-8 max-sm:rounded-md max-sm:max-h-[30vh] mt-2 ${isHidden ? 'max-sm:hidden' : ' max-sm:flex'}`}>
+          <div className={` z-3 max-h-[95vh] overflow-y-auto overflow-x-hidden flex flex-col items-start justify-start pl-0 pr-2 max-sm:border-2 max-sm:pt-3 max-sm:pl-3 max-sm:pb-3 max-sm:bg-white max-sm:absolute max-sm:left-0 max-sm:top-8 max-sm:rounded-md max-sm:max-h-[300px] zindex mt-2 ${isHidden ? 'max-sm:hidden' : ' max-sm:flex'}`}>
             <h3 className='w-full text-sm font-bold text-main-color mb-2 flex justify-between'><span># Genres</span><span className='text-[13px]'>{Filters.length}</span></h3>
             <span className='w-fit flex flex-col items-start justify-start'>
               {Filters.map((button) => (
