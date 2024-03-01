@@ -26,6 +26,10 @@
     @apply text-black leading-normal font-medium text-xs outline-none transition hover:text-blue-400 even:pointer-events-none
   }
 
+  .navbar-link {
+    @apply flex gap-2 relative transition rounded-md hover:bg-gray-100 p-2
+  }
+
 }
 
 
@@ -178,7 +182,7 @@ body {
   position: absolute;
   left: 20px;
   top: -5px;
-  padding: 2px 8px;
+  padding: 3px 7px 1px 7px;
   border-radius: 10px;
   display: flex;
   font-size: 13px;
