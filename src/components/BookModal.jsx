@@ -25,9 +25,9 @@ function BookModal({ selectedBook, closeModal }) {
 
   return (
     <div id='book' className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-50 overscroll-contain z-50 flex items-center max-sm:items-end justify-center animate-fade'>
-      <div className='bg-white h-fit max-h-[90vh] w-[100%] max-w-[900px] overflow-y-auto overscroll-contain rounded-3xl max-sm:rounded-none px-6 py-5 max-sm:px-2 max-sm:py-2 animate-goingTop '>
+      <div className='bg-white h-fit max-h-[90vh] w-[100%] max-w-[900px] overflow-y-auto overscroll-contain rounded-lg max-sm:rounded-none px-6 py-5 max-sm:px-2 max-sm:py-2 animate-goingTop '>
         <div className=' h-full w-full flex flex-col items-start justify-start'>
-          <MdCancel className=' self-end text-gray-300 transit hover:text-main-color cursor-pointer text-3xl' onClick={closeModal}/>
+          <MdCancel className=' self-end text-gray-300 transit hover:text-main-color cursor-pointer text-3xl' onClick={closeModal} />
           <div className='h-full w-full flex flex-col items-start justify-start mb-5 px-5 max-sm:px-0'>
             <div className='flex gap-8 max-sm:gap-4 max-sm:flex-col items-start justify-start'>
               <img src={selectedBook.URL} key={selectedBook.id} alt="Book Poster" loading='lazy' className='h-[300px] max-sm:h-auto w-full max-sm:w-[150px] object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 max-sm:self-center' />
@@ -39,8 +39,11 @@ function BookModal({ selectedBook, closeModal }) {
                 <p className=' max-sm:mt-0 max-sm:p-3 max-sm:text-center text-gray-600 line-clamp-6 max-sm:line-clamp-none'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius Fugiat quis Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione aperiam veritatis a pariatur nesciunt ipsum reprehenderit porro accusamus exercitationem velit aliquam laudantium nisi officiis voluptatum vitae praesentium, expedita delectus. Blanditiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet placeat corporis dolor eligendi expedita neque in doloremque accusantium nemo obcaecati debitis maiores dolorem sunt, aspernatur reiciendis, quibusdam ratione numquam non. assumenda eligendi earum, velit eum laboriosam asperiores omnis iure natus qui nostrum illo rerum! Quaerat incidunt aspernatur officiis? Ratione, vitae.
                 </p>
-                <a href="#" className='h-9 w-[90%] max-w-[200px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
-                    
+                <div className='flex flex-wrap gap-2'>
+                  <a href="#" className='h-9 w-[90%] max-w-[160px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
+                  <a href="#" className='h-9 w-[90%] max-w-[160px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-gray-200 text-black py-2 px-4 rounded-md transition'>Download</a>
+                </div>
+
               </div>
             </div>
           </div>
