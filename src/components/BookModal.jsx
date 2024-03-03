@@ -31,11 +31,12 @@ function BookModal({ selectedBook, closeModal }) {
           <div className='h-full w-full overflow-y-auto overscroll-contain flex flex-col items-start justify-start mt-3 px-5 max-sm:px-0'>
             <div className='flex gap-8 max-sm:gap-4 max-sm:flex-col items-start justify-start'>
               <img src={selectedBook.URL} key={selectedBook.id} alt="Book Poster" loading='lazy' className='h-[300px] max-sm:h-auto w-full max-sm:w-[150px] object-cover flex-1 rounded-sm drop-shadow-lg ring-1 ring-gray-100 max-sm:self-center' />
-              <div>
-                <h1 className=' text-[45px] leading-[50px] break-words  max-sm:p-2 max-sm:text-center'>
+              <div className=' space-y-4'>
+                <h1 className=' text-[45px] leading-[50px] break-words max-sm:p-2 max-sm:text-center font-normal'>
                   {selectedBook.title}
                 </h1>
-                <p className='mt-3 max-sm:mt-0 max-sm:p-3 max-sm:text-center'>
+                <h3 className=''>Dr. Mathew Waltford</h3>
+                <p className=' max-sm:mt-0 max-sm:p-3 max-sm:text-center'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius repellendus molestiae qui quaerat rerum consectetur recusandae facere, unde nobis, harum amet eveniet modi saepe nesciunt dolore explicabo adipisci enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quis assumenda eligendi earum, velit eum laboriosam asperiores omnis iure natus qui nostrum illo rerum! Quaerat incidunt aspernatur officiis? Ratione, vitae.</p>
               </div>
             </div>
