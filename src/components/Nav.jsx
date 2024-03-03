@@ -8,6 +8,8 @@ import { IoLanguage } from "react-icons/io5";
 import { TbSunMoon } from "react-icons/tb";
 import { RxEnterFullScreen } from "react-icons/rx";
 
+import { BsArrowsFullscreen } from "react-icons/bs";
+
 function Nav() {
 
 
@@ -28,7 +30,7 @@ function Nav() {
                 <div className="flex w-fit justify-end items-center gap-3    ">
 
                     <a href="#" className="group navbar-link max-sm:hidden">
-                        <RxEnterFullScreen className=" text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                        <BsArrowsFullscreen className=" text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
                     </a>
 
                     <a href="#" className="group navbar-link">
