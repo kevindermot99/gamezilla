@@ -1,4 +1,5 @@
 import pagesLogo from "../assets/images/pagez-logo.png"
+import defaultPfp from "../assets/images/default-pfp.png"
 import { BiBookAlt } from "react-icons/bi";
 import { RiUser6Line } from "react-icons/ri";
 import { useState, useEffect } from "react";
@@ -46,7 +47,7 @@ function Nav() {
                         <Notification label={9} />
                     </a>
                     <a href="#" className="group navbar-link">
-                        <RiUser6Line className="text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                        <img src={defaultPfp} />
                     </a>
 
                 </div>
