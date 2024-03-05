@@ -1,5 +1,5 @@
 import pagesLogo from "../assets/images/pagez-logo.png"
-import defaultPfp from "../assets/images/default-pfp.png"
+import defaultPfp from "../assets/images/default-pfp.jpg"
 import { BiBookAlt } from "react-icons/bi";
 import { RiUser6Line } from "react-icons/ri";
 import { useState, useEffect } from "react";
