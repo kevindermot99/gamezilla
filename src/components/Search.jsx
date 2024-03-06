@@ -3,7 +3,7 @@ import { RiSearch2Line } from "react-icons/ri";
 
 function Search() {
   return (
-    <div className='search-component py-[80px] max-sm:py-0 width-90'>
+    <div className='search-component py-[80px] max-sm:py-0'>
       <p className='relative text-black text-sm  drop-shadow font-normal px-5 max-sm:hidden'>
       Up to 244,034 Free Books.
         </p>
