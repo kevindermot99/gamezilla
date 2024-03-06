@@ -27,7 +27,7 @@
   }
 
   .navbar-link {
-    @apply flex gap-2 relative transition rounded-md hover:bg-gray-100 p-2
+    @apply flex gap-2 relative transition rounded-md hover:bg-gray-200 
   }
 
 }

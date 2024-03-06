@@ -5,9 +5,7 @@ import { RiUser6Line } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import Headroom from "react-headroom";
 import Notification from "./Notification";
-import { IoLanguage } from "react-icons/io5";
 import { TbSunMoon } from "react-icons/tb";
-import { RxEnterFullScreen } from "react-icons/rx";
 
 import { BsArrowsFullscreen } from "react-icons/bs";
 
@@ -28,26 +26,18 @@ function Nav() {
 
 
 
-                <div className="flex w-fit justify-end items-center gap-3    ">
+                <div className="flex w-fit justify-end items-center   ">
 
-                    <a href="#" className="group navbar-link max-sm:hidden">
-                        <BsArrowsFullscreen className=" text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                    <a href="#" className="group navbar-link p-2">
+                        <TbSunMoon className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
                     </a>
 
-                    <a href="#" className="group navbar-link">
-                        <TbSunMoon className="text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                    <a href="#" className="group navbar-link p-2 ml-2">
+                        <BiBookAlt className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                        {/* <Notification label={9} /> */}
                     </a>
-
-                    <a href="#" className="group navbar-link">
-                        <IoLanguage className="text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
-                    </a>
-
-                    <a href="#" className="group navbar-link">
-                        <BiBookAlt className="text-xl cursor-pointer relative transition text-black group-hover:text-main-color" />
-                        <Notification label={9} />
-                    </a>
-                    <a href="#" className="group navbar-link">
-                        <img src={defaultPfp} />
+                    <a href="#" className="group navbar-link rounded-full ml-5">
+                        <img src={defaultPfp} className=" h-8 rounded-full " />
                     </a>
 
                 </div>
