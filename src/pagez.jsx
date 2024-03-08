@@ -3,7 +3,7 @@ import { Browse } from './sections';
 import Nav from './components/Nav';
 
 
-const App = () => {
+const Pagez = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Pagez;

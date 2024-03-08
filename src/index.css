@@ -34,7 +34,7 @@
     @apply text-black font-normal text-2xl flex justify-center items-center gap-1
   }
   .linkText{
-    @apply text-black font-medium text-lg flex justify-center items-center gap-1
+    @apply text-black font-normal text-lg flex justify-center items-center gap-1
   }
 }
 
@@ -83,6 +83,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'DM Sans', sans-serif;
+  outline-color: var(--main-color);
 }
 
 input[type="search"]::-webkit-search-decoration,
