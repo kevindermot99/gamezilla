@@ -48,7 +48,7 @@ function Browse() {
 
   return (
     <section className=' flex gap-5 '>
-      <div className='bg-blue-300 w-[30%] max-w-[250px]'>
+      <div className='bg-blue-300 w-[30%] max-w-[250px] h-[95vh] sticky top-5 overflow-y-auto'>
       </div>
       <div className='flex flex-col gap-5 w-full'>
         <Search />
