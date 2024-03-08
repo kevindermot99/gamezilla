@@ -1,8 +1,12 @@
 import React from 'react'
+import LandingNavBar from './LandingNavBar'
 
 function Landing() {
   return (
-    <div>Landing</div>
+    <div >
+      <LandingNavBar />
+      <h1>Landing</h1>
+    </div>
   )
 }
 

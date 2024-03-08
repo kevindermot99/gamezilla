@@ -30,6 +30,9 @@
     @apply flex gap-2 relative transition rounded-md hover:bg-gray-200 
   }
 
+  .linkText{
+    @apply text-black font-medium text-lg
+  }
 }
 
 

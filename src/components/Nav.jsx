@@ -20,7 +20,7 @@ function Nav() {
             <nav className="flex justify-between items-center max-container py-5 bg-white sticky top-0 z-index-10">
                 <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">
                     <img src={pagesLogo} alt="logo" className=" h-9" />
-                    <h1 className="text-black font-medium text-xl font-palanquin ">Pagez</h1>
+                    <h1 className="linkText">Pagez</h1>
                     
                 </a>
 
