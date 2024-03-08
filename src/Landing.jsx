@@ -6,7 +6,6 @@ import { GoArrowUpRight } from "react-icons/go";
 
 function Landing() {
 
-
   return (
     <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
 
@@ -27,8 +26,6 @@ function Landing() {
         </div>
       </nav>
 
-
-
       <section className=' flex flex-col items-center justify-center text-center p-7 relative max-sm:p-0 max-sm:space-y-6'>
 
         <div className="absolute top-56 left-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
@@ -41,30 +38,19 @@ function Landing() {
           Read or Download Novels online at $0.00 cost, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptate at necessitatibus sed dolorum perferendis in Voluptas, deleniti?
         </p>
         <div className='gradient-moving-bg shadow-xl' >
-          <img  src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-xl' alt="screenshot" />
+          <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-xl' alt="screenshot" />
         </div>
       </section>
 
       <section className='mt-[80px] flex flex-col justify-center items-center'>
         <div className='tag'>Features</div>
-        <div className='mt-5 '>
-          <div className='bg-gray-100 py-5 px-7 rounded-2xl '>
-            <h1 className='text-xl font-semibold'>Built In Reader</h1>
-            <p className='font-normal text-sm max-w-[500px] opacity-50'>read your desired book without leaving the app, a Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo eligendi sunt earum sint eveniet impedit nostrum, minus iste eum aspernatur, dolor soluta eius molestiae iure assumenda temporibus deleniti natus. Book reader was crafted from screatch to ensure readers satisfation</p>
-          </div>
-          <div className='bg-gray-100 py-5 px-7 rounded-2xl '>
-            <h1 className='text-xl font-semibold'>Free Download</h1>
-            <p className='font-normal text-sm max-w-[500px] opacity-50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur mollitia dignissimos magnam commodi, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorem quibusdam nisi vitae nostrum, fuga voluptas minima porro, quos ad distinctio alias et qui  aperiam ex </p>
-          </div>
-          <div className='bg-gray-100 py-5 px-7 rounded-2xl '>
-            <h1 className='text-xl font-semibold'>Dark Mode</h1>
-            <p className='font-normal text-sm max-w-[500px] opacity-50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur mollitia dignissimos magnam commodi, aperiam ex </p>
-          </div>
-          <div className='bg-gray-100 py-5 px-7 rounded-2xl '>
-            <h1 className='text-xl font-semibold'>Share my Library</h1>
-            <p className='font-normal text-sm max-w-[500px] opacity-50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur mollitia dignissimos magnam commodi, aperiam ex </p>
+        <div className='mt-4 max-w-[1000px] grid grid-cols-2 gap-8'>
+          <div className="">
+            <h1 className="">Free Download</h1>
+            <p className="">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
           </div>
         </div>
+
       </section>
     </div>
   )
