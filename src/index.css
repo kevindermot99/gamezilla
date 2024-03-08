@@ -214,7 +214,7 @@ body {
   border-radius: 13px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
   animation: scrollPerspective linear;
   animation-timeline: scroll();
 }
@@ -257,6 +257,21 @@ body {
     transform: rotate(180deg);
     scale: 1;
   }
+}
+
+.tag{
+  background-color: #f7f7f7;
+  width: fit-content;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  border-radius: 50px;
+  border: 1px solid #e4e4e4;
+  margin: 10px 0;
 }
 
 
