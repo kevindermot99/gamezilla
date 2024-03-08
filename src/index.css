@@ -34,7 +34,7 @@
     @apply text-black font-normal text-2xl flex justify-center items-center gap-1
   }
   .linkText{
-    @apply text-black font-normal text-lg flex justify-center items-center gap-1
+    @apply text-black font-normal text-base flex justify-center items-center gap-1
   }
 }
 
@@ -77,13 +77,17 @@
   }
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-family: 'DM Sans', sans-serif;
   outline-color: var(--main-color);
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -96,7 +100,6 @@ input[type="search"]::-webkit-search-results-decoration {
 body {
   max-width: 1500px;
   margin: auto;
-
 }
 
 
@@ -206,16 +209,28 @@ body {
 
 .gradient-moving-bg{
   /* bg-main-color p-[2px] rounded-xl */
-  background-color: #e0e0e03f;
-  padding: 1.7px;
+  background-color: #e0e0e060;
+  padding: 2px;
   border-radius: 13px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.5s ease;
+  animation: scrollPerspective linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollPerspective {
+  from {
+    transform: perspective(600px) rotateX(15deg);
+  }
+  to{
+    transform: perspective(600px) rotateX(0deg);
+  }
 }
 
 .gradient-moving-bg::after{
   content: "";
-  width: 260px;
+  width: 200px;
   height: 2000px;
   position: absolute;
   right: 0;
@@ -227,20 +242,20 @@ body {
   background-color: var(--main-color);
   filter: blur(10px);
   z-index: -1;
-  animation: rotation 6s linear infinite;
+  animation: rotation 5s linear infinite;
 }
 
 @keyframes rotation {
   0%{
     transform: rotate(0deg);
-    scale: .5;
+    scale: 1;
   }
   50%{
     scale: 2;
   }
   100%{
-    transform: rotate(360deg);
-    scale: .5;
+    transform: rotate(180deg);
+    scale: 1;
   }
 }
 
