@@ -19,9 +19,9 @@ const App = () => {
 
   return (
     // !loading && (
-      <main className='relative bg-white px-5'>
+      <main className='relative bg-white px-7'>
         <Nav />
-        <section className='xl:padding-1 wide:padding-r padding-b'>
+        <section className='xl:padding-1 wide:padding-r'>
           <Browse />
         </section>
       </main>

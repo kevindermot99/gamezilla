@@ -48,7 +48,10 @@ function Browse() {
 
   return (
     <section className=' flex gap-5 '>
-      <div className='bg-blue-300 w-[30%] max-w-[250px] h-[95vh] sticky top-5 overflow-y-auto'>
+      <div className='flex flex-col gap-1 w-[30%] max-w-[200px] min-w-[200px] h-[95vh] sticky top-5 overflow-y-auto overscroll-contain'>
+      {Filters.map((filter) => (
+        <div className='text-sm font-medium capitalize px-4 py-2 cursor-pointer rounded-md transition hover:bg-gray-200 hover:text-main-color'>{filter.label}</div>
+      ))}
       </div>
       <div className='flex flex-col gap-5 w-full'>
         <Search />
