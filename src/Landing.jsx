@@ -49,6 +49,10 @@ function Landing() {
             <h1 className="">Free Download</h1>
             <p className="">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
           </div>
+          <div className="">
+            <h1 className="">Free Download</h1>
+            <p className="">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
+          </div>
         </div>
 
       </section>
