@@ -262,17 +262,14 @@ body {
 }
 
 .tag{
-  background-color: #f7f7f7;
   width: fit-content;
-  padding: 5px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: black;
   border-radius: 50px;
-  border: 1px solid #e4e4e4;
   margin: 10px 0;
 }
 

@@ -44,15 +44,24 @@ function Landing() {
 
       <section className='mt-[80px] flex flex-col justify-center items-center'>
         <div className='tag'>Features</div>
-        <div className='mt-4 max-w-[1000px] grid grid-cols-2 gap-8'>
-          <div className="">
-            <h1 className="">Free Download</h1>
-            <p className="">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
+        <div className='mt-4 max-w-[1000px] grid grid-cols-1 gap-4 '>
+
+          <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden">
+            <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
+            <p className="text-base text-gray-500">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
           </div>
-          <div className="">
-            <h1 className="">Free Download</h1>
-            <p className="">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
+          <div className='w-full flex gap-4 '>
+            <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden w-[50%]">
+              <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
+              <p className="text-base text-gray-500">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
+            </div>
+            <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden w-[50%]">
+              <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
+              <p className="text-base text-gray-500">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
+            </div>
           </div>
+          
+          
         </div>
 
       </section>
