@@ -31,7 +31,7 @@
   }
 
   .logoText{
-    @apply text-black font-normal text-2xl flex justify-center items-center gap-1
+    @apply text-main-color  font-normal text-2xl flex justify-center items-center gap-1
   }
   .linkText{
     @apply text-black font-normal text-sm flex justify-center items-center gap-1
