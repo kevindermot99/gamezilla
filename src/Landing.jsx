@@ -6,6 +6,8 @@ import { GoArrowUpRight } from "react-icons/go";
 
 function Landing() {
 
+  const HeroGradientText = ''
+
   return (
     <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
 
@@ -31,8 +33,8 @@ function Landing() {
         <div className="absolute top-56 left-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
         <div className="absolute -bottom-10 right-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
 
-        <h1 className='capitalize font-semibold text-[70px] text-black text-wrap max-w-[820px] leading-[80px] mt-[50px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
-          dive into The <span className='text-main-color '>ocean</span> of Free novels
+        <h1 className='capitalize font-semibold text-[80px] text-wrap max-w-[820px] leading-[80px] mt-[50px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
+          <span className={`${HeroGradientText}`}>dive into The </span><span className='text-main-color '>ocean</span> <span className='text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-500'>of Free novels</span>
         </h1>
         <p className='text-base  font-normal leading-6 max-w-[800px] text-black text-wrap m-[40px] max-sm:m-0'>
           Read or Download Novels online at $0.00 cost, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptate at necessitatibus sed dolorum perferendis in Voluptas, deleniti?
