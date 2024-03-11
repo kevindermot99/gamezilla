@@ -41,32 +41,10 @@ function Landing() {
           <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-xl' alt="screenshot" />
         </div>
 
-        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition opacity-50 hover:bg-gray-200 hover:opacity-100 bg-gradient-to-l to-gray-100 from-gray-200 '>Open Pagez App <GoArrowUpRight /></Link>
+        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition opacity-50 hover:bg-main-color hover:text-white hover:opacity-100 '>Open Pagez App <GoArrowUpRight /></Link>
       </section>
 
-      <section className='mt-[30px] flex flex-col justify-center items-center'>
-        <div className='tag'>Features</div>
-        <div className='mt-4 max-w-[1000px] grid grid-cols-1 gap-4 '>
-
-          <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden">
-            <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
-            <p className="text-base text-gray-500">Get unlimited lorem access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
-          </div>
-          <div className='w-full flex gap-4 '>
-            <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden w-[60%]">
-              <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
-              <p className="text-base text-gray-500">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
-            </div>
-            <div className="ring-1 ring-purple-100 p-8 rounded-3xl overflow-hidden w-[40%]">
-              <h1 className="text-2xl font-bold text-main-color  mb-2">Free Downloads</h1>
-              <p className="text-base text-gray-500">Get unlimited access to a vast library of novels for free. Download your favorites and enjoy them offline anywhere, anytime.</p>
-            </div>
-          </div>
-          
-          
-        </div>
-
-      </section>
+     
     </div>
   )
 }
