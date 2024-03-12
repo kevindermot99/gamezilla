@@ -9,9 +9,9 @@ function Landing() {
   const HeroGradientText = 'text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800'
 
   return (
-    <div className='px-5 max-lg:px-5 overflow-clip pb-[100px]'>
+    <div className=' overflow-clip pb-[100px]'>
 
-      <nav className="flex justify-between items-center py-5">
+      <nav className="flex justify-between items-center py-5 px-5 max-w-[1500px] m-auto">
         <div className='flex justify-center items-center'>
           <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-6 '>
             <img src={pagesLogo} alt="Logo" className='h-9' />
@@ -30,24 +30,27 @@ function Landing() {
         </div>
       </nav>
 
-      <section className=' flex flex-col items-center justify-center text-center p-7 relative max-sm:p-0 max-sm:space-y-6'>
+      <section className=' flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[80px]'>
 
-        <div className="absolute top-56 left-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
-        <div className="absolute -bottom-10 right-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
-
-        <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] mt-[60px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
+      
+        <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
           <span className={`HeroText`}>Infinite </span><span className='text-main-color '>Stories, </span> <br /><span className={`HeroText`}>One Library.</span>
         </h1>
-        <p className='text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap m-[30px] max-sm:m-0'>
+        <p className='text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap mt-[30px] max-sm:m-0'>
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
         </p>
-        <div className='gradient-moving-bg shadow-xl flex justify-start items-start' >
-          <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-xl' alt="screenshot" />
+
+        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 '>Get Stated Today</Link>
+
+        <div className='gradient-moving-bg shadow-xl flex justify-start items-start max-h-[400px]' >
+          <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-t-xl ' alt="screenshot" />
         </div>
 
-        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition opacity-50 hover:bg-main-color hover:text-white hover:opacity-100 '>Open Pagez App <GoArrowUpRight /></Link>
       </section>
 
+      <section className='w-full h-[100vh] bg-gray-100 z-10'>
+
+      </section>
      
     </div>
   )
