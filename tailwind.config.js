@@ -22,6 +22,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         DMsans: ['DM Sans', 'sans-serif'],
         salsa: ['salsa', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
       },
       colors: {
         'primary': "#ECEEFF",
