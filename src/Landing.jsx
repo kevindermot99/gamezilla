@@ -9,13 +9,13 @@ function Landing() {
   const HeroGradientText = 'text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800'
 
   return (
-    <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
+    <div className='px-5 max-lg:px-5 overflow-clip pb-[100px]'>
 
-      <nav className="flex justify-between items-center py-3">
+      <nav className="flex justify-between items-center py-5">
         <div className='flex justify-center items-center'>
           <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-6 '>
-            <img src={pagesLogo} alt="Logo" className='h-10' />
-            <p className='logoText'>pagez</p>
+            <img src={pagesLogo} alt="Logo" className='h-9' />
+            <p className='logoText'>Pagez</p>
           </Link>
           
         </div>
