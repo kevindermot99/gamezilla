@@ -17,14 +17,16 @@ function Landing() {
             <img src={pagesLogo} alt="Logo" className='h-10' />
             <p className='logoText'>pagez</p>
           </Link>
-          <Link to="/" className='linkText max-lg:hidden'>Overview</Link>
+          
+        </div>
+        <div className='flex gap-1 justify-center items-center'>
+        <Link to="/" className='linkText max-lg:hidden'>Overview</Link>
           <Link className='linkText max-lg:hidden'>Features</Link>
           <Link className='linkText max-lg:hidden'>Creator</Link>
           <Link className='linkText max-lg:hidden'>Source code <GoArrowUpRight /></Link>
-        </div>
-        <div className='flex gap-1 justify-center items-center'>
-          <Link to="" className=' text-black font-normal text-sm transition hover:text-main-color max-sm:px-4'>Sign in</Link>
-          <Link to="" className='px-4 py-2 ml-5 bg-main-color font-medium text-sm text-white rounded-lg transition hover:opacity-90 max-sm:hidden'>Get Started Today</Link>
+          <div>|</div>
+          <Link to="" className='linkText'>Sign in</Link>
+          <Link to="" className='px-4 py-2 bg-main-color font-medium text-sm text-white rounded-lg transition hover:opacity-90 max-sm:hidden'>Get Started Today</Link>
         </div>
       </nav>
 

@@ -32,7 +32,7 @@
   }
 
   .logoText{
-    @apply text-main-color font-bold text-3xl flex justify-center items-center gap-1 font-Inter capitalize
+    @apply text-main-color font-extrabold text-3xl flex justify-center items-center gap-1 font-Inter capitalize
   }
   .linkText{
     @apply text-black font-medium text-sm flex justify-center items-center gap-1 py-2 px-4 hover:bg-gray-100 rounded-lg transition 
