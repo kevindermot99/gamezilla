@@ -36,7 +36,7 @@ function Landing() {
         <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] mt-[60px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
           <span className={`HeroText`}>Infinite </span><span className='text-main-color '>Stories, </span> <br /><span className={`HeroText`}>One Library.</span>
         </h1>
-        <p className='text-xl font-normal leading-6 max-w-[800px] text-gray-600 text-wrap m-[30px] max-sm:m-0'>
+        <p className='text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap mt-[30px] max-sm:m-0'>
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
         </p>
         <div className='gradient-moving-bg shadow-xl flex justify-start items-start' >
