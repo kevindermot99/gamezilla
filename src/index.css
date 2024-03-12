@@ -281,7 +281,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* CUSTOM SCROLL */
-
+/* 
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -300,4 +300,15 @@ input[type="search"]::-webkit-search-results-decoration {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color);
+} */
+
+/* CUSTOM SELECT COLORS */
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #8c52ff4b;
+}
+
+::selection {
+  color: black;
+  background: #8c52ff4b;
 }
