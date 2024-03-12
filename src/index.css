@@ -34,7 +34,7 @@
     @apply text-main-color font-bold text-3xl flex justify-center items-center gap-1
   }
   .linkText{
-    @apply text-black font-normal text-sm flex justify-center items-center gap-1
+    @apply text-black font-medium text-sm flex justify-center items-center gap-1
   }
 }
 

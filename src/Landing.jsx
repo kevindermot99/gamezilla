@@ -33,8 +33,8 @@ function Landing() {
         <div className="absolute top-56 left-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
         <div className="absolute -bottom-10 right-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
 
-        <h1 className='capitalize font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[90px] mt-[50px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
-          <span className={`HeroText`}>Where </span><span className='text-main-color '>Novels</span> <br /><span className={`HeroText`}>meets Readers</span>
+        <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] mt-[60px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
+          <span className={`HeroText`}>Where </span><span className='text-main-color '>Novels</span> <br /><span className={`HeroText`}>meet readers</span>
         </h1>
         <p className='text-2xl  font-normal leading-6 max-w-[800px] text-black text-wrap m-[40px] max-sm:m-0'>
           Read or Download Novels online at $0.00 cost,  necessitatibus sed dolorum perferendis in Voluptas, deleniti?
