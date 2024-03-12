@@ -32,7 +32,7 @@
   }
 
   .logoText{
-    @apply text-main-color font-bold text-3xl flex justify-center items-center gap-1
+    @apply text-main-color font-bold text-3xl flex justify-center items-center gap-1 font-Inter capitalize
   }
   .linkText{
     @apply text-black font-medium text-sm flex justify-center items-center gap-1 py-2 px-4 hover:bg-gray-100 rounded-lg transition 
@@ -83,7 +83,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   outline-color: var(--main-color);
 }
 
