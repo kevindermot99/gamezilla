@@ -12,15 +12,15 @@ function Landing() {
     <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
 
       <nav className="flex justify-between items-center py-3">
-        <div className='flex justify-center items-center gap-5'>
-          <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-4'>
+        <div className='flex justify-center items-center'>
+          <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-6 '>
             <img src={pagesLogo} alt="Logo" className='h-10' />
             <p className='logoText'>Pagez</p>
           </Link>
-          <Link to="/" className='linkText transition hover:text-main-color max-lg:hidden'>Overview</Link>
-          <Link className='linkText transition hover:text-main-color max-lg:hidden'>Features</Link>
-          <Link className='linkText transition hover:text-main-color max-lg:hidden'>Creator</Link>
-          <Link className='linkText transition hover:text-main-color max-lg:hidden'>Source code <GoArrowUpRight /></Link>
+          <Link to="/" className='linkText max-lg:hidden'>Overview</Link>
+          <Link className='linkText max-lg:hidden'>Features</Link>
+          <Link className='linkText max-lg:hidden'>Creator</Link>
+          <Link className='linkText max-lg:hidden'>Source code <GoArrowUpRight /></Link>
         </div>
         <div className='flex gap-1 justify-center items-center'>
           <Link to="" className=' text-black font-normal text-sm transition hover:text-main-color max-sm:px-4'>Sign in</Link>
@@ -36,7 +36,7 @@ function Landing() {
         <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] mt-[60px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
           <span className={`HeroText`}>Infinite </span><span className='text-main-color '>Stories, </span> <br /><span className={`HeroText`}>One Library.</span>
         </h1>
-        <p className='text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap mt-[30px] max-sm:m-0'>
+        <p className='text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap m-[30px] max-sm:m-0'>
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
         </p>
         <div className='gradient-moving-bg shadow-xl flex justify-start items-start' >
