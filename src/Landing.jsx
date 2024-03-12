@@ -42,7 +42,7 @@ function Landing() {
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
         </p>
 
-        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 '>Get Stated Today</Link>
+        <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 '>Open Pagez App</Link>
 
         <div className='gradient-moving-bg shadow-3xl   flex justify-start items-start max-h-[400px]' >
           <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-t-xl ' alt="screenshot" />
@@ -56,7 +56,7 @@ function Landing() {
         </h1>
         
         <Feature position="1" tip="" title="" description="" direction="left" URL={searchbarvid} />
-        <Feature position="2" tip="" title="" description="" direction="right" URL={searchbarvid} />
+        <Feature position="2" tip="" title="" description="" direction="right" types="1" URL={searchbarvid} />
         <Feature position="3" tip="" title="" description="" direction="left" URL={searchbarvid} />
       
       </section>
