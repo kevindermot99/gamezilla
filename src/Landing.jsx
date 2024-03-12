@@ -2,7 +2,9 @@ import { React, useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import pagesLogo from "./assets/images/pagez-logo.png"
 import screenShoot from "./assets/images/screenshoot.png"
+import searchbar from  "./assets/images/searchbar.png"
 import { GoArrowUpRight } from "react-icons/go";
+import Feature from './components/Feature'
 
 function Landing() {
 
@@ -48,8 +50,11 @@ function Landing() {
 
       </section>
 
-      <section className='w-full h-[100vh] bg-white border-t-[1px] border-gray-300 z-10'>
-
+      <section className='w-full h-[100vh] bg-white border-t-[1px] border-gray-300 z-10 flex flex-col items-center justify-start p-7'>
+        <h1 className='m-10 text-base font-medium leading-8 text-black text-wrap '>
+          1,241 People has started using Pagez since the Launch
+        </h1>
+      <Feature tip="" title="" description="" image="" />
       </section>
      
     </div>
