@@ -19,10 +19,10 @@ function Landing() {
             <img src={pagesLogo} alt="Logo" className='h-9' />
             <p className='logoText'>Pagez</p>
           </Link>
-          
+
         </div>
         <div className='flex gap-1 justify-center items-center'>
-        <Link to="/" className='linkText max-lg:hidden'>Overview</Link>
+          <Link to="/" className='linkText max-lg:hidden'>Overview</Link>
           <Link className='linkText max-lg:hidden'>Features</Link>
           <Link className='linkText max-lg:hidden'>Creator</Link>
           <Link className='linkText max-lg:hidden'>Source code <GoArrowUpRight /></Link>
@@ -34,7 +34,7 @@ function Landing() {
 
       <section className=' flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[80px]'>
 
-      
+
         <h1 className='font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[100px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
           <span className={`HeroText`}>Infinite </span><span className='text-main-color '>Stories, </span> <br /><span className={`HeroText`}>One Library.</span>
         </h1>
@@ -54,13 +54,36 @@ function Landing() {
         <h1 className='mt-10 text-base font-medium leading-8 text-black text-wrap'>
           1,241 People has started using Pagez since the Launch
         </h1>
-        
-        <Feature position="1" tip="" title="" description="" direction="left" URL={searchbarvid} />
-        <Feature position="2" tip="" title="" description="" direction="right" types="1" URL={searchbarvid} />
-        <Feature position="3" tip="" title="" description="" direction="left" URL={searchbarvid} />
-      
+
+        <Feature
+          position="1"
+          tip="Easy Find"
+          title="Discover with Ease"
+          description="Easily find your favorite novels using our simple and intuitive search feature. Navigate through our vast collection effortlessly and dive into captivating stories with just a few clicks."
+          direction="left"
+          URL={searchbarvid}
+        />
+        <Feature
+          position="2"
+          tip="Free Downloads"
+          title="Download for Free"
+          description="Indulge in a wealth of captivating novels without spending a penny. Enjoy the freedom of unlimited free downloads and explore a world of literary wonders at no cost."
+          direction="right"
+          types="1"
+          URL={searchbarvid}
+        />
+        <Feature
+          position="3"
+          tip="Warm Music"
+          title="Accompanied by Music"
+          description="Elevate your reading experience with comforting background music. Immerse yourself in the warmth of melodies that complement the mood of the stories, enhancing the overall enjoyment of your literary journey."
+          direction="left"
+          URL={searchbarvid}
+        />
+
+
       </section>
-     
+
     </div>
   )
 }
