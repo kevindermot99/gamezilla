@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { MdCancel } from "react-icons/md";
+import { FaCaretDown } from "react-icons/fa";
 
 function BookModal({ selectedBook, closeModal }) {
 
@@ -24,7 +25,7 @@ function BookModal({ selectedBook, closeModal }) {
   }, []);
 
   return (
-    <div id='book' className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-50 overscroll-contain z-50 flex items-center max-sm:items-end justify-center animate-fade'>
+    <div id='book' className='fixed top-0 left-0 right-0 bottom-0 w-full h-[100vh] bg-black bg-opacity-20 overscroll-contain z-50 flex items-center max-sm:items-end justify-center animate-fade'>
       <div className='bg-white h-fit max-h-[90vh] w-[100%] max-w-[900px] overflow-y-auto overscroll-contain rounded-lg max-sm:rounded-none px-6 py-5 max-sm:px-2 max-sm:py-2 animate-goingTop '>
         <div className=' h-full w-full flex flex-col items-start justify-start'>
           <MdCancel className=' self-end text-gray-300 transit hover:text-main-color cursor-pointer text-3xl' onClick={closeModal} />
@@ -37,11 +38,11 @@ function BookModal({ selectedBook, closeModal }) {
                 </h1>
                 <h3 className=' font-medium max-sm:text-center '><span className=' text-main-color font-bold'>Author : </span>Dr. Mathew Waltford</h3>
                 <p className=' max-sm:mt-0 max-sm:p-3 max-sm:text-center text-gray-600 line-clamp-6 max-sm:line-clamp-none text-[16px] '>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius Fugiat quis Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione aperiam veritatis a pariatur nesciunt ipsum reprehenderit porro accusamus exercitationem velit aliquam laudantium nisi officiis voluptatum vitae praesentium, expedita delectus. Blanditiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet placeat corporis dolor eligendi expedita neque in doloremque accusantium nemo obcaecati debitis maiores dolorem sunt, aspernatur reiciendis, quibusdam ratione numquam non. assumenda eligendi earum, velit eum laboriosam asperiores omnis iure natus qui nostrum illo rerum! Quaerat incidunt aspernatur officiis? Ratione, vitae.
+                  Lorem ipsum dolor sit amet  ratione numquam non. assumenda eligendi earum, velit eum laboriosam asperiores omnis iure natus qui nostrum illo rerum! Quaerat incidunt aspernatur officiis? Ratione, vitae.
                 </p>
                 <div className='flex flex-wrap gap-2 pt-3 '>
                   <a href="#" className='h-9 w-[90%] max-w-[160px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-main-color text-white py-2 px-4 rounded-md transition'>open</a>
-                  <a href="#" className='h-9 w-[90%] max-w-[160px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded-md transition'>Download PDF</a>
+                  <a href="#" className='h-9 w-[90%] max-w-[160px] max-sm:max-w-none max-sm:m-auto flex justify-center items-center capitalize font-medium text-sm cursor-pointer bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded-md transition '>Get PDF</a>
                 </div>
 
               </div>

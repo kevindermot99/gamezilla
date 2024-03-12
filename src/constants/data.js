@@ -91,4 +91,8 @@ export const Books = [
     {id: 'book35', URL: book35, title: 'Whispers in the Wind: Elemental Chronicles'},
 ];
 
-
+export const Formats = [
+    {format: 'PDF', explanation: '(Portable Document Format): Widely used for preserving document formatting across devices. Ideal for consistent viewing and printing.'},
+    {format: 'DOC', explanation: '(Microsoft Word Document): Associated with Microsoft Word, offering editable formats suitable for customization.'},
+    {format: 'PDB', explanation: ' (PalmDOC eBook): Originally used for Palm OS devices, optimized for smaller screens and efficient eBook reading.'},
+];

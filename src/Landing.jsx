@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import pagesLogo from "./assets/images/pagez-logo.png"
 import screenShoot from "./assets/images/screenshoot.png"
 import searchbarvid from "./assets/images/search.mp4"
+import downloadOrOpen from "./assets/images/download or Open.mp4"
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from './components/Feature'
 
@@ -67,10 +68,10 @@ function Landing() {
           position="2"
           tip="Free Downloads"
           title="Download for Free"
-          description="Indulge in a wealth of captivating novels without spending a penny. Enjoy the freedom of unlimited free downloads and explore a world of literary wonders at no cost."
+          description="Indulge in a wealth of captivating novels without spending a penny. Enjoy the freedom of unlimited free downloads and explore a world of literary wonders at no cost. common novel formats are:"
           direction="right"
-          types="1"
-          URL={searchbarvid}
+          showFormats="1"
+          URL={downloadOrOpen}
         />
         <Feature
           position="3"
