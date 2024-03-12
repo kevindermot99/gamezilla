@@ -87,11 +87,24 @@ function Landing() {
 
       <section className='w-full bg-white flex flex-col items-center justify-start p-7'>
         <h1 className='text-black text-center opacity-90 font-bold text-[35px] leading-[45px]'>
-          <span className=' line-through'>Free By Adds</span>
+          <span className=' line-through'>
+            Free By Adds
+            </span>
           <br />
-          it's just Free.
+          No, It's 100% Free.
         </h1>
-        
+        <div className='w-full max-w-[1200px] h-[400px] flex gap-3 mt-20'>
+          <div className='w-[60%] h-[100%] bg-blue-700 rounded-2xl'>
+
+          </div>
+          <div className='w-[40%] h-full flex flex-col gap-3'>
+            <div className='h-[50%] w-full bg-yellow-500 rounded-2xl pattern-dots pattern-blue-500 pattern-bg-white 
+  pattern-size-6 pattern-opacity-20 '>
+              
+            </div>
+            <div className='h-[50%] w-full bg-green-600 rounded-2xl'></div>
+          </div>
+        </div>
       </section>
 
     </div>
