@@ -6,7 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 function Landing() {
 
-  const HeroGradientText = 'text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-500'
+  const HeroGradientText = 'text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800'
 
   return (
     <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
