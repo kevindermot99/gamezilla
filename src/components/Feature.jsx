@@ -41,7 +41,7 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
             </div>
             <div className={`w-[45%] h-[350px] ${position == '1' && 'bg-orange-200 '} ${position == '2' && 'bg-violet-400 '} ${position == '3' && 'bg-yellow-300 '} overflow-clip rounded-2xl pointer-events-none shadow-xl sticky top-[100px]`}>
                 
-                <video src={URL} autoPlay muted loop className={`absolute h-[90%] w-[90%] object-cover -bottom-[10px] ${direction == 'left' && 'right-0 rounded-tl-2xl'} ${direction != 'left' && 'left-0 rounded-tr-2xl'}`} />
+                <video src={URL} autoPlay muted loop className={`absolute shadow-xl h-[90%] w-[90%] object-cover -bottom-[10px] ${direction == 'left' && 'right-0 rounded-tl-2xl'} ${direction != 'left' && 'left-0 rounded-tr-2xl'}`} />
             </div>
         </div>
     )

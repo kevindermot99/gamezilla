@@ -85,6 +85,15 @@ function Landing() {
 
       </section>
 
+      <section className='w-full bg-white flex flex-col items-center justify-start p-7'>
+        <h1 className='text-black text-center opacity-90 font-bold text-[35px] leading-[45px]'>
+          <span className=' line-through'>Free By Adds</span>
+          <br />
+          it's just Free.
+        </h1>
+        
+      </section>
+
     </div>
   )
 }
