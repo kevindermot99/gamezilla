@@ -11,7 +11,7 @@ function Landing() {
   return (
     <div className=' overflow-clip pb-[100px]'>
 
-      <nav className="flex justify-between items-center py-5 px-5 max-w-[1500px] m-auto">
+      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className='flex justify-center items-center'>
           <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-6 '>
             <img src={pagesLogo} alt="Logo" className='h-9' />
@@ -42,13 +42,13 @@ function Landing() {
 
         <Link to="/app" className='flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 '>Get Stated Today</Link>
 
-        <div className='gradient-moving-bg shadow-xl flex justify-start items-start max-h-[400px]' >
+        <div className='gradient-moving-bg shadow-3xl   flex justify-start items-start max-h-[400px]' >
           <img src={screenShoot} loading='lazy' className=' w-full max-w-[1000px] rounded-t-xl ' alt="screenshot" />
         </div>
 
       </section>
 
-      <section className='w-full h-[100vh] bg-gray-100 z-10'>
+      <section className='w-full h-[100vh] bg-white border-t-[1px] border-gray-300 z-10'>
 
       </section>
      
