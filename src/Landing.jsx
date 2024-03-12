@@ -54,7 +54,7 @@ function Landing() {
         <h1 className='m-10 text-base font-medium leading-8 text-black text-wrap '>
           1,241 People has started using Pagez since the Launch
         </h1>
-      <Feature tip="" title="" description="" image="" />
+      <Feature tip="" title="" description="" image={searchbar} />
       </section>
      
     </div>
