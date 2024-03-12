@@ -11,7 +11,7 @@ function Landing() {
   return (
     <div className='px-14 max-lg:px-5 overflow-clip pb-[100px]'>
 
-      <nav className="flex justify-between items-center py-7">
+      <nav className="flex justify-between items-center py-3">
         <div className='flex justify-center items-center gap-5'>
           <Link to="/" className='flex justify-start items-center gap-2 text-base font-medium mr-4'>
             <img src={pagesLogo} alt="Logo" className='h-10' />
@@ -34,7 +34,7 @@ function Landing() {
         <div className="absolute -bottom-10 right-7 -z-[10] size-[700px] blur-3xl opacity-15 rounded-[50%] bg-main-color max-sm:hidden"></div>
 
         <h1 className='capitalize font-extrabold  text-[90px] text-wrap max-w-[900px] leading-[90px] mt-[50px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0'>
-          <span className={`HeroText`}>dive into The </span><span className='text-main-color '>ocean</span> <span className={`HeroText`}>of Free novels</span>
+          <span className={`HeroText`}>Where </span><span className='text-main-color '>Novels</span> <br /><span className={`HeroText`}>meets Readers</span>
         </h1>
         <p className='text-2xl  font-normal leading-6 max-w-[800px] text-black text-wrap m-[40px] max-sm:m-0'>
           Read or Download Novels online at $0.00 cost,  necessitatibus sed dolorum perferendis in Voluptas, deleniti?
