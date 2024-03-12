@@ -50,11 +50,15 @@ function Landing() {
 
       </section>
 
-      <section className='w-full h-[100vh] bg-white border-t-[1px] border-gray-300 z-10 flex flex-col items-center justify-start p-7'>
-        <h1 className='m-10 text-base font-medium leading-8 text-black text-wrap '>
+      <section className='w-full bg-white border-t-[1px] border-gray-300 z-10 flex flex-col items-center justify-start p-7'>
+        <h1 className='mt-10 text-base font-medium leading-8 text-black text-wrap'>
           1,241 People has started using Pagez since the Launch
         </h1>
-      <Feature tip="" title="" description="" URL={searchbarvid} />
+        
+        <Feature position="1" tip="" title="" description="" direction="left" URL={searchbarvid} />
+        <Feature position="2" tip="" title="" description="" direction="right" URL={searchbarvid} />
+        <Feature position="3" tip="" title="" description="" direction="left" URL={searchbarvid} />
+      
       </section>
      
     </div>
