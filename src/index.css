@@ -102,6 +102,12 @@ body {
   margin: auto;
 }
 
+.HeroText{
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to top, #5a5a5a -30%, #000 150%);
+}
+
 
 .search-component {
   /* min-height: 100px; */
