@@ -2,7 +2,7 @@ import { React, useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import pagesLogo from "./assets/images/pagez-logo.png"
 import screenShoot from "./assets/images/screenshoot.png"
-import searchbar from  "./assets/images/searchbar.png"
+import searchbarvid from "./assets/images/search.mp4"
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from './components/Feature'
 
@@ -54,7 +54,7 @@ function Landing() {
         <h1 className='m-10 text-base font-medium leading-8 text-black text-wrap '>
           1,241 People has started using Pagez since the Launch
         </h1>
-      <Feature tip="" title="" description="" image={searchbar} />
+      <Feature tip="" title="" description="" URL={searchbarvid} />
       </section>
      
     </div>
