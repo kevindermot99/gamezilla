@@ -43,7 +43,7 @@ function Browse() {
 
   return (
     <section className=" flex gap-5 px-7 max-sm:px-5 ">
-      <div className="hidden flex flex-col w-[30%] max-w-[200px] min-w-[200px] h-[95vh] sticky top-5 overflow-y-auto overscroll-contain">
+      <div className="hidden flex-col w-[30%] max-w-[200px] min-w-[200px] h-[95vh] sticky top-5 overflow-y-auto overscroll-contain">
         {Filters.map((filter) => (
           <div className="text-sm font-medium capitalize px-4 py-[10px] cursor-pointer rounded-md transition hover:bg-gray-200 hover:text-main-color">
             {filter.label}
