@@ -109,7 +109,7 @@ function Landing() {
         <div className="flex items-center justify-evenly  w-full max-w-[900px]">
           <div>
           <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
-            Fits seamlessly on <span className="text-main-color ">small screens</span>
+            Fits seamlessly on <span className="text-main-color ">All Screens</span>
           </h1> 
           <p className="font-medium text-base max-w-[420px] leading-relaxed">
             Our web app changes its look to fit small screens. It makes everything easy to see and use, no matter if you're using a phone or a tablet. So, it's simple and comfortable for everyone to use, whether you're on a big computer or a tiny phone.
