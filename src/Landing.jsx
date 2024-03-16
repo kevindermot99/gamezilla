@@ -100,7 +100,7 @@ function Landing() {
         />
       </section>
 
-      <section className="w-full bg-white flex flex-col items-center justify-start p-7">
+      <section className="w-full bg-white flex flex-col items-center justify-start px-7">
         <h1 className="text-black text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
           <span className=" line-through">Free By Adds</span>
           <br />
@@ -120,9 +120,11 @@ function Landing() {
             <img src={phoneMockup} className="w-[242px] h-[430px]" loading="lazy" />
           </div>
         </div>
+
+        <p className="my-16 text-xs text-gray-400">Disclaimer: i don't own any of this book, this is a School Project</p>
       </section>
 
-      <footer className="mt-[80px] py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
+      <footer className=" py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
         <h1 className="text-gray-400 text-sm font-medium text-wrap">&copy; All right to book owners. </h1>
         <h1 className="text-gray-400 text-sm font-medium text-wrap"> 2023 - {time.getFullYear()} </h1>
       </footer>
