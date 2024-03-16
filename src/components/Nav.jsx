@@ -15,7 +15,7 @@ function Nav() {
 
     return (
 
-        <header className="font-montserrat w-ful">
+        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 px-7 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
             <nav className="flex justify-between items-center max-container py-5 bg-white sticky top-0 z-index-10">
                 <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">

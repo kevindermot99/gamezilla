@@ -19,7 +19,7 @@ const Pagez = () => {
 
   return (
     // !loading && (
-      <main className='relative bg-white px-7'>
+      <main className='relative bg-white'>
         <Nav />
         <section className='xl:padding-1 wide:padding-r'>
           <Browse />
