@@ -10,11 +10,14 @@ import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
 
 function Landing() {
+
+  const time = new Date();
+
   const HeroGradientText =
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
-    <div className=" overflow-clip pb-[100px]">
+    <div className=" overflow-clip">
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
           <Link
@@ -118,6 +121,10 @@ function Landing() {
           </div>
         </div>
       </section>
+
+      <footer className="mt-[80px] py-5 px-3">
+        <h1 className="text-gray-400 text-xs font-medium text-wrap">&copy; All right to book owners. 2023 - {time.getFullYear()} </h1>
+      </footer>
     </div>
   );
 }
