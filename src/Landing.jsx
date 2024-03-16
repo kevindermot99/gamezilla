@@ -30,7 +30,6 @@ function Landing() {
             Overview
           </Link>
           <Link className="linkText max-lg:hidden">Features</Link>
-          <Link className="linkText max-lg:hidden">Creator</Link>
           <Link className="linkText max-lg:hidden">
             Source code <GoArrowUpRight />
           </Link>

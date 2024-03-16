@@ -294,7 +294,7 @@ input[type="search"]::-webkit-search-results-decoration {
 ::-webkit-scrollbar-thumb {
   border: 4px solid #fff;
   background-clip: padding-box;
-  background: #e2e2e291;
+  background: #c0c0c091;
   border-radius: 50px;
 }
 
