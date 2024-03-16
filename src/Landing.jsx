@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import pagesLogo from "./assets/images/pagez-logo.png";
 import screenShoot from "./assets/images/screenshoot.png";
 import searchbarvid from "./assets/images/search.mp4";
+import phoneMockup from "./assets/images/phone-mockup.png"
 import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
+
 
 function Landing() {
   const HeroGradientText =
