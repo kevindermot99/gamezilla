@@ -15,7 +15,7 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
                 <h1 className='text-black opacity-90 font-bold text-[35px] leading-[45px]'>
                     {title}
                 </h1>
-                <p className='text-gray-600 font-medium text-xl leading-relaxed text-wrap '>
+                <p className='text-gray-600 font-medium text-base leading-relaxed text-wrap '>
                     {description    }    
                 </p>
                 {
@@ -39,7 +39,7 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
                     #{position}
                 </p>
             </div>
-            <div className={`w-[45%] h-[350px] ${position == '1' && 'bg-orange-200 '} ${position == '2' && 'bg-violet-400 '} ${position == '3' && 'bg-yellow-300 '} overflow-clip rounded-2xl pointer-events-none shadow-xl sticky top-[100px]`}>
+            <div className={`w-[40%] h-[300px] ${position == '1' && 'bg-orange-200 '} ${position == '2' && 'bg-violet-400 '} ${position == '3' && 'bg-yellow-300 '} overflow-clip rounded-2xl pointer-events-none shadow-xl sticky top-[100px]`}>
                 
                 <video src={URL} autoPlay muted loop className={`absolute shadow-xl h-[90%] w-[90%] object-cover -bottom-[10px] ${direction == 'left' && 'right-0 rounded-tl-2xl'} ${direction != 'left' && 'left-0 rounded-tr-2xl'}`} />
             </div>
