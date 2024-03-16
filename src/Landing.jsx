@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import pagesLogo from "./assets/images/pagez-logo.png";
 import screenShoot from "./assets/images/screenshoot.png";
 import searchbarvid from "./assets/images/search.mp4";
-import phoneMockup from "./assets/images/phone-mockup.png"
+import phoneMockup from "./assets/images/phone-mockup.png";
+import mackMockup from "./assets/images/mac-mockup.png";
 import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
-
 
 function Landing() {
   const HeroGradientText =
@@ -96,15 +96,28 @@ function Landing() {
           showFormats="1"
           URL={downloadOrOpen}
         />
-        
       </section>
 
       <section className="w-full bg-white flex flex-col items-center justify-start p-7">
-        <h1 className="text-black text-center opacity-90 font-bold text-[35px] leading-[45px]">
+        <h1 className="text-black text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
           <span className=" line-through">Free By Adds</span>
           <br />
           No, It's <span className="text-main-color "> 100% Free.</span>
         </h1>
+        <div className="flex items-center justify-evenly  w-full max-w-[900px]">
+          <div>
+          <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
+            Fits seamlessly on <span className="text-main-color ">small screens</span>
+          </h1> 
+          <p className="font-medium text-base max-w-[420px] leading-relaxed">
+            Our web app changes its look to fit small screens. It makes everything easy to see and use, no matter if you're using a phone or a tablet. So, it's simple and comfortable for everyone to use, whether you're on a big computer or a tiny phone.
+          </p> 
+          </div>
+          
+          <div className=" overflow-clip  ">
+            <img src={phoneMockup} className="w-[242px] h-[430px]" loading="lazy" />
+          </div>
+        </div>
       </section>
     </div>
   );
