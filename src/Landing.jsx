@@ -122,8 +122,9 @@ function Landing() {
         </div>
       </section>
 
-      <footer className="mt-[80px] py-5 px-3">
-        <h1 className="text-gray-400 text-xs font-medium text-wrap">&copy; All right to book owners. 2023 - {time.getFullYear()} </h1>
+      <footer className="mt-[80px] py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
+        <h1 className="text-gray-400 text-sm font-medium text-wrap">&copy; All right to book owners. </h1>
+        <h1 className="text-gray-400 text-sm font-medium text-wrap"> 2023 - {time.getFullYear()} </h1>
       </footer>
     </div>
   );
