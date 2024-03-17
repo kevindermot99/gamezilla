@@ -121,7 +121,7 @@ function Landing() {
           </div>
         </div>
 
-        <p className="my-16 text-xs text-gray-400">Disclaimer: i don't own any of this book, this is a School Project</p>
+        <p className="my-16 text-xs text-gray-400">Disclaimer: i don't own any of these books, this is a School Project</p>
       </section>
 
       <footer className=" py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
