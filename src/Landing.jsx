@@ -8,6 +8,7 @@ import mackMockup from "./assets/images/mac-mockup.png";
 import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
+import { IoCloseOutline } from "react-icons/io5";
 
 function Landing() {
 
@@ -20,7 +21,23 @@ function Landing() {
     <div className=" overflow-clip relative">
 
       <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full z-40 overscroll-contain">
-        <div className="w-[90%] h-[90%] max-w-[370px] max-h-[400px] bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg "></div>
+        <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
+          <button className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
+            <IoCloseOutline className="text-2xl" />
+          </button>
+          <h1 className=" font-black tracking-tighter text-[35px] mb-2 select-none">
+            Sign in
+          </h1>
+          <p className="font-medium text-base  text-gray-500 mb-6 select-none">
+            Sign in with your email here.
+          </p>
+          <form className="flex flex-col justify-start items-start w-full">
+            <input type="text" className=" textbase text-black py-3 px-3 ring-1 ring-gray-300 hover:ring-gray-400 transition  " />
+            <input type="password" className=" textbase text-black py-3 px-3 ring-1 ring-gray-300 hover:ring-gray-400 transition  " />
+            <button type="submit">Sign in</button>
+          </form>
+
+        </div>
       </div>
 
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
