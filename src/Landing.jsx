@@ -16,10 +16,12 @@ function Landing() {
 
   const showSignIn = () => {
     setSignInForm(true)
+    document.body.style.overflow = 'hidden';
   }
 
   const hideSignIn = () => {
     setSignInForm(false)
+    document.body.style.overflow = '';
   }
 
   const HeroGradientText =
