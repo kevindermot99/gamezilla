@@ -3,7 +3,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 
-function Form() {
+function SignIn() {
   return (
     <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full z-40 overscroll-contain">
       <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
@@ -18,16 +18,21 @@ function Form() {
         </p>
         <form className="flex flex-col justify-start items-start w-full">
           <input
-            type="text"
+            type="email"
+            required
+            name="email"
+            // autoComplete="on" 
             className="tracking-tight textbase text-black py-[10px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Email"
           />
           <input
             type="password"
+            required
+            name="password"
             className=" tracking-tighte4 textbase text-black py-[10px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Password"
           />
-          <button type="submit" className="h-[50px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 ">
+          <button type="submit" className="h-[47px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 ">
             Sign in
             </button>
         </form>
@@ -39,4 +44,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default SignIn;

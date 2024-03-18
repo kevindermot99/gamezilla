@@ -8,7 +8,7 @@ import mackMockup from "./assets/images/mac-mockup.png";
 import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
-import Form from "./components/Form";
+import SignIn from "./components/SignIn";
 
 function Landing() {
   const time = new Date();
@@ -18,7 +18,7 @@ function Landing() {
 
   return (
     <div className=" overflow-clip relative">
-      <Form />
+      <SignIn />
 
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
