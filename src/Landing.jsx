@@ -9,9 +9,9 @@ import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
 import { IoCloseOutline } from "react-icons/io5";
+import Form from "./components/Form";
 
 function Landing() {
-
   const time = new Date();
 
   const HeroGradientText =
@@ -19,7 +19,6 @@ function Landing() {
 
   return (
     <div className=" overflow-clip relative">
-
       <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full z-40 overscroll-contain">
         <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
           <button className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
@@ -31,11 +30,8 @@ function Landing() {
           <p className="font-medium text-base  text-gray-500 mb-6 select-none">
             Sign in with your email here.
           </p>
-          <form className="flex flex-col justify-start items-start w-full">
-            <input type="text" className=" textbase text-black py-3 px-3 ring-1 ring-gray-300 hover:ring-gray-400 transition  " />
-            <input type="password" className=" textbase text-black py-3 px-3 ring-1 ring-gray-300 hover:ring-gray-400 transition  " />
-            <button type="submit">Sign in</button>
-          </form>
+
+          <Form />
 
         </div>
       </div>
@@ -130,25 +126,40 @@ function Landing() {
         </h1>
         <div className="flex items-center justify-evenly  w-full max-w-[900px]">
           <div>
-          <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
-            Fits seamlessly on <span className="text-main-color ">All Screens</span>
-          </h1> 
-          <p className="font-medium text-base max-w-[420px] leading-relaxed">
-            Our web app changes its look to fit small screens. It makes everything easy to see and use, no matter if you're using a phone or a tablet. So, it's simple and comfortable for everyone to use, whether you're on a big computer or a tiny phone.
-          </p> 
+            <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
+              Fits seamlessly on{" "}
+              <span className="text-main-color ">All Screens</span>
+            </h1>
+            <p className="font-medium text-base max-w-[420px] leading-relaxed">
+              Our web app changes its look to fit small screens. It makes
+              everything easy to see and use, no matter if you're using a phone
+              or a tablet. So, it's simple and comfortable for everyone to use,
+              whether you're on a big computer or a tiny phone.
+            </p>
           </div>
-          
+
           <div className=" overflow-clip  ">
-            <img src={phoneMockup} className="w-[242px] h-[430px]" loading="lazy" />
+            <img
+              src={phoneMockup}
+              className="w-[242px] h-[430px]"
+              loading="lazy"
+            />
           </div>
         </div>
 
-        <p className="my-16 text-xs text-gray-400">Disclaimer: i don't own any of these books, this is a School Project</p>
+        <p className="my-16 text-xs text-gray-400">
+          Disclaimer: i don't own any of these books, this is a School Project
+        </p>
       </section>
 
       <footer className=" py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
-        <h1 className="text-gray-400 text-sm font-medium text-wrap">&copy; All right to book owners. </h1>
-        <h1 className="text-gray-400 text-sm font-medium text-wrap"> 2023 - {time.getFullYear()} </h1>
+        <h1 className="text-gray-400 text-sm font-medium text-wrap">
+          &copy; All right to book owners.{" "}
+        </h1>
+        <h1 className="text-gray-400 text-sm font-medium text-wrap">
+          {" "}
+          2023 - {time.getFullYear()}{" "}
+        </h1>
       </footer>
     </div>
   );
