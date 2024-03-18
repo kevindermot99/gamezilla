@@ -19,8 +19,8 @@ function Landing() {
   return (
     <div className=" overflow-clip relative">
 
-      <div className="fixed top-0 left-0 w-full h-full backdrop-blur-sm z-40 overscroll-contain">
-        <div className="w-[90%] h-[90%] max-w-[600px] max-h-[500px] bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg "></div>
+      <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full z-40 overscroll-contain">
+        <div className="w-[90%] h-[90%] max-w-[600px] max-h-[450px] bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg "></div>
       </div>
 
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
