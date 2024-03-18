@@ -17,7 +17,12 @@ function Landing() {
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
-    <div className=" overflow-clip">
+    <div className=" overflow-clip relative">
+
+      <div className="fixed top-0 left-0 w-full h-full backdrop-blur-sm z-40 overscroll-contain">
+        
+      </div>
+
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
           <Link
