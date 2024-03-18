@@ -13,6 +13,14 @@
   --main-color: #8C52FF;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
 @layer components {
   .max-container {
     max-width: 1500px;

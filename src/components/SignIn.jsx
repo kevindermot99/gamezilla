@@ -22,17 +22,17 @@ function SignIn() {
             required
             name="email"
             // autoComplete="on" 
-            className="tracking-tight textbase text-black py-[10px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className="tracking-tight text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 textbase text-black py-[10px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Password"
           />
-          <button type="submit" className="h-[47px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 ">
+          <button type="submit" className="h-[45px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 ">
             Sign in
             </button>
         </form>

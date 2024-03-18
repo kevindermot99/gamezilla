@@ -12,13 +12,22 @@ import SignIn from "./components/SignIn";
 
 function Landing() {
   const time = new Date();
+  const [signInForm, setSignInForm] = useState(false)
+
+  const showSignIn = () => {
+    setSignInForm(true)
+  }
 
   const HeroGradientText =
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
     <div className=" overflow-clip relative">
-      <SignIn />
+
+      <div className={`w-full h-full relative transition duration-300 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
+        <SignIn />
+      </div>
+      
 
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
@@ -39,9 +48,9 @@ function Landing() {
             Source code <GoArrowUpRight />
           </Link>
           <div>|</div>
-          <Link to="" className="linkText">
+          <button onClick={showSignIn} className="linkText">
             Sign in
-          </Link>
+          </button>
           <Link
             to=""
             className="px-4 py-2 bg-main-color font-medium text-sm text-white rounded-lg transition hover:opacity-90 max-sm:hidden"
