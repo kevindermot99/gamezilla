@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import ButtonLoader from "./ButtonLoader";
 
 function SignIn({ hideSignIn, showSignUp }) {
+  const [submitting, setSubmitting] = useState(false);
+
   const handleEscapeKey = (event) => {
     if (event.key === "Escape") {
       hideSignIn();
@@ -16,11 +19,16 @@ function SignIn({ hideSignIn, showSignUp }) {
       window.removeEventListener("keydown", handleEscapeKey);
     };
   }, []);
-  
+
   const switchForms = () => {
-    showSignUp()
-    hideSignIn()
-  }
+    showSignUp();
+    hideSignIn();
+  };
+
+  // submit
+  const signIn = () => {
+    setSubmitting(true);
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full bg-black bg-opacity-45 h-full overscroll-contain">
@@ -37,7 +45,10 @@ function SignIn({ hideSignIn, showSignUp }) {
         <p className="font-medium text-base text-gray-500 mb-6 select-none">
           Sign in with your email here.
         </p>
-        <form className="flex flex-col justify-start items-start w-full">
+        <form
+          onSubmit={signIn}
+          className="flex flex-col justify-start items-start w-full"
+        >
           <input
             type="email"
             required
@@ -55,15 +66,21 @@ function SignIn({ hideSignIn, showSignUp }) {
           />
           <button
             type="submit"
-            className="h-[45px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 "
+            className="h-[45px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 flex justify-center items-center "
           >
-            Sign in
+            {!submitting && "Sign In"}
+            {submitting && <ButtonLoader />}
           </button>
         </form>
         <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center ">
           <h1 className=" text-sm text-black p-2">
             Dont have an account?{" "}
-            <span onClick={switchForms} className=" cursor-pointer text-main-color font-medium">Sign up</span>
+            <span
+              onClick={switchForms}
+              className=" cursor-pointer text-main-color font-medium"
+            >
+              Sign up
+            </span>
           </h1>
         </div>
       </div>

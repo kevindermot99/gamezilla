@@ -10,6 +10,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import ButtonLoader from "./components/ButtonLoader";
 
 function Landing() {
   const time = new Date();
@@ -52,7 +53,6 @@ function Landing() {
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
       
-
       <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
           <Link
