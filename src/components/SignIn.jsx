@@ -3,11 +3,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 
-function SignIn() {
+function SignIn({hideSignIn}) {
+
   return (
-    <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full z-40 overscroll-contain">
+    <div className="fixed top-0 left-0 w-full bg-black bg-opacity-35 h-full overscroll-contain">
       <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
-        <button className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
+        <button onClick={hideSignIn} className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100">
           <IoCloseOutline className="text-2xl" />
         </button>
         <h1 className=" font-black tracking-tighter text-[35px] mb-2 select-none">

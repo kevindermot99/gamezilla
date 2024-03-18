@@ -287,6 +287,41 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 10px 0;
 }
 
+.fadeIt{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s ease-out;
+}
+
+.hideIt{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* CUSTOM SCROLL */
 

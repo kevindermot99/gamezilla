@@ -18,14 +18,19 @@ function Landing() {
     setSignInForm(true)
   }
 
+  const hideSignIn = () => {
+    setSignInForm(false)
+  }
+
   const HeroGradientText =
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
     <div className=" overflow-clip relative">
 
-      <div className={`w-full h-full relative transition duration-300 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
-        <SignIn />
+      <div 
+      className={`w-full h-full relative duration-300 z-40 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
+        <SignIn hideSignIn={hideSignIn} />
       </div>
       
 
