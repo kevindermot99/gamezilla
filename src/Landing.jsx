@@ -9,18 +9,30 @@ import downloadOrOpen from "./assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
 import Feature from "./components/Feature";
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 
 function Landing() {
   const time = new Date();
   const [signInForm, setSignInForm] = useState(false)
+  const [signUpForm, setSignUpForm] = useState(false)
 
+  //sign in 
   const showSignIn = () => {
     setSignInForm(true)
     document.body.style.overflow = 'hidden';
   }
-
   const hideSignIn = () => {
     setSignInForm(false)
+    document.body.style.overflow = '';
+  }
+
+  // sign up
+  const showSignUp = () => {
+    setSignUpForm(true)
+    document.body.style.overflow = 'hidden';
+  }
+  const hideSignUp = () => {
+    setSignUpForm(false)
     document.body.style.overflow = '';
   }
 
@@ -32,7 +44,12 @@ function Landing() {
 
       <div 
       className={`w-full h-full relative duration-300 z-40 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
-        <SignIn hideSignIn={hideSignIn} />
+        <SignIn hideSignIn={hideSignIn} showSignUp={showSignUp} />
+      </div>
+
+      <div 
+      className={`w-full h-full relative duration-300 z-40 ${signUpForm ? 'fadeIt' : 'hideIt'}`}>
+        <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
       
 
@@ -58,12 +75,12 @@ function Landing() {
           <button onClick={showSignIn} className="linkText">
             Sign in
           </button>
-          <Link
-            to=""
+          <button
+            onClick={showSignUp}
             className="px-4 py-2 bg-main-color font-medium text-sm text-white rounded-lg transition hover:opacity-90 max-sm:hidden"
           >
-            Get Started Today
-          </Link>
+            Sign up
+          </button>
         </div>
       </nav>
 
@@ -81,7 +98,7 @@ function Landing() {
           to="/app"
           className="flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 "
         >
-          Open Pagez App
+          Open Pagez
         </Link>
 
         <div className="gradient-moving-bg shadow-3xl   flex justify-start items-start max-h-[400px]">
