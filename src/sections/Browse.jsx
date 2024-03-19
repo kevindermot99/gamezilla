@@ -51,7 +51,6 @@ function Browse() {
         ))}
       </div>
       <div className="flex flex-col gap-5 w-full">
-        <Search />
 
         <div className=" flex justify-start items-start max-sm:gap-0 relative">
           <div className="h-fit w-full ">
