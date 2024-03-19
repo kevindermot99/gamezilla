@@ -17,17 +17,19 @@ function Nav() {
 
         <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 relative px-7 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
-            <nav className="flex justify-between items-center max-container py-5 bg-white sticky top-0 z-index-10">
+            <nav className="flex justify-between items-center max-container py-3 bg-white sticky top-0 z-index-10">
                 <a href="/" className="flex justify-start items-center gap-2 text-base font-medium w-[200px]">
                     <img src={pagesLogo} alt="logo" className=" h-9" />
                     <h1 className="logoText">Pagez</h1>
 
                 </a>
 
-                <div className='relative w-full max-w-[600px]'>
-                    <input className="search transition bg-gray-200 bg-opacity-80 max-sm:bg-gray-100 backdrop-blur-md text-sm " type="search" placeholder="Find a Book.." />
-                    <RiSearch2Line className="absolute top-0 bottom-0 m-auto left-4 size-5 text-[#333] " />
-                </div>
+                <form className='relative w-full max-w-[600px]'>
+                    <input className="search transition bg-gray-50 text-sm ring-1 ring-gray-200 " type="search" placeholder="Find a Book.." />
+                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-gray-200 h-[85%] w-[40px] rounded-lg flex justify-center items-center">
+                        <RiSearch2Line className="text-black text-lg" />
+                    </button>
+                </form>
 
                 <div className="flex w-fit justify-end items-center min-w-[170px]  ">
 
