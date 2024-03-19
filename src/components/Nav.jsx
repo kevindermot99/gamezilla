@@ -1,11 +1,11 @@
 import pagesLogo from "../assets/images/pagez-logo.png"
 import defaultPfp from "../assets/images/default-pfp.jpg"
-import { BiBookAlt } from "react-icons/bi";
 import { RiUser6Line } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import Headroom from "react-headroom";
 import Notification from "./Notification";
 import { TbSunMoon } from "react-icons/tb";
+import { LuLibrary } from "react-icons/lu";
 
 import { BsArrowsFullscreen } from "react-icons/bs";
 
@@ -33,7 +33,7 @@ function Nav() {
                     </a>
 
                     <a href="#" className="group navbar-link p-2 ml-2">
-                        <BiBookAlt className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
+                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
                         {/* <Notification label={9} /> */}
                     </a>
                     <a href="#" className="group navbar-link rounded-full ml-5">
