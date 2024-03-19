@@ -8,6 +8,7 @@ import { TbSunMoon } from "react-icons/tb";
 import { LuLibrary } from "react-icons/lu";
 import { RiSearch2Line } from "react-icons/ri";
 import { BsArrowsFullscreen } from "react-icons/bs";
+import { TbMenu2 } from "react-icons/tb";
 
 function Nav() {
 
@@ -15,14 +16,19 @@ function Nav() {
 
     return (
 
-        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 relative px-7 max-sm:px-5">
+        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 relative pl-5 pr-5 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
-            <nav className="flex justify-between items-center max-container py-3 bg-white sticky top-0 z-index-10">
-                <a href="/" className="flex justify-start items-center gap-2 text-base font-medium w-[200px]">
-                    <img src={pagesLogo} alt="logo" className=" h-9" />
-                    <h1 className="logoText">Pagez</h1>
+            <nav className="flex justify-between items-center py-3 bg-white sticky top-0 z-index-10">
+                <div className="flex justify-start items-center gap-2 min-w-[200px]">
+                    <button className="h-[40px] w-[40px] transition hover:bg-gray-200 flex items-center justify-center rounded-full">
+                        <TbMenu2 className="text-2xl" />
+                    </button>
+                    <a href="/" className="flex justify-start items-center gap-1 text-base font-medium ">
+                        <img src={pagesLogo} alt="logo" className=" h-7" />
+                        <h1 className="logoText">Pagez</h1>
+                    </a>
+                </div>
 
-                </a>
 
                 <form className='relative w-full max-w-[600px]'>
                     <input className="search transition bg-gray-50 text-sm ring-1 ring-gray-200 " type="search" placeholder="Find a Book.." />
@@ -43,7 +49,7 @@ function Nav() {
                     </a>
                     <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-8 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap bg-gray-100 py-2 px-3 right-0 -bottom-[130%] rounded-md shadow-xl  tranition hidden group-hover:block">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap bg-white py-2 px-3 right-0 -bottom-[140%] rounded-m ring-1 ring-gray-200 rounded-lg tranition hidden group-hover:block">Clare thomson</p>
                     </a>
 
                 </div>

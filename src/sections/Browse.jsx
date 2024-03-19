@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Search from "../components/Search";
 import Button from "../components/Button";
 import { Filters } from "../constants/data";
 import { IoFilter } from "react-icons/io5";
@@ -42,15 +41,10 @@ function Browse() {
   }, []);
 
   return (
-    <section className=" flex gap-5 px-7 max-sm:px-5 ">
-      <div className="hidden flex-col w-[30%] max-w-[200px] min-w-[200px] h-[95vh] sticky top-5 overflow-y-auto overscroll-contain">
-        {Filters.map((filter) => (
-          <div className="text-sm font-medium capitalize px-4 py-[10px] cursor-pointer rounded-md transition hover:bg-gray-200 hover:text-main-color">
-            {filter.label}
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col gap-5 w-full">
+    <section className=" flex gap-5 px-5 ">
+      
+      
+      {/* <div className="flex flex-col gap-5 w-full">
 
         <div className=" flex justify-start items-start max-sm:gap-0 relative">
           <div className="h-fit w-full ">
@@ -88,10 +82,10 @@ function Browse() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* modal */}
-      <BookModal selectedBook={selectedBook} closeModal={closeModal} />
+      {/* <BookModal selectedBook={selectedBook} closeModal={closeModal} /> */}
     </section>
   );
 }
