@@ -15,7 +15,7 @@ function Nav() {
 
     return (
 
-        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 px-7 max-sm:px-5">
+        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white z-20 relative px-7 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
             <nav className="flex justify-between items-center max-container py-5 bg-white sticky top-0 z-index-10">
                 <a href="/" className="flex justify-start items-center gap-2 text-base font-medium">
@@ -36,10 +36,9 @@ function Nav() {
                         <LuLibrary className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
                         {/* <Notification label={9} /> */}
                     </a>
-                    <a href="#" className="group navbar-link rounded-full ml-1 flex items-center justify-center py-[4px] px-[6px]">
-                        
-                        <p className=" text-sm font-semibold pl-2">Clare thomson</p>
+                    <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-8 rounded-full " />
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap bg-gray-100 py-2 px-3 right-0 -bottom-[130%] rounded-md shadow-xl  tranition hidden group-hover:block">Clare thomson</p>
                     </a>
 
                 </div>
