@@ -36,7 +36,9 @@ function Nav() {
                         <LuLibrary className="text-2xl cursor-pointer relative transition text-black group-hover:text-main-color" />
                         {/* <Notification label={9} /> */}
                     </a>
-                    <a href="#" className="group navbar-link rounded-full ml-5">
+                    <a href="#" className="group navbar-link rounded-full ml-1 flex items-center justify-center py-[4px] px-[6px]">
+                        
+                        <p className=" text-sm font-semibold pl-2">Clare thomson</p>
                         <img src={defaultPfp} className=" h-8 rounded-full " />
                     </a>
 
