@@ -22,12 +22,25 @@ function SideBar() {
     const toggleSidebar = () => {
         if (sidebar === "big") {
             setSidebar("small")
+            localStorage.setItem("sidebar","small")
         }
         else {
             setSidebar("big")
+            localStorage.setItem("sidebar","big")
         }
     }
     console.log(sidebar)
+    
+    useEffect(() => {
+        const sidebarState = localStorage.getItem("sidebar")
+        if (sidebarState === "big") {
+            setSidebar("big")
+        }
+        else {
+            setSidebar("small")
+        }
+        console.log("sidebar is set to: "+sidebarState)
+    },[])
 
 
     return (
