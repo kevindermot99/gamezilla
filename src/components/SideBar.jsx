@@ -54,7 +54,7 @@ function SideBar() {
             <div className={`group flex justify-between items-center mb-3 w-full `}>
 
                 <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full'} flex justify-start items-center gap-2 text-base font-medium max-w-[50px] cursor-default `}>
-                    <img src={pagesLogo} alt="logo" className={` transition h-auto w-[40px] pl-2 ${sidebar === "small" && 'pl-0'} `} />
+                    <img src={pagesLogo} alt="logo" className={` transition h-auto w-[45px] ${sidebar === "small" && 'pl-0'} `} />
                     <h1 className={`logoText ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
