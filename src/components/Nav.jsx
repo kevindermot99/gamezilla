@@ -25,9 +25,9 @@ function Nav() {
 
                 <div className="flex w-fit justify-end items-center min-w-[170px]  ">
 
-                    <a href="#" className="group navbar-link p-2">
+                    {/* <a href="#" className="group navbar-link p-2">
                         <TbSunMoon className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
-                    </a>
+                    </a> */}
 
                     <a href="#" className="group navbar-link p-2 ml-2">
                         <LuLibrary className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
