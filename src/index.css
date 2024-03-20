@@ -327,10 +327,10 @@ input[type="search"]::-webkit-search-results-decoration {
 /* CUSTOM SELECT COLORS */
 ::-moz-selection { /* Code for Firefox */
   color: white;
-  background: ;
+  background: #8c52ff4b;
 }
 
 ::selection {
   color: white;
-  background: #8c52ffa6;
+  background: #8c52ff4b;
 }

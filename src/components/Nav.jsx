@@ -14,7 +14,7 @@ function Nav() {
 
         <header className="font-montserrat w-ful max-sm:sticky top-0 bg-gray-900 z-20 relative pl-5 pr-5 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
-            <nav className="flex justify-between items-center py-3 sticky top-0 z-index-10 px-3">
+            <nav className="flex justify-between items-center py-5 sticky top-0 z-index-10 px-3">
             
                 <form className='relative w-full max-w-[450px]'>
                     <input className="search transition bg-gray-800 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-primary  " type="search" placeholder="Find a Book.." />
