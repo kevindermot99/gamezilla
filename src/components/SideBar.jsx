@@ -28,7 +28,7 @@ function SideBar() {
 
 
     return (
-        <div className={`transition-width  duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[70px] py-3 px-2'} relative h-[100vh] flex flex-col items-start justify-start p-3 border-r border-gray-800 border-opacity-50 `}>
+        <div className={`transition-width  duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[70px] py-3 px-2'} relative h-[100vh] flex flex-col items-start justify-start p-3 bg-gray-950 bg-opacity-20`}>
             <div className={`group flex justify-between items-center gap-2 mb-3 px-3 ${sidebar === "small" && 'px-0 w-[50px]'} w-full`}>
                 
                 <div className={`${sidebar === "small" && 'w-full h-full flex justify-center items-center'} flex justify-start items-center gap-2 text-base font-medium h-[50px] cursor-default`}>
@@ -44,37 +44,37 @@ function SideBar() {
                     
                 </button>
             </div>
-            <ul className={`sidebar w-full h-full overflow-y-auto `}>
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+            <ul className={`sidebar w-full h-full overflow-y-auto pr-1 overflow-x-clip`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <IoHomeOutline className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color ' />
                     <p className={`font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
 
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <MdOutlineExplore className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color ' />
                     <p className={`font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Explore</p>
                 </Link>
 
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <LuLibrary className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color ' />
                     <p className={`font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Libraries</p>
                 </Link>
 
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <MdOutlineContactSupport className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color' />
                     <p className={`font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Support</p>
                 </Link>
 
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <SlSettings className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color' />
                     <p className={`font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Settings</p>
                 </Link>
                 <div className='w-[95%] m-auto h-[1px] bg-gray-800 my-3'></div>
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <SlLike className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color' />
                     <p className={`font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
                 </Link>
-                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
+                <Link className={`h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg  hover:bg-gray-800 hover:bg-opacity-40 ${sidebar === "small" && 'px-0 justify-center w-[50px]'}`}>
                     <MdOutlineWatchLater className='text-[23px] min-h-6 min-w-6 group-hover:text-main-color' />
                     <p className={`font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
                 </Link>
