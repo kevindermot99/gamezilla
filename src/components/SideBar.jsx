@@ -5,6 +5,10 @@ import { IoHomeOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { MdOutlineExplore } from "react-icons/md";
 import { LuLibrary } from "react-icons/lu";
+import { MdOutlineContactSupport } from "react-icons/md";
+import { MdOutlineSettingsSuggest } from "react-icons/md";
+import { SlLike } from "react-icons/sl";
+import { MdOutlineWatchLater } from "react-icons/md";
 
 
 function SideBar() {
@@ -19,20 +23,39 @@ function SideBar() {
                     <h1 className="logoText">Pagez</h1>
                 </a>
             </div>
-            <ul className='w-full h-full overflow-y-auto'>
+            <ul className='sidebar w-full h-full overflow-y-auto'>
                 <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <IoHomeOutline  className='text-[23px] group-hover:text-main-color '/>
+                    <IoHomeOutline className='text-[23px] group-hover:text-main-color ' />
                     <p className='font-light  '>Home</p>
                 </Link>
 
                 <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <MdOutlineExplore  className='text-[23px] group-hover:text-main-color '/>
+                    <MdOutlineExplore className='text-[23px] group-hover:text-main-color ' />
                     <p className='font-light  '>Explore</p>
                 </Link>
 
                 <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <LuLibrary  className='text-[23px] group-hover:text-main-color '/>
+                    <LuLibrary className='text-[23px] group-hover:text-main-color ' />
                     <p className='font-light  '>Libraries</p>
+                </Link>
+
+                <Link className='group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg hover:bg-gray-800'>
+                    <MdOutlineContactSupport className='text-[23px] group-hover:text-main-color' />
+                    <p className='font-light'>Support</p>
+                </Link>
+
+                <Link className='group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg hover:bg-gray-800'>
+                    <MdOutlineSettingsSuggest className='text-[23px] group-hover:text-main-color' />
+                    <p className='font-light'>Settings</p>
+                </Link>
+                <div className='w-[95%] m-auto h-[1px] bg-gray-800 my-3'></div>
+                <Link className='group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg hover:bg-gray-800'>
+                    <SlLike className='text-[23px] group-hover:text-main-color' />
+                    <p className='font-light'>Liked Books</p>
+                </Link>
+                <Link className='group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg hover:bg-gray-800'>
+                    <MdOutlineWatchLater className='text-[23px] group-hover:text-main-color' />
+                    <p className='font-light'>Play Later</p>
                 </Link>
             </ul>
         </div>
