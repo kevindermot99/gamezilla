@@ -12,15 +12,18 @@ const Pagez = () => {
 
     if (spinner) {
       setTimeout(() => {
-        spinner.classList.add("loader-overlay-hidden");
+        spinner.classList.add("hidden");
         setLoading(false);
-      }, 1500);
+      }, 1300);
     }
   }, []);
 
   return (
     // !loading && (
     <main className='relative bg-gray-900 text-white flex'>
+      <div class="loader-overlay" id="loader-overlay">
+        <div class="loader"></div>
+      </div>
       <div className='w-fit'>
         <SideBar />
       </div>
@@ -32,8 +35,8 @@ const Pagez = () => {
       </div>
 
     </main>
-    // )
-  );
+  )
+  // );
 };
 
 export default Pagez;
