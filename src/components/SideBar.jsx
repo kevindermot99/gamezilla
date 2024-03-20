@@ -1,8 +1,10 @@
 import React from 'react'
 import pagesLogo from "../assets/images/pagez-logo.png"
 import { TbMenu2 } from "react-icons/tb";
-import { GoHomeFill } from "react-icons/go";
+import { IoHomeOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { MdOutlineExplore } from "react-icons/md";
+import { LuLibrary } from "react-icons/lu";
 
 
 function SideBar() {
@@ -18,29 +20,19 @@ function SideBar() {
                 </a>
             </div>
             <ul className='w-full h-full overflow-y-auto'>
-                <Link className=' flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <GoHomeFill  className='text-[23px] '/>
+                <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
+                    <IoHomeOutline  className='text-[23px] group-hover:text-main-color '/>
                     <p className='font-light  '>Home</p>
                 </Link>
 
-                <Link className=' flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <GoHomeFill  className='text-[23px] '/>
-                    <p className='font-light  '>Home</p>
+                <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
+                    <MdOutlineExplore  className='text-[23px] group-hover:text-main-color '/>
+                    <p className='font-light  '>Explore</p>
                 </Link>
 
-                <Link className=' flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <GoHomeFill  className='text-[23px] '/>
-                    <p className='font-light  '>Home</p>
-                </Link>
-
-                <Link className=' flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <GoHomeFill  className='text-[23px] '/>
-                    <p className='font-light  '>Home</p>
-                </Link>
-
-                <Link className=' flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
-                    <GoHomeFill  className='text-[23px] '/>
-                    <p className='font-light  '>Home</p>
+                <Link className=' group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 py-3 transition rounded-lg  hover:bg-gray-800 '>
+                    <LuLibrary  className='text-[23px] group-hover:text-main-color '/>
+                    <p className='font-light  '>Libraries</p>
                 </Link>
             </ul>
         </div>
