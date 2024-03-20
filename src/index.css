@@ -40,7 +40,7 @@ input[data-autocompleted] {
   }
 
   .logoText{
-    @apply text-main-color font-bold text-xl flex justify-center items-center gap-1
+    @apply text-white font-bold text-xl flex justify-center items-center gap-1
   }
   .linkText{
     @apply text-black font-medium text-sm  flex justify-center items-center gap-1 py-2 px-4 hover:bg-gray-100 rounded-lg transition 
@@ -125,7 +125,6 @@ input[type="search"]::-webkit-search-results-decoration {
   outline: none;
   border-radius: 13px;
   margin: auto;
-  color: #000;
 }
 
 .search::placeholder {

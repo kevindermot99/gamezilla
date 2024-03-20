@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Browse } from './sections';
 import Nav from './components/Nav';
+import SideBar from './components/SideBar';
 
 
 const Pagez = () => {
@@ -19,12 +20,18 @@ const Pagez = () => {
 
   return (
     // !loading && (
-      <main className='relative bg-white'>
+    <main className='relative bg-gray-900 text-white flex'>
+      <div className='w-fit'>
+        <SideBar />
+      </div>
+      <div className='w-full'>
         <Nav />
         <section className='xl:padding-1 wide:padding-r'>
           <Browse />
         </section>
-      </main>
+      </div>
+
+    </main>
     // )
   );
 };
