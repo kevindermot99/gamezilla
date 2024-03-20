@@ -119,6 +119,7 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: center;
   z-index: 99999;
   transition: .2s;
+  display: none;
 }
 
 .loader-overlay.hidden{
