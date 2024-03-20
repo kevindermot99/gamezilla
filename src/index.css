@@ -326,11 +326,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* CUSTOM SELECT COLORS */
 ::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: #8c52ff4b;
+  color: white;
+  background: ;
 }
 
 ::selection {
-  color: black;
-  background: #8c52ff4b;
+  color: white;
+  background: #8c52ffa6;
 }
