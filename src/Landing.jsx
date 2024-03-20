@@ -60,7 +60,7 @@ function Landing() {
             className="flex justify-start items-center gap-2 text-base font-medium mr-6 "
           >
             <img src={pagesLogo} alt="Logo" className="h-9" />
-            <p className="logoText">Pagez</p>
+            <p className="logoText text-black">Pagez</p>
           </Link>
         </div>
         <div className="flex gap-1 justify-center items-center">
