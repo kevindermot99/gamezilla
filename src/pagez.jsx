@@ -21,8 +21,8 @@ const Pagez = () => {
   return (
     // !loading && (
     <main className='relative bg-gray-900 text-white flex'>
-      <div class="loader-overlay" id="loader-overlay">
-        <div class="loader"></div>
+      <div className="loader-overlay" id="loader-overlay">
+        <div className="loader"></div>
       </div>
       <div className='w-fit'>
         <SideBar />

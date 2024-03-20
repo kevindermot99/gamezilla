@@ -29,7 +29,6 @@ function SideBar() {
             localStorage.setItem("sidebar","big")
         }
     }
-    console.log(sidebar)
     
     useEffect(() => {
         const sidebarState = localStorage.getItem("sidebar")
@@ -39,7 +38,6 @@ function SideBar() {
         else {
             setSidebar("small")
         }
-        console.log("sidebar is set to: "+sidebarState)
     },[])
 
 
