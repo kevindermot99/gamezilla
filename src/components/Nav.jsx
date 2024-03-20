@@ -29,12 +29,12 @@ function Nav() {
                         <TbSunMoon className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
                     </a> */}
 
-                    <a href="#" className="group navbar-link p-2 ml-2">
+                    <a href="#" className="group navbar-link p-2 ml-5">
                         <LuLibrary className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
                         <Notification label={9} />
                     </a>
                     <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
-                        <img src={defaultPfp} className=" h-8 rounded-full " />
+                        <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
                         <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap bg-gray-900 py-2 px-3 right-0 -bottom-[140%] rounded-m ring-1 ring-gray-800 rounded-lg tranition hidden group-hover:block">Clare thomson</p>
                     </a>
 
