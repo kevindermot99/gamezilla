@@ -13,7 +13,7 @@ import { MdOutlineWatchLater } from "react-icons/md";
 
 function SideBar() {
     return (
-        <div className="min-w-[240px] h-[100vh] flex flex-col items-start justify-start p-3 border-r border-gray-800 ">
+        <div className="min-w-[240px] h-[100vh] flex flex-col items-start justify-start p-3 border-r border-gray-800 border-opacity-50 ">
             <div className="flex justify-start items-center gap-2 mb-5 px-2">
                 <button className="h-[40px] w-[40px] transition hover:bg-gray-800 flex items-center justify-center rounded-full">
                     <TbMenu2 className="text-2xl text-white" />

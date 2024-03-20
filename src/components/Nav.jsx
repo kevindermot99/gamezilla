@@ -21,7 +21,7 @@ function Nav() {
 
 
                 <form className='relative w-full max-w-[450px]'>
-                    <input className="search transition bg-gray-900  text-sm ring-1 ring-gray-800 placeholder:text-gray-600 text-primary  " type="search" placeholder="Find a Book.." />
+                    <input className="search transition bg-gray-800 bg-opacity-60 text-sm placeholder:text-gray-600 text-primary  " type="search" placeholder="Find a Book.." />
                     <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-gray-800 h-[85%] w-[40px] rounded-lg flex justify-center items-center">
                         <RiSearch2Line className="text-primary text-lg" />
                     </button>
