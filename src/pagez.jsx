@@ -24,6 +24,7 @@ const Pagez = () => {
       <div className="loader-overlay" id="loader-overlay">
         <div className="loader"></div>
       </div>
+      
       <div className='w-fit'>
         <SideBar />
       </div>

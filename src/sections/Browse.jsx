@@ -44,7 +44,7 @@ function Browse() {
     <section className=" flex gap-5 px-5 ">
       
       
-      {/* <div className="flex flex-col gap-5 w-full">
+      <div className="flex flex-col gap-5 w-full">
 
         <div className=" flex justify-start items-start max-sm:gap-0 relative">
           <div className="h-fit w-full ">
@@ -82,10 +82,10 @@ function Browse() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* modal */}
-      {/* <BookModal selectedBook={selectedBook} closeModal={closeModal} /> */}
+      <BookModal selectedBook={selectedBook} closeModal={closeModal} />
     </section>
   );
 }
