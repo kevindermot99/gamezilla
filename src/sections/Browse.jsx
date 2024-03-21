@@ -41,13 +41,21 @@ function Browse() {
   }, []);
 
   return (
-    <section className=" flex gap-5 px-5 ">
-      
-      
-  
-
-      {/* modal */}
-      <BookModal selectedBook={selectedBook} closeModal={closeModal} />
+    <section className=" flex gap-5 px-14 ">
+      <h1 className="font-bold text-3xl text-black dark:text-primary  ">Discover</h1>
+      <div className="w-full h-fit flex flex-wrap">
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+        <p>Musical</p>
+      </div>
     </section>
   );
 }
