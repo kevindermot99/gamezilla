@@ -20,7 +20,7 @@ const Pagez = () => {
 
   return (
     // !loading && (
-    <main className='relative bg-gray-900 text-white flex'>
+    <main className='relative bg-white dark:bg-gray-900 text-black dark:text-white flex'>
       <div className="loader-overlay" id="loader-overlay">
         <div className="loader"></div>
       </div>
