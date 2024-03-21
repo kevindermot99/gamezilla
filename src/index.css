@@ -400,8 +400,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* CUSTOM SELECT COLORS */
-::-moz-selection {
-  /* Code for Firefox */
+/* ::-moz-selection {
   color: white;
   background: #8c52ff4b;
 }
@@ -409,4 +408,4 @@ input[type="search"]::-webkit-search-results-decoration {
 ::selection {
   color: white;
   background: #8c52ff4b;
-}
+} */
