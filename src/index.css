@@ -190,6 +190,8 @@ input[type="search"]::-webkit-search-results-decoration {
   z-index: 10 !important;
 }
 
+
+
 .search {
   /* background-color: #ffffff; */
   /* backdrop-filter: blur(10px); */
