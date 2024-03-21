@@ -22,8 +22,8 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
                     showFormats == '1' &&
 
                     <div className='flex flex-col w-full gap-2 mt-2'>
-                        {Formats.map((format) => (
-                            <div className='group py-5 px-6 bg-gray-50 rounded-2xl cursor-pointer transition'>
+                        {Formats.map((format, index) => (
+                            <div key={index} className='group py-5 px-6 bg-gray-50 rounded-2xl cursor-pointer transition'>
                                 <h1 className=' text-black font-bold text-base flex gap-1 items-center justify-start'>
                                     <TbFileDownload className='text-2xl text-gray-500' />
                                     {format.format}
