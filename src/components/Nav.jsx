@@ -12,14 +12,14 @@ function Nav() {
 
     return (
 
-        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-gray-900 z-20 relative pl-5 pr-5 max-sm:px-5">
+        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-white dark:bg-gray-900 z-20 relative pl-5 pr-5 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
             <nav className="flex justify-between items-center py-5 sticky top-0 z-index-10 px-3">
             
                 <form className='relative w-full max-w-[450px]'>
-                    <input className="search transition bg-gray-800 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-primary  " type="search" placeholder="Find a Book.." />
-                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-gray-800 h-[80%] w-[40px] rounded-lg flex justify-center items-center">
-                        <RiSearch2Line className="text-primary text-lg" />
+                    <input className="search transition bg-gray-200 dark:bg-gray-800 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-black dark:text-primary  " type="search" placeholder="Find a Book.." />
+                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-slate-300 dark:hover:bg-gray-800 h-[80%] w-[40px] rounded-lg flex justify-center items-center">
+                        <RiSearch2Line className="text-black dark:text-primary text-lg" />
                     </button>
                 </form>
 
