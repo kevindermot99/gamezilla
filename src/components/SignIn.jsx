@@ -54,14 +54,14 @@ function SignIn({ hideSignIn, showSignUp }) {
             required
             name="email"
             // autoComplete="on"
-            className="tracking-tight text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className="tracking-tight text-base text-black py-[12px] mb-3 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-200 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-200 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
             placeholder="Password"
           />
           <button
