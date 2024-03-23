@@ -7,6 +7,9 @@ function Browse() {
     <section className=" flex flex-col gap-2 ml-14 mr-9 overflow-clip relative">
       <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
       <BooksBar />
+      <BooksBar />
+      <BooksBar />
+      <BooksBar />
     </section>
   );
 }
