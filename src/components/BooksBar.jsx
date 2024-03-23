@@ -1,5 +1,5 @@
 import React from 'react'
-import Bookcover from "../assets/images/bookcover.jpg"
+import { Books } from '../constants/data'
 
 function BooksBar() {
     return (
@@ -12,6 +12,7 @@ function BooksBar() {
                 <h1 className=' break-words whitespace-normal leading-5 my-1 text-sm '>Harry Potter & the chamber of sectrets</h1>
                 <p className=' text-sm opacity-40 font-light'>J.K Rowling</p>
             </div>
+            
         </div>
     )
 }
