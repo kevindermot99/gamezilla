@@ -34,6 +34,7 @@ export default {
         "main-color": "#8C52FF",
         "dark-sidebar": "#171717",
         "dark-body": "#212121",
+        "dark-navlink": "#2f2f2f5e",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
