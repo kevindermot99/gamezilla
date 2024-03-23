@@ -28,7 +28,7 @@ const Pagez = () => {
       <div className='w-fit'>
         <SideBar />
       </div>
-      <div className='w-full overflow-clip'>
+      <div className='w-full overflow-x-clip '>
         <Nav />
         <section className='xl:padding-1 wide:padding-r w-full'>
           <Browse />

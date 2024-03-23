@@ -42,7 +42,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 transition-width duration-300 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-100  dark:bg-dark-sidebar`}>
+        <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-100  dark:bg-dark-sidebar`}>
             <button onClick={toggleSidebar} className={`absolute left-[105%] top-0 bottom-0 m-auto z-30 h-fit flex items-center justify-center rounded-full`}>
                 {sidebar === "big" ?
                     <FaAngleLeft className="text-xl text-stone-500 dark:text-stone-700 transition hover:text-main-color" />
