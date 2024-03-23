@@ -45,9 +45,9 @@ function SideBar() {
         <div className={`transition-width duration-300 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-gray-50  dark:bg-gray-950 dark:bg-opacity-10`}>
             <button onClick={toggleSidebar} className={`absolute left-[105%] top-0 bottom-0 m-auto z-30 h-fit flex items-center justify-center rounded-full`}>
                 {sidebar === "big" ?
-                    <FaAngleLeft className="text-xl text-stone-200 dark:text-gray-800 transition hover:text-main-color" />
+                    <FaAngleLeft className="text-xl text-stone-500 dark:text-gray-700 transition hover:text-main-color" />
                     :
-                    <FaAngleRight className="text-xl text-stone-200 dark:text-gray-800 transition hover:text-main-color" />
+                    <FaAngleRight className="text-xl text-stone-500 dark:text-gray-700 transition hover:text-main-color" />
                 }
 
             </button>
@@ -60,7 +60,7 @@ function SideBar() {
             </div>
             <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip`}>
                 <Link className={`active  h-[50px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition rounded-lg hover:bg-stone-200 dark:hover:bg-gray-800 hover:bg-opacity-50 ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
-                    <IoHomeOutline className='text-[22px] min-h-5 min-w-5 group-hover:text-main-color ' />
+                    <IoHomeOutline className='text-[22px5 min-h-5 min-w-5 group-hover:text-main-color ' />
                     <p className={` text-sm font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
 

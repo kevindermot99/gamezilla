@@ -4,6 +4,7 @@ import { Filters } from "../constants/data";
 import { IoFilter } from "react-icons/io5";
 import { Books } from "../constants/data";
 import BookModal from "../components/BookModal";
+import BooksBar from "../components/BooksBar";
 
 function Browse() {
   const [isHidden, setIsHidden] = useState(false);
@@ -41,21 +42,9 @@ function Browse() {
   }, []);
 
   return (
-    <section className=" flex gap-5 px-14 ">
-      <h1 className="font-bold text-3xl text-black dark:text-primary  ">For Kevin Dermot</h1>
-      <div className="w-full h-fit flex flex-wrap">
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-        <p>Musical</p>
-      </div>
+    <section className=" flex flex-col gap-2 px-14 ">
+      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
+      <BooksBar />
     </section>
   );
 }
