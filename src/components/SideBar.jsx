@@ -61,38 +61,38 @@ function SideBar() {
             <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip`}>
                 <Link className={`active  h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <IoHomeOutline className='text-[22px5 min-h-5 min-w-5 opacity-50  group-hover:opacity-100' />
-                    <p className={` text-sm font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <MdOutlineExplore className='text-[22px] min-h-5 min-w-5 opacity-50  group-hover:opacity-100' />
-                    <p className={` text-sm font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Explore</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Explore</p>
                 </Link>
 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <LuLibrary className='text-[22px] min-h-5 min-w-5 opacity-50  group-hover:opacity-100' />
-                    <p className={` text-sm font-light  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Libraries</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Libraries</p>
                 </Link>
 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <MdOutlineContactSupport className='text-[22px] min-h-5 min-w-5 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Support</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Support</p>
                 </Link>
 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <SlSettings className='text-[22px] min-h-5 min-w-5 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Settings</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Settings</p>
                 </Link>
 
                 <div className='w-[95%] m-auto h-[1px] bg-stone-200 dark:bg-stone-800  my-3'></div>
                 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <SlLike className='text-[22px] min-h-5 min-w-5 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
                 </Link>
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-5 outline-none w-full px-4 transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'p-0 justify-center max-w-[50px]'}`}>
                     <MdOutlineWatchLater className='text-[22px] min-h-5 min-w-5 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-light overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
+                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
                 </Link>
             </ul>
         </div>
