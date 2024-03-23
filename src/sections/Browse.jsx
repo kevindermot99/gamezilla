@@ -19,12 +19,34 @@ function Browse() {
 
   return (
     <section className=" flex flex-col gap-2 ml-14 mr-9 overflow-clip relative">
-      
-      <Reveal keyframes={customAnimation} delay={200} triggerOnce><h1 className="font-bold text-2xl text-black dark:text-white mb-1 w-fit">Trending this week</h1></Reveal>
-      <BooksBar />
 
-      <Reveal keyframes={customAnimation} delay={200} triggerOnce><h1 className="font-bold text-2xl text-black dark:text-white mb-1">Continue Listening</h1></Reveal>
-      <BooksBar />
+      <Reveal keyframes={customAnimation} delay={200} triggerOnce>
+        <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
+        Trending this
+        week</h1>
+      </Reveal>
+      <BooksBar count={9} />
+
+      <Reveal keyframes={customAnimation} delay={200} triggerOnce>
+        <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
+        Recently Played
+      </h1>
+      </Reveal>
+      <BooksBar count={2} />
+
+      <Reveal keyframes={customAnimation} delay={200} triggerOnce>
+        <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
+        New Releases
+      </h1>
+      </Reveal>
+      <BooksBar count={6} />
+
+      <Reveal keyframes={customAnimation} delay={200} triggerOnce>
+        <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
+        thowback
+      </h1>
+      </Reveal>
+      <BooksBar count={2} />
 
     </section>
   );
