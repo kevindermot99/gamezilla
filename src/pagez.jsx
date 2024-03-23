@@ -21,16 +21,16 @@ const Pagez = () => {
   return (
     // !loading && (
     <main className='relative bg-white dark:bg-gray-900 text-black dark:text-white flex'>
-      <div className="loader-overlay" id="loader-overlay">
+      {/* <div className="loader-overlay" id="loader-overlay">
         <div className="loader"></div>
-      </div>
+      </div> */}
       
       <div className='w-fit'>
         <SideBar />
       </div>
-      <div className='w-full'>
+      <div className='w-full overflow-clip'>
         <Nav />
-        <section className='xl:padding-1 wide:padding-r'>
+        <section className='xl:padding-1 wide:padding-r w-full'>
           <Browse />
         </section>
       </div>
