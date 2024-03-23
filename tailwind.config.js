@@ -32,7 +32,7 @@ export default {
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
         "main-color": "#8C52FF",
-        "dark-sidebar": "#171717",
+        "dark-sidebar": "#191919",
         "dark-body": "#212121",
         "dark-navlink": "#2f2f2f5e",
       },
