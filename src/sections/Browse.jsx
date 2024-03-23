@@ -8,46 +8,6 @@ function Browse() {
       
       <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
       <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-      
-      <h1 className="font-bold text-2xl text-black dark:text-primary mb-4">For Kevin Dermot</h1>
-      <BooksBar />
-
 
     </section>
   );
