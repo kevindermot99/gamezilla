@@ -22,7 +22,7 @@ function Book() {
             <div className='w-full overflow-x-clip '>
                 <Nav />
                 <section className='xl:padding-1 wide:padding-r w-full'>
-                    <div className=''>
+                    <div className='min-h-[300px] h-fit bg-red-300 ml-12'>
 
                     </div>
                 </section>
