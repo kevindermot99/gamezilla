@@ -22,14 +22,14 @@ function SideBar() {
     const toggleSidebar = () => {
         if (sidebar === "big") {
             setSidebar("small")
-            localStorage.setItem("sidebar","small")
+            localStorage.setItem("sidebar", "small")
         }
         else {
             setSidebar("big")
-            localStorage.setItem("sidebar","big")
+            localStorage.setItem("sidebar", "big")
         }
     }
-    
+
     useEffect(() => {
         const sidebarState = localStorage.getItem("sidebar")
         if (sidebarState === "big") {
@@ -38,19 +38,12 @@ function SideBar() {
         else {
             setSidebar("small")
         }
-    },[])
+    }, [])
 
 
     return (
         <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-200  dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30 backdrop-blur-sm`}>
-            <button onClick={toggleSidebar} className={`absolute left-[105%] top-0 bottom-0 m-auto z-30 h-fit flex items-center justify-center rounded-full`}>
-                {sidebar === "big" ?
-                    <FaAngleLeft className="text-xl text-stone-500 dark:text-stone-700 transition hover:text-main-color" />
-                    :
-                    <FaAngleRight className="text-xl text-stone-500 dark:text-stone-700 transition hover:text-main-color" />
-                }
 
-            </button>
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
                 <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full'} flex justify-start items-center text-base font-medium max-w-[50px] cursor-default `}>
@@ -75,7 +68,7 @@ function SideBar() {
                 </Link>
 
                 <div className='w-[95%] m-auto h-[1px] bg-stone-200 dark:bg-stone-800  my-3'></div>
-                
+
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
                     <FaRegHeart className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
@@ -85,6 +78,17 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
                 </Link>
             </ul>
+            <div className='absolute bottom-0 left-0 w-full h-fit p-2 bg-stone-200 dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30'>
+                <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-xl bg-stone-800 bg-opacity-50`}>
+                    {sidebar === "big" ?
+                        <FaAngleLeft className="text-xl text-stone-500 dark:text-stone-500 transition group-hover:text-main-color" />
+                        :
+                        <FaAngleRight className="text-xl text-stone-500 dark:text-stone-500 transition group-hover:text-main-color" />
+                    }
+
+                </button>
+            </div>
+
         </div>
     )
 }
