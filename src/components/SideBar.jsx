@@ -12,8 +12,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { TbViewportWide } from "react-icons/tb";
 
-import { FaAngleLeft } from "react-icons/fa6";
-import { FaAngleRight } from "react-icons/fa6";
+import { TbLayoutSidebarRightExpand } from "react-icons/tb";
+import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 
 
 function SideBar() {
@@ -78,12 +78,12 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
                 </Link>
             </ul>
-            <div className='absolute bottom-0 left-0 w-full h-fit p-2 bg-stone-200 dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30'>
-                <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-xl bg-stone-800 bg-opacity-50`}>
+            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-stone-200 dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30'>
+                <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-lg hover:bg-main-color transition duration-300`}>
                     {sidebar === "big" ?
-                        <FaAngleLeft className="text-xl text-stone-500 dark:text-stone-500 transition group-hover:text-main-color" />
+                        <TbLayoutSidebarRightExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
                         :
-                        <FaAngleRight className="text-xl text-stone-500 dark:text-stone-500 transition group-hover:text-main-color" />
+                        <TbLayoutSidebarLeftExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
                     }
 
                 </button>
