@@ -10,11 +10,13 @@ const customAnimation = keyframes`
   from {
     opacity: 0;
     transform: translateX(-200px);
+    scale: .95;
   }
 
   to {
     opacity: 1;
     transform: translateX(0);
+    scale: 1;
   }
 `;
 
@@ -26,7 +28,7 @@ const limit = count;
         <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-contain pb-3 mb-6">
             {Books.slice(0, limit).map((book) => (
                 <Reveal keyframes={customAnimation} triggerOnce>
-                    <Link key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-sidebar p-3'>
+                    <Link to={`/book/${book.id}`} key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-sidebar p-3'>
                         <div className='relative h-[180px] w-[180px] aspect-square rounded-lg overflow-clip mb-2 select-none'>
                             <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                             <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
