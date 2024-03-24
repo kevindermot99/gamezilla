@@ -39,7 +39,7 @@ function BooksBar({ count }) {
                             </div>
 
                         </div>
-                        <Link to={`/book/${book.id}`} className=' break-words  whitespace-normal leading-5 my-1 text-base font-normal text-black dark:text-white max-w-[180px] hover:underline'>{book.title}</Link>
+                        <Link to={`/book/${book.id}`} className=' break-words  whitespace-normal leading-5 my-1 text-base font-normal text-black dark:text-white max-w-[180px] w-fit hover:underline '>{book.title}</Link>
                         <p className=' text-sm font-medium  text-stone-600 dark:text-stone-500'>{book.author}</p>
                     </div>
 
