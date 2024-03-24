@@ -42,7 +42,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-200  dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30 backdrop-blur-sm`}>
+        <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar z-10`}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
