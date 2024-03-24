@@ -26,9 +26,10 @@ function Book() {
                         <div className='h-[200px] w-auto aspect-square'>
                             <img className="w-full h-full object-cover pointer-events-none" src={res    .URL} alt="" />
                         </div>
-                        <div className='flex flex-col items-start justify-start text-black dark:text-white'>
+                        <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-4'>
                             <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold '>{res.title}</h1>
-                            <p></p>
+                            <p className=' font-semibold text-lg'>{res.author}</p>
+                            <p className=' font-normal text-base text-stone-500 dark:text-stone-300 '>132,245 Likes - 13 min 10 sec</p>
                         </div>
                     </div>
                 </section>
