@@ -39,12 +39,13 @@ function Book() {
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
                         <div className={` h-fi flex gap-6 items-start justify-start px-14 pb-7`} >
-                            <div className='h-[200px] w-auto aspect-square'>
+                            <div className='h-[240px] w-auto aspect-square'>
                                 <img className="w-full h-full object-cover pointer-events-none rounded-md shadow-xl  " src={res.URL} alt="" />
                             </div>
                             <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
                                 <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
                                 <p className=' font-semibold text-lg text-white'>{res.author}</p>
+                                <p className='font-normal text-base text-stone-300 max-w-[800px]'>{res.about}</p>
                                 <p className=' font-normal text-base text-stone-300 '>132,245 Likes - 13 min 10 sec</p>
                             </div>
                         </div>

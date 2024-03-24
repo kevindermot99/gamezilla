@@ -14,6 +14,7 @@ export const Books = [
     URL: book1,
     title: "Harry Potter and the chamber of secrets",
     author: "J.K. Rowling",
+    about: "Second-year wizard Harry Potter faces peril at Hogwarts when students are petrified, leading him to uncover the hidden Chamber of Secrets to save the school."
   },
   {
     id: "book2",
