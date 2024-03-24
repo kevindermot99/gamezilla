@@ -45,7 +45,7 @@ function Book() {
                             <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
                                 <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
                                 <p className=' font-semibold text-lg text-white'>{res.author}</p>
-                                <p className='font-normal text-base text-stone-300 max-w-[800px]'>{res.about}</p>
+                                <p className='font-normal text-base text-stone-300 max-w-[790px] leading-relaxed'>{res.about}</p>
                                 <p className=' font-normal text-base text-stone-300 '>132,245 Likes - 13 min 10 sec</p>
                             </div>
                         </div>

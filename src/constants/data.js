@@ -14,43 +14,56 @@ export const Books = [
     URL: book1,
     title: "Harry Potter and the chamber of secrets",
     author: "J.K. Rowling",
-    about: "Second-year wizard Harry Potter faces peril at Hogwarts when students are petrified, leading him to uncover the hidden Chamber of Secrets to save the school."
+    about: "Second-year wizard Harry Potter faces peril at Hogwarts when students are petrified, leading him to uncover the hidden Chamber of Secrets to save the school.",
+    likes: "1,092,294"
   },
   {
     id: "book2",
     URL: book2,
     title: "Eragon",
     author: "Christopher Paolini",
+    about: "the journey of a farm boy who discovers a dragon egg. With newfound powers and a destiny intertwined with an ancient order, he battles an oppressive regime. This fantasy epic blends dragons, magic, and adventure in a captivating tale of heroism and rebellion.",
+    likes: "902,144"
   },
   {
     id: "book3",
     URL: book3,
     title: "No Two Persons",
     author: "Erica Bauermeister",
+    about: "the lives of diverse characters, exploring the profound impact of human connections. Through lyrical prose, Bauermeister delves into themes of love, loss, and the beauty found in our relationships.",
+    likes: "665,424"
   },
   {
     id: "book4",
     URL: book4,
     title: "Dune",
     author: "Frank Herbert",
+    about: "a sci-fi epic set on the desert planet Arrakis, following Paul Atreides amidst political intrigue and mystical forces. This saga delves into themes of power, religion, and ecology in a richly imagined universe.",
+    likes: "502,153"
   },
   {
     id: "book5",
     URL: book5,
     title: "Never",
     author: "Ken Follett",
+    about: " characters from different walks of life against historical backdrops. The story delves into love, ambition, and the timeless quest for dreams amidst changing times. ",
+    likes: "120,024"
   },
   {
     id: "book6",
     URL: book6,
     title: "Sand",
     author: "Hugh Howey",
+    about: "a dystopian world where protagonist Palmer navigates treacherous deserts and uncovers startling truths. Howey's gripping narrative explores adventure, danger, and human resilience in a thrilling tale of survival.",
+    likes: "4,922,034"
   },
   {
     id: "book7",
     URL: book7,
     title: "Daughter Of Deep",
     author: "Rick Riordan",
+    about: "an exhilarating underwater journey with Maeve, uncovering her connection to an ancient sea deity. Riordan skillfully merges mythology and contemporary adventure, crafting a tale of bravery, camaraderie, and embracing destiny beneath the waves.",
+    likes: "694,034"
   },
 ];
 
