@@ -42,7 +42,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar z-10`}>
+        <div className={` sticky top-0 duration-200 ${sidebar === "big" && 'w-[240px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar border-r-4 border-stone-100  dark:border-dark-navlink `}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
@@ -67,7 +67,7 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Categories</p>
                 </Link>
 
-                <div className='w-[95%] m-auto h-[1px] bg-stone-200 dark:bg-stone-800  my-3'></div>
+                <div className='w-[95%] m-auto h-[4px] bg-stone-100 dark:bg-stone-800  my-3'></div>
 
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
                     <FaRegHeart className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />

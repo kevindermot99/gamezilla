@@ -31,17 +31,20 @@ function Book() {
 
 
     return (
-        <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-hidden '>
-            <div style={{ backgroundColor: color }} className='h-[700px] w-full absolute -top-[300px] left-0 z-0  opacity-90'></div>
-            <div className='relative text-black dark:text-white flex '>
+        <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-clip '>
+            
+            <div style={{ backgroundColor: color }} className='h-[500px] w-full absolute top-0 left-0 opacity-70'></div>
+            
+            <div className='relative text-black dark:text-white flex  '>
 
                 <div className='w-fit'>
                     <SideBar />
                 </div>
+
                 <div className=' w-full overflow-x-clip '>
                     <Nav />
-                    <section className='xl:padding-1 wide:padding-r w-full overflow-clip z-20'>
-                        <div className={`min-h-[250px] h-fi py-5 px-10 flex gap-6 items-start justify-start `} >
+                    <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
+                        <div className={` h-fi flex gap-6 items-start justify-start px-14 pb-7`} >
                             <div className='h-[200px] w-auto aspect-square'>
                                 <img className="w-full h-full object-cover pointer-events-none rounded-md shadow-xl  " src={res.URL} alt="" />
                             </div>
@@ -51,8 +54,12 @@ function Book() {
                                 <p className=' font-normal text-base text-stone-300 '>132,245 Likes - 13 min 10 sec</p>
                             </div>
                         </div>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-transparent backdrop-blur-3xl to-dark-body h-[500px]'>
+                            hello wolrd
+                        
+                        </div>
 
-                    </section>
+                    </div>
                 </div>
 
             </div>
