@@ -8,6 +8,11 @@ import { Books } from './constants/data';
 function Book() {
 
     const { id } = useParams();
+    const res = Books.find(findthis)
+    function findthis(book){
+        return book.id === id;
+    }
+
 
     return (
         <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto'>
@@ -17,7 +22,9 @@ function Book() {
             <div className='w-full overflow-x-clip '>
                 <Nav />
                 <section className='xl:padding-1 wide:padding-r w-full'>
+                    <div className=''>
 
+                    </div>
                 </section>
             </div>
 
