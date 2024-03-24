@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import SideBar from './components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from './constants/data';
-// import image from './image.jpg'
+import { FaPlay } from "react-icons/fa";
 
 import { average } from 'color.js'
 
@@ -18,23 +18,17 @@ function Book() {
         return book.id === id;
     }
 
-    // useEffect(() => {
     average(res.URL, { format: 'hex' })
         .then(HexColor => {
             setColor(HexColor)
         })
-    // }, [])
-
-
-
-
 
 
     return (
         <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-clip '>
-            
+
             <div style={{ backgroundColor: color }} className='h-[500px] w-full absolute top-0 left-0 opacity-70'></div>
-            
+
             <div className='relative text-black dark:text-white flex  '>
 
                 <div className='w-fit'>
@@ -54,9 +48,12 @@ function Book() {
                                 <p className=' font-normal text-base text-stone-300 '>132,245 Likes - 13 min 10 sec</p>
                             </div>
                         </div>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-transparent backdrop-blur-3xl to-dark-body h-[500px]'>
-                            hello wolrd
-                        
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-transparent backdrop-blur-3xl to-dark-body h-[500px] px-14'>
+                            <div className='w-full pt-4'>
+                                <button className=' transition aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
+                                    <FaPlay className='text-white text-xl ' />
+                                </button>
+                            </div>
                         </div>
 
                     </div>
