@@ -60,7 +60,7 @@ function Book() {
     return (
         <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-clip '>
 
-            <div style={{ backgroundColor: color }} className='h-[500px] w-[100vw] absolute top-0 left-0 opacity-100 z-0 transition duration-700  '></div>
+            <div style={{ backgroundColor: color }} className='h-[500px] w-[100vw] absolute top-0 left-0 opacity-100 z-0 transition duration-300  '></div>
 
             <div className='relative text-black dark:text-white flex  '>
 
@@ -71,7 +71,7 @@ function Book() {
                 <div className=' w-full overflow-x-clip z-10'>
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
-                        <Reveal keyframes={customAnimation} triggerOnce duration={600}>
+                        <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
                                 <div className='h-[200px] w-auto aspect-square shadow-2xl '>
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
