@@ -41,7 +41,7 @@ function Landing() {
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
-    <div className=" overflow-clip relative">
+    <div className=" overflow-clip relative bg-white">
 
       <div 
       className={`w-full h-full relative duration-300 z-40 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
@@ -53,7 +53,7 @@ function Landing() {
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
       
-      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white z-10 bg-opacity-85 backdrop-blur-lg">
+      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white dark:bg-dark-navlink z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
           <Link
             to="/"
@@ -101,7 +101,7 @@ function Landing() {
           Open Pagez
         </Link>
 
-        <div className="gradient-moving-bg shadow-3xl   flex justify-start items-start max-h-[400px]">
+        <div className="gradient-moving-bg shadow-3xl flex justify-start items-start max-h-[400px]">
           <img
             src={screenShoot}
             loading="lazy"
@@ -111,7 +111,7 @@ function Landing() {
         </div>
       </section>
 
-      <section className="w-full bg-white border-t-[1px] border-gray-300 z-10 flex flex-col items-center justify-start p-7">
+      <section className="w-full bg-white border-t-[1px] border-gray-300 flex flex-col items-center justify-start p-7 relative z-10">
         <h1 className="mt-10 text-base font-medium leading-8 text-black text-wrap">
           1,241 People has started using Pagez since the Launch
         </h1>
