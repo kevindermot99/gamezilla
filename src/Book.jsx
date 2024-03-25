@@ -13,7 +13,7 @@ import { keyframes } from "@emotion/react";
 const customAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(100px);
   }
 
   to {
@@ -53,21 +53,19 @@ function Book() {
                 <div className=' w-full overflow-x-clip z-10'>
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
-                        <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
-                            <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+                        <Reveal keyframes={customAnimation} triggerOnce duration={600}>
+                            <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
                                 <div className='h-[200px] w-auto aspect-square shadow-2xl '>
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                                 </div>
-                            </Reveal>
-                            <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+                                <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
                                     <h1 className='text-[45px] leading-[40px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
                                     <p className=' font-semibold text-base text-white'>{res.author}</p>
                                     <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
                                     <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
-                                </Reveal>
+                                </div>
                             </div>
-                        </div>
+                        </Reveal>
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body h-[500px] px-9'>
                             <div className='w-full pt-4 flex items-center justify-start gap-6 '>
                                 <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
