@@ -36,7 +36,7 @@ function Book() {
     }
 
     const author = res.author;
-    
+
     const authorBooks = Books.filter(findtherebooks)
     function findtherebooks(books) {
         return books.author === author;
@@ -103,44 +103,37 @@ function Book() {
                                             <th className='text-left '><WiTime3 className='text-xl ' /></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody className='space-y-5 '>
+                                        
                                         {authorBooks.map((authorBook) => (
-                                        <tr>
-                                            <td className='w-[40%] py-3'>
-                                                <div className='w-fit h-fit flex items-center gap-3'>
-                                                    <img src={authorBook.URL} alt={authorBook.title} className='h-12 w-12 shadow-md rounded-sm ' />
-                                                    <div className={` block w-full truncate text-ellipsis`}>
-                                                        <Link to={`/book/${authorBook.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{res.title}</Link>
-                                                        <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{authorBook.author}</p>
+                                            <tr key={authorBook.id}>
+                                                <td className='w-[40%] py-3'>
+                                                    <div className='w-fit h-fit flex items-center gap-3'>
+                                                        <img src={authorBook.URL} alt={authorBook.title} className='h-12 w-12 shadow-md rounded-sm ' />
+                                                        <div className={` block w-full truncate text-ellipsis`}>
+                                                            <Link to={`/book/${authorBook.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{res.title}</Link>
+                                                            <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{authorBook.author}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td className='w-[20%] py-3'>
-                                                <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
-                                            </td>
+                                                </td>
+                                                <td className='w-[20%] py-3'>
+                                                    <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
+                                                </td>
 
-                                            <td className='w-[20%] py-3'>
-                                                <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{authorBook.likes}</p>
-                                            </td>
+                                                <td className='w-[20%] py-3'>
+                                                    <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{authorBook.likes}</p>
+                                                </td>
 
-                                            <td className='w-[20%] py-3'>
-                                                <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
-                                            </td>
-                                        </tr>
-                                    ))}
+                                                <td className='w-[20%] py-3'>
+                                                    <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                        
                                     </tbody>
-
-
-
                                 </table>
                             </div>
-
-
-
                         </div>
-
-
-
                     </div>
                 </div>
 
