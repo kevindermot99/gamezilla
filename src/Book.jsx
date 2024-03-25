@@ -27,15 +27,15 @@ function Book() {
     return (
         <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-clip '>
 
-            <div style={{ backgroundColor: color }} className='h-[500px] w-full absolute top-0 left-0 opacity-70'></div>
+            <div style={{ backgroundColor: color }} className='h-[500px] w-[100vw] absolute top-0 left-0 opacity-100 z-0'></div>
 
             <div className='relative text-black dark:text-white flex  '>
 
-                <div className='w-fit'>
+                <div className='w-fit z-10'>
                     <SideBar />
                 </div>
 
-                <div className=' w-full overflow-x-clip '>
+                <div className=' w-full overflow-x-clip z-10'>
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
                         <div className={` h-fi flex gap-6 items-start justify-start px-14 pb-7`} >
