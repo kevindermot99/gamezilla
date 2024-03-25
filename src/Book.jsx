@@ -60,7 +60,7 @@ function Book() {
     return (
         <section className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-clip '>
 
-            <div style={{ backgroundColor: color }} className='h-[500px] w-[100vw] absolute top-0 left-0 opacity-100 z-0'></div>
+            <div style={{ backgroundColor: color }} className='h-[500px] w-[100vw] absolute top-0 left-0 opacity-100 z-0 transition duration-700  '></div>
 
             <div className='relative text-black dark:text-white flex  '>
 
@@ -77,7 +77,7 @@ function Book() {
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                                 </div>
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                    <h1 className='text-[45px] leading-[40px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
+                                    <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
                                     <p className=' font-semibold text-base text-white'>{res.author}</p>
                                     <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
                                     <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
