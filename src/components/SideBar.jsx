@@ -24,19 +24,19 @@ function SideBar() {
         }
     }
 
-    useEffect(() => {
-        const sidebarState = localStorage.getItem("sidebar")
-        if (sidebarState === "big") {
-            setSidebar("big")
-        }
-        else {
-            setSidebar("small")
-        }
-    }, [])
+    // useEffect(() => {
+    //     const sidebarState = localStorage.getItem("sidebar")
+    //     if (sidebarState === "big") {
+    //         setSidebar("big")
+    //     }
+    //     else {
+    //         setSidebar("small")
+    //     }
+    // }, [])
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200 relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
