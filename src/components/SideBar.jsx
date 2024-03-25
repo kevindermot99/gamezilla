@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import pagesLogo from "../assets/images/pagez-logo.png"
-import { TbMenu2 } from "react-icons/tb";
-import { TbViewportNarrow } from "react-icons/tb";
 import { IoHomeOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { MdOutlineExplore } from "react-icons/md";
 import { BiCategoryAlt } from "react-icons/bi";
-import { MdOutlineContactSupport } from "react-icons/md";
-import { SlSettings } from "react-icons/sl";
 import { FaRegHeart } from "react-icons/fa";
-import { MdOutlineWatchLater } from "react-icons/md";
-import { TbViewportWide } from "react-icons/tb";
-
 import { TbLayoutSidebarRightExpand } from "react-icons/tb";
 import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 
@@ -67,16 +60,16 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Categories</p>
                 </Link>
 
-                <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-300 dark:bg-opacity-15  my-3'></div>
-
                 <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
                     <FaRegHeart className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
                 </Link>
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
-                    <MdOutlineWatchLater className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Play Later</p>
-                </Link>
+
+                <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-300 dark:bg-opacity-15  my-3'></div>
+
+                <div className={``}>
+                    
+                </div>
             </ul>
             <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-stone-200 dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30'>
                 <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-lg hover:bg-main-color transition duration-300`}>
