@@ -92,19 +92,19 @@ function Landing() {
         </div>
       </nav>
 
-      <section className=" flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[80px]">
-        <h1 className="font-extrabold  text-[80px] leading-[75px] text-wrap max-w-[900px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0">
-          <span className={`HeroText`}>Infinite </span>
+      <section className=" flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[100px]">
+        <h1 className="font-extrabold  text-[60px] leading-[60px] text-wrap max-w-[900px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0">
+          <span className={`HeroText`}>Fantastic </span>
           <span className="text-main-color ">Stories, </span> <br />
-          <span className={`HeroText`}>One Library.</span>
+          <span className={`HeroText`}>All in One Spot.</span>
         </h1>
-        <p className="text-xl font-normal leading-8 max-w-[400px] text-stone-400 text-wrap mt-[30px] max-sm:m-0">
-          Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
+        <p className="text-base font-normal leading-relaxed max-w-[500px] text-stone-500 text-wrap mt-[20px] max-sm:m-0">
+        Listen to Free Audiobooks Online: Unlimited Access, Zero Cost, Pure Enjoyment!
         </p>
 
         <Link
           to="/app"
-          className="flex items-center justify-center gap-1 font-medium py-3 px-7 rounded-lg mt-10 transition bg-main-color text-white hover:opacity-90 "
+          className="flex items-center justify-center text-sm gap-1 font-medium py-2 px-7 rounded-lg mt-6 transition bg-main-color text-white hover:opacity-90 "
         >
           Open Pagez
         </Link>

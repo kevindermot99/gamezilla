@@ -258,7 +258,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .gradient-moving-bg {
   /* bg-main-color p-[2px] rounded-xl */
-  background-color: #e0e0e057;
+  background-color: #e0e0e000;
   padding: 2px;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
@@ -269,23 +269,25 @@ input[type="search"]::-webkit-search-results-decoration {
   animation-timeline: scroll();
   animation-range-start: 0;
   animation-range-end: 340px;
-  margin-top: 30px;
+  margin-top: 100px;
   z-index: 1;
 }
 
 @keyframes scrollPerspective {
-  /* from {
-    transform: perspective(600px) rotateX(15deg);
+  from {
+    /* transform: perspective(600px) rotateX(15deg); */
+    /* transform: translateY(0); */
   }
 
   to {
-    transform: perspective(600px) rotateX(0deg);
-  } */
+    /* transform: perspective(600px) rotateX(0deg); */
+    /* transform: translateY(300px); */
+  }
 }
 
 .gradient-moving-bg::after {
   content: "";
-  width: 150px;
+  width: 120px;
   height: 2000px;
   position: absolute;
   right: 0;
@@ -295,13 +297,15 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: auto;
   border-radius: 50%;
   background-color: var(--main-color);
-  filter: blur(10px);
+  filter: blur(1px);
   z-index: -1;
   animation: rotation 6s linear infinite;
+  /* opacity: .4; */
+  display: none;
 }
 
 @keyframes rotation {
-  0% {
+  /* 0% {
     transform: rotate(0deg);
     scale: 1.5;
   }
@@ -313,7 +317,7 @@ input[type="search"]::-webkit-search-results-decoration {
   100% {
     transform: rotate(180deg);
     scale: 1.5;
-  }
+  } */
 }
 
 .tag {
