@@ -4,15 +4,15 @@ import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
+  // from {
+  //   opacity: 0;
+  //   transform: translateX(-200px);
+  // }
 
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  // to {
+  //   opacity: 1;
+  //   transform: translateX(0);
+  // }
 `;
 
 function Browse() {

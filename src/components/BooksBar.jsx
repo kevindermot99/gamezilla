@@ -8,15 +8,13 @@ import { keyframes } from "@emotion/react";
 
 const customAnimation = keyframes`
   from {
-    opacity: 0;
-    transform: translateX(-100px);
-    scale: .95;
+    transform: translateY(10px);
+    
   }
 
   to {
-    opacity: 1;
-    transform: translateX(0);
-    scale: 1;
+    transform: translateY(0);
+
   }
 `;
 
@@ -25,8 +23,8 @@ function BooksBar({ count }) {
     const limit = count;
 
     return (
-        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto  overscroll-contain pb-3 mb-6">
-            <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
+        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-6">
+            <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                 {Books.slice(0, limit).map((book) => (
 
                     <div key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-sidebar p-3'>
