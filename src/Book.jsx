@@ -4,8 +4,9 @@ import SideBar from './components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from './constants/data';
 import { FaPlay } from "react-icons/fa";
-
+import { FaRegHeart } from "react-icons/fa";
 import { average } from 'color.js'
+import { HiOutlineDownload } from "react-icons/hi";
 
 
 function Book() {
@@ -38,22 +39,31 @@ function Book() {
                 <div className=' w-full overflow-x-clip z-10'>
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
-                        <div className={` h-fi flex gap-6 items-start justify-start px-14 pb-7`} >
-                            <div className='h-[240px] w-auto aspect-square'>
-                                <img className="w-full h-full object-cover pointer-events-none rounded-md shadow-xl  " src={res.URL} alt="" />
+                        <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
+                            <div className='h-[200px] w-auto aspect-square shadow-2xl '>
+                                <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                             </div>
                             <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
-                                <p className=' font-semibold text-lg text-white'>{res.author}</p>
-                                <p className='font-normal text-base text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
-                                <p className=' font-normal text-base text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
+                                <h1 className='text-[45px] leading-[40px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
+                                <p className=' font-semibold text-base text-white'>{res.author}</p>
+                                <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
+                                <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
                             </div>
                         </div>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-transparent backdrop-blur-3xl to-dark-body h-[500px] px-14'>
-                            <div className='w-full pt-4'>
-                                <button className=' transition aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body h-[500px] px-9'>
+                            <div className='w-full pt-4 flex items-center justify-start gap-6 '>
+                                <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
                                     <FaPlay className='text-white text-xl ' />
                                 </button>
+
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 shadow-lg' title={`Like`}>
+                                    <FaRegHeart className='text-black dark:text-white text-[25px] ' />
+                                </button>
+
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 shadow-lg' title={`Download`}>
+                                    <HiOutlineDownload className='text-black dark:text-white text-[30px] ' />
+                                </button>
+
                             </div>
                         </div>
 
