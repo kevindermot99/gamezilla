@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
 @tailwind base;
@@ -43,11 +44,11 @@ input[data-autocompleted] {
   }
 
   .navbar-link {
-    @apply flex gap-2 relative transition rounded-md hover:bg-gray-100 dark:hover:bg-stone-900 dark:hover:bg-opacity-50 backdrop-blur-md
+    @apply flex gap-2 relative transition rounded-md hover:bg-gray-100 dark:hover:bg-stone-900 dark:hover:bg-opacity-30 backdrop-blur-md
   }
 
   .logoText {
-    @apply font-medium text-2xl flex justify-center items-center gap-1
+    @apply font-medium text-[30px] flex justify-center items-center gap-1
   }
 
   .linkText {
@@ -257,7 +258,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .gradient-moving-bg {
   /* bg-main-color p-[2px] rounded-xl */
-  background-color: #e0e0e000;
+  background-color: #e0e0e057;
   padding: 2px;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
@@ -273,13 +274,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 @keyframes scrollPerspective {
-  from {
+  /* from {
     transform: perspective(600px) rotateX(15deg);
   }
 
   to {
     transform: perspective(600px) rotateX(0deg);
-  }
+  } */
 }
 
 .gradient-moving-bg::after {

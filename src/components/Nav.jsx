@@ -7,8 +7,13 @@ import { TbSunMoon } from "react-icons/tb";
 import { LuLibrary } from "react-icons/lu";
 import { RiSearch2Line } from "react-icons/ri";
 import { BsArrowsFullscreen } from "react-icons/bs";
+import jQuery from "jquery";
+import { useLocation } from "react-router-dom";
 
 function Nav() {
+
+    const location = useLocation();
+    
 
     return (
 
@@ -30,12 +35,12 @@ function Nav() {
                     </a> */}
 
                     <a href="#" className="group navbar-link p-2 ml-5">
-                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black " />
+                        <LuLibrary className={`text-2xl cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book/") && 'text-white dark:text-white '} group-hover:text-black dark:group-hover:text-white`} />
                         <Notification label={9} />
                     </a>
-                    <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
+                    <a href="#" className="group rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-stone-900 dark:bg-opacity-30 dark:text-white backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
                     </a>
 
                 </div>

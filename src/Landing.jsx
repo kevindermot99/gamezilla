@@ -58,14 +58,14 @@ function Landing() {
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
 
-      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto bg-white ">
+      <nav className="flex justify-between items-center py-5 px-5 max-w-[1200px] m-auto bg-white ">
         <div className="flex justify-center items-center">
           <Link
             to="/"
             className="flex justify-start items-center gap-2 text-base font-medium mr-6 "
           >
-            <img src={pagesLogo} alt="Logo" className="h-9" />
-            <p className="logoText ">Pagez</p>
+            {/* <img src={pagesLogo} alt="Logo" className="h-9" /> */}
+            <p className="logoText font-Pacifico ">Pagez</p>
           </Link>
         </div>
         <div className="flex gap-1 justify-center items-center">
@@ -76,7 +76,10 @@ function Landing() {
           <Link className="linkText max-lg:hidden">
             Source code <GoArrowUpRight />
           </Link>
-          <div>|</div>
+        </div>
+        <div className="flex gap-1 justify-center items-center">
+          
+          {/* <div>|</div> */}
           <button onClick={showSignIn} className="linkText">
             Sign in
           </button>
@@ -110,7 +113,7 @@ function Landing() {
           <img
             src={screenShoot}
             loading="lazy"
-            className=" w-full max-w-[1000px] rounded-t-xl "
+            className=" w-full max-w-[1000px] rounded-t-xl bg-white "
             alt="screenshot"
           />
         </div>

@@ -24,6 +24,7 @@ export default {
         DMsans: ['DM Sans', 'sans-serif'],
         salsa: ['salsa', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
+        Pacifico: ['Pacifico', 'sans-serif'],
       },
       colors: {
         'primary': "#ECEEFF",
