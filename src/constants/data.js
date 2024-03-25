@@ -5,6 +5,7 @@ import book4 from "../assets/images/bookcover4.jpg";
 import book5 from "../assets/images/bookcover5.jpg";
 import book6 from "../assets/images/bookcover6.jpg";
 import book7 from "../assets/images/bookcover7.jpg";
+import book8 from "../assets/images/bookcover8.jpg";
 
 
 
@@ -64,6 +65,14 @@ export const Books = [
     author: "Rick Riordan",
     about: "an exhilarating underwater journey with Maeve, uncovering her connection to an ancient sea deity. Riordan skillfully merges mythology and contemporary adventure, crafting a tale of bravery, camaraderie, and embracing destiny beneath the waves.",
     likes: "694,034"
+  },
+  {
+    id: "book8",
+    URL: book8,
+    title: "The Ickabog",
+    author: "J.K. Rowling",
+    about: "a mythical creature that affects the kingdom of Cornucopia. Two friends uncover the truth about the creature and its impact on their world, teaching lessons about bravery and friendship along the way.",
+    likes: "1,411,234"
   },
 ];
 
