@@ -74,11 +74,11 @@ function Book() {
                                     <FaPlay className='text-white text-xl ' />
                                 </button>
 
-                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 shadow-lg' title={`Like`}>
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Like`}>
                                     <FaRegHeart className='text-black dark:text-white text-[25px] ' />
                                 </button>
 
-                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 shadow-lg' title={`Download`}>
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Download`}>
                                     <HiOutlineDownload className='text-black dark:text-white text-[30px] ' />
                                 </button>
 
