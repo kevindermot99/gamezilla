@@ -77,7 +77,7 @@ function SignUp({ hideSignUp, showSignIn }) {
             {submitting && <ButtonLoader />}
           </button>
         </form>
-        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center ">
+        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center py-6">
           <h1 className=" text-sm text-black ">
             Already have an account?{" "}
             <span onClick={switchForms} className=" cursor-pointer text-main-color font-medium">Sign in</span>

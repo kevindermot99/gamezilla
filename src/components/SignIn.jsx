@@ -72,7 +72,7 @@ function SignIn({ hideSignIn, showSignUp }) {
             {submitting && <ButtonLoader />}
           </button>
         </form>
-        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center ">
+        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center py-6">
           <h1 className=" text-sm text-black ">
             Dont have an account?{" "}
             <span
