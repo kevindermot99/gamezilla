@@ -41,7 +41,15 @@ function Book() {
     function findtherebooks(books) {
         return books.author === author;
     }
-    // console.log(authorBooks)
+
+    // Get the index of the book with the exact ID
+    const index = authorBooks.findIndex(book => book.id === id);
+
+    // If the index is found, move the book to the beginning
+    if (index !== -1) {
+        const bookToMove = authorBooks.splice(index, 1)[0];
+        authorBooks.unshift(bookToMove);
+    }
 
     average(res.URL, { format: 'hex' })
         .then(HexColor => {
@@ -94,42 +102,42 @@ function Book() {
                             </div>
 
                             <div className='w-full py-4'>
-                                <table className='w-full' >
+                                <table className='w-full border-separate border-spacing-y-5'>
                                     <thead>
                                         <tr>
                                             <th className='text-left text-base capitalize'>books by {res.author}</th>
                                             <th className='text-left text-base capitalize'>Date added</th>
                                             <th className='text-left text-base capitalize'>Likes</th>
-                                            <th className='text-left '><WiTime3 className='text-xl ' /></th>
+                                            <th className='text-left'><WiTime3 className='text-xl ' /></th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         {authorBooks.map((authorBook) => (
                                             <tr key={authorBook.id}>
-                                                <td className='w-[40%] py-4'>
+                                                <td className='w-[40%]'>
                                                     <div className='w-fit h-fit flex items-center gap-3'>
                                                         <img src={authorBook.URL} alt={authorBook.title} className='h-12 w-12 shadow-md rounded-sm ' />
                                                         <div className={` block w-full truncate text-ellipsis`}>
-                                                            <Link to={`/book/${authorBook.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{res.title}</Link>
+                                                            <Link to={`/book/${authorBook.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{authorBook.title}</Link>
                                                             <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{authorBook.author}</p>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td className='w-[20%] py-4'>
+                                                <td className='w-[20%]'>
                                                     <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
                                                 </td>
 
-                                                <td className='w-[20%] py-4'>
+                                                <td className='w-[20%]'>
                                                     <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{authorBook.likes}</p>
                                                 </td>
 
-                                                <td className='w-[20%] py-4'>
+                                                <td className='w-[20%]'>
                                                     <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
                                                 </td>
                                             </tr>
                                         ))}
-                                        
+
                                     </tbody>
                                 </table>
                             </div>
