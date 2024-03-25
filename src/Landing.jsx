@@ -116,8 +116,8 @@ function Landing() {
         </div>
       </section>
 
-      <section className="w-full bg-white border-t-[1px] border-stone-300 flex flex-col items-center justify-start p-7 relative z-10">
-        <h1 className="mt-10 text-base font-medium leading-8 text-black text-wrap">
+      <section className="w-full bg-white border-t-[1px] border-stone-300 dark:border-stone-600 dark:bg-dark-body flex flex-col items-center justify-start p-7 relative z-10">
+        <h1 className="mt-10 text-base font-medium leading-8 text-black dark:text-white text-wrap">
           1,241 People has started using Pagez since the Launch
         </h1>
 
@@ -140,19 +140,19 @@ function Landing() {
         />
       </section>
 
-      <section className="w-full bg-white flex flex-col items-center justify-start px-7">
-        <h1 className="text-black text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
+      <section className="w-full bg-white dark:bg-dark-body flex flex-col items-center justify-start px-7">
+        <h1 className="text-black dark:text-white  text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
           <span className=" line-through">Free By Adds</span>
           <br />
           No, It's <span className="text-main-color "> 100% Free.</span>
         </h1>
         <div className="flex items-center justify-evenly  w-full max-w-[900px] z-10">
           <div>
-            <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
+            <h1 className="text-4xl font-extrabold text-black dark:text-white  text-wrap max-w-[400px] leading-[50px] mb-4  ">
               Fits seamlessly on{" "}
               <span className="text-main-color ">All Screens</span>
             </h1>
-            <p className="font-medium text-base max-w-[420px] leading-relaxed text-black">
+            <p className="font-medium text-base max-w-[420px] leading-relaxed text-stone-400">
               Our web app changes its look to fit small screens. It makes
               everything easy to see and use, no matter if you're using a phone
               or a tablet. So, it's simple and comfortable for everyone to use,
@@ -169,8 +169,8 @@ function Landing() {
           </div>
         </div>
 
-        <p className="my-16 text-xs text-black">
-          Disclaimer: i don't own any of these books, this is a School Project
+        <p className="my-16 text-base text-black dark:text-white ">
+          Disclaimer: i don't own any of these books and this is a School Project
         </p>
       </section>
 
