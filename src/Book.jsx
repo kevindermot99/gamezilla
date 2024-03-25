@@ -84,7 +84,7 @@ function Book() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body  min-h-[500px] px-9'>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-9'>
 
                             <div className='w-full py-4 flex items-center justify-start gap-6 '>
                                 <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
