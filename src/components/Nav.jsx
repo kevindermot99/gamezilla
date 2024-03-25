@@ -30,12 +30,12 @@ function Nav() {
                     </a> */}
 
                     <a href="#" className="group navbar-link p-2 ml-5">
-                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black dark:text-primary opacity-60 group-hover:opacity-100" />
+                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black dark:text-primary" />
                         <Notification label={9} />
                     </a>
                     <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap bg-white  dark:bg-dark-sidebar   py-2 px-3 right-0 -bottom-[140%] rounded-m ring-1 ring-gray-200 dark:ring-dark-navlink   rounded-lg tranition hidden group-hover:block">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-stone-900 dark:bg-opacity-50 backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block dark:text-white text-black">Clare thomson</p>
                     </a>
 
                 </div>
