@@ -35,6 +35,11 @@ function Book() {
         return book.id === id;
     }
 
+    const authorBooks = Books.find(findtherebooks)
+    function findtherebooks(books) {
+        return books.author === res.author;
+    }
+
     average(res.URL, { format: 'hex' })
         .then(HexColor => {
             setColor(HexColor)
@@ -68,7 +73,8 @@ function Book() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body  min-h-[300px] px-9'>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body  min-h-[500px] px-9'>
+                            
                             <div className='w-full py-4 flex items-center justify-start gap-6 '>
                                 <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
                                     <FaPlay className='text-white text-xl ' />
@@ -87,9 +93,9 @@ function Book() {
                             <div className='w-full py-4'>
                                 <table className='w-full' >
                                     <tr>
-                                        <th className='text-left '>Title</th>
-                                        <th className='text-left '>Date added</th>
-                                        <th className='text-left '>Likes</th>
+                                        <th className='text-left text-base '>Title & Author</th>
+                                        <th className='text-left text-base '>Date added</th>
+                                        <th className='text-left text-base '>Likes</th>
                                         <th className='text-left '><WiTime3 className='text-xl ' /></th>
                                     </tr>
                                     <tr>
@@ -117,6 +123,9 @@ function Book() {
                                     
                                 </table>
                             </div>
+
+                            
+
                         </div>
 
 
