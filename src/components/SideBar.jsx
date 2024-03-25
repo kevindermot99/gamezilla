@@ -70,13 +70,13 @@ function SideBar() {
 
                 <div className="w-full h-fit flex flex-col pb-[80px]">
                     {Books.map((book, index) => (
-                        <div key={index} className='min-h-[65px] w-full h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink cursor-pointer'>
-                            <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-md ' />
-                            <div className={` block w-full max-w-[70%] ${sidebar === "small" && " hidden"}`}>
-                                <h1 className=' truncate text-ellipsis w-full'>{book.title}</h1>
-                                <p className={` truncate text-ellipsis w-full text-stone-500 dark:text-stone-400 `}>{book.author}</p>
+                        <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>
+                            <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-sm ' />
+                            <div className={` block w-full max-w-[70%] truncate text-ellipsis ${sidebar === "small" && " hidden"}`}>
+                                <h1 className='truncate text-ellipsistext-black dark:text-white'>{book.title}</h1>
+                                <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{book.author}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </ul>
