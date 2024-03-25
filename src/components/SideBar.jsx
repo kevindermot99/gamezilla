@@ -36,7 +36,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[80px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'}  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
@@ -46,22 +46,22 @@ function SideBar() {
                 </div>
             </div>
             <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 overscroll-contain `}>
-                <Link to="/app" className={`active  h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
+                <Link to="/app" className={`active  h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <IoHomeOutline className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
 
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
+                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <MdOutlineExplore className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Explore</p>
                 </Link>
 
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
+                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <BiCategoryAlt className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Categories</p>
                 </Link>
 
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
+                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <FaRegHeart className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
                 </Link>
@@ -71,10 +71,10 @@ function SideBar() {
                 <div className="w-full h-fit flex flex-col pb-[80px]">
                     {Books.map((book, index) => (
                         <div key={index} className='w-full h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink cursor-pointer'>
-                            <img src={book.URL} alt={book.title} className='h-10 aspect-square' />
-                            <div className='block w-full max-w-[70%]'>
+                            <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-md ' />
+                            <div className={` block w-full max-w-[70%] ${sidebar === "small" && " hidden"}`}>
                                 <h1 className=' truncate text-ellipsis w-full'>{book.title}</h1>
-                                <p className='truncate text-ellipsis w-full text-stone-500 dark:text-stone-400  '>{book.author}</p>
+                                <p className={` truncate text-ellipsis w-full text-stone-500 dark:text-stone-400 `}>{book.author}</p>
                             </div>
                         </div>
                     ))}
