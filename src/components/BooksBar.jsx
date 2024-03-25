@@ -23,7 +23,7 @@ function BooksBar({ count }) {
     const limit = count;
 
     return (
-        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-6">
+        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-6 custom-scrollbar">
             <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                 {Books.slice(0, limit).map((book) => (
 

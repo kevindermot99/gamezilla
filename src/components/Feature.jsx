@@ -12,7 +12,7 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
                 <h1 className='text-main-color font-semibold text-xl '>
                     {tip}
                 </h1>
-                <h1 className='text-black dark:text-white opacity-90 font-bold text-[35px] leading-[45px]'>
+                <h1 className='text-black opacity-90 font-bold text-[35px] leading-[45px]'>
                     {title}
                 </h1>
                 <p className='text-stone-400  font-medium text-base leading-relaxed text-wrap '>
@@ -23,8 +23,8 @@ function Feature({ tip, title, description, URL, direction, position, showFormat
 
                     <div className='flex flex-col w-full gap-2 mt-2'>
                         {Formats.map((format, index) => (
-                            <div key={index} className='group py-5 px-6 bg-stone-100 dark:bg-dark-navlink rounded-2xl cursor-pointer transition'>
-                                <h1 className=' text-black dark:text-white  font-bold text-base flex gap-1 items-center justify-start'>
+                            <div key={index} className='group py-5 px-6 bg-stone-100 rounded-2xl cursor-pointer transition'>
+                                <h1 className=' text-black font-bold text-base flex gap-1 items-center justify-start'>
                                     <TbFileDownload className='text-2xl text-stone-400 ' />
                                     {format.format}
                                 </h1>

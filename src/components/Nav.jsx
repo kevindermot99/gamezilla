@@ -17,9 +17,9 @@ function Nav() {
             <nav className="flex justify-end items-center py-5 sticky top-0 z-index-10 px-3">
             
                 {/* <form className='relative w-full max-w-[450px]'>
-                    <input className="search transition bg-gray-200 dark:bg-gray-800 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-black dark:text-primary  " type="search" placeholder="Find a Book.." />
-                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-slate-200 dark:hover:bg-gray-800 h-[80%] w-[40px] rounded-lg flex justify-center items-center">
-                        <RiSearch2Line className="text-black dark:text-primary text-lg" />
+                    <input className="search transition bg-gray-200 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-black " type="search" placeholder="Find a Book.." />
+                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-slate-200 h-[80%] w-[40px] rounded-lg flex justify-center items-center">
+                        <RiSearch2Line className="text-black text-lg" />
                     </button>
                 </form> */}
 
@@ -30,12 +30,12 @@ function Nav() {
                     </a> */}
 
                     <a href="#" className="group navbar-link p-2 ml-5">
-                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black dark:text-primary" />
+                        <LuLibrary className="text-2xl cursor-pointer relative transition text-black " />
                         <Notification label={9} />
                     </a>
                     <a href="#" className="group navbar-link rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-stone-900 dark:bg-opacity-50 backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block dark:text-white text-black">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
                     </a>
 
                 </div>

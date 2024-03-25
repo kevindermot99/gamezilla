@@ -41,7 +41,7 @@ function Landing() {
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
-    <div className=" overflow-clip relative bg-white dark:bg-dark-body text-black dark:text-white">
+    <div className=" overflow-clip relative bg-white text-black overflow-y-hidden custom-scrollbar-theme ">
       <div
         className={`w-full h-full relative duration-300 z-40 ${
           signInForm ? "fadeIt" : "hideIt"
@@ -58,7 +58,7 @@ function Landing() {
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
 
-      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto bg-white dark:bg-dark-body ">
+      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto bg-white ">
         <div className="flex justify-center items-center">
           <Link
             to="/"
@@ -91,9 +91,9 @@ function Landing() {
 
       <section className=" flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[80px]">
         <h1 className="font-extrabold  text-[80px] leading-[75px] text-wrap max-w-[900px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0">
-          <span className={`HeroText dark:text-white`}>Infinite </span>
+          <span className={`HeroText`}>Infinite </span>
           <span className="text-main-color ">Stories, </span> <br />
-          <span className={`HeroText dark:text-white`}>One Library.</span>
+          <span className={`HeroText`}>One Library.</span>
         </h1>
         <p className="text-xl font-normal leading-8 max-w-[400px] text-stone-400 text-wrap mt-[30px] max-sm:m-0">
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
@@ -116,8 +116,8 @@ function Landing() {
         </div>
       </section>
 
-      <section className="w-full bg-white border-t-[1px] border-stone-300 dark:border-stone-600 dark:bg-dark-body flex flex-col items-center justify-start p-7 relative z-10">
-        <h1 className="mt-10 text-base font-medium leading-8 text-black dark:text-white text-wrap">
+      <section className="w-full bg-white border-t-[1px] border-stone-300 flex flex-col items-center justify-start p-7 relative z-10">
+        <h1 className="mt-10 text-base font-medium leading-8 text-black text-wrap">
           1,241 People has started using Pagez since the Launch
         </h1>
 
@@ -140,15 +140,15 @@ function Landing() {
         />
       </section>
 
-      <section className="w-full bg-white dark:bg-dark-body flex flex-col items-center justify-start px-7">
-        <h1 className="text-black dark:text-white  text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
+      <section className="w-full bg-white  flex flex-col items-center justify-start px-7">
+        <h1 className="text-black   text-center opacity-90 font-bold text-[35px] leading-[45px] mb-28">
           <span className=" line-through">Free By Adds</span>
           <br />
           No, It's <span className="text-main-color "> 100% Free.</span>
         </h1>
         <div className="flex items-center justify-evenly  w-full max-w-[900px] z-10">
           <div>
-            <h1 className="text-4xl font-extrabold text-black dark:text-white  text-wrap max-w-[400px] leading-[50px] mb-4  ">
+            <h1 className="text-4xl font-extrabold text-black   text-wrap max-w-[400px] leading-[50px] mb-4  ">
               Fits seamlessly on{" "}
               <span className="text-main-color ">All Screens</span>
             </h1>
@@ -169,7 +169,7 @@ function Landing() {
           </div>
         </div>
 
-        <p className="my-16 text-base text-black dark:text-white ">
+        <p className="my-16 text-base text-black  ">
           Disclaimer: i don't own any of these books and this is a School Project
         </p>
       </section>

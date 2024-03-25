@@ -10,7 +10,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   --main-color: #8C52FF;
   --dark-body-color: #111827;
   --light-scrollbar: #afafaf48;
@@ -106,8 +106,10 @@ input[data-autocompleted] {
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
   
 }
+
 
 
 
@@ -360,28 +362,26 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* width & height */
-::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track {
   border-radius: 20px;
 }
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background: #5a5a5a2a;
   border-radius: 20px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #5a5a5a7a;
 }
 
-/* CUSTOM SCROLL */
+
+
 
 
 /* CUSTOM SELECT COLORS */
