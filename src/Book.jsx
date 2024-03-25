@@ -7,6 +7,20 @@ import { FaPlay } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { average } from 'color.js'
 import { HiOutlineDownload } from "react-icons/hi";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 
 function Book() {
@@ -40,14 +54,18 @@ function Book() {
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full overflow-clip'>
                         <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
-                            <div className='h-[200px] w-auto aspect-square shadow-2xl '>
-                                <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
-                            </div>
+                            <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+                                <div className='h-[200px] w-auto aspect-square shadow-2xl '>
+                                    <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
+                                </div>
+                            </Reveal>
                             <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                <h1 className='text-[45px] leading-[40px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
-                                <p className=' font-semibold text-base text-white'>{res.author}</p>
-                                <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
-                                <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
+                                <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+                                    <h1 className='text-[45px] leading-[40px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
+                                    <p className=' font-semibold text-base text-white'>{res.author}</p>
+                                    <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
+                                    <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
+                                </Reveal>
                             </div>
                         </div>
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body h-[500px] px-9'>
