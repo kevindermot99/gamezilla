@@ -41,7 +41,7 @@ function Landing() {
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
-    <div className=" overflow-clip relative bg-white">
+    <div className=" overflow-clip relative bg-white dark:bg-dark-body text-black dark:text-white">
 
       <div 
       className={`w-full h-full relative duration-300 z-40 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
@@ -53,14 +53,14 @@ function Landing() {
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
       
-      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white dark:bg-dark-navlink z-10 bg-opacity-85 backdrop-blur-lg">
+      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white dark:bg-dark-body dark:bg-opacity-90 z-10 bg-opacity-85 backdrop-blur-lg">
         <div className="flex justify-center items-center">
           <Link
             to="/"
             className="flex justify-start items-center gap-2 text-base font-medium mr-6 "
           >
             <img src={pagesLogo} alt="Logo" className="h-9" />
-            <p className="logoText text-black">Pagez</p>
+            <p className="logoText ">Pagez</p>
           </Link>
         </div>
         <div className="flex gap-1 justify-center items-center">

@@ -51,7 +51,7 @@ input[data-autocompleted] {
   }
 
   .linkText {
-    @apply text-black font-medium text-sm flex justify-center items-center gap-1 py-2 px-4 hover:bg-gray-100 rounded-lg transition
+    @apply font-medium text-sm flex justify-center items-center gap-1 py-2 px-4 hover:bg-gray-100 dark:hover:bg-dark-navlink rounded-lg transition
   }
 }
 
