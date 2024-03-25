@@ -32,7 +32,7 @@ function Browse() {
         Recently Played
       </h1>
       </Reveal>
-      <BooksBar count={2} />
+      <BooksBar count={5} />
 
       <Reveal keyframes={customAnimation} delay={200} triggerOnce>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
