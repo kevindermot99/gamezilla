@@ -45,7 +45,7 @@ function SideBar() {
                     <h1 className={`logoText ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
-            <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 `}>
+            <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 overscroll-contain `}>
                 <Link to="/app" className={`active  h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[50px]'}`}>
                     <IoHomeOutline className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
@@ -81,7 +81,7 @@ function SideBar() {
                 </div>
             </ul>
 
-            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-stone-200 dark:bg-dark-sidebar bg-opacity-10 dark:bg-opacity-30'>
+            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-stone-200 dark:bg-dark-sidebar'>
                 <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-lg hover:bg-main-color transition duration-300`}>
                     {sidebar === "big" ?
                         <TbLayoutSidebarRightExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
