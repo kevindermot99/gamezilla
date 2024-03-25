@@ -9,6 +9,8 @@ import { average } from 'color.js'
 import { HiOutlineDownload } from "react-icons/hi";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import { WiTime3 } from "react-icons/wi";
+import { Link } from 'react-router-dom';
 
 const customAnimation = keyframes`
   from {
@@ -66,8 +68,8 @@ function Book() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body h-[500px] px-9'>
-                            <div className='w-full pt-4 flex items-center justify-start gap-6 '>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-dark-navlink backdrop-blur-3xl to-dark-body  min-h-[300px] px-9'>
+                            <div className='w-full py-4 flex items-center justify-start gap-6 '>
                                 <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
                                     <FaPlay className='text-white text-xl ' />
                                 </button>
@@ -81,7 +83,43 @@ function Book() {
                                 </button>
 
                             </div>
+
+                            <div className='w-full py-4'>
+                                <table className='w-full' >
+                                    <tr>
+                                        <th className='text-left '>Title</th>
+                                        <th className='text-left '>Date added</th>
+                                        <th className='text-left '>Likes</th>
+                                        <th className='text-left '><WiTime3 className='text-xl ' /></th>
+                                    </tr>
+                                    <tr>
+                                        <td className='w-[40%] py-3'>
+                                            <div className='w-fit h-fit flex items-center gap-3'>
+                                                <img src={res.URL} alt={res.title} className='h-12 w-12 shadow-md rounded-sm ' />
+                                                <div className={` block w-full truncate text-ellipsis`}>
+                                                    <Link  to={`/book/${res.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{res.title}</Link>
+                                                    <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{res.author}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className='w-[20%] py-3'>
+                                            <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
+                                        </td>
+
+                                        <td className='w-[20%] py-3'>
+                                            <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{res.likes}</p>
+                                        </td>
+
+                                        <td className='w-[20%] py-3'>
+                                            <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
                         </div>
+
+
 
                     </div>
                 </div>
