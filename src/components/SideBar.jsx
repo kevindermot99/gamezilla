@@ -36,7 +36,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-95 backdrop-blur-2xl  `}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
@@ -64,7 +64,7 @@ function SideBar() {
 
                 <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-500 dark:bg-opacity-15 my-3'></div>
 
-                <div className="w-full h-fit flex flex-col pb-[80px]">
+                <div className="w-full h-fit flex flex-col">
                     <p className='text-stone-400 dark:text-stone-500 uppercase text-xs px-2 py-2 text-center'>Liked Books</p>
                     {Books.map((book, index) => (
                         <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>
@@ -78,7 +78,7 @@ function SideBar() {
                 </div>
             </ul>
 
-            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-white dark:bg-dark-sidebar'>
+            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-white dark:bg-dark-sidebar hidden'>
                 <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-lg hover:bg-main-color transition duration-300`}>
                     {sidebar === "big" ?
                         <TbLayoutSidebarRightExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
