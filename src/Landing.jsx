@@ -14,46 +14,51 @@ import ButtonLoader from "./components/ButtonLoader";
 
 function Landing() {
   const time = new Date();
-  const [signInForm, setSignInForm] = useState(false)
-  const [signUpForm, setSignUpForm] = useState(false)
+  const [signInForm, setSignInForm] = useState(false);
+  const [signUpForm, setSignUpForm] = useState(false);
 
-  //sign in 
+  //sign in
   const showSignIn = () => {
-    setSignInForm(true)
-    document.body.style.overflow = 'hidden';
-  }
+    setSignInForm(true);
+    document.body.style.overflow = "hidden";
+  };
   const hideSignIn = () => {
-    setSignInForm(false)
-    document.body.style.overflow = '';
-  }
+    setSignInForm(false);
+    document.body.style.overflow = "";
+  };
 
   // sign up
   const showSignUp = () => {
-    setSignUpForm(true)
-    document.body.style.overflow = 'hidden';
-  }
+    setSignUpForm(true);
+    document.body.style.overflow = "hidden";
+  };
   const hideSignUp = () => {
-    setSignUpForm(false)
-    document.body.style.overflow = '';
-  }
+    setSignUpForm(false);
+    document.body.style.overflow = "";
+  };
 
   const HeroGradientText =
     "text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-700 max-sm:to-gray-800";
 
   return (
     <div className=" overflow-clip relative bg-white dark:bg-dark-body text-black dark:text-white">
-
-      <div 
-      className={`w-full h-full relative duration-300 z-40 ${signInForm ? 'fadeIt' : 'hideIt'}`}>
+      <div
+        className={`w-full h-full relative duration-300 z-40 ${
+          signInForm ? "fadeIt" : "hideIt"
+        }`}
+      >
         <SignIn hideSignIn={hideSignIn} showSignUp={showSignUp} />
       </div>
 
-      <div 
-      className={`w-full h-full relative duration-300 z-40 ${signUpForm ? 'fadeIt' : 'hideIt'}`}>
+      <div
+        className={`w-full h-full relative duration-300 z-40 ${
+          signUpForm ? "fadeIt" : "hideIt"
+        }`}
+      >
         <SignUp hideSignUp={hideSignUp} showSignIn={showSignIn} />
       </div>
-      
-      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto sticky top-0 bg-white dark:bg-dark-body dark:bg-opacity-90 z-10 bg-opacity-85 backdrop-blur-lg">
+
+      <nav className="flex justify-between items-center py-4 px-5 max-w-[1500px] m-auto bg-white dark:bg-dark-body ">
         <div className="flex justify-center items-center">
           <Link
             to="/"
@@ -86,11 +91,11 @@ function Landing() {
 
       <section className=" flex flex-col items-center justify-center text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[80px]">
         <h1 className="font-extrabold  text-[80px] leading-[75px] text-wrap max-w-[900px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0">
-          <span className={`HeroText`}>Infinite </span>
+          <span className={`HeroText dark:text-white`}>Infinite </span>
           <span className="text-main-color ">Stories, </span> <br />
-          <span className={`HeroText`}>One Library.</span>
+          <span className={`HeroText dark:text-white`}>One Library.</span>
         </h1>
-        <p className="text-xl font-normal leading-8 max-w-[400px] text-gray-600 text-wrap mt-[30px] max-sm:m-0">
+        <p className="text-xl font-normal leading-8 max-w-[400px] text-stone-400 text-wrap mt-[30px] max-sm:m-0">
           Enjoy Free Novels Online: No Cost, No Limits, Pure Pleasure!
         </p>
 
@@ -111,7 +116,7 @@ function Landing() {
         </div>
       </section>
 
-      <section className="w-full bg-white border-t-[1px] border-gray-300 flex flex-col items-center justify-start p-7 relative z-10">
+      <section className="w-full bg-white border-t-[1px] border-stone-300 flex flex-col items-center justify-start p-7 relative z-10">
         <h1 className="mt-10 text-base font-medium leading-8 text-black text-wrap">
           1,241 People has started using Pagez since the Launch
         </h1>
@@ -141,13 +146,13 @@ function Landing() {
           <br />
           No, It's <span className="text-main-color "> 100% Free.</span>
         </h1>
-        <div className="flex items-center justify-evenly  w-full max-w-[900px]">
+        <div className="flex items-center justify-evenly  w-full max-w-[900px] z-10">
           <div>
             <h1 className="text-4xl font-extrabold text-black text-wrap max-w-[400px] leading-[50px] mb-4  ">
               Fits seamlessly on{" "}
               <span className="text-main-color ">All Screens</span>
             </h1>
-            <p className="font-medium text-base max-w-[420px] leading-relaxed">
+            <p className="font-medium text-base max-w-[420px] leading-relaxed text-black">
               Our web app changes its look to fit small screens. It makes
               everything easy to see and use, no matter if you're using a phone
               or a tablet. So, it's simple and comfortable for everyone to use,
@@ -155,7 +160,7 @@ function Landing() {
             </p>
           </div>
 
-          <div className=" overflow-clip  ">
+          <div className=" overflow-clip ">
             <img
               src={phoneMockup}
               className="w-[242px] h-[430px]"
@@ -164,16 +169,16 @@ function Landing() {
           </div>
         </div>
 
-        <p className="my-16 text-xs text-gray-400">
+        <p className="my-16 text-xs text-black">
           Disclaimer: i don't own any of these books, this is a School Project
         </p>
       </section>
 
       <footer className=" py-5 px-5 flex items-center justify-between gap-4 max-sm:block">
-        <h1 className="text-gray-400 text-sm font-medium text-wrap">
+        <h1 className="text-stone-400 text-sm font-medium text-wrap">
           &copy; All right to book owners.{" "}
         </h1>
-        <h1 className="text-gray-400 text-sm font-medium text-wrap">
+        <h1 className="text-stone-400 text-sm font-medium text-wrap">
           {" "}
           2023 - {time.getFullYear()}{" "}
         </h1>
