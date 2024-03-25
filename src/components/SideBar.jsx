@@ -81,7 +81,7 @@ function SideBar() {
                 </div>
             </ul>
 
-            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-stone-200 dark:bg-dark-sidebar'>
+            <div className='absolute bottom-0 left-0 w-full h-fit p-3 bg-white dark:bg-dark-sidebar'>
                 <button onClick={toggleSidebar} className={`group w-full py-3 px-2 flex items-center justify-center rounded-lg hover:bg-main-color transition duration-300`}>
                     {sidebar === "big" ?
                         <TbLayoutSidebarRightExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
