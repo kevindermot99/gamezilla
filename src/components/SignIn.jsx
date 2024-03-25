@@ -35,7 +35,7 @@ function SignIn({ hideSignIn, showSignUp }) {
       <div className="  w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white dark:bg-dark-body  absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
         <button
           onClick={hideSignIn}
-          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100"
+          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer  hover:bg-stone-200 dark:hover:bg-dark-navlink"
         >
           <IoCloseOutline className="text-2xl" />
         </button>

@@ -33,17 +33,17 @@ function SignUp({ hideSignUp, showSignIn }) {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-black bg-opacity-45 h-full overscroll-contain">
-      <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
+      <div className="w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white dark:bg-dark-body  absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
         <button
           onClick={hideSignUp}
-          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-gray-100"
+          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer hover:bg-stone-200 dark:hover:bg-dark-navlink"
         >
           <IoCloseOutline className="text-2xl" />
         </button>
-        <h1 className=" font-black tracking-tighter text-[35px] mb-2 select-none">
+        <h1 className=" font-black tracking-tighter text-[35px] mb-2 select-none text-black dark:text-white ">
           Sign Up
         </h1>
-        <p className="font-medium text-base text-gray-500 mb-6 select-none">
+        <p className="font-medium text-base text-stone-400 mb-6 select-none">
           Sign in with your email here.
         </p>
         <form onSubmit={signUp} className="flex flex-col justify-start items-start w-full">
@@ -52,21 +52,21 @@ function SignUp({ hideSignUp, showSignIn }) {
             required
             name="email"
             // autoComplete="on"
-            className="tracking-tight text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className="tracking-tight text-base  text-black dark:text-white py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60 dark:bg-stone-700 dark:bg-opacity-30"
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className=" tracking-tighte4 text-base  text-black dark:text-white py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60 dark:bg-stone-700 dark:bg-opacity-30"
             placeholder="Password"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 ring-1 ring-gray-300 outline-none hover:ring-gray-400 transition focus:ring-main-color  "
+            className=" tracking-tighte4 text-base text-black dark:text-white py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60 dark:bg-stone-700 dark:bg-opacity-30"
             placeholder="Confirm Password"
           />
           <button
@@ -78,7 +78,7 @@ function SignUp({ hideSignUp, showSignIn }) {
           </button>
         </form>
         <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center ">
-          <h1 className=" text-sm text-black p-2">
+          <h1 className=" text-sm text-black dark:text-white p-2">
             Already have an account?{" "}
             <span onClick={switchForms} className=" cursor-pointer text-main-color font-medium">Sign in</span>
           </h1>
