@@ -32,10 +32,10 @@ function SignIn({ hideSignIn, showSignUp }) {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-black bg-opacity-45 h-full overscroll-contain">
-      <div className="  w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white dark:bg-dark-body  absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
+      <div className="  w-[90%] max-h-[90%] max-w-[370px] h-fit bg-white  absolute top-0 left-0 right-0 bottom-0 m-auto rounded-xl shadow-lg flex flex-col justify-start items-center">
         <button
           onClick={hideSignIn}
-          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer  hover:bg-stone-200 dark:hover:bg-dark-navlink"
+          className="self-end translate-y-2 mr-2 p-1 rounded-md cursor-pointer  hover:bg-stone-200 "
         >
           <IoCloseOutline className="text-2xl" />
         </button>
@@ -54,14 +54,14 @@ function SignIn({ hideSignIn, showSignUp }) {
             required
             name="email"
             // autoComplete="on"
-            className="tracking-tight text-base text-black dark:text-white  py-[12px] mb-3 rounded-lg w-[85%] m-auto px-5  outline-none transition bg-stone-200 bg-opacity-60 dark:bg-stone-700 dark:bg-opacity-30  "
+            className="tracking-tight text-base text-black py-[12px] mb-3 rounded-lg w-[85%] m-auto px-5  outline-none transition bg-stone-200 bg-opacity-60 "
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black dark:text-white  py-[12px] mb-4 rounded-lg w-[85%] m-auto px-5 outline-none transition bg-stone-200 bg-opacity-60 dark:bg-stone-700 dark:bg-opacity-30  "
+            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-5 outline-none transition bg-stone-200 bg-opacity-60 "
             placeholder="Password"
           />
           <button
@@ -73,7 +73,7 @@ function SignIn({ hideSignIn, showSignUp }) {
           </button>
         </form>
         <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center ">
-          <h1 className=" text-sm text-black dark:text-white p-2">
+          <h1 className=" text-sm text-black ">
             Dont have an account?{" "}
             <span
               onClick={switchForms}
