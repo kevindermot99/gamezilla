@@ -61,14 +61,11 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Categories</p>
                 </Link>
 
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <FaRegHeart className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50 group-hover:opacity-100' />
-                    <p className={` text-sm font-medium dark:text-stone-300 text-stone-700 overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked Books</p>
-                </Link>
 
-                <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-300 dark:bg-opacity-15  my-3'></div>
+                <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-500 dark:bg-opacity-15 my-3'></div>
 
                 <div className="w-full h-fit flex flex-col pb-[80px]">
+                    <p className='text-stone-400 dark:text-stone-500 uppercase text-xs px-2 py-2 text-center'>Liked Books</p>
                     {Books.map((book, index) => (
                         <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>
                             <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-sm ' />
