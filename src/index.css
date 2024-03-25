@@ -267,7 +267,7 @@ input[type="search"]::-webkit-search-results-decoration {
   animation-range-start: 0;
   animation-range-end: 340px;
   margin-top: 30px;
-  z-index: -1;
+  z-index: 1;
 }
 
 @keyframes scrollPerspective {
