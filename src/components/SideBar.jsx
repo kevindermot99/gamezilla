@@ -36,17 +36,17 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200 relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-90 backdrop-blur-2xl  `}>
 
             <div className={`group flex justify-between items-center mb-5 w-full `}>
 
-                <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full'} flex justify-start items-center text-base font-medium max-w-[50px] cursor-default `}>
-                    <img src={pagesLogo} alt="logo" className={` transition h-auto w-[45px] mx-3 ${sidebar === "small" && 'pl-0'} `} />
+                <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full pl-[5px]'} flex justify-start items-center text-base font-medium max-w-[50px] cursor-default `}>
+                    <img src={pagesLogo} alt="logo" className={` transition h-auto w-[42px] mx-3`} />
                     <h1 className={`logoText ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
             <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 overscroll-contain `}>
-                <Link to="/app" className={`active  h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
+                <Link to="/app" className={`active h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <IoHomeOutline className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
@@ -70,7 +70,7 @@ function SideBar() {
 
                 <div className="w-full h-fit flex flex-col pb-[80px]">
                     {Books.map((book, index) => (
-                        <div key={index} className='w-full h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink cursor-pointer'>
+                        <div key={index} className='min-h-[65px] w-full h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink cursor-pointer'>
                             <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-md ' />
                             <div className={` block w-full max-w-[70%] ${sidebar === "small" && " hidden"}`}>
                                 <h1 className=' truncate text-ellipsis w-full'>{book.title}</h1>
