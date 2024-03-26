@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Landing from './Landing';
+import Landing from './pages/Landing'
 import Pagez from './Pagez';
-import Book from './Book';
+import Book from './pages/Book';
+import PageError from './pages/PageError';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/app' element={<Pagez />} />
+        <Route path='/' element={<Pagez />} />
+        <Route path='/landingPage' element={<Landing />} />
         <Route path='/book/:id' element={<Book />} />
+        <Route path='/*' element={<PageError />} />
       </Routes>
     </Router>
   );
