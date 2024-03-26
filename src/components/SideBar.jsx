@@ -36,7 +36,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-1 py-5 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-95 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-1 py-5 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-95 backdrop-blur-2xl  `}>
 
             <div className={`group justify-between items-center mb-5 w-full hidden`}>
 
@@ -45,7 +45,7 @@ function SideBar() {
                     <h1 className={`logoText text-stone-400 px-2 py-2  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
-            <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 overscroll-contain custom-scrollbar `}>
+            <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-2 overscroll-contain custom-scrollbar `}>
                 <Link to="/" className={`active h-[45px]  group flex items-center justify-start text-[15px] gap-3 outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <GoHome className='text-[22px] mx-3 min-h-7 min-w-6 opacity-50  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
@@ -62,12 +62,12 @@ function SideBar() {
                 </Link>
 
 
-                <div className='w-[95%] m-auto h-[2px] bg-stone-100 dark:bg-stone-500 dark:bg-opacity-15 my-3'></div>
+                <div className='w-[95%] m-auto h-[2px] bg-stone-200 dark:bg-stone-500 dark:bg-opacity-15 my-3'></div>
 
                 <div className="w-full h-fit flex flex-col">
-                    <div className='flex justify-between items-center'>
-                    <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
-                    <Link to="/" className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
+                    <div className='flex justify-between items-center pr-2 mb-2'>
+                        <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
+                        <Link to="/" className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
                     </div>
                     {Books.map((book, index) => (
                         <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>
