@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Browse } from './sections';
 import Nav from './components/Nav';
 import SideBar from './components/SideBar';
+import { timers } from 'jquery';
 
 
 const Pagez = () => {
 
   const [loading, setLoading] = useState(null)
 
-  window.onload = function() {
+  window.onload = function () {
     setLoading(true)
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setLoading(false)
     }, 1400);
-  })
+  }, [])
 
   return (
     loading ? (
