@@ -1,7 +1,0 @@
-First create all remaining pages
-    - liked books page
-    - trending books page
-    - recently played
-    - recently added
-    - my Library
-
