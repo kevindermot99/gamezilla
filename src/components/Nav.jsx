@@ -40,7 +40,7 @@ function Nav() {
                     </a>
                     <a href="#" className="group rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-stone-900 dark:bg-opacity-30 dark:text-white backdrop-blur-md shadow-lg rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
                     </a>
 
                 </div>
