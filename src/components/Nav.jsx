@@ -36,7 +36,7 @@ function Nav() {
 
                     <a href="#" className="group navbar-link p-2 ml-5">
                         <LuLibrary className={`text-2xl cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book/") && 'text-white dark:text-white '} group-hover:text-black dark:group-hover:text-white`} />
-                        <Notification label={9} />
+                        <Notification label={84} />
                     </a>
                     <a href="#" className="group rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />

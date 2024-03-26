@@ -128,77 +128,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.loader-overlay {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--body-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-  transition: .2s;
-  display: none;
-}
-
-.loader-overlay.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader {
-  --uib-size: 150px;
-  --uib-color: var(--main-color);
-  --uib-speed: 1.4s;
-  --uib-stroke: 5px;
-  --uib-bg-opacity: .1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--uib-stroke);
-  width: var(--uib-size);
-  border-radius: calc(var(--uib-stroke) / 2);
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-
-.loader::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--uib-color);
-  opacity: var(--uib-bg-opacity);
-  transition: background-color 0.3s ease;
-}
-
-.loader::after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  border-radius: calc(var(--uib-stroke) / 2);
-  animation: zoom var(--uib-speed) ease-in-out infinite;
-  transform: translateX(-100%);
-  background-color: var(--uib-color);
-  transition: background-color 0.3s ease;
-}
-
-@keyframes zoom {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-
-
-
 .HeroText {
   color: transparent;
   background-clip: text;
@@ -208,7 +137,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .zindex {
   z-index: 10 !important;
 }
-
 
 
 .search {
@@ -227,17 +155,22 @@ input[type="search"]::-webkit-search-results-decoration {
 @media only screen and (max-width: 640px) {}
 
 
-.notification {
+/* .notification {
   position: absolute;
   left: 20px;
   top: -5px;
-  padding: 3px 7px 1px 7px;
-  border-radius: 10px;
+  width: 24px;
+  height: 24px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+  border-radius: 8px;
   font-size: 13px;
   font-weight: 700;
+  line-height: 0;
   color: white;
-}
+} */
 
 
 .stay-at-top {
