@@ -38,11 +38,12 @@ function SideBar() {
     return (
         <div className={` sticky top-0 ${sidebar === "big" && 'w-[260px]'}  ${sidebar === "small" && 'w-[100px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start px-3 py-5 bg-stone-50  dark:bg-dark-sidebar dark:bg-opacity-95 backdrop-blur-2xl  `}>
 
-            <div className={`group flex justify-between items-center mb-5 w-full `}>
+            <div className={`group justify-between items-center mb-5 w-full hidden `}>
 
-                <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full pl-[5px]'} flex justify-start items-center text-base font-medium max-w-[50px] cursor-default `}>
-                    <img src={pagesLogo} alt="logo" className={` transition h-auto w-[42px] mx-3`} />
-                    <h1 className={`logoText ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
+                <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full pl-[5px]'} flex justify-start items-center text-base font-medium max-w-[50px] cursor-default px-3 py-1`}>
+                    {/* <img src={pagesLogo} alt="logo" className={` transition h-auto w-[42px] mx-3`} /> */}
+                    <h1 className={`logoText`}>P</h1>
+                    <h1 className={`logoText ${sidebar === "small" && 'hidden'}`}>agez</h1>
                 </div>
             </div>
             <ul className={`sidebar w-full h-full overflow-y-auto overflow-x-clip pr-3 overscroll-contain custom-scrollbar `}>
