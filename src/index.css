@@ -54,7 +54,7 @@ input[data-autocompleted] {
   }
 
   .logoText {
-    @apply font-medium text-[27px] flex justify-center items-center gap-1 font-Pacifico dark:font-extralight 
+    @apply font-medium text-[27px] flex justify-center items-center gap-1 font-Pacifico dark:font-extralight
   }
 
   .linkText {
@@ -114,7 +114,7 @@ input[data-autocompleted] {
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  
+
 }
 
 
@@ -128,7 +128,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.loader-overlay{
+.loader-overlay {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -141,7 +141,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.loader-overlay.hidden{
+.loader-overlay.hidden {
   opacity: 0;
   visibility: hidden;
 }
