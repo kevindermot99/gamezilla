@@ -48,7 +48,7 @@ input[data-autocompleted] {
   }
 
   .logoText {
-    @apply font-medium text-[30px] flex justify-center items-center gap-1
+    @apply font-medium text-[30px] flex justify-center items-center gap-1 font-Pacifico dark:font-extralight 
   }
 
   .linkText {
