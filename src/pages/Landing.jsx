@@ -1,16 +1,14 @@
 import { React, useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import pagesLogo from "./assets/images/pagez-logo.png";
-import screenShoot from "./assets/images/screenshoot.png";
-import searchbarvid from "./assets/images/search.mp4";
-import phoneMockup from "./assets/images/phone-mockup.png";
-import mackMockup from "./assets/images/mac-mockup.png";
-import downloadOrOpen from "./assets/images/download or Open.mp4";
+import screenShoot from "../assets/images/screenshoot.png";
+import searchbarvid from "../assets/images/search.mp4";
+import phoneMockup from "../assets/images/phone-mockup.png";
+import downloadOrOpen from "../assets/images/download or Open.mp4";
 import { GoArrowUpRight } from "react-icons/go";
-import Feature from "./components/Feature";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import ButtonLoader from "./components/ButtonLoader";
+import Feature from "../components/Feature";
+import SignIn from "../components/SignIn";
+import SignUp from "../components/SignUp";
+import ButtonLoader from "../components/ButtonLoader";
 
 function Landing() {
   const time = new Date();
@@ -103,7 +101,7 @@ function Landing() {
         </p>
 
         <Link
-          to="/app"
+          to="/"
           className="flex items-center justify-center text-sm gap-1 font-medium py-2 px-7 max-sm:w-full rounded-lg mt-6 transition bg-main-color text-white hover:opacity-90 "
         >
           Open Pagez

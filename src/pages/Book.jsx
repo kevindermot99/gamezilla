@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Nav from './components/Nav';
-import SideBar from './components/SideBar';
+import Nav from '../components/Nav';
+import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
-import { Books } from './constants/data';
+import { Books } from '../constants/data';
 import { FaPlay } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { average } from 'color.js'
