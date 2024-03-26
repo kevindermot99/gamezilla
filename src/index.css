@@ -378,12 +378,14 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #5a5a5a2a;
+  /* background: #5a5a5a2a; */
+  background: transparent;
   border-radius: 20px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #5a5a5a7a;
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  /* background: #5a5a5a7a; */
+  background: #5a5a5a2a;
 }
 
 
