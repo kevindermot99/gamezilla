@@ -11,6 +11,7 @@ import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
+import { MdAdd } from "react-icons/md";
 
 const customAnimation = keyframes`
   from {
@@ -97,6 +98,10 @@ function Book() {
 
                                 <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Download`}>
                                     <HiOutlineDownload className='text-black dark:text-white text-[30px] ' />
+                                </button>
+
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Add to Library`}>
+                                    <MdAdd className='text-black dark:text-white text-[30px] ' />
                                 </button>
 
                             </div>

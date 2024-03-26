@@ -41,12 +41,7 @@ function Browse() {
       </Reveal>
       <BooksBar count={6} />
 
-      <Reveal keyframes={customAnimation} delay={200} triggerOnce duration={800}>
-        <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
-        thowback
-      </h1>
-      </Reveal>
-      <BooksBar count={2} />
+      
 
     </section>
   );
