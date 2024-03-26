@@ -12,7 +12,7 @@ const Pagez = () => {
       </div>
       <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
         <Nav />
-        <div className='xl:padding-1 wide:padding-r w-full'>
+        <div className='xl:padding-1 wide:padding-r w-full pt-[20px]'>
           <Browse />
         </div>
       </div>
