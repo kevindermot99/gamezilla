@@ -6,7 +6,7 @@ import SideBar from './components/SideBar';
 
 const Pagez = () => {
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(null)
 
   window.onload = function() {
     setLoading(true)
@@ -16,7 +16,7 @@ const Pagez = () => {
     const timer = setTimeout(() => {
       setLoading(false)
     }, 1400);
-  }, [])
+  })
 
   return (
     loading ? (
@@ -31,6 +31,9 @@ const Pagez = () => {
         <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
           <Nav />
           <div className='xl:padding-1 wide:padding-r w-full pt-[20px]'>
+            <div className=''>
+
+            </div>
             <Browse />
           </div>
         </div>
