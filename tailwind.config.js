@@ -33,11 +33,12 @@ export default {
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
         "main-color": "#8C52FF",
-        "dark-sidebar": "#191919",
-        "banner-top-gradient": "#2f2f2f22",
-        "banner-bottom-gradient": "#191919",
+        "dark-sidebar": "#202020",
+        "banner-top-gradient": "#2f2f2f40",
+        "banner-bottom-gradient": "#212121",
         "dark-body": "#212121",
         "dark-navlink": "#2f2f2f5e",
+        "dark-hover": "#191919",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'

@@ -27,7 +27,7 @@ function BooksBar({ count }) {
             <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                 {Books.slice(0, limit).map((book) => (
 
-                    <div key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-sidebar p-3'>
+                    <div key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3'>
                         <div className='relative h-[180px] w-[180px] aspect-square rounded-lg overflow-clip mb-2 select-none'>
                             <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                             <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
@@ -44,7 +44,7 @@ function BooksBar({ count }) {
                 ))}
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce >
-                <Link className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-sidebar p-3 cursor-pointer'>
+                <Link className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3 cursor-pointer'>
                     <div className='relative h-[100%] w-[180px] overflow-clip select-none flex flex-col items-center justify-center'>
                         <TbPlayerTrackNext className='text-2xl opacity-70 ' />
                         <p className='text-base font-medium  opacity-70'>View All</p>

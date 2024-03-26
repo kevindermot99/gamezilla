@@ -10,6 +10,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@viewport {
+  zoom: 1.0;
+  min-zoom: 1.0;
+  max-zoom: 2.0;
+}
+
 :root {
   /* color-scheme: light dark; */
   --main-color: #8C52FF;
