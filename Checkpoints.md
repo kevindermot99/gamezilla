@@ -6,5 +6,6 @@
     - trending books page
     - history page
     - my Library page
+    - author page
 
 *iejforuf ienf*
