@@ -73,8 +73,8 @@ function Book() {
                     <Nav />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
-                            <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
-                                <div className='h-[200px] w-auto aspect-square shadow-2xl '>
+                            <div className={` h-fi flex gap-6 items-start justify-start px-9 pt-4 pb-8 `} >
+                                <div className='h-[200px] w-auto aspect-square shadow-custom'>
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                                 </div>
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
@@ -85,9 +85,9 @@ function Book() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-9'>
+                        <div className='flex flex-col bg-white bg-opacity-90 dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-9'>
 
-                            <div className='w-full py-4 flex items-center justify-start gap-6 '>
+                            <div className='w-full pt-8 flex items-center justify-start gap-6 '>
                                 <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
                                     <FaPlay className='text-white text-xl ' />
                                 </button>
