@@ -172,6 +172,9 @@ input[type="search"]::-webkit-search-results-decoration {
   color: white;
 } */
 
+img{
+  /* display: none; */
+}
 
 .stay-at-top {
   position: -webkit-sticky;

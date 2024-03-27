@@ -6,25 +6,8 @@ import SideBar from './components/SideBar';
 
 const Pagez = () => {
 
-  const [loading, setLoading] = useState(null)
-
-
-
-  useEffect(() => {
-    window.onload = function () {
-      setLoading(true)
-    }
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1400);
-  })
 
   return (
-    loading ? (
-      <div className='w-full h-[100vh] bg-white dark:bg-dark-body flex justify-center items-center relative '>
-        <p className='font-Pacifico text-[60px] text-stone-900 dark:text-stone-600 cursor-default pointer-events-none select-none '>P</p>
-      </div>
-    ) : (
       <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
         <div className='w-fit z-10'>
           <SideBar />
@@ -40,7 +23,6 @@ const Pagez = () => {
         </div>
 
       </main>
-    )
   )
 };
 
