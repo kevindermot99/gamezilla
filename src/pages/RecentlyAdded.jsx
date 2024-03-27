@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/Nav';
 import SideBar from '../components/SideBar';
-import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import { FaPlay } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
-import { average } from 'color.js'
-import { HiOutlineDownload } from "react-icons/hi";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
-import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
-import { MdAdd } from "react-icons/md";
-import Booksflow from '../components/Booksflow';
-import { TbPlayerTrackNext } from "react-icons/tb";
 
 const customAnimation = keyframes`
   from {
-    transform: translateY(10px);
-    
+    transform: translateY(10px); 
   }
 
   to {
     transform: translateY(0);
-
   }
 `;
 
@@ -31,7 +21,6 @@ const customAnimation = keyframes`
 function RecentlyAdded() {
 
     const [color, setColor] = useState("#3a3d44")
-
 
     return (
         <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>

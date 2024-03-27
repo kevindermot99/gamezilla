@@ -15,7 +15,7 @@ const Pagez = () => {
     else if(hours >= 12 && hours < 18){
       setGreet('Afternoon')
     }
-    else if(hours >= 18 && hours < 4){
+    else if(hours >= 18){
       setGreet("Evening")
     }
   }, [])

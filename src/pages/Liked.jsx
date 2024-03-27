@@ -12,6 +12,7 @@ import { keyframes } from "@emotion/react";
 import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
 import { MdAdd } from "react-icons/md";
+import BooksGrid from '../components/BooksGrid';
 
 const customAnimation = keyframes`
   from {
@@ -54,7 +55,7 @@ function Liked() {
                             </div>
                         </Reveal>
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-9'>
-
+                            <BooksGrid />
                         </div>
                     </div>
                 </div>
