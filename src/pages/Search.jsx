@@ -20,7 +20,7 @@ function Search() {
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                     </svg>
                                 </div>
-                                <input type="search" id="default-search" class="block w-full pl-12 pr-7 py-3 text-sm text-black dark:text-white bg-stone-200 dark:bg-stone-700  dark:bg-opacity-30 font-medium     rounded-3xl outline-none placeholder:text-stone-500 " placeholder="Search Book Names or Authors" required />
+                                <input type="search" id="default-search" class="block w-full pl-12 pr-7 py-3 text-sm text-black dark:text-white bg-stone-200 dark:bg-stone-700 bg-opacity-60 dark:bg-opacity-30 font-medium     rounded-3xl outline-none placeholder:text-stone-500 " placeholder="Search Book Names or Authors" required />
 
                             </div>
                         </form>
