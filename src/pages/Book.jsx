@@ -4,14 +4,14 @@ import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import { FaPlay } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
+import { IoMdHeartEmpty } from "react-icons/io";
 import { average } from 'color.js'
-import { HiOutlineDownload } from "react-icons/hi";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
-import { MdAdd } from "react-icons/md";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { BsCloudDownload } from "react-icons/bs";
 
 const customAnimation = keyframes`
   from {
@@ -93,16 +93,16 @@ function Book() {
                                     <FaPlay className='text-white text-xl ' />
                                 </button>
 
-                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Like`}>
-                                    <FaRegHeart className='text-black dark:text-white text-[25px] ' />
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Like`}>
+                                    <IoMdHeartEmpty className='text-black dark:text-stone-200 text-[30px] ' />
                                 </button>
 
-                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Download`}>
-                                    <HiOutlineDownload className='text-black dark:text-white text-[30px] ' />
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Add to Library`}>
+                                    <IoIosAddCircleOutline className='text-black dark:text-stone-200 text-[30px] ' />
                                 </button>
 
-                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-110   ' title={`Add to Library`}>
-                                    <MdAdd className='text-black dark:text-white text-[30px] ' />
+                                <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Download`}>
+                                    <BsCloudDownload className='text-black dark:text-stone-200 text-[25px] ' />
                                 </button>
 
                             </div>
