@@ -47,11 +47,9 @@ function RecentlyAdded() {
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
-                                <div className='flex flex-col items-end justify-start gap-4 text-black dark:text-white py-3'>
+                                <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
                                     <h1 className='text-[60px] max-sm:text-[30px] leading-[60px] max-sm:leading-[30px] max-w-[700px] font-extrabold text-white '>Recently added</h1>
-                                    {/* <p className=' font-semibold text-base text-white'>{res.author}</p>
-                                    <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
-                                    <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p> */}
+                                    <p className=' font-normal text-base text-white'>20 most recent Audio Books</p>
                                 </div>
                             </div>
                         </Reveal>
