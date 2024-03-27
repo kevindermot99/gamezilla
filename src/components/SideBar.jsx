@@ -88,7 +88,7 @@ function SideBar() {
                 <div className="w-full h-fit flex flex-col">
                     <div className='flex justify-between items-center pr-2 mb-2'>
                         <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
-                        <Link to="/" className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
+                        <Link to={`/liked/${id}`} className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
                     </div>
                     {Books.map((book, index) => (
                         <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center p-2 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>

@@ -28,7 +28,7 @@ const customAnimation = keyframes`
 
 function Trending() {
 
-    const [color, setColor] = useState("#303e27")
+    const [color, setColor] = useState("#19483f")
 
 
     return (
