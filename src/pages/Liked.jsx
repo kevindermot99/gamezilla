@@ -54,7 +54,7 @@ function Liked() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-9'>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] p-8'>
                             <BooksGrid />
                         </div>
                     </div>
