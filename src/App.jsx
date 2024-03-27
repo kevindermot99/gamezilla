@@ -7,6 +7,7 @@ import PageError from './pages/PageError';
 import LogoDarkMode from './assets/images/Pagez_Logo__dark_mode.png'
 import LogoLightMode from './assets/images/Pagez_Logo__light_mode.png'
 import Search from './pages/Search';
+import RecentlyAdded from './pages/RecentlyAdded';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path='/' element={<Pagez />} />
           <Route path='/landingPage' element={<Landing />} />
           <Route path='/search' element={<Search />} />
+          <Route path='/recentlyadded' element={<RecentlyAdded />} />
           <Route path='/book/:id' element={<Book />} />
           <Route path='/*' element={<PageError />} />
         </Routes>

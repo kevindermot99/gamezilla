@@ -1,6 +1,6 @@
 
 # checkpoints
-    - search page
+    - search page ✔
     - recently added page
     - liked books page
     - trending books page
