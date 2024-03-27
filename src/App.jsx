@@ -10,6 +10,7 @@ import Search from './pages/Search';
 import RecentlyAdded from './pages/RecentlyAdded';
 import Liked from './pages/Liked';
 import Trending from './pages/Trending';
+import History from './pages/History';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path='/recentlyadded' element={<RecentlyAdded />} />
           <Route path='/liked/:id' element={<Liked />} />
           <Route path='/trending' element={<Trending />} />
+          <Route path='/history/:id' element={<History />} />
           <Route path='/book/:id' element={<Book />} />
           <Route path='/*' element={<PageError />} />
         </Routes>
