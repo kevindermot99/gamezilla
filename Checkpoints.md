@@ -1,9 +1,10 @@
 
 # checkpoints
+    - search page
+    - recently added page
     - liked books page
     - trending books page
-    - recently played page
-    - recently added page
+    - history page
     - my Library page
 
 *iejforuf ienf*
