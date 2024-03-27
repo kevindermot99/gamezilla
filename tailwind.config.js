@@ -37,7 +37,7 @@ export default {
         "banner-top-gradient": "#2f2f2f40",
         "banner-bottom-gradient": "#212121",
         "dark-body": "#212121",
-        "dark-navlink": "#2f2f2f5e",
+        "dark-navlink": "#2f2f2f60",
         "dark-hover": "#191919",
       },
       boxShadow: {
