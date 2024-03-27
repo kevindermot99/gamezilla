@@ -14,9 +14,9 @@ const Pagez = () => {
         </div>
         <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
           <Nav />
-          <div className='xl:padding-1 wide:padding-r w-full pt-[20px]'>
-            <div className=''>
-
+          <div className='xl:padding-1 wide:padding-r w-full'>
+            <div className='px-[60px] mb-5'>
+              <p className='text-stone-400 text-sm tracking-wide font-mono cursor-default'>Morning Kevin.</p>
             </div>
             <Browse />
           </div>
