@@ -28,7 +28,7 @@ const customAnimation = keyframes`
 
 function Author() {
 
-    const [color, setColor] = useState("#555273")
+    const [color, setColor] = useState("#5c715e")
 
     const { author } = useParams()
     console.log(author)

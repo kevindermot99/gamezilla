@@ -28,7 +28,7 @@ const customAnimation = keyframes`
 
 function History() {
 
-    const [color, setColor] = useState("#3b475e")
+    const [color, setColor] = useState("#4d4545")
 
 
     return (
