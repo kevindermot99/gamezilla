@@ -8,4 +8,5 @@
     - my Library page
     - author page
 
-*iejforuf ienf*
+*ideas*
+    - play button scale on active
