@@ -26,9 +26,9 @@ const customAnimation = keyframes`
 `;
 
 
-function RecentlyAdded() {
+function Liked() {
 
-    const [color, setColor] = useState("#3a3d44")
+    const [color, setColor] = useState("#555273")
 
 
     return (
@@ -48,8 +48,8 @@ function RecentlyAdded() {
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                    <h1 className='text-[60px] max-sm:text-[30px] leading-[60px] max-sm:leading-[30px] max-w-[700px] font-extrabold text-white '>Recently added</h1>
-                                    <p className=' font-normal text-base text-white'>20 most recent Audio Books</p>
+                                    <h1 className='text-[60px] max-sm:text-[30px] leading-[60px] max-sm:leading-[30px] max-w-[700px] font-extrabold text-white '>Liked</h1>
+                                    <p className=' font-normal text-base text-white'>Audio Books you Liked</p>
                                 </div>
                             </div>
                         </Reveal>
@@ -67,4 +67,4 @@ function RecentlyAdded() {
 
 };
 
-export default RecentlyAdded;
+export default Liked;

@@ -38,6 +38,8 @@ function SideBar() {
     //     }
     // }, [])
 
+    const id = '198h9rbs7d9872';
+
 
     return (
         <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 backdrop-blur-2xl  `}>
@@ -65,7 +67,7 @@ function SideBar() {
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Recently Added</p>
                 </Link>
 
-                <Link className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
+                <Link to={`/liked/${id}`} className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
                     <IoMdHeartEmpty className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked</p>
                 </Link>
