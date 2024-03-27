@@ -31,6 +31,7 @@ function Book() {
     const [color, setColor] = useState("transparent")
 
     const { id } = useParams();
+    console.log(id)
     const res = Books.find(findthis)
     function findthis(book) {
         return book.id === id;
@@ -79,7 +80,7 @@ function Book() {
                                 </div>
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
                                     <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
-                                    <p className=' font-semibold text-base text-white'>{res.author}</p>
+                                    <Link to={`/author/${res.author}`} className=' font-semibold text-base text-white hover:underline'>{res.author}</Link>
                                     <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
                                     <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
                                 </div>
@@ -123,9 +124,9 @@ function Book() {
                                                 <td className='w-[40%]'>
                                                     <div className='w-fit h-fit flex items-center gap-3'>
                                                         <img src={authorBook.URL} alt={authorBook.title} className='h-12 w-12 shadow-md rounded-sm ' />
-                                                        <div className={` block w-full truncate text-ellipsis`}>
+                                                        <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
                                                             <Link to={`/book/${authorBook.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{authorBook.title}</Link>
-                                                            <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{authorBook.author}</p>
+                                                            <Link to={`/author/${authorBook.author}`} className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm hover:underline `}>{authorBook.author}</Link>
                                                         </div>
                                                     </div>
                                                 </td>

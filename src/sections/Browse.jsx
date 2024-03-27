@@ -22,27 +22,25 @@ function Browse() {
 
       <Reveal keyframes={customAnimation} delay={200} triggerOnce duration={800}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
-        Trending this
-        week</h1>
+        Trending Now
+        </h1>
       </Reveal>
       <BooksBar count={9} />
 
       <Reveal keyframes={customAnimation} delay={200} triggerOnce duration={800}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
-        Recently Played
+        Recently added
       </h1>
       </Reveal>
       <BooksBar count={5} />
 
       <Reveal keyframes={customAnimation} delay={200} triggerOnce duration={800}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">
-        New Releases
+        History
       </h1>
       </Reveal>
       <BooksBar count={6} />
-
       
-
     </section>
   );
 }
