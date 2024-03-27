@@ -9,6 +9,7 @@ import LogoLightMode from './assets/images/Pagez_Logo__light_mode.png'
 import Search from './pages/Search';
 import RecentlyAdded from './pages/RecentlyAdded';
 import Liked from './pages/Liked';
+import Trending from './pages/Trending';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path='/search' element={<Search />} />
           <Route path='/recentlyadded' element={<RecentlyAdded />} />
           <Route path='/liked/:id' element={<Liked />} />
+          <Route path='/trending' element={<Trending />} />
           <Route path='/book/:id' element={<Book />} />
           <Route path='/*' element={<PageError />} />
         </Routes>
