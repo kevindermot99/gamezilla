@@ -31,6 +31,14 @@ function Liked() {
 
     const [color, setColor] = useState("#555273")
 
+    const { id } = useParams();
+    console.log(id)
+    const res = Books.find(findthis)
+    function findthis(book) {
+        return book.id === id;
+    }
+
+
 
     return (
         <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>
@@ -55,7 +63,48 @@ function Liked() {
                             </div>
                         </Reveal>
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] p-8'>
-                            <BooksGrid />
+                            <Reveal keyframes={customAnimation} triggerOnce duration={300}>
+                                <div className='w-full py-4'>
+                                    <table className='w-full border-separate border-spacing-y-5'>
+                                        <thead>
+                                            <tr>
+                                                <th className='text-left text-base capitalize'>You liked </th>
+                                                <th className='text-left text-base capitalize'>Date added</th>
+                                                <th className='text-left text-base capitalize'>Likes</th>
+                                                <th className='text-left'><WiTime3 className='text-xl ' /></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            {Books.map((book) => (
+                                                <tr key={book.id}>
+                                                    <td className='w-[40%]'>
+                                                        <div className='w-fit h-fit flex items-center gap-3'>
+                                                            <img src={book.URL} alt={book.title} className='h-12 w-12 shadow-md rounded-sm ' />
+                                                            <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
+                                                                <Link to={`/book/${book.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{book.title}</Link>
+                                                                <Link to={`/author/${book.author}`} className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm hover:underline `}>{book.author}</Link>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
+                                                    </td>
+
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{book.likes}</p>
+                                                    </td>
+
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
+                                                    </td>
+                                                </tr>
+                                            ))}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </Reveal>
                         </div>
                     </div>
                 </div>
