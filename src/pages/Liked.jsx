@@ -62,7 +62,7 @@ function Liked() {
                                     <table className='w-full border-separate border-spacing-y-5'>
                                         <thead>
                                             <tr>
-                                                <th className='text-left text-base capitalize'>You liked </th>
+                                                <th className='text-left text-base capitalize'>Book Name </th>
                                                 <th className='text-left text-base capitalize'>Date added</th>
                                                 <th className='text-left text-base capitalize'>Likes</th>
                                                 <th className='text-left'><WiTime3 className='text-xl ' /></th>
