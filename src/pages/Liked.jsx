@@ -3,16 +3,10 @@ import Nav from '../components/Nav';
 import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
-import { FaPlay } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
-import { average } from 'color.js'
-import { HiOutlineDownload } from "react-icons/hi";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
-import { MdAdd } from "react-icons/md";
-import BooksGrid from '../components/BooksGrid';
 
 const customAnimation = keyframes`
   from {
