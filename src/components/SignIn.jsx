@@ -54,14 +54,14 @@ function SignIn({ hideSignIn, showSignUp }) {
             required
             name="email"
             // autoComplete="on"
-            className="tracking-tight text-base text-black py-[12px] mb-3 rounded-lg w-[85%] m-auto px-5  outline-none transition bg-stone-200 bg-opacity-60 "
+            className="tracking-tight text-base text-black py-[12px] mb-2 rounded-lg w-[85%] m-auto px-5  outline-none transition bg-stone-50 bg-opacity-60 border border-stone-200 border-opacity-70 "
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-5 outline-none transition bg-stone-200 bg-opacity-60 "
+            className=" tracking-tighte4 text-base text-black py-[12px] mb-5 rounded-lg w-[85%] m-auto px-5 outline-none transition bg-stone-50 bg-opacity-60 border border-stone-200 border-opacity-70 "
             placeholder="Password"
           />
           <button
@@ -72,7 +72,7 @@ function SignIn({ hideSignIn, showSignUp }) {
             {submitting && <ButtonLoader />}
           </button>
         </form>
-        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center py-6">
+        <div className=" border-t border-stone-200 border-opacity-60 w-full p-3 flex items-center justify-center py-6">
           <h1 className=" text-sm text-black ">
             Dont have an account?{" "}
             <span

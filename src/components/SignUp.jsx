@@ -44,7 +44,7 @@ function SignUp({ hideSignUp, showSignIn }) {
           Sign Up
         </h1>
         <p className="font-medium text-base text-stone-400 mb-6 select-none">
-          Sign in with your email here.
+          Sign up with your email here.
         </p>
         <form onSubmit={signUp} className="flex flex-col justify-start items-start w-full">
           <input
@@ -52,32 +52,32 @@ function SignUp({ hideSignUp, showSignIn }) {
             required
             name="email"
             // autoComplete="on"
-            className="tracking-tight text-base  text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60 "
+            className="tracking-tight text-base  text-black py-[13px] mb-2 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-50 bg-opacity-60 border border-stone-200 border-opacity-70   "
             placeholder="Email"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base  text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60"
+            className=" tracking-tighte4 text-base  text-black py-[13px] mb-2 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-50 bg-opacity-60 border border-stone-200 border-opacity-70  "
             placeholder="Password"
           />
           <input
             type="password"
             required
             name="password"
-            className=" tracking-tighte4 text-base text-black py-[12px] mb-4 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-200 bg-opacity-60"
+            className=" tracking-tighte4 text-base text-black py-[13px] mb-5 rounded-lg w-[85%] m-auto px-3 outline-none transition bg-stone-50 bg-opacity-60 border border-stone-200 border-opacity-70  "
             placeholder="Confirm Password"
           />
           <button
             type="submit"
             className="h-[45px] w-[85%] m-auto bg-main-color rounded-lg text-white text-base transition mb-5 hover:opacity-90 flex justify-center items-center "
           >
-            {!submitting && "Sign In"}
+            {!submitting && "Sign Up"}
             {submitting && <ButtonLoader />}
           </button>
         </form>
-        <div className=" border-t border-gray-200 w-full p-3 flex items-center justify-center py-6">
+        <div className=" border-t border-stone-200 border-opacity-60 w-full p-3 flex items-center justify-center py-6">
           <h1 className=" text-sm text-black ">
             Already have an account?{" "}
             <span onClick={switchForms} className=" cursor-pointer text-main-color font-medium">Sign in</span>
