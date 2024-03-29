@@ -34,7 +34,7 @@ function Nav() {
                         <TbSunMoon className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
                     </a> */}
 
-                    <a href="#" className="group navbar-link p-2 ml-5">
+                    <a href="#" className="group navbar-link p-2 ml-5" title="My Library">
                         <LuLibrary className={`text-2xl cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") ? 'text-white dark:text-white ' : ''} group-hover:text-black dark:group-hover:text-white`} />
                         <Notification label={84} />
                     </a>
@@ -48,7 +48,6 @@ function Nav() {
             </nav>
             {/* </Headroom> */}
         </header>
-
     )
 }
 
