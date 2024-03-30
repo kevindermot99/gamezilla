@@ -7,6 +7,7 @@ import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Link } from 'react-router-dom';
 import { WiTime3 } from "react-icons/wi";
+import { GrClose } from "react-icons/gr";
 
 const customAnimation = keyframes`
   from {
@@ -19,9 +20,19 @@ const customAnimation = keyframes`
 `;
 
 
+
 function RecentlyAdded() {
 
     const [color, setColor] = useState("#3a3d44")
+
+    const [sidebar, setSideBar] = useState(false);
+    const openSidebar = () => {
+        setSideBar(true)
+    }
+
+    const closeSidebar = () => {
+        setSideBar(false)
+    }
 
     return (
         <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>
@@ -30,12 +41,15 @@ function RecentlyAdded() {
 
             <div className='relative text-black dark:text-white flex '>
 
-                <div className='w-fit z-10'>
+                <div className={`w-fit z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
+                    <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
+                        <GrClose />
+                    </button>
                     <SideBar />
                 </div>
 
                 <div className=' w-full overflow-x-clip z-10 '>
-                    <Nav />
+                    <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex gap-6 items-start justify-start px-9 py-6 `} >
