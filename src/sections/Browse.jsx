@@ -18,7 +18,7 @@ const customAnimation = keyframes`
 function Browse() {
 
   return (
-    <section className=" flex flex-col gap-2 ml-12 mr-9 overflow-clip relative">
+    <section className=" flex flex-col gap-2 ml-12 mr-9 overflow-clip relative max-md:ml-3 max-md:mr-3">
 
       <Reveal keyframes={customAnimation} delay={200} triggerOnce duration={800}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize">

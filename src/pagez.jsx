@@ -46,7 +46,7 @@ const Pagez = () => {
       //   <img src={LogoLightMode} className='h-20 block dark:hidden' />
       // </div>
       <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
-        <div className={`w-fit z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'opacity-100 z-50 ' : 'opacity-0 -z-10'} `}>
+        <div className={`w-fit z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
           <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
             <GrClose />
           </button>
@@ -55,7 +55,7 @@ const Pagez = () => {
         <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
           <Nav openSidebar={openSidebar} />
           <div className='xl:padding-1 wide:padding-r w-full'>
-            <div className='px-[60px] mb-5 w-fit'>
+            <div className='px-[60px] mb-5 w-fit max-md:px-6'>
               <p className='text-stone-400 dark:text-stone-500  text-sm tracking-wide font-mono cursor-default'>
                 {greet} Kevin.
               </p>
