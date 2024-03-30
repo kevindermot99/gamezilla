@@ -53,34 +53,39 @@ function SideBar() {
                 </div>
             </div>
             <ul className={`sidebar w-full h-fit pr-2 overscroll-contain flex flex-col gap-1  `}>
-                <Link to="/" className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative'}`}>
-                    <div className='indicator'></div>
-                    <GoHome className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to="/" className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
+                    <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
+                    <GoHome className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                 </Link>
 
-                <Link to="/search" className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <IoSearchOutline className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to="/search" className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/search' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
+                    <div className={` indicator opacity-0 ${location.pathname === '/search' && 'opacity-100 '}`}></div>
+                    <IoSearchOutline className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/search' ? 'opacity-80 ' : 'opacity-30'}`}/>
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Search</p>
                 </Link>
 
-                <Link to={`/recentlyadded`} className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <PiMusicNotesPlusDuotone className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to={`/recentlyadded`} className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/recentlyadded' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group ' }`}>
+                    <div className={` indicator opacity-0 ${location.pathname === '/recentlyadded' && 'opacity-100 '}`}></div>
+                    <PiMusicNotesPlusDuotone className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/recentlyadded' ? 'opacity-80 ' : 'opacity-30'}`}/>
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Recently Added</p>
                 </Link>
 
-                <Link to={`/liked/${id}`} className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <IoMdHeartEmpty className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to={`/liked/${id}`} className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname.includes('/liked/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group ' }`}>
+                    <div className={` indicator opacity-0 ${location.pathname.includes('/liked/') && 'opacity-100 '}`}></div>
+                    <IoMdHeartEmpty className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname.includes('/liked/') ? 'opacity-80 ' : 'opacity-30'}`}/>
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked</p>
                 </Link>
 
-                <Link to={`/trending`} className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <IoTrendingUp className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to={`/trending`} className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/trending' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group ' }`}>
+                    <div className={` indicator opacity-0 ${location.pathname === '/trending' && 'opacity-100 '}`}></div>
+                    <IoTrendingUp className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/trending' ? 'opacity-80 ' : 'opacity-30'}`}/>
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Trending</p>
                 </Link>
 
-                <Link to={`/history/${id}`} className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'}`}>
-                    <GoHistory className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />
+                <Link to={`/history/${id}`} className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname.includes('/history/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group ' }`}>
+                    <div className={` indicator opacity-0 ${location.pathname.includes('/history/') && 'opacity-100 '}`}></div>
+                    <GoHistory className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname.includes('/history/') ? 'opacity-80 ' : 'opacity-30'}`}/>
                     <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>History</p>
                 </Link>
 
