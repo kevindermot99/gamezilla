@@ -22,7 +22,7 @@ function Nav({openSidebar}) {
 
     return (
 
-        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-transparent z-10 relative pl-5 pr-5 max-sm:px-5 max-md:bg-white dark:bg-dark-body max-md:backdrop-blur-md max-md:dark:bg-opacity-20 ">
+        <header className="font-montserrat w-ful max-md:sticky top-0 bg-transparent z-10 relative pl-5 pr-5 max-sm:px-5 max-md:bg-white max-md:dark:bg-dark-body max-md:backdrop-blur-md max-md:dark:bg-opacity-20 ">
             {/* <Headroom pinStart={0}> */}
             <nav className="flex justify-end max-md:justify-between items-center py-5 sticky top-0 z-index-10 px-3 max-md:px-0">
             
@@ -42,7 +42,7 @@ function Nav({openSidebar}) {
                     </a>
                     <a href="#" className="group rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black">Clare thomson</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">Clare thomson</p>
                     </a>
 
                 </div>
