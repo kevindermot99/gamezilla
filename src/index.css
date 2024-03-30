@@ -309,7 +309,16 @@ img{
   }
 }
 
-
+.indicator{
+  position: absolute;
+  left: -80px;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 85%;
+  background-color: var(--main-color);
+  z-index: 99;
+}
 
 
 
