@@ -49,7 +49,7 @@ function Liked() {
 
             <div className='relative text-black dark:text-white flex '>
 
-                <div className={`w-fit h-[100vh] sticky top-0 z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
+                <div className={`w-fit h-[100vh] sticky top-0 z-10 max-md:fixed max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
                     <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
                         <GrClose />
                     </button>

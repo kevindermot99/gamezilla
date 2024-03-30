@@ -35,20 +35,20 @@ function RecentlyAdded() {
     }
 
     return (
-        <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>
+        <main className={`relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar `}>
 
             <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div>
 
             <div className='relative text-black dark:text-white flex '>
 
-                <div className={`w-fit h-[100vh] sticky top-0  z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
+            <div className={`w-fit h-[100vh] sticky top-0 z-10 max-md:fixed max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
                     <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
                         <GrClose />
                     </button>
                     <SideBar />
                 </div>
 
-                <div className=' w-full overflow-x-clip z-10 '>
+                <div className=' w-full overflow-x-clip z-10'>
                     <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
@@ -62,7 +62,7 @@ function RecentlyAdded() {
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-8 max-md:px-5'>
                             <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                                 <div className='w-full py-4'>
-                                    <table className='w-full border-separate border-spacing-y-5'>
+                                    <table className='w-full border-separate border-spacing-y-5 '>
                                         <thead>
                                             <tr>
                                                 <th className='text-left text-base capitalize'>Book Name </th>
