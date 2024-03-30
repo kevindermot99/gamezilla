@@ -22,7 +22,7 @@ function Nav({openSidebar}) {
 
     return (
 
-        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-transparent z-10 relative pl-5 pr-5 max-sm:px-5 max-md:bg-white dark:bg-dark-body">
+        <header className="font-montserrat w-ful max-sm:sticky top-0 bg-transparent z-10 relative pl-5 pr-5 max-sm:px-5 max-md:bg-white dark:bg-dark-body max-md:backdrop-blur-md max-md:dark:bg-opacity-20 ">
             {/* <Headroom pinStart={0}> */}
             <nav className="flex justify-end max-md:justify-between items-center py-5 sticky top-0 z-index-10 px-3 max-md:px-0">
             
