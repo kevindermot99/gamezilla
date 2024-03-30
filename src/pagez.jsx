@@ -4,12 +4,14 @@ import Nav from './components/Nav';
 import SideBar from './components/SideBar';
 import LogoDarkMode from './assets/images/Pagez_Logo__dark_mode.png'
 import LogoLightMode from './assets/images/Pagez_Logo__light_mode.png'
+import { GrClose } from "react-icons/gr";
 
 
 const Pagez = () => {
 
   // const [loading, setLoading] = useState(false)
   const [greet, setGreet] = useState("");
+  const [sidebar, setSideBar] = useState(false);
 
   useEffect(() => {
     const myDate = new Date();
@@ -25,6 +27,17 @@ const Pagez = () => {
     }
   }, [])
 
+  const openSidebar = () =>{
+    setSideBar(true)
+  }
+
+  const closeSidebar = () => {
+    setSideBar(false)
+  }
+
+
+
+
 
   return (
 
@@ -33,11 +46,14 @@ const Pagez = () => {
       //   <img src={LogoLightMode} className='h-20 block dark:hidden' />
       // </div>
       <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
-        <div className='w-fit z-10'>
+        <div className={`w-fit z-10 max-md:absolute max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200   ${sidebar ? 'opacity-100 z-50 ' : 'opacity-0 -z-10'} `}>
+          <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
+            <GrClose />
+          </button>
           <SideBar />
         </div>
         <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
-          <Nav />
+          <Nav openSidebar={openSidebar} />
           <div className='xl:padding-1 wide:padding-r w-full'>
             <div className='px-[60px] mb-5 w-fit'>
               <p className='text-stone-400 dark:text-stone-500  text-sm tracking-wide font-mono cursor-default'>

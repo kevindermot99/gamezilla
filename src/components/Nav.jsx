@@ -9,24 +9,26 @@ import { RiSearch2Line } from "react-icons/ri";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import jQuery from "jquery";
 import { useLocation } from "react-router-dom";
+import { IoIosMenu } from "react-icons/io";
 
-function Nav() {
+function Nav({openSidebar}) {
 
     const location = useLocation();
+    
+    const changeSidebar = () => {
+        openSidebar()
+    }
     
 
     return (
 
         <header className="font-montserrat w-ful max-sm:sticky top-0 bg-transparent z-10 relative pl-5 pr-5 max-sm:px-5">
             {/* <Headroom pinStart={0}> */}
-            <nav className="flex justify-end items-center py-5 sticky top-0 z-index-10 px-3">
+            <nav className="flex justify-end max-md:justify-between items-center py-5 sticky top-0 z-index-10 px-3 max-md:px-0">
             
-                {/* <form className='relative w-full max-w-[450px]'>
-                    <input className="search transition bg-gray-200 bg-opacity-60 rounded-lg text-sm placeholder:text-gray-600 text-black " type="search" placeholder="Find a Book.." />
-                    <button type="submit" className="absolute top-0 bottom-0 m-auto right-1 transition hover:bg-slate-200 h-[80%] w-[40px] rounded-lg flex justify-center items-center">
-                        <RiSearch2Line className="text-black text-lg" />
-                    </button>
-                </form> */}
+                <button onClick={changeSidebar} className="hidden max-md:block ">
+                    <IoIosMenu className="text-[30px]" />
+                </button>
 
                 <div className="flex w-fit justify-end items-center min-w-[170px]  ">
 

@@ -43,7 +43,7 @@ function SideBar() {
 
 
     return (
-        <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 backdrop-blur-2xl  `}>
+        <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'} duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 backdrop-blur-2xl max-md:w-[90%] max-md:h-[85vh] max-md:p-4 max-md:rounded-lg `}>
 
             <div className={`group justify-between items-center mb-5 w-full hidden`}>
 
@@ -52,7 +52,7 @@ function SideBar() {
                     <h1 className={`logoText text-stone-400 px-2 py-2  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
-            <ul className={`sidebar w-full h-fit pr-2 overscroll-contain flex flex-col gap-1  `}>
+            <ul className={`sidebar w-full h-fit pr-2 max-md:pr-0 overscroll-contain flex flex-col gap-1  `}>
                 <Link to="/" className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
                     <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
                     <GoHome className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
@@ -116,7 +116,6 @@ function SideBar() {
                         :
                         <TbLayoutSidebarLeftExpand className="text-[26px] text-stone-500 dark:text-stone-500 transition group-hover:text-white" />
                     }
-
                 </button>
             </div>
 
