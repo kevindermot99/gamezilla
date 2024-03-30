@@ -52,7 +52,7 @@ function SideBar() {
                     <h1 className={`logoText text-stone-400 px-2 py-2  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                 </div>
             </div>
-            <ul className={`sidebar w-full h-fit pr-2 overscroll-contain `}>
+            <ul className={`sidebar w-full h-fit pr-2 overscroll-contain flex flex-col gap-1  `}>
                 <Link to="/" className={`h-[45px]  group flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative'}`}>
                     <div className='indicator'></div>
                     <GoHome className='text-[22px] mx-3 min-h-7 min-w-6 opacity-30  group-hover:opacity-100' />

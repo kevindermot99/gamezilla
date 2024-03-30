@@ -311,13 +311,15 @@ img{
 
 .indicator{
   position: absolute;
-  left: -80px;
+  left: -3px;
   top: 0;
   bottom: 0;
-  width: 100px;
-  height: 85%;
+  margin: auto;
+  width: 5px;
+  height: 60%;
   background-color: var(--main-color);
-  z-index: 99;
+  z-index: 1;
+  border-radius: 20px;
 }
 
 
