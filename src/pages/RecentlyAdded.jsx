@@ -6,6 +6,7 @@ import { FaPlay } from "react-icons/fa";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Link } from 'react-router-dom';
+import { WiTime3 } from "react-icons/wi";
 
 const customAnimation = keyframes`
   from {
@@ -45,30 +46,48 @@ function RecentlyAdded() {
                             </div>
                         </Reveal>
                         <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] p-8'>
-                            <div className="bookbar w-[100%] h-fit grid grid-cols-2 max-lg:grid-cols-1 gap-1 justify-evenly pb-3 mb-6 custom-scrollbar">
-                                <Reveal keyframes={customAnimation} triggerOnce duration={300}>
-                                    {Books.map((book) => (
+                            <Reveal keyframes={customAnimation} triggerOnce duration={300}>
+                                <div className='w-full py-4'>
+                                    <table className='w-full border-separate border-spacing-y-5'>
+                                        <thead>
+                                            <tr>
+                                                <th className='text-left text-base capitalize'>Book Name </th>
+                                                <th className='text-left text-base capitalize'>Date added</th>
+                                                <th className='text-left text-base capitalize'>Likes</th>
+                                                <th className='text-left'><WiTime3 className='text-xl ' /></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                                        <div key={book.id} className=' group flex gap-5 w-full- h-[100%] rounded-xl transition duration-100 hover:bg-stone-200 hover:bg-opacity-70 dark:hover:bg-dark-hover dark:hover:bg-opacity-40 p-3'>
-                                            <div className='relative h-[130px] w-[130px] min-h-[130px] min-w-[130px] aspect-square rounded-md  overflow-clip select-none'>
-                                                <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
-                                                <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
-                                                    <button className=' transition absolute bottom-1 right-1 aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${book.title}`}>
-                                                        <FaPlay className='text-white text-xl ' />
-                                                    </button>
-                                                </div>
+                                            {Books.map((book) => (
+                                                <tr key={book.id}>
+                                                    <td className='w-[40%]'>
+                                                        <div className='w-fit h-fit flex items-center gap-3'>
+                                                            <img src={book.URL} alt={book.title} className='h-12 w-12 shadow-md rounded-sm ' />
+                                                            <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
+                                                                <Link to={`/book/${book.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{book.title}</Link>
+                                                                <Link to={`/author/${book.author}`} className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm hover:underline `}>{book.author}</Link>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
+                                                    </td>
 
-                                            </div>
-                                            <div className='flex flex-col gap-2'>
-                                                <Link to={`/book/${book.id}`} className=' break-words  whitespace-normal leading-5 my-1 text-xl font-bold text-black dark:text-white max-w-[100%] w-fit hover:underline '>{book.title}</Link>
-                                                <Link to={`/author/${book.author}`} className=' text-sm font-medium  text-stone-600 dark:text-stone-500 hover:underline'>{book.author}</Link>
-                                                <p className=' text-sm font-medium  text-stone-500 dark:text-stone-500 line-clamp-3'>{book.about}</p>
-                                            </div>
-                                        </div>
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{book.likes}</p>
+                                                    </td>
 
-                                    ))}
-                                </Reveal>
-                            </div>
+                                                    <td className='w-[20%]'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
+                                                    </td>
+                                                </tr>
+                                            ))}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </Reveal>
                         </div>
                     </div>
                 </div>
