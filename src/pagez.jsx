@@ -27,7 +27,7 @@ const Pagez = () => {
     }
   }, [])
 
-  const openSidebar = () =>{
+  const openSidebar = () => {
     setSideBar(true)
   }
 
@@ -41,30 +41,33 @@ const Pagez = () => {
 
   return (
 
-      // <div className='w-full h-[100vh] bg-white dark:bg-dark-body flex justify-center items-center relative '>
-      //   <img src={LogoDarkMode} className='h-20 hidden dark:block' />
-      //   <img src={LogoLightMode} className='h-20 block dark:hidden' />
-      // </div>
-      <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
-        <div className={`w-fit z-10 max-md:fixed max-md:w-full max-md:h-[100vh] flex justify-center items-center flex-col max-md:backdrop-blur-lg  max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'} `}>
-          <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 self-end mr-[5%] hidden max-md:block'>
-            <GrClose />
-          </button>
-          <SideBar />
-        </div>
-        <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
-          <Nav openSidebar={openSidebar} />
-          <div className='xl:padding-1 wide:padding-r w-full'>
-            <div className='px-[60px] mb-5 w-fit max-md:px-6'>
-              <p className='text-stone-400 dark:text-stone-500  text-sm tracking-wide font-mono cursor-default'>
-                {greet} Kevin.
-              </p>
-            </div>
-            <Browse />
-          </div>
-        </div>
+    // <div className='w-full h-[100vh] bg-white dark:bg-dark-body flex justify-center items-center relative '>
+    //   <img src={LogoDarkMode} className='h-20 hidden dark:block' />
+    //   <img src={LogoLightMode} className='h-20 block dark:hidden' />
+    // </div>
+    <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
+      <div className={`w-fit z-10 ${sidebar ? 'max-md:opacity-100 max-md:z-50 ' : 'max-md:opacity-0 max-md:-z-10'}'} `}>
 
-      </main>
+        <SideBar />
+
+        <button onClick={closeSidebar} className=' bg-stone-100  dark:bg-dark-sidebar justify-center items-center p-3 rounded-full mb-3 mr-[5%] hidden max-md:block'>
+          <GrClose />
+        </button>
+
+      </div>
+      <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
+        <Nav openSidebar={openSidebar} />
+        <div className='xl:padding-1 wide:padding-r w-full'>
+          <div className='px-[60px] mb-5 w-fit max-md:px-6'>
+            <p className='text-stone-400 dark:text-stone-500  text-sm tracking-wide font-mono cursor-default'>
+              {greet} Kevin.
+            </p>
+          </div>
+          <Browse />
+        </div>
+      </div>
+
+    </main>
   )
 };
 
