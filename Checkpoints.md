@@ -10,4 +10,7 @@
     - profile page 
 
 *ideas*
+    - menu icon change to white io certain pages
+    - redo of the whole details page overflow y
     - play button scale on active
+    - table switch to grid on small devices
