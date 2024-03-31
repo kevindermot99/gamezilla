@@ -337,6 +337,13 @@ img{
   height: 7px;
 }
 
+@media screen and (max-width: 500px) {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
+
 .custom-scrollbar::-webkit-scrollbar-track {
   border-radius: 20px;
 }
@@ -351,6 +358,8 @@ img{
   /* background: #5a5a5a7a; */
   background: #5a5a5a2a;
 }
+
+
 
 
 

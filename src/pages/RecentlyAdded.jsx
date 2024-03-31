@@ -59,7 +59,7 @@ function RecentlyAdded() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-8 max-md:px-5 flex-1'>
+                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[700px] px-8 max-md:px-5 flex-1'>
                             {/* <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                                 <div className='w-full py-4'>
                                     <table className='w-full border-separate border-spacing-y-5 '>
