@@ -12,7 +12,7 @@ import { GrClose } from "react-icons/gr";
 const customAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(20px);
   }
 
   to {
@@ -44,9 +44,9 @@ function Liked() {
     
 
     return (
-        <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>
+        <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-hidden  h-[100vh]'>
 
-            <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div>
+            {/* <div className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div> */}
 
             <div className='relative text-black dark:text-white flex '>
 
@@ -56,7 +56,7 @@ function Liked() {
                 </div>
 
 
-                <div className=' w-full overflow-x-clip z-10 '>
+                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto custom-scrollbar ' style={{ backgroundColor: color }}>
                     <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
