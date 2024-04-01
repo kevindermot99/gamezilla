@@ -23,11 +23,11 @@ function BooksBar({ count }) {
     const limit = count;
 
     return (
-        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-6 custom-scrollbar">
+        <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
 
             {Books.slice(0, limit).map((book) => (
 
-                <div key={book.id} className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3'>
+                <div key={book.id} className=' group flex flex-col w-fit min-h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3'>
                     <div className='relative h-[180px] w-[180px] aspect-square rounded-md  overflow-clip mb-2 select-none'>
                         <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                         <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
