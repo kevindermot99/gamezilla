@@ -62,7 +62,7 @@ function Author() {
                             <div className={` h-fit flex gap-6 items-start justify-start px-9 py-6 max-md:min-h-[200px] max-md:px-5 `} >
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3 max-md:self-end max-md:py-1'>
                                     <p className=' font-normal text-base text-white'>30 Audiobooks by</p>
-                                    <h1 className='text-[60px] max-sm:text-[30px] leading-[60px] max-sm:leading-[30px] max-w-[700px] font-extrabold text-white '>{author}</h1>
+                                    <h1 className='text-[60px] max-sm:text-[40px] leading-[60px] max-sm:leading-[40px] max-w-[700px] font-extrabold text-white '>{author}</h1>
                                 </div>
                             </div>
                         </Reveal>
