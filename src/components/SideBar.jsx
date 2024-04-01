@@ -14,7 +14,7 @@ import { GoHistory } from "react-icons/go";
 import { PiMusicNotesPlusDuotone } from "react-icons/pi";
 
 
-function SideBar() {
+function SideBar({ closeSidebar }) {
     const [sidebar, setSidebar] = useState("big")
     const location = useLocation()
 
@@ -29,23 +29,17 @@ function SideBar() {
         }
     }
 
-    // useEffect(() => {
-    //     const sidebarState = localStorage.getItem("sidebar")
-    //     if (sidebarState === "big") {
-    //         setSidebar("big")
-    //     }
-    //     else {
-    //         setSidebar("small")
-    //     }
-    // }, [])
+    const closeSB = () => {
+        closeSidebar()
+    }
 
     const id = '198h9rbs7d9872';
 
 
     return (
         <>
-            <div className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start max-md:backdrop-blur-lg  max-md:transition max-md:duration-200 `}></div>
-            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'} max-md:duration-200  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 max-md:dark:bg-opacity-100 backdrop-blur-2xl max-md:w-[240px] max-md:p-4 max-md:rounded-lg max-md:shadow-xl`}>
+            <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
+            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'}  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 backdrop-blur-2xl max-md:max-w-[80vw] `}>
 
                 <div className={`group justify-between items-center mb-5 w-full hidden`}>
 
@@ -54,7 +48,7 @@ function SideBar() {
                         <h1 className={`logoText text-stone-400 px-2 py-2  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
                     </div>
                 </div>
-                <ul className={`sidebar w-full h-fit pr-2 max-md:pr-0 overscroll-contain flex flex-col gap-1`}>
+                <ul className={`sidebar w-full h-fit pr-2 overscroll-contain flex flex-col gap-1`}>
                     <Link to="/" className={`h-[45px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
                         <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
                         <GoHome className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
@@ -93,9 +87,9 @@ function SideBar() {
 
                 </ul>
 
-                <div className='w-[95%] m-auto h-[2px] bg-stone-200 dark:bg-stone-500 dark:bg-opacity-15 my-3 max-md:hidden'></div>
+                <div className='w-[95%] m-auto h-[2px] bg-stone-200 dark:bg-stone-500 dark:bg-opacity-15 my-3 '></div>
 
-                <div className="w-full flex flex-col overflow-y-auto custom-scrollbar overflow-x-clip h-full pr-2 min-h-fit max-md:hidden ">
+                <div className="w-full flex flex-col overflow-y-auto custom-scrollbar overflow-x-clip h-full pr-2 min-h-fit  ">
                     <div className='flex justify-between items-center pr-2 mb-2'>
                         <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
                         <Link to={`/liked/${id}`} className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
