@@ -340,10 +340,10 @@ img{
 }
 
 @media screen and (max-width: 500px) {
-  .custom-scrollbar::-webkit-scrollbar {
+  /* .custom-scrollbar::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-  }
+  } */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -354,6 +354,10 @@ img{
   /* background: #5a5a5a2a; */
   background: transparent;
   border-radius: 20px;
+}
+
+.dynamic-scrollbar{
+  color-scheme: light dark;
 }
 
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {

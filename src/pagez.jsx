@@ -52,7 +52,7 @@ const Pagez = () => {
         <SideBar closeSidebar={closeSidebar} />
       </div>
 
-      <div className=' w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar '>
+      <div className=' w-full overflow-x-clip z-0 overflow-y-auto dynamic-scrollbar'>
         <Nav openSidebar={openSidebar} />
         <div className='xl:padding-1 wide:padding-r w-full max-md:mt-3'>
           <div className='px-[60px] mb-5 max-md:px-6 max-md:mb-6'>

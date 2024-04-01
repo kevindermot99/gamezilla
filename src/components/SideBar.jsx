@@ -39,7 +39,7 @@ function SideBar({ closeSidebar }) {
     return (
         <>
             <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
-            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'}  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-80 max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 backdrop-blur-2xl max-md:max-w-[80vw] max-md:round `}>
+            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'}  relative h-[100vh] flex flex-col items-start justify-start pl-3 pr-2 py-3 bg-stone-100  dark:bg-dark-sidebar max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] max-md:rounded-r-xl   `}>
 
                 <div className={`group justify-between items-center mb-5 w-full hidden`}>
 

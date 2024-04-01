@@ -29,7 +29,7 @@ const customAnimation = keyframes`
 
 function Author() {
 
-    const [color, setColor] = useState("#5c715e")
+    const [color, setColor] = useState("#262626")
     const [sidebar, setSideBar] = useState(false);
 
     const { author } = useParams()
@@ -48,14 +48,10 @@ function Author() {
             {/* <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div> */}
 
             <div className='relative text-black dark:text-white flex '>
-
-
                 <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-500  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
                     <SideBar closeSidebar={closeSidebar} />
                 </div>
-
-
-                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto custom-scrollbar' style={{ backgroundColor: color }}>
+                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar' style={{ backgroundColor: color }}>
                     <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
@@ -66,14 +62,53 @@ function Author() {
                                 </div>
                             </div>
                         </Reveal>
-                        <div className='flex flex-col bg-white dark:bg-inherit dark:bg-gradient-to-b from-banner-top-gradient backdrop-blur-2xl to-banner-bottom-gradient  min-h-[500px] px-8 max-md:px-5'>
+                        <div className='flex flex-col bg-white dark:bg-dark-sidebar h-fit pb-10 px-8 max-md:px-5 flex-1'>
+                        <Reveal keyframes={customAnimation} triggerOnce duration={300}>
+                                <div className='w-full py-4'>
+                                    <table className='w-full border-separate border-spacing-y-5 max-sm:border-spacing-y-6'>
+                                        <thead>
+                                            <tr>
+                                                <th className='text-left text-base capitalize'>Book Name </th>
+                                                <th className='text-left text-base capitalize max-lg:hidden'>Date added</th>
+                                                <th className='text-left text-base capitalize max-md:hidden'>Likes</th>
+                                                <th className='text-left max-lg:hidden'><WiTime3 className='text-xl ' /></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
+                                            {Books.map((book) => (
+                                                <tr key={book.id}>
+                                                    <td className='w-[40%]'>
+                                                        <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
+                                                            <img src={book.URL} alt={book.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px]  shadow-md rounded-sm  ' />
+                                                            <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
+                                                                <Link to={`/book/${book.id}`} className='truncate text-ellipsistext-black dark:text-white hover:underline font-medium text-base'>{book.title}</Link>
+                                                                <Link to={`/author/${book.author}`} className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm hover:underline `}>{book.author}</Link>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className='w-[20%] max-lg:hidden'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
+                                                    </td>
+
+                                                    <td className='w-[20%] max-md:hidden'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>{book.likes}</p>
+                                                    </td>
+
+                                                    <td className='w-[20%] max-lg:hidden'>
+                                                        <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
+                                                    </td>
+                                                </tr>
+                                            ))}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </Reveal>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </main>
 
     )

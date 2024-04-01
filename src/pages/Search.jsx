@@ -25,7 +25,7 @@ function Search() {
                 <SideBar closeSidebar={closeSidebar} />
             </div>
 
-            <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar flex flex-col '>
+            <div className='w-full overflow-x-clip z-0 overflow-y-auto dynamic-scrollbar flex flex-col '>
                 <Nav openSidebar={openSidebar} />
                 <div className='xl:padding-1 wide:padding-r w-full h-fit flex flex-col'>
                     <div className="w-[100%] m-auto ml-10 max-md:ml-0 max-md:px-[20px] flex gap-3 items-center max-md:justify-center">

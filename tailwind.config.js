@@ -34,7 +34,6 @@ export default {
         "white-400": "rgba(255, 255, 255, 0.80)",
         "main-color": "#8C52FF",
         "dark-sidebar": "#202020",
-        "banner-top-gradient": "#21212130",
         "banner-bottom-gradient": "#212121",
         "dark-body": "#212121",
         "dark-navlink": "#2f2f2f60",
