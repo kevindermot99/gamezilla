@@ -20,6 +20,7 @@ function App() {
           <Route path='/' element={<Pagez />} />
           <Route path='/landingPage' element={<Landing />} />
           <Route path='/search' element={<Search />} />
+          <Route path='/search/:keyword' element={<Search />} />
           <Route path='/recentlyadded' element={<RecentlyAdded />} />
           <Route path='/liked/:id' element={<Liked />} />
           <Route path='/trending' element={<Trending />} />
