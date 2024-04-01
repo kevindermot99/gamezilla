@@ -14,3 +14,4 @@
     - redo of the whole details page overflow y
     - play button scale on active
     - table switch to grid on small devices
+    - alfabetic dropdown on search
