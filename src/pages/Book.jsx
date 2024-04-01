@@ -84,8 +84,8 @@ function Book() {
                     <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
-                            <div className={` h-fi flex gap-6 items-start justify-start px-9 pt-4 pb-8 `} >
-                                <div className='h-[200px] w-auto aspect-square shadow-custom'>
+                            <div className={` h-fi flex max-md:flex-col gap-6 items-start justify-start px-9 pt-4 pb-8 `} >
+                                <div className='h-[200px] w-auto aspect-square shadow-custom self-center'>
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                                 </div>
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
