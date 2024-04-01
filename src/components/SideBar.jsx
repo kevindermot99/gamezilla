@@ -95,7 +95,7 @@ function SideBar({ closeSidebar }) {
                         <Link to={`/liked/${id}`} className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
                     </div>
                     {Books.map((book, index) => (
-                        <Link to={`/book/${book.id}`} key={index} className=' w-full cursor-pointer h-fit flex items-center py-3 px-4 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink'>
+                        <Link to={`/book/${book.id}`} key={index} onClick={closeSB} className=' w-full cursor-pointer h-fit flex items-center py-3 px-4 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink select-none'>
                             {/* <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-sm' /> */}
                             <div className={` block w-full max-w-[100%] truncate text-ellipsis ${sidebar === "small" && " hidden"}`}>
                                 <h1 className='truncate text-ellipsistext-black dark:text-white'>{book.title}</h1>

@@ -84,15 +84,15 @@ function Book() {
                     <Nav openSidebar={openSidebar} />
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
-                            <div className={` h-fi flex max-md:flex-col gap-6 items-start justify-start px-9 pt-4 pb-8 `} >
-                                <div className='h-[200px] w-auto aspect-square shadow-custom self-center'>
+                            <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 pt-4 pb-8 `} >
+                                <div className='h-[200px] w-auto aspect-square shadow-custom'>
                                     <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
                                 </div>
-                                <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3'>
-                                    <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white '>{res.title}</h1>
-                                    <Link to={`/author/${res.author}`} className=' font-semibold text-base text-white hover:underline'>{res.author}</Link>
-                                    <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed'>{res.about}</p>
-                                    <p className=' font-normal text-sm text-stone-50 '>{res.likes} Likes • 13 min 10 sec</p>
+                                <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3 '>
+                                    <h1 className='text-[45px] leading-[45px] max-w-[700px] font-extrabold text-white  max-md:w-full max-md:text-center '>{res.title}</h1>
+                                    <Link to={`/author/${res.author}`} className=' font-semibold text-base text-white hover:underline max-md:w-full max-md:text-center '>{res.author}</Link>
+                                    <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed max-md:hidden max-md:w-full max-md:text-center '>{res.about}</p>
+                                    <p className=' font-normal text-sm text-stone-50 max-md:w-full max-md:text-center'>{res.likes} Likes • 13 min 10 sec</p>
                                 </div>
                             </div>
                         </Reveal>

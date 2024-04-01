@@ -15,3 +15,4 @@
     - play button scale on active
     - table switch to grid on small devices
     - alfabetic dropdown on search
+    - dynamic title on some pages
