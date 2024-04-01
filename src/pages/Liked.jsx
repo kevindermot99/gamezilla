@@ -42,12 +42,6 @@ function Liked() {
         setSideBar(false)
     }
     
-    useEffect(() => {
-        const metaThemeColor = document.querySelector("meta[name=theme-color]");
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute("content", color);
-        }
-    }, [color]);
 
     return (
         <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-x-clip h-[100vh] overflow-y-auto custom-scrollbar'>
