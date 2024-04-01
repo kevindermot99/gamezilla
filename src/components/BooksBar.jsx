@@ -42,12 +42,6 @@ function BooksBar({ count }) {
                 </div>
 
             ))}
-            <Link className=' group flex flex-col w-fit h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3 cursor-pointer'>
-                <div className='relative h-[100%] w-[180px] overflow-clip select-none flex flex-col items-center justify-center'>
-                    <TbPlayerTrackNext className='text-2xl opacity-70 ' />
-                    <p className='text-base font-medium  opacity-70'>View All</p>
-                </div>
-            </Link>
         </div>
     )
 }

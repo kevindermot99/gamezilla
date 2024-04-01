@@ -46,7 +46,7 @@ const Pagez = () => {
     //   <img src={LogoDarkMode} className='h-20 hidden dark:block' />
     //   <img src={LogoLightMode} className='h-20 block dark:hidden' />
     // </div>
-    <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh] overflow-clip'>
+    <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh] overflow-clip pb-[70px]'>
       <img src={PagezDarkBg} className='absolute opacity-10 h-full w-full object-cover hidden dark:block blur-sm ' loading='lazy'/>
       <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-500  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
         <SideBar closeSidebar={closeSidebar} />
@@ -54,12 +54,12 @@ const Pagez = () => {
 
       <div className='w-full overflow-x-clip z-0 overflow-y-auto custom-scrollbar'>
         <Nav openSidebar={openSidebar} />
-        <div className='xl:padding-1 wide:padding-r w-full max-md:mt-5'>
-          <div className='px-[60px] mb-5 w-fit max-md:px-6'>
-            <p className='text-stone-400 dark:text-stone-500  text-sm tracking-wide font-mono cursor-default'>
+        <div className='xl:padding-1 wide:padding-r w-full max-md:mt-3'>
+          <div className='px-[60px] mb-5 max-md:px-6 max-md:mb-6'>
+            <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
               {greet} Kevin.
             </p>
-          </div>
+            </div>
           <Browse />
         </div>
       </div>
