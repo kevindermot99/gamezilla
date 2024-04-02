@@ -15,6 +15,12 @@ import { PiMusicNotesPlusDuotone } from "react-icons/pi";
 import LogoDarkMode from '../assets/images/Pagez_Logo__dark_mode.png'
 import LogoLightMode from '../assets/images/Pagez_Logo__light_mode.png'
 import { BsCloudDownload } from "react-icons/bs";
+import { IoShuffleOutline } from "react-icons/io5";
+import { IoPlaySkipBack } from "react-icons/io5";
+import { FaPlay } from "react-icons/fa";
+import { GiPauseButton } from "react-icons/gi";
+import { IoPlaySkipForward } from "react-icons/io5";
+import { IoRepeatOutline } from "react-icons/io5";
 
 
 function SideBar({ closeSidebar }) {
@@ -108,13 +114,13 @@ function SideBar({ closeSidebar }) {
                     ))}
                 </div> */}
 
-                <div className=' w-full h-[300px] min-h-[300px] bg-white dark:bg-dark-navlink rounded-xl flex flex-col justify-start items-center px-3 py-6 overflow-clip'>
+                <div className=' w-full h-fit min-h-[300px] bg-white dark:bg-dark-navlink rounded-xl flex flex-col justify-start items-center px-7 py-8 overflow-clip gap-3 '>
 
-                    <div className='flex justify-center items-center h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl '>
+                    <div className='flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl '>
                         <img src={LogoDarkMode} className='h-16 opacity-60' />
                     </div>
 
-                    <div className=' flex justify-between w-full pt-3 '>
+                    <div className=' flex justify-between w-full pt-2'>
                         <span className='w-[60%] flex flex-col gap-1'>
                             <h1 className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4'>Harry Potter and the chamber of secrets</h1>
                             <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>J.K. Rowling</p>
@@ -132,12 +138,38 @@ function SideBar({ closeSidebar }) {
                         </span>
                     </div>
 
-                    <div className='w-full pt-2 '>
-                        <input type="range" className='w-full' />
+                    <div className='w-full '>
+
+                        <label for="default-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default range</label>
+                        <input id="default-range" type="range" value="0" className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-600" />
+
                         <span className='flex justify-between'>
                             <p className='text-black dark:text-white text-[13px] font-light  leading-4'>01:31</p>
                             <p className='text-black dark:text-white text-[13px] font-light  leading-4'>13:42</p>
                         </span>
+                    </div>
+
+                    <div className='w-full flex items-start justify-between '>
+                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                            <IoShuffleOutline className='text-stone-700 
+                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        </button>
+                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                            <IoPlaySkipBack className='text-stone-700 
+                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        </button>
+                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                            <FaPlay className='text-stone-700 
+                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        </button>
+                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                            <IoPlaySkipForward className='text-stone-700 
+                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        </button>
+                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                            <IoRepeatOutline className='text-stone-700 
+                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        </button>
                     </div>
 
                 </div>
