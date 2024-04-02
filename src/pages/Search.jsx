@@ -31,11 +31,11 @@ function Search() {
                     <div className="w-[100%] m-auto ml-10 max-md:ml-0 max-md:px-[20px] flex gap-3 items-center max-md:justify-center">
                         <form class="relative w-full max-w-[400px]">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-                                <svg class="w-4 h-4 text-stone-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 dark:text-stone-400 text-stone-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                 </svg>
                             </div>
-                            <input type="search" id="default-search" class="block w-full pl-12 pr-7 py-3 text-sm text-black dark:text-white bg-stone-200 dark:bg-dark-navlink  bg-opacity-60 font-medium     rounded-3xl outline-none placeholder:text-stone-500 " placeholder="Search Book Names or Authors" required />
+                            <input type="search" id="default-search" class="block w-full pl-12 pr-7 py-3 text-sm text-black dark:text-white bg-stone-200 dark:bg-dark-navlink  bg-opacity-60 font-medium rounded-3xl outline-none placeholder:text-stone-500 dark:placeholder:text-stone-400 " placeholder="Search Book Names or Authors" required />
                         </form>
                         <button className='py-3 px-3 rounded-full text-black dark:text-white bg-stone-200 dark:bg-dark-navlink  bg-opacity-60 font-medium'>
                             <RxLetterCaseCapitalize className='text-lg ' />
