@@ -15,6 +15,8 @@ import Author from './pages/Author';
 function App() {
 
   return (
+    <>
+
       <Router>
         <Routes>
           <Route path='/' element={<Pagez />} />
@@ -30,6 +32,8 @@ function App() {
           <Route path='/*' element={<PageError />} />
         </Routes>
       </Router>
+
+    </>
   );
 }
 
