@@ -90,12 +90,12 @@ function SideBar({ closeSidebar }) {
                 <div className='w-[95%] m-auto h-[2px] bg-stone-200 dark:bg-stone-500 dark:bg-opacity-15 my-3 '></div>
 
                 <div className="w-full flex flex-col overflow-y-auto custom-scrollbar overflow-x-clip h-full pr-2 min-h-fit  ">
-                    <div className='flex justify-between items-center pr-2 mb-2 sticky top-0 bg-dark-sidebar max-md:bg-dark-hover '>
+                    <div className='flex justify-between items-center pr-2 mb-2 sticky top-0 bg-stone-100 dark:bg-dark-sidebar max-md:bg-stone-100 max-md:dark:bg-dark-hover '>
                         <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
                         <Link to={`/liked/${id}`} className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
                     </div>
                     {Books.map((book, index) => (
-                        <Link to={`/book/${book.id}`} key={index} onClick={closeSB} className=' w-full cursor-pointer h-fit flex items-center py-3 px-4 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink select-none'>
+                        <Link to={`/book/${book.id}`} key={index} onClick={closeSB} className=' w-full cursor-pointer h-fit flex items-center py-2 px-4 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink select-none'>
                             {/* <img src={book.URL} alt={book.title} className='h-10 w-10 shadow-md rounded-sm' /> */}
                             <div className={` block w-full max-w-[100%] truncate text-ellipsis ${sidebar === "small" && " hidden"}`}>
                                 <h1 className='truncate text-ellipsistext-black dark:text-white'>{book.title}</h1>
