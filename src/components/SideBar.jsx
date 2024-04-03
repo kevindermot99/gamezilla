@@ -21,6 +21,7 @@ import { FaPlay } from "react-icons/fa";
 import { GiPauseButton } from "react-icons/gi";
 import { IoPlaySkipForward } from "react-icons/io5";
 import { IoRepeatOutline } from "react-icons/io5";
+import { GoLinkExternal } from "react-icons/go";
 
 
 function SideBar({ closeSidebar }) {
@@ -114,9 +115,13 @@ function SideBar({ closeSidebar }) {
                     ))}
                 </div> */}
 
-                <div className=' w-full h-fit min-h-[300px] bg-white dark:bg-dark-navlink rounded-xl flex flex-col justify-start items-center px-7 py-8 overflow-clip gap-3 '>
+                <div className='sticky bottom-0 w-full h-fit min-h-[330px] bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
+                    <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-10 h-full w-full object-cover opacity-10 blur-md ' />
+                    <Link to="/" className='h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 self-end mb-3' title={`Now Playing`}>
+                        <GoLinkExternal className='text-black dark:text-stone-200 text-[22px] cursor-pointer ' />
+                        </Link>
 
-                    <div className='flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl '>
+                    <div className='flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 '>
                         <img src={LogoDarkMode} className='h-16 opacity-60' />
                     </div>
 
@@ -127,21 +132,20 @@ function SideBar({ closeSidebar }) {
                         </span>
                         <span className='w-fit flex items-center justify-start gap-2  '>
 
-                            <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Download`}>
-                                <IoMdHeartEmpty className='text-black dark:text-stone-200 text-[24px] cursor-pointer ' title='Like' />
+                            <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Like`}>
+                                <IoMdHeartEmpty className='text-black dark:text-stone-200 text-[24px] cursor-pointer ' />
                             </button>
 
                             <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Download`}>
-                                <BsCloudDownload className='text-black dark:text-stone-200 text-[22px] cursor-pointer ' title='Download' />
+                                <BsCloudDownload className='text-black dark:text-stone-200 text-[22px] cursor-pointer ' />
                             </button>
 
                         </span>
                     </div>
 
-                    <div className='w-full '>
+                    <div className='w-full pb-2 '>
 
-                        <label for="default-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default range</label>
-                        <input id="default-range" type="range" value="0" className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-600" />
+                        <input id="default-range" type="range" defaultValue={0} className="w-full h-1 mb-3 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-600" />
 
                         <span className='flex justify-between'>
                             <p className='text-black dark:text-white text-[13px] font-light  leading-4'>01:31</p>
@@ -149,24 +153,24 @@ function SideBar({ closeSidebar }) {
                         </span>
                     </div>
 
-                    <div className='w-full flex items-start justify-between '>
-                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                    <div className='w-full flex items-center  justify-between '>
+                        <button className=' h-[35px] w-[35px] rounded-full transition aspect-square  flex items-center justify-center -100 hover:bg-stone-200 dark:hover:bg-dark-navlink opacity-80 hover:opacity-100 active:scale-90 ' title={`Download`}>
                             <IoShuffleOutline className='text-stone-700 
                              dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
                         </button>
-                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                        <button className=' h-[35px] w-[35px] rounded-full transition aspect-square  flex items-center justify-center -100 hover:bg-stone-200 dark:hover:bg-dark-navlink opacity-80 hover:opacity-100 active:scale-90 ' title={`Download`}>
                             <IoPlaySkipBack className='text-stone-700 
                              dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
                         </button>
-                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
-                            <FaPlay className='text-stone-700 
-                             dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
+                        <button className=' h-[35px] w-[35px] rounded-full transition aspect-square  flex items-center justify-center -100 hover:bg-stone-200 dark:hover:bg-dark-navlink opacity-80 hover:opacity-100 active:scale-90 ' title={`Download`}>
+                            <GiPauseButton className='text-stone-700 
+                             dark:text-stone-200 text-[17px] cursor-pointer ' title='Download' />
                         </button>
-                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                        <button className=' h-[35px] w-[35px] rounded-full transition aspect-square  flex items-center justify-center -100 hover:bg-stone-200 dark:hover:bg-dark-navlink opacity-80 hover:opacity-100 active:scale-90 ' title={`Download`}>
                             <IoPlaySkipForward className='text-stone-700 
                              dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
                         </button>
-                        <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:bg-stone-400 active:scale-90 ' title={`Download`}>
+                        <button className=' h-[35px] w-[35px] rounded-full transition aspect-square  flex items-center justify-center -100 hover:bg-stone-200 dark:hover:bg-dark-navlink opacity-80 hover:opacity-100 active:scale-90 ' title={`Download`}>
                             <IoRepeatOutline className='text-stone-700 
                              dark:text-stone-200 text-[20px] cursor-pointer ' title='Download' />
                         </button>
