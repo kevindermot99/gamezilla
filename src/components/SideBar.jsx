@@ -78,37 +78,37 @@ const SideBar = React.memo(({ closeSidebar }) => {
                     <ul className={`sidebar w-full h-fit overscroll-contain flex flex-col gap-1`}>
                         <Link to="/" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
-                            <GoHome className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <GoHome className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Home</p>
                         </Link>
 
                         <Link to="/search" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/search' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/search' && 'opacity-100 '}`}></div>
-                            <IoSearchOutline className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/search' ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <IoSearchOutline className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname === '/search' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Search</p>
                         </Link>
 
                         <Link to={`/recentlyadded`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/recentlyadded' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
                             <div className={` indicator opacity-0 ${location.pathname === '/recentlyadded' && 'opacity-100 '}`}></div>
-                            <PiMusicNotesPlusDuotone className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/recentlyadded' ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <PiMusicNotesPlusDuotone className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname === '/recentlyadded' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Recently Added</p>
                         </Link>
 
                         <Link to={`/liked/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname.includes('/liked/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
                             <div className={` indicator opacity-0 ${location.pathname.includes('/liked/') && 'opacity-100 '}`}></div>
-                            <IoMdHeartEmpty className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname.includes('/liked/') ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <IoMdHeartEmpty className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname.includes('/liked/') ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Liked</p>
                         </Link>
 
                         <Link to={`/trending`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname === '/trending' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
                             <div className={` indicator opacity-0 ${location.pathname === '/trending' && 'opacity-100 '}`}></div>
-                            <IoTrendingUp className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname === '/trending' ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <IoTrendingUp className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname === '/trending' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>Trending</p>
                         </Link>
 
                         <Link to={`/history/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${sidebar === "small" && 'max-w-[100%] justify-center'} ${location.pathname.includes('/history/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
                             <div className={` indicator opacity-0 ${location.pathname.includes('/history/') && 'opacity-100 '}`}></div>
-                            <GoHistory className={`text-[22px] mx-3 min-h-7 min-w-6 ${location.pathname.includes('/history/') ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <GoHistory className={`text-[18px] mx-3 min-h-7 min-w-5 ${location.pathname.includes('/history/') ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap ${sidebar === "small" && 'hidden'}`}>History</p>
                         </Link>
 
@@ -117,11 +117,11 @@ const SideBar = React.memo(({ closeSidebar }) => {
 
                 <div className='w-full h-fit'>
 
-                    <h1 className='font-bold text-lg text-stone-400 dark:text-stone-500 mb-2 '>Last Played</h1>
+                    <h1 className='font-bold text-lg text-stone-600 dark:text-stone-500 mb-2 '>Last Played</h1>
 
-                    <div className='relative w-full h-fit  bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
+                    <div className='relative w-full h-fit  bg-stone-100 dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
                         {nowPlaying === null && (
-                            <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-30 blur-lg ' />
+                            <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-20 blur-lg p-5 ' />
                         )}
                         {nowPlaying && (
                             <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20 blur-2xl ' />
