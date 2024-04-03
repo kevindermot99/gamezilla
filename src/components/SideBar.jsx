@@ -97,24 +97,6 @@ function SideBar({ closeSidebar }) {
 
                 </ul>
 
-                {/* <div className='flex justify-between items-center pr-2 w-full bg-stone-100 dark:bg-dark-sidebar max-md:bg-stone-100 max-md:dark:bg-dark-hover mt-3'>
-                        <p className='text-stone-400 dark:text-stone-300 capitalize text-sm px-2 py-2'>Liked Books</p>
-                        <Link to={`/liked/${id}`} className='text-sm capitalize text-stone-700 dark:text-stone-300 hover:underline'>view all</Link>
-                    </div>
-                <div className='w-[95%] m-auto h-[2px] bg-stone-200 dark:bg-stone-500 dark:bg-opacity-15 mb-3 '></div>
-
-                <div className="w-full flex flex-col overflow-y-auto custom-scrollbar relative h-full pr-2 mb-3">
-                    
-                    {Books.map((book, index) => (
-                        <Link to={`/book/${book.id}`} key={index} onClick={closeSB} className=' w-full cursor-pointer h-fit flex items-center py-2 px-4 gap-3 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink select-none'>
-                           <div className={` block w-full max-w-[100%] truncate text-ellipsis ${sidebar === "small" && " hidden"}`}>
-                                <h1 className='truncate text-ellipsistext-black dark:text-white'>{book.title}</h1>
-                                <p className={`truncate text-ellipsis text-stone-500 dark:text-stone-400 text-sm `}>{book.author}</p>
-                            </div>
-                        </Link>
-                    ))}
-                </div> */}
-
                 <div className='sticky bottom-0 w-full h-fit min-h-[330px] bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
                     <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-10 h-full w-full object-cover opacity-10 blur-md ' />
                     <Link to="/" className='h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 self-end mb-3' title={`Now Playing`}>
