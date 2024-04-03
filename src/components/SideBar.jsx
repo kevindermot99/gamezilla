@@ -127,7 +127,7 @@ function SideBar({ closeSidebar }) {
 
                     <div className='w-full pb-2 '>
 
-                        <input id="default-range" type="range" defaultValue={0} className="w-full h-1 mb-3 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-600" />
+                        <input id="default-range" type="range" defaultValue={0} className="w-full h-1 mb-3 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-700 dark:bg-opacity-70" />
 
                         <span className='flex justify-between'>
                             <p className='text-black dark:text-white text-[13px] font-light  leading-4'>01:31</p>

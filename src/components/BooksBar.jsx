@@ -3,24 +3,14 @@ import { Books } from '../constants/data'
 import { FaPlay } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { TbPlayerTrackNext } from "react-icons/tb";
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
-
-const customAnimation = keyframes`
-  from {
-    transform: translateY(10px);
-    
-  }
-
-  to {
-    transform: translateY(0);
-
-  }
-`;
 
 
 function BooksBar({ count }) {
     const limit = count;
+
+    const handleNowPlaying = (id) => {
+        localStorage.setItem("nowPlaying", id)
+    }
 
     return (
         <div className="bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
@@ -31,7 +21,7 @@ function BooksBar({ count }) {
                     <div className='relative h-[180px] w-[180px] aspect-square rounded-md  overflow-clip mb-2 select-none'>
                         <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                         <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
-                            <button className=' transition absolute bottom-2 right-2 aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${book.title}`}>
+                            <button id={book.id} onClick={() => handleNowPlaying(book.id)} className=' transition absolute bottom-2 right-2 aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${book.title}`}>
                                 <FaPlay className='text-white text-xl ' />
                             </button>
                         </div>
