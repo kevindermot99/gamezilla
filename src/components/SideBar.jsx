@@ -14,6 +14,7 @@ import { GoHistory } from "react-icons/go";
 import { PiMusicNotesPlusDuotone } from "react-icons/pi";
 import LogoDarkMode from '../assets/images/Pagez_Logo__dark_mode.png'
 import LogoLightMode from '../assets/images/Pagez_Logo__light_mode.png'
+import audio1 from '../assets/musics/1.wav'
 import { BsCloudDownload } from "react-icons/bs";
 import { IoShuffleOutline } from "react-icons/io5";
 import { IoPlaySkipBack } from "react-icons/io5";
@@ -24,9 +25,23 @@ import { IoRepeatOutline } from "react-icons/io5";
 import { GoLinkExternal } from "react-icons/go";
 
 
-function SideBar({ closeSidebar }) {
+const SideBar = React.memo(({ closeSidebar }) => {
     const [sidebar, setSidebar] = useState("big")
     const location = useLocation()
+    const [nowPlaying, setNowPlaying] = useState(null);
+
+
+
+    useEffect(() => {
+        const nowPlayingBookId = localStorage.getItem("nowPlaying");
+        if (nowPlayingBookId) {
+            const res = Books.find(book => book.id === nowPlayingBookId);
+            setNowPlaying(res);
+        }
+    }, []); // Include other dependencies as needed
+
+
+
 
     const toggleSidebar = () => {
         if (sidebar === "big") {
@@ -98,13 +113,26 @@ function SideBar({ closeSidebar }) {
                 </ul>
 
                 <div className='sticky bottom-0 w-full h-fit min-h-[330px] bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
-                    <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-10 h-full w-full object-cover opacity-10 blur-md ' />
+                    {nowPlaying === null && (
+                        <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-10 h-full w-full object-cover opacity-30 blur-2xl ' />
+                    )}
+                    {nowPlaying && (
+                        <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-10 h-[500px] w-[500px] object-cover opacity-30 blur-2xl ' />
+                    )}
+
                     <Link to="/" className='h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 self-end mb-3' title={`Now Playing`}>
                         <GoLinkExternal className='text-black dark:text-stone-200 text-[22px] cursor-pointer ' />
-                        </Link>
+                    </Link>
 
-                    <div className='flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 '>
-                        <img src={LogoDarkMode} className='h-16 opacity-60' />
+                    <div className='flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 overflow-hidden shadow  '>
+                        {nowPlaying === null && (
+                            <img src={LogoDarkMode} className='h-16 opacity-60' />
+                        )}
+                        {nowPlaying && (
+                            <img src={nowPlaying.URL} className='h-full w-full object-cover opacity-90' />
+                        )}
+
+
                     </div>
 
                     <div className=' flex justify-between w-full pt-2'>
@@ -125,7 +153,14 @@ function SideBar({ closeSidebar }) {
                         </span>
                     </div>
 
+
+
+
                     <div className='w-full pb-2 '>
+
+                        <audio controls>
+                            <source src={audio1} type="audio/ogg" />
+                        </audio>
 
                         <input id="default-range" type="range" defaultValue={0} className="w-full h-1 mb-3 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-700 dark:bg-opacity-70" />
 
@@ -164,6 +199,6 @@ function SideBar({ closeSidebar }) {
         </>
 
     )
-}
+});
 
 export default SideBar

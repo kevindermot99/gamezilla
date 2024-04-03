@@ -33,7 +33,7 @@ function Book() {
     const [sidebar, setSideBar] = useState(false);
 
     const { id } = useParams();
-    console.log(id)
+    // console.log(id)
     const res = Books.find(findthis)
     function findthis(book) {
         return book.id === id;
