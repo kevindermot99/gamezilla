@@ -65,7 +65,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
     return (
         <>
             <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
-            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'}  relative h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between px-3 py-3 bg-stone-100  dark:bg-dark-sidebar max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] gap-2 max-md:rounded-r-xl`}>
+            <div className={` sticky top-0 ${sidebar === "big" && 'w-[280px]'}  ${sidebar === "small" && 'w-[120px]'}  relative h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between px-3 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] gap-2 max-md:rounded-r-xl`}>
 
                 <div className='w-full h-fit'>
                     <div className={`group justify-between items-center w-full mb-6`}>
@@ -119,19 +119,19 @@ const SideBar = React.memo(({ closeSidebar }) => {
 
                     <h1 className='font-bold text-lg text-stone-600 dark:text-stone-500 mb-2 '>Last Played</h1>
 
-                    <div className='relative w-full h-fit  bg-stone-100 dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
+                    <div className='relative w-full h-fit  bg-stone-100 dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-clip '>
                         {nowPlaying === null && (
                             <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-20 blur-lg p-5 ' />
                         )}
                         {nowPlaying && (
-                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20 blur-2xl ' />
+                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-10 blur-md ' />
                         )}
 
-                        <Link to="/" className={` z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 self-end mb-3 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `} title={`Now Playing`}>
-                            <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' />
+                        <Link to="/" className={`relative z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 self-end mb-3 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `}>
+                            <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' title='Open' />
                         </Link>
 
-                        <div className=' z-10flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 overflow-hidden shadow  '>
+                        <div className=' z-10flex justify-center items-center h-[120px] min-h-[120px] w-[120px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 overflow-hidden shadow  '>
                             {nowPlaying === null && (
                                 <img src={LogoDarkMode} className='h-auto m-auto object-cover opacity-60 p-5' />
                             )}
