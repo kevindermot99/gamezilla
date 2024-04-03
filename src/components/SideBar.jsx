@@ -116,53 +116,74 @@ const SideBar = React.memo(({ closeSidebar }) => {
                 </div>
 
                 <div className='w-full h-fit'>
-                
-                <h1 className='font-bold text-lg text-stone-400 dark:text-stone-500 mb-2 '>Last Played</h1>
 
-                <div className='relative w-full h-fit  bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
-                    {nowPlaying === null && (
-                        <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-30 blur-lg ' />
-                    )}
-                    {nowPlaying && (
-                        <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20 blur-2xl ' />
-                    )}
+                    <h1 className='font-bold text-lg text-stone-400 dark:text-stone-500 mb-2 '>Last Played</h1>
 
-                    <Link to="/" className=' z-10 h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 self-end mb-3' title={`Now Playing`}>
-                        <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' />
-                    </Link>
-
-                    <div className=' z-10flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 overflow-hidden shadow  '>
+                    <div className='relative w-full h-fit  bg-white dark:bg-dark-player rounded-xl flex flex-col justify-start items-center px-7 pb-8 pt-5 overflow-hidden '>
                         {nowPlaying === null && (
-                            <img src={LogoDarkMode} className='h-16 opacity-60' />
+                            <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-30 blur-lg ' />
                         )}
                         {nowPlaying && (
-                            <img src={nowPlaying.URL} className='h-full w-full object-cover opacity-90' />
+                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20 blur-2xl ' />
                         )}
+
+                        <Link to="/" className={` z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 self-end mb-3 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `} title={`Now Playing`}>
+                            <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' />
+                        </Link>
+
+                        <div className=' z-10flex justify-center items-center h-[100px] min-h-[100px] w-[100px] bg-stone-200 dark:bg-dark-navlink bg-opacity-70  rounded-xl mb-3 overflow-hidden shadow  '>
+                            {nowPlaying === null && (
+                                <img src={LogoDarkMode} className='h-auto m-auto object-cover opacity-60 p-5' />
+                            )}
+                            {nowPlaying && (
+                                <img src={nowPlaying.URL} className='h-full w-full object-cover opacity-90' />
+                            )}
+
+
+                        </div>
+
+                        <div className=' z-10 flex justify-between w-full pt-2'>
+                            <span className='w-[60%] flex flex-col gap-1'>
+                                {nowPlaying === null && (
+                                    <h1 className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4'>
+                                        Book Name
+                                    </h1>
+                                )}
+                                {nowPlaying && (
+                                    <h1 className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4'>
+                                        {nowPlaying.title}
+                                    </ h1>
+                                )}
+                                {nowPlaying === null && (
+                                    <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>
+                                        Author
+                                    </p>
+                                )}
+                                {nowPlaying && (
+                                    <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>
+                                        {nowPlaying.author}
+                                    </p>
+                                )}
+
+                            </span>
+                            <span className='w-fit flex items-center justify-start gap-2  '>
+
+                                <button className={`group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '}   `} title={`Like`}>
+                                    <IoMdHeartEmpty className='text-black dark:text-stone-500 text-[24px] cursor-pointer dark:group-hover:text-stone-200' />
+                                </button>
+
+                                <button className={`group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `} title={`Download`}>
+                                    <BsCloudDownload className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200' />
+                                </button>
+
+                            </span>
+                        </div>
+
                     </div>
-
-                    <div className=' z-10 flex justify-between w-full pt-2'>
-                        <span className='w-[60%] flex flex-col gap-1'>
-                            <h1 className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4'>Harry Potter and the chamber of secrets</h1>
-                            <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>J.K. Rowling</p>
-                        </span>
-                        <span className='w-fit flex items-center justify-start gap-2  '>
-
-                            <button className='group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Like`}>
-                                <IoMdHeartEmpty className='text-black dark:text-stone-500 text-[24px] cursor-pointer dark:group-hover:text-stone-200' />
-                            </button>
-
-                            <button className='group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Download`}>
-                                <BsCloudDownload className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200' />
-                            </button>
-
-                        </span>
-                    </div>
-
                 </div>
-                </div>
-                
 
-            </div>
+
+            </div >
         </>
 
     )
