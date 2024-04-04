@@ -10,9 +10,9 @@
     - profile page 
 
 *ideas*
-    - menu icon change to white io certain pages
-    - redo of the whole details page overflow y
+    - menu icon change to white in certain pages ✔
+    - redo of the whole details page overflow x ✔
     - play button scale on active
-    - table switch to grid on small devices
+    - table hide some columns on small devices ✔
     - alfabetic dropdown on search
     - dynamic title on some pages
