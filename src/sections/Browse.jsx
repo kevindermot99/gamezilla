@@ -3,6 +3,8 @@ import BooksBar from "../components/BooksBar";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Link } from "react-router-dom";
+import { GoChevronLeft } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
 
 const customAnimation = keyframes`
   from {
@@ -25,9 +27,13 @@ function Browse() {
       <Reveal keyframes={customAnimation} triggerOnce duration={400}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 px-3 capitalize flex items-center justify-between">
           <span>Trending Now</span>
-          <Link to={`/trending`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
+          <span className="flex items-center justify-end ">
+            <Link to={`/trending`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
+          </span>
         </h1>
-        <BooksBar count={9} />
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+          <BooksBar />
+        </div>
       </Reveal>
 
       <Reveal keyframes={customAnimation} triggerOnce duration={400}>
@@ -35,7 +41,9 @@ function Browse() {
           <span>Recently added</span>
           <Link to={`/recentlyadded`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <BooksBar count={5} />
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+          <BooksBar />
+        </div>
       </Reveal>
 
       <Reveal keyframes={customAnimation} triggerOnce duration={400}>
@@ -43,7 +51,9 @@ function Browse() {
           <span>History</span>
           <Link to={`/history/${id}`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <BooksBar count={6} />
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+          <BooksBar />
+        </div>
       </Reveal>
 
     </section>
