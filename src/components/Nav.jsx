@@ -34,10 +34,6 @@ function Nav({openSidebar}) {
 
                 <div className="flex w-fit justify-end items-center min-w-[170px]  ">
 
-                    {/* <a href="#" className="group navbar-link p-2">
-                        <TbSunMoon className="text-2xl cursor-pointer relative transition text-primary group-hover:text-main-color" />
-                    </a> */}
-
                     <Link to={`/myLibrary/${id}`} className="group navbar-link p-2 ml-5" title="My Library">
                         <LuLibrary className={`text-2xl cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") ? 'text-white dark:text-white ' : ''} group-hover:text-black dark:group-hover:text-white`} />
                         <Notification label={84} />
