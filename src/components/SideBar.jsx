@@ -150,9 +150,9 @@ const SideBar = React.memo(({ closeSidebar }) => {
                                     </h1>
                                 )}
                                 {nowPlaying && (
-                                    <h1 className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4'>
+                                    <Link to={`/book/${nowPlaying.id}`} className='truncate text-ellipsis text-black dark:text-white text-[13px] font-semibold leading-4 hover:underline'>
                                         {nowPlaying.title}
-                                    </ h1>
+                                    </ Link>
                                 )}
                                 {nowPlaying === null && (
                                     <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>
@@ -160,9 +160,9 @@ const SideBar = React.memo(({ closeSidebar }) => {
                                     </p>
                                 )}
                                 {nowPlaying && (
-                                    <p className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4'>
+                                    <Link to={`/author/${nowPlaying.author}`} className='truncate text-ellipsis text-black dark:text-white text-[13px] font-light  leading-4 hover:underline '>
                                         {nowPlaying.author}
-                                    </p>
+                                    </Link>
                                 )}
 
                             </span>
