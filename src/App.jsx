@@ -10,6 +10,7 @@ import Liked from './pages/Liked';
 import Trending from './pages/Trending';
 import History from './pages/History';
 import Author from './pages/Author';
+import MyLibrary from './pages/MyLibrary';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/search/:keyword' element={<Search />} />
           <Route path='/recentlyadded' element={<RecentlyAdded />} />
           <Route path='/liked/:id' element={<Liked />} />
+          <Route path='/myLibrary/:id' element={<MyLibrary />} />
           <Route path='/trending' element={<Trending />} />
           <Route path='/history/:id' element={<History />} />
           <Route path='/author/:author' element={<Author />} />
