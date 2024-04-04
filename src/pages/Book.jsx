@@ -121,6 +121,7 @@ function Book() {
                                 <table className='w-full border-separate border-spacing-y-5 max-sm:border-spacing-y-6'>
                                     <thead>
                                         <tr>
+                                            <th className='text-left text-base capitalize'># </th>
                                             <th className='text-left text-base capitalize'>books by {res.author}</th>
                                             <th className='text-left text-base capitalize  max-lg:hidden'>Date added</th>
                                             <th className='text-left text-base capitalize  max-md:hidden'>Likes</th>
@@ -129,8 +130,9 @@ function Book() {
                                     </thead>
                                     <tbody>
 
-                                        {authorBooks.map((authorBook) => (
+                                        {authorBooks.map((authorBook, index) => (
                                             <tr key={authorBook.id}>
+                                                <td className='min-w-[30px] text-stone-500 dark:text-stone-500 font-bold text-sm ' >{index + 1}</td>
                                                 <td className='w-[40%] max-md:w-[100%]'>
                                                     <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
                                                         <img src={authorBook.URL} alt={authorBook.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px] shadow-md rounded-sm ' />

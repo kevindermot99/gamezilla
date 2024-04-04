@@ -71,6 +71,7 @@ function History() {
                                     <table className='w-full border-separate border-spacing-y-5 max-sm:border-spacing-y-6'>
                                         <thead>
                                             <tr>
+                                                <th className='text-left text-base capitalize'># </th>
                                                 <th className='text-left text-base capitalize'>Book Name </th>
                                                 <th className='text-left text-base capitalize max-lg:hidden'>Date added</th>
                                                 <th className='text-left text-base capitalize max-md:hidden'>Likes</th>
@@ -79,8 +80,9 @@ function History() {
                                         </thead>
                                         <tbody>
 
-                                            {Books.map((book) => (
+                                            {Books.map((book, index) => (
                                                 <tr key={book.id}>
+                                                    <td className='min-w-[30px] text-stone-500 dark:text-stone-500 font-bold text-sm ' >{index+1}</td>
                                                     <td className='w-[40%]'>
                                                         <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
                                                             <img src={book.URL} alt={book.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px]  shadow-md rounded-sm  ' />
