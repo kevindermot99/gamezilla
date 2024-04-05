@@ -115,16 +115,13 @@ export const Formats = [
 export const users = [
   {
     id: "QHNXEXCNBQGALHZXXA58",
-    fistName: "Kaneza kevin",
-    lastName: "Mbonimpaye",
     displayName: "Kevin Mboni",
     email: "mbonimpayekevin@gmail.com",
     role: "Host",
-    dob: "30/07/2003",
     gender: "Male",
     country: "Rwanda",
     city: "Kigali",
     maturity: "18+",
-    avatar: avatar3,
+    avatar: avatar2,
   },
 ];
