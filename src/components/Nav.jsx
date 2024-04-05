@@ -1,4 +1,4 @@
-import defaultPfp from "../assets/images/default-pfp.jpg"
+import avatar from "../assets/avatars/avatar red.png"
 import { RiUser6Line } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import Headroom from "react-headroom";
@@ -39,7 +39,7 @@ function Nav({openSidebar}) {
                         <Notification label={84} />
                     </Link>
                     <Link to={`/profile/${id}`} className="group rounded-full ml-3 flex items-center justify-center relative">
-                        <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
+                        <img src={avatar} className=" h-9 w-9 rounded-full " />
                         <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">Clare thomson</p>
                     </Link>
 
