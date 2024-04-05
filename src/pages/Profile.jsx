@@ -60,7 +60,7 @@ function Profile() {
                 <div className=' w-full overflow-x-clip z-10 h-fit min-h-[300px] max-h-[100vh] overflow-y-auto dynamic-scrollbar '>
                     <Nav openSidebar={openSidebar} />
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
-                        <div className='flex flex-col px-16 py-3'>
+                        <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
 
                             <div className='flex items-center gap-6'>
                                 <div className='h-32 w-32 rounded-full ring-1 ring-stone-100 shadow-xl shadow-stone-100 dark:shadow-stone-900 dark:ring-stone-800'>
@@ -75,34 +75,34 @@ function Profile() {
                             <p className='mt-8 text-sm font-semibold'>Required fields have an asterisk: *</p>
 
                             <form className='w-full h-fit mt-4 max-w-[700px] flex flex-col gap-5'>
-                                <div className='w-full flex gap-5 '>
+                                <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>Display Name* </p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
                                     <label className='w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>Email* </p>
-                                        <input type="email" name="email" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="email" name="email" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
                                 </div>
-                                <div className='w-full flex gap-5 '>
-                                    <label className='w-1/2 '>
+                                <div className='w-full flex gap-5 max-md:flex-col '>
+                                    <label className='w-1/2 max-md:w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>Last Name*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
-                                    <label className='w-1/2 '>
+                                    <label className='w-1/2 max-md:w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>First Name*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
                                 </div>
-                                <div className='w-full flex gap-5 '>
-                                    <label className='w-1/2 '>
+                                <div className='w-full flex gap-5 max-md:flex-col '>
+                                    <label className='w-1/2 max-md:w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>Country *</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
-                                    <label className='w-1/2 '>
+                                    <label className='w-1/2 max-md:w-full '>
                                         <p className='text-sm font-semibold text-black dark:text-stone-500 '>City*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
                                     </label>
                                 </div>
                                 
