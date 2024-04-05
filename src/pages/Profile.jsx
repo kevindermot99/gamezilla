@@ -54,8 +54,10 @@ function Profile() {
 
                 <div className=' w-full overflow-x-clip z-10 h-fit min-h-[300px] max-h-[100vh] overflow-y-auto dynamic-scrollbar '>
                     <Nav openSidebar={openSidebar} />
-                    <div>
-                        
+                    <div className='flex flex-col'>
+                        <div>
+                            <img  />
+                        </div>
                     </div>
                 </div>
 
