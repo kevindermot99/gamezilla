@@ -44,7 +44,7 @@ function MyLibrary() {
     
 
     return (
-        <main className='relative bg-white dark:bg-dark-body max-w-[2000px] m-auto overflow-hidden  h-[100vh]'>
+        <main className='relative bg-white dark:bg-dark-body overflow-hidden  h-[100vh]'>
 
             {/* <div className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div> */}
 
