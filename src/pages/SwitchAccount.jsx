@@ -98,7 +98,7 @@ function SwitchAccount() {
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
                                                     </td>
 
-                                                    <td className='w-[20%]'>
+                                                    <td className='w-[20%] max-md:w-[30%]'>
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Mar 2, 2024</p>
                                                     </td>
 

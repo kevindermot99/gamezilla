@@ -83,7 +83,7 @@ function History() {
                                             {Books.map((book, index) => (
                                                 <tr key={book.id}>
                                                     <td className='min-w-[30px] text-stone-500 dark:text-stone-500 font-bold text-sm ' >{index+1}</td>
-                                                    <td className='w-[40%]'>
+                                                    <td className='w-[40%] max-lg:w-[80%] max-md:w-[95%]'>
                                                         <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
                                                             <img src={book.URL} alt={book.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px]  shadow-md rounded-sm  ' />
                                                             <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
