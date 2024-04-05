@@ -19,7 +19,7 @@ function Search() {
     }
     
     return (
-        <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex max-w-[2000px] m-auto h-[100vh]'>
+        <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh]'>
 
             <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-500  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
                 <SideBar closeSidebar={closeSidebar} />
