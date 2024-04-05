@@ -102,11 +102,12 @@ function SwitchAccount() {
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Mar 2, 2024</p>
                                                     </td>
 
-                                                    <td className='w-[20%] max-lg:hidden'>
+                                                    <td className='w-[15%] max-lg:hidden'>
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Host</p>
                                                     </td>
-                                                    <td className='w-[20%]'>
-                                                        <button className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400 py-2 px-5 bg-stone-200 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700 rounded-lg capitalize'>remove</button>
+                                                    <td className='min-w-[130px] flex gap-2 '>
+                                                        <button className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400 py-2 px-5 bg-stone-200 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700 rounded-lg capitalize'>Edit</button>
+                                                        <button className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400 py-2 px-5 bg-stone-200 hover:bg-red-500 hover:text-white dark:bg-stone-800 dark:hover:bg-red-500  rounded-lg capitalize'>remove</button>
                                                     </td>
                                                 </tr>
                                             ))}

@@ -2,7 +2,7 @@ import React from 'react'
 
 function PLayer() {
   return (
-    <div>PLayer</div>
+    <div className=' text-black dark:text-white '>PLayer</div>
   )
 }
 

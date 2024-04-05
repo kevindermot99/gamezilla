@@ -23,7 +23,7 @@ function BooksBar({ count }) {
                     <div className='relative h-[180px] w-[180px] aspect-square rounded-md  overflow-clip mb-2 select-none'>
                         <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                         <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
-                            <Link to={`/player/${book.id}`} id={book.id} onClick={() => handleNowPlaying(book.id)} className=' transition absolute bottom-2 right-2 aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg' title={`Play ${book.title}`}>
+                            <Link to={`/player/${book.id}`} id={book.id} onClick={() => handleNowPlaying(book.id)} className=' transition absolute bottom-2 right-2 aspect-square size-14  flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 translate-y-3 group-hover:translate-y-0 hover:scale-105 shadow-lg active:scale-90' title={`Play ${book.title}`}>
                                 <FaPlay className='text-white text-xl ' />
                             </Link>
                         </div>

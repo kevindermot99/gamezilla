@@ -67,6 +67,11 @@ function Book() {
     const closeSidebar = () => {
         setSideBar(false)
     }
+
+    const handleNowPlaying = (id) => {
+        localStorage.setItem("nowPlaying", id)
+    }
+
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>
 
@@ -99,9 +104,9 @@ function Book() {
                         <div className='flex flex-col bg-white dark:bg-dark-sidebar h-fit pb-10 px-8 max-md:px-5 flex-1 '>
 
                             <div className='w-full pt-8 flex items-center justify-start gap-6 '>
-                                <button className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg' title={`Play ${res.title}`}>
+                                <Link to={`/player/${res.id}`} onClick={() => handleNowPlaying(res.id)} className=' transition aspect-square size-14   flex items-center justify-center pl-[2px]  bg-main-color rounded-full duration-100 hover:scale-105 shadow-lg active:scale-90' title={`Play ${res.title}`}>
                                     <FaPlay className='text-white text-xl ' />
-                                </button>
+                                </Link>
 
                                 <button className=' h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 ' title={`Like`}>
                                     <IoMdHeartEmpty className='text-black dark:text-stone-200 text-[30px] ' />
