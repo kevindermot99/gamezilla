@@ -31,7 +31,7 @@ function Browse() {
             <Link to={`/trending`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
           </span>
         </h1>
-        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 custom-scrollbar">
           <BooksBar />
         </div>
       </Reveal>
@@ -41,7 +41,7 @@ function Browse() {
           <span>Recently added</span>
           <Link to={`/recentlyadded`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 custom-scrollbar">
           <BooksBar />
         </div>
       </Reveal>
@@ -51,7 +51,7 @@ function Browse() {
           <span>History</span>
           <Link to={`/history/${id}`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 mb-3 custom-scrollbar">
+        <div className=" bookbar w-[100%] h-fit flex overflow-x-scroll overscroll-y-auto overflow-y-clip  overscroll-contain pb-3 custom-scrollbar">
           <BooksBar />
         </div>
       </Reveal>
