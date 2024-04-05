@@ -24,6 +24,7 @@ import { GiPauseButton } from "react-icons/gi";
 import { IoPlaySkipForward } from "react-icons/io5";
 import { IoRepeatOutline } from "react-icons/io5";
 import { GoLinkExternal } from "react-icons/go";
+import { AppVersion } from '../constants/data';
 
 
 const SideBar = React.memo(({ closeSidebar }) => {
@@ -71,7 +72,8 @@ const SideBar = React.memo(({ closeSidebar }) => {
                     <div className={`group justify-between items-center w-full mb-6`}>
 
                         <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full pl-[5px]'} flex justify-start items-center text-base font-medium cursor-default `}>
-                            <h1 className={`logoText text-stone-900 dark:text-stone-400 py-2 tracking-wide  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
+                            <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 tracking-wide  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
+                            <p className='bg-stone-200 text-xs text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion}</p>
                         </div>
                     </div>
 

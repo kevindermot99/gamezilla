@@ -8,6 +8,7 @@ import book7 from "../assets/images/bookcover7.jpg";
 import book8 from "../assets/images/bookcover8.jpg";
 
 
+export const AppVersion = 'v 1.3'
 
 export const Books = [
   {
