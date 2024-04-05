@@ -44,7 +44,7 @@ function Profile() {
     }
 
     const inputStyle = 'w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-0 text-black dark:text-stone-300 bg-transparent dark:bg-dark-navlink py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color'
-    const inputTitleStyle = 'text-sm font-semibold text-black dark:text-stone-500 '
+    const inputTitleStyle = 'text-sm font-semibold text-black dark:text-stone-400 '
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden  h-[100vh]'>
@@ -63,6 +63,8 @@ function Profile() {
                     <Nav openSidebar={openSidebar} />
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                         <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
+                            
+                        <h1 className='text-[40px] max-sm:text-[20px] max-w-[700px] font-extrabold text-black dark:text-stone-100  pb-5'>Active profile</h1>
 
                             <div className='flex items-center gap-6'>
                                 <div className='h-32 w-32 rounded-full ring-1 ring-stone-100 shadow-xl shadow-stone-100 dark:shadow-stone-900 dark:ring-stone-800'>
@@ -71,10 +73,11 @@ function Profile() {
                                 <div className='flex flex-col gap-1 '>
                                     <h1 className='text-2xl font-bold'>{loggedInUser.displayName}</h1>
                                     <Link to='#' className='truncate text-ellipsis text-sm hover:underline cursor-pointer w-fit text-main-color'> Log Out</Link>
+                                    <Link to='#' className='truncate text-ellipsis text-sm hover:underline cursor-pointer w-fit text-main-color'> Switch Account</Link>
                                 </div>
                             </div>
 
-                            <p className='mt-8 text-sm font-semibold'>Required fields have an asterisk: *</p>
+                            <p className='mt-8 text-sm font-light text-black dark:text-stone-500 '>Required fields have an asterisk: *</p>
 
                             <form className='w-full h-fit mt-4 max-w-[700px] flex flex-col gap-5'>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
@@ -97,7 +100,7 @@ function Profile() {
                                         <input type="text" name="displayName" className={inputStyle} />
                                     </label>
                                 </div>
-                                <div className='w-full flex pr-5  max-md:flex-col '>
+                                <div className='w-full flex pr-5 max-sm:pr-0  max-md:flex-col '>
                                     <label className='w-1/2 max-md:w-full '>
                                         <p className={inputTitleStyle} >Gender</p>
                                         <select name="displayName" className={inputStyle} >
