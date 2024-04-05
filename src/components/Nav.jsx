@@ -30,21 +30,21 @@ function Nav({ openSidebar }) {
             <nav className="flex justify-end max-md:justify-between items-center py-5 sticky top-0 z-index-10 px-3 max-md:px-0">
 
                 <button onClick={changeSidebar} className="hidden max-md:block ">
-                    <HiMenuAlt1 className={`text-[30px] ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") ? 'text-white dark:text-white ' : ''}`} />
+                    <HiMenuAlt1 className={`text-[30px] ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/switchAccount/") ? 'text-white dark:text-white ' : ''}`} />
                 </button>
 
-                <div className="flex w-fit justify-end items-center min-w-[170px]  ">
+                <div className="flex w-fit justify-end items-center min-w-[170px] gap-4  ">
 
-                    <Link to={`/myLibrary/${id}`} className="group navbar-link p-2 ml-5" title="Switch Accounts">
-                        <PiUserSwitchLight className={`text-[32px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") ? 'text-white dark:text-white ' : ''} group-hover:text-black dark:group-hover:text-white`} />
+                    <Link to={`/switchAccount/${id}`} className="group navbar-link  ml-5" title="Switch Accounts">
+                        <PiUserSwitchLight className={`text-[32px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/switchAccount/") ? 'text-white dark:text-white ' : ''}`} />
                     </Link>
 
-                    <Link to={`/myLibrary/${id}`} className="group navbar-link p-2" title="My Library">
-                        <LuLibrary className={`text-[32px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") ? 'text-white dark:text-white ' : ''} group-hover:text-black dark:group-hover:text-white`} />
+                    <Link to={`/myLibrary/${id}`} className="group navbar-link " title="My Library">
+                        <LuLibrary className={`text-[28px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/switchAccount/") ? 'text-white dark:text-white ' : ''}`} />
                         <Notification label={84} />
                     </Link>
 
-                    <Link to={`/profile/${id}`} className="group rounded-full ml-3 flex items-center justify-center relative">
+                    <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1">
                         <img src={avatar} className=" h-9 w-9 rounded-full " />
                         <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">Clare thomson</p>
                     </Link>

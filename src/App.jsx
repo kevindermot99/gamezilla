@@ -12,6 +12,7 @@ import History from './pages/History';
 import Author from './pages/Author';
 import MyLibrary from './pages/MyLibrary';
 import Profile from './pages/Profile';
+import SwitchAccount from './pages/SwitchAccount';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/liked/:id' element={<Liked />} />
           <Route path='/myLibrary/:id' element={<MyLibrary />} />
           <Route path='/profile/:id' element={<Profile />} />
+          <Route path='/switchAccount/:id' element={<SwitchAccount />} />
           <Route path='/trending' element={<Trending />} />
           <Route path='/history/:id' element={<History />} />
           <Route path='/author/:author' element={<Author />} />

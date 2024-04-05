@@ -52,7 +52,7 @@ input[data-autocompleted] {
   }
 
   .navbar-link {
-    @apply flex gap-2 relative transition rounded-md hover:bg-gray-100 dark:hover:bg-dark-hover
+    @apply flex gap-2 relative transition rounded-md 
   }
 
   .logoText {
