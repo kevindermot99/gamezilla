@@ -13,6 +13,7 @@ import Author from './pages/Author';
 import MyLibrary from './pages/MyLibrary';
 import Profile from './pages/Profile';
 import SwitchAccount from './pages/SwitchAccount';
+import PLayer from './pages/PLayer';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path='/history/:id' element={<History />} />
           <Route path='/author/:author' element={<Author />} />
           <Route path='/book/:id' element={<Book />} />
+          <Route path='/player/:id' element={<PLayer />} />
           <Route path='/*' element={<PageError />} />
         </Routes>
       </Router>
