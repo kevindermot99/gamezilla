@@ -43,6 +43,8 @@ function Profile() {
         return user.id === id;
     }
 
+    const inputStyle = 'w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-0 text-black dark:text-stone-300 bg-transparent dark:bg-dark-navlink py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color'
+    const inputTitleStyle = 'text-sm font-semibold text-black dark:text-stone-500 '
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden  h-[100vh]'>
@@ -77,32 +79,32 @@ function Profile() {
                             <form className='w-full h-fit mt-4 max-w-[700px] flex flex-col gap-5'>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>Display Name* </p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <p className={inputTitleStyle} >Username* </p>
+                                        <input type="text" name="username" className={inputStyle} />
                                     </label>
                                     <label className='w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>Email* </p>
-                                        <input type="email" name="email" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <p className={inputTitleStyle} >Email* </p>
+                                        <input type="email" name="email" className={inputStyle} />
                                     </label>
                                 </div>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-1/2 max-md:w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>Last Name*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <p className={inputTitleStyle}>Country *</p>
+                                        <input type="text" name="displayName" className={inputStyle} />
                                     </label>
                                     <label className='w-1/2 max-md:w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>First Name*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <p className={inputTitleStyle} >City*</p>
+                                        <input type="text" name="displayName" className={inputStyle} />
                                     </label>
                                 </div>
-                                <div className='w-full flex gap-5 max-md:flex-col '>
+                                <div className='w-full flex pr-5  max-md:flex-col '>
                                     <label className='w-1/2 max-md:w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>Country *</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
-                                    </label>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className='text-sm font-semibold text-black dark:text-stone-500 '>City*</p>
-                                        <input type="text" name="displayName" className='w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-30 bg-transparent dark:bg-dark-navlink   py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color  ' />
+                                        <p className={inputTitleStyle} >Gender</p>
+                                        <select name="displayName" className={inputStyle} >
+                                            <option value="" selected className='hidden '></option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
                                     </label>
                                 </div>
                                 
