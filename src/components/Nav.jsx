@@ -38,10 +38,10 @@ function Nav({openSidebar}) {
                         <LuLibrary className={`text-2xl cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") ? 'text-white dark:text-white ' : ''} group-hover:text-black dark:group-hover:text-white`} />
                         <Notification label={84} />
                     </Link>
-                    <a href="#" className="group rounded-full ml-3 flex items-center justify-center relative">
+                    <Link to={`/profile/${id}`} className="group rounded-full ml-3 flex items-center justify-center relative">
                         <img src={defaultPfp} className=" h-9 w-9 rounded-full " />
                         <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">Clare thomson</p>
-                    </a>
+                    </Link>
 
                 </div>
 
