@@ -73,7 +73,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
 
                         <div className={`${sidebar === "small" && 'flex justify-center items-center gap-0 max-w-[50px] w-full pl-[5px]'} flex justify-start items-center text-base font-medium cursor-default `}>
                             <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 tracking-wide  ${sidebar === "small" && 'hidden'}`}>Pagez</h1>
-                            <p className='bg-stone-200 text-xs text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion}</p>
+                            <p className='bg-stone-200 dark:bg-dark-navlink  text-xs text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion}</p>
                         </div>
                     </div>
 
