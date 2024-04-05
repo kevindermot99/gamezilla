@@ -76,9 +76,9 @@ function SwitchAccount() {
                                                 <th className='text-left text-base capitalize'># </th>
                                                 <th className='text-left text-base capitalize'>Account name </th>
                                                 <th className='text-left text-base capitalize max-lg:hidden'>Date created</th>
-                                                <th className='text-left text-base capitalize max-md:hidden'>Last seen</th>
+                                                <th className='text-left text-base capitalize'>Last seen</th>
                                                 <th className='text-left max-lg:hidden'>Role</th>
-                                                <th className='text-left max-lg:hidden'>Actions</th>
+                                                <th className='text-left '>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -86,7 +86,7 @@ function SwitchAccount() {
                                             {Books.map((book, index) => (
                                                 <tr key={book.id}>
                                                     <td className='min-w-[30px] max-w-[30px] text-stone-500 dark:text-stone-500 font-bold text-sm ' >{index+1}</td>
-                                                    <td className='w-[20%] pr-8'>
+                                                    <td className='w-[20%] max-lg:w-[50%] pr-8'>
                                                         <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
                                                             <img src={book.URL} alt={book.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px]  shadow-md rounded-full' />
                                                             <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
@@ -98,14 +98,14 @@ function SwitchAccount() {
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Feb 23, 2023</p>
                                                     </td>
 
-                                                    <td className='w-[20%] max-md:hidden'>
+                                                    <td className='w-[20%]'>
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>Mar 2, 2024</p>
                                                     </td>
 
                                                     <td className='w-[20%] max-lg:hidden'>
                                                         <p className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400'>13 min 32 sec</p>
                                                     </td>
-                                                    <td className='w-[20%] max-lg:hidden'>
+                                                    <td className='w-[20%]'>
                                                         <button className='truncate text-ellipsis text-sm text-stone-600 dark:text-stone-400 py-2 px-5 bg-stone-200 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700 rounded-lg capitalize'>remove</button>
                                                     </td>
                                                 </tr>

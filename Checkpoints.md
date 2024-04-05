@@ -6,7 +6,8 @@
     - trending books page ✔
     - history page ✔
     - author page ✔
-    - my Library page 
+    - my Library page ✔
+    - switch account page ✔
     - profile page 
 
 *ideas*
