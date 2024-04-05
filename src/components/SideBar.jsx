@@ -117,7 +117,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
                             <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-20 blur-lg p-5 ' />
                         )}
                         {nowPlaying && (
-                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-35  blur-md  ' />
+                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20  dark:opacity-35  blur-md  ' />
                         )}
 
 
@@ -148,24 +148,12 @@ const SideBar = React.memo(({ closeSidebar }) => {
                             <span className='w-fit flex items-center justify-center gap-2  '>
 
                                 <button className={`group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '}   `} title={`Like`}>
-                                    <IoMdHeartEmpty className='text-black dark:text-stone-500 text-[24px] cursor-pointer dark:group-hover:text-stone-200' />
+                                    <IoMdHeartEmpty className='text-black dark:text-stone-200 text-[24px] cursor-pointer dark:group-hover:text-stone-200' />
                                 </button>
 
                                 <button className={`group h-fit transition aspect-square  flex items-center justify-center -100 hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `} title={`Download`}>
-                                    <BsCloudDownload className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200' />
+                                    <BsCloudDownload className='text-black dark:text-stone-200 text-[22px] cursor-pointer dark:group-hover:text-stone-200' />
                                 </button>
-
-                                {nowPlaying === null && (
-                                    <button className={` group relative z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `}>
-                                        <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' title='Open' />
-                                    </button>
-                                )}
-                                {nowPlaying && (
-                                    <Link to={`/player/${nowPlaying.id}`} className={`group relative z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `}>
-                                        <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' title='Open' />
-                                    </Link>
-                                )}
-
                             </span>
                         </div>
 
