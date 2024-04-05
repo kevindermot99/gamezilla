@@ -22,7 +22,7 @@ const customAnimation = keyframes`
 `;
 
 
-function SwitchAccount() {
+function ManageProfiles() {
 
     const [color, setColor] = useState("#262626")
     const [sidebar, setSideBar] = useState(false);
@@ -62,7 +62,7 @@ function SwitchAccount() {
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fit flex gap-6 items-start justify-start px-9 py-6   max-md:min-h-[200px] max-md:px-5`} >
                                 <div className='flex flex-col items-start justify-start gap-4 text-black dark:text-white py-3  max-md:self-end max-md:py-1'>
-                                    <h1 className='text-[60px] max-sm:text-[40px] leading-[60px] max-sm:leading-[40px] max-w-[700px] font-extrabold text-white '>Switch Accounts</h1>
+                                    <h1 className='text-[60px] max-sm:text-[40px] leading-[60px] max-sm:leading-[40px] max-w-[700px] font-extrabold text-white '>Manage Profiles</h1>
                                     <p className=' font-normal text-base text-white'>You can add up to 5 accounts</p>
                                 </div>
                             </div>
@@ -90,7 +90,8 @@ function SwitchAccount() {
                                                         <div className='w-fit h-fit flex items-center gap-3 max-sm:gap-5'>
                                                             <img src={book.URL} alt={book.title} className='h-12 w-12 max-sm:h-[70px] max-sm:w-[70px]  shadow-md rounded-full' />
                                                             <div className={`w-full truncate text-ellipsis flex flex-col gap-1`}>
-                                                                <h1 className='truncate text-ellipsis w-full text-black dark:text-white hover:underline cursor-pointer font-medium text-base'>Kevin</h1>
+                                                                <h1 className='truncate text-ellipsis w-full text-black dark:text-white font-medium text-base'>Kevin</h1>
+                                                                <p className='truncate text-ellipsis text-sm hover:underline cursor-pointer text-main-color'>Switch</p>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -128,4 +129,4 @@ function SwitchAccount() {
 
 };
 
-export default SwitchAccount;
+export default ManageProfiles;
