@@ -44,7 +44,7 @@ const Pagez = () => {
     <>
       <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh] overflow-clip   '>
 
-        <img src={PagezDarkBg} className='absolute opacity-10 h-full w-full object-cover hidden dark:block blur-sm ' loading='lazy' />
+        <img src={PagezDarkBg} className='absolute opacity-10 h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
         <div className={`w-fit z-20 max-md:fixed max-md:top-0 max-md:transition max-md:duration-500  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
           <SideBar closeSidebar={closeSidebar} />
         </div>
