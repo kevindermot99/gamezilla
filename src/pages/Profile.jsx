@@ -64,10 +64,10 @@ function Profile() {
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                         <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
                             
-                        <h1 className='text-[40px] max-sm:text-[20px] max-w-[700px] font-extrabold text-black dark:text-stone-100  pb-5'>Active profile</h1>
+                        <h1 className='text-[40px] max-sm:text-[25px] max-w-[700px] font-extrabold text-black dark:text-stone-100  pb-5'>Active profile</h1>
 
-                            <div className='flex items-center gap-6'>
-                                <div className='h-32 w-32 rounded-full ring-1 ring-stone-100 shadow-xl shadow-stone-100 dark:shadow-stone-900 dark:ring-stone-800'>
+                            <div className='flex items-center gap-6 flex-wrap '>
+                                <div className='h-32 w-32 min-w-32 min-h-32 rounded-full ring-1 ring-stone-100 shadow-xl shadow-stone-100 dark:shadow-stone-900 dark:ring-stone-800'>
                                     <img src={loggedInUser.avatar} className='h-32 rounded-full ' />
                                 </div>
                                 <div className='flex flex-col gap-1 '>
@@ -92,22 +92,26 @@ function Profile() {
                                 </div>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle}>Country *</p>
-                                        <input type="text" name="displayName" className={inputStyle} />
-                                    </label>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle} >City*</p>
-                                        <input type="text" name="displayName" className={inputStyle} />
-                                    </label>
-                                </div>
-                                <div className='w-full flex pr-5 max-sm:pr-0  max-md:flex-col '>
-                                    <label className='w-1/2 max-md:w-full '>
                                         <p className={inputTitleStyle} >Gender</p>
                                         <select name="displayName" className={inputStyle} >
                                             <option value="" selected className='hidden '></option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                         </select>
+                                    </label>
+                                    <label className='w-1/2 max-md:w-full '>
+                                        <p className={inputTitleStyle} >DOB*</p>
+                                        <input type="date" name="displayName" className={inputStyle} />
+                                    </label>
+                                </div>
+                                <div className='w-full flex gap-5 max-md:flex-col '>
+                                    <label className='w-1/2 max-md:w-full '>
+                                        <p className={inputTitleStyle}>Country *</p>
+                                        <input type="text" name="displayName" className={inputStyle} />
+                                    </label>
+                                    <label className='w-1/2 max-md:w-full '>
+                                        <p className={inputTitleStyle} >City*</p>
+                                        <input type="text" name="displayName" className={inputStyle} />
                                     </label>
                                 </div>
                                 
