@@ -8,11 +8,11 @@ import book7 from "../assets/images/bookcover7.jpg";
 import book8 from "../assets/images/bookcover8.jpg";
 
 
-import avart1 from "../assets/avatars/avatar green.png"
-import avart2 from "../assets/avatars/avatar blue.png"
-import avart3 from "../assets/avatars/avatar red.png"
-import avart4 from "../assets/avatars/avatar yellow.png"
-import avart5 from "../assets/avatars/avatar tangerine.png"
+import avatar1 from "../assets/avatars/avatar green.png"
+import avatar2 from "../assets/avatars/avatar blue.png"
+import avatar3 from "../assets/avatars/avatar red.png"
+import avatar4 from "../assets/avatars/avatar yellow.png"
+import avatar5 from "../assets/avatars/avatar tangerine.png"
 
 export const AppVersion = {
   Version: "v 1.0",
@@ -115,7 +115,7 @@ export const Formats = [
 export const users = [
   {
     id: "QHNXEXCNBQGALHZXXA58",
-    otherNames: "Kaneza kevin",
+    fistName: "Kaneza kevin",
     lastName: "Mbonimpaye",
     displayName: "Kevin Mboni",
     email: "mbonimpayekevin@gmail.com",
@@ -125,6 +125,6 @@ export const users = [
     country: "Rwanda",
     city: "Kigali",
     maturity: "18+",
-    avatar: avart3,
+    avatar: avatar3,
   },
 ];
