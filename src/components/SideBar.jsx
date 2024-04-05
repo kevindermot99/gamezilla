@@ -25,7 +25,7 @@ import { IoPlaySkipForward } from "react-icons/io5";
 import { IoRepeatOutline } from "react-icons/io5";
 import { GoLinkExternal } from "react-icons/go";
 import { AppVersion } from '../constants/data';
-
+import { users } from "../constants/data";
 
 const SideBar = React.memo(({ closeSidebar }) => {
     const location = useLocation()
@@ -46,7 +46,12 @@ const SideBar = React.memo(({ closeSidebar }) => {
         closeSidebar()
     }
 
-    const id = '198h9rbs7d9872';
+    const id = 'QHNXEXCNBQGALHZXXA58'
+
+    const loggedInUser = users.find(findthis)
+    function findthis(user) {
+        return user.id === id;
+    }
 
 
     return (
@@ -157,7 +162,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
                                 )}
                                 {nowPlaying && (
                                     <Link to={`/player/${nowPlaying.id}`} className={`group relative z-10 h-fit transition aspect-square  flex items-center justify-center hover:scale-105 active:scale-90 pointer-events-none ${nowPlaying && ' pointer-events-auto '} `}>
-                                    <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' title='Open' />
+                                        <GoLinkExternal className='text-black dark:text-stone-500 text-[22px] cursor-pointer dark:group-hover:text-stone-200 ' title='Open' />
                                     </Link>
                                 )}
 

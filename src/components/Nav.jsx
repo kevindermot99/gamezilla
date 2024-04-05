@@ -11,6 +11,7 @@ import jQuery from "jquery";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { PiUserSwitchLight } from "react-icons/pi";
+import { users } from "../constants/data";
 
 function Nav({ openSidebar }) {
 
@@ -20,7 +21,12 @@ function Nav({ openSidebar }) {
         openSidebar()
     }
 
-    const id = 'OUVE983948H00F'
+    const id = 'QHNXEXCNBQGALHZXXA58'
+
+    const loggedInUser = users.find(findthis)
+    function findthis(user){
+        return user.id === id;
+    }
 
 
     return (
@@ -44,9 +50,9 @@ function Nav({ openSidebar }) {
                         <Notification label={84} />
                     </Link>
 
-                    <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1">
-                        <img src={avatar} className=" h-9 w-9 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">Clare thomson</p>
+                    <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1 ring-1 ring-stone-100 shadow-xl">
+                        <img src={loggedInUser.avatar} className=" h-9 w-9 rounded-full " />
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">{loggedInUser.displayName}</p>
                     </Link>
 
                 </div>

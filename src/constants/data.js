@@ -112,7 +112,7 @@ export const Formats = [
   },
 ];
 
-export const logdgedInUser = [
+export const users = [
   {
     id: "QHNXEXCNBQGALHZXXA58",
     otherNames: "Kaneza kevin",
@@ -125,6 +125,6 @@ export const logdgedInUser = [
     country: "Rwanda",
     city: "Kigali",
     maturity: "18+",
-    pfp: image1,
+    avatar: avart3,
   },
 ];
