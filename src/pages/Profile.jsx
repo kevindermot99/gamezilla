@@ -59,7 +59,7 @@ function Profile() {
                 </div>
 
 
-                <div className=' w-full overflow-x-clip z-10 h-fit min-h-[300px] max-h-[100vh] overflow-y-auto dynamic-scrollbar '>
+                <div className=' w-full overflow-x-clip z-10 h-fit min-h-[100vh] max-h-[100vh] overflow-y-auto dynamic-scrollbar '>
                     <Nav openSidebar={openSidebar} />
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                         <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
@@ -71,7 +71,7 @@ function Profile() {
                                     <img src={loggedInUser.avatar} className='h-32 rounded-full ' />
                                 </div>
                                 <div className='flex flex-col gap-1 '>
-                                    <h1 className='text-2xl font-bold'>{loggedInUser.displayName}</h1>
+                                    <h1 className='text-2xl font-bold'>{loggedInUser.userName}</h1>
                                     <Link to='#' className='truncate text-ellipsis text-sm hover:underline cursor-pointer w-fit text-main-color'> Log Out</Link>
                                     <Link to='#' className='truncate text-ellipsis text-sm hover:underline cursor-pointer w-fit text-main-color'> Switch Account</Link>
                                 </div>
@@ -79,15 +79,15 @@ function Profile() {
 
                             <p className='mt-8 text-sm font-light text-black dark:text-stone-500 '>Required fields have an asterisk: *</p>
 
-                            <form className='w-full h-fit mt-4 max-w-[700px] flex flex-col gap-5'>
+                            <form className='w-full h-fit mt-4 flex flex-col gap-5  max-w-[1200px]'>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-full '>
                                         <p className={inputTitleStyle} >Username* </p>
-                                        <input type="text" name="username" className={inputStyle} />
+                                        <input type="text" name="username" value={loggedInUser.userName} className={inputStyle} />
                                     </label>
                                     <label className='w-full '>
                                         <p className={inputTitleStyle} >Email* </p>
-                                        <input type="email" name="email" className={inputStyle} />
+                                        <input type="email" name="email" value={loggedInUser.email} className={inputStyle} />
                                     </label>
                                 </div>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
@@ -101,7 +101,7 @@ function Profile() {
                                     </label>
                                     <label className='w-1/2 max-md:w-full '>
                                         <p className={inputTitleStyle} >DOB*</p>
-                                        <input type="date" name="displayName" className={inputStyle} />
+                                        <input type="date" name="displayName" value={loggedInUser.dob} className={inputStyle} />
                                     </label>
                                 </div>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
@@ -113,6 +113,10 @@ function Profile() {
                                         <p className={inputTitleStyle} >City*</p>
                                         <input type="text" name="displayName" className={inputStyle} />
                                     </label>
+                                </div>
+
+                                <div className='my-8  w-full flex items-start justify-end'>
+                                    <button className='px-6 py-3 bg-main-color font-medium text-sm text-white rounded-lg transition hover:bg-opacity-50 '>Save Changes</button>
                                 </div>
                                 
                             </form>

@@ -115,7 +115,7 @@ export const Formats = [
 export const users = [
   {
     id: "QHNXEXCNBQGALHZXXA58",
-    displayName: "Kevin Mboni",
+    userName: "Kevin Mboni",
     email: "mbonimpayekevin@gmail.com",
     role: "Host",
     gender: "Male",

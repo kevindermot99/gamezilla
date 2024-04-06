@@ -52,7 +52,7 @@ function Nav({ openSidebar }) {
 
                     <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1 ring-1 ring-stone-100 dark:ring-stone-700 shadow">
                         <img src={loggedInUser.avatar} className=" h-8 w-8 rounded-full " />
-                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">{loggedInUser.displayName}</p>
+                        <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">{loggedInUser.userName}</p>
                     </Link>
 
                 </div>

@@ -117,7 +117,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
                             <img src={LogoDarkMode} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-full w-full object-cover opacity-20 blur-lg p-5 ' />
                         )}
                         {nowPlaying && (
-                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-20  dark:opacity-35  blur-md  ' />
+                            <img src={nowPlaying.URL} className=' absolute top-0 left-0 right-0 bottom-0 m-auto -z-0 h-[500px] w-[500px] object-cover opacity-40  dark:opacity-35  blur-md  ' />
                         )}
 
 
