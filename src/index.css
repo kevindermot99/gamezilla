@@ -223,26 +223,24 @@ img{
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
   position: relative;
-  /* overflow: hidden;
+  overflow: hidden;
   transition: transform 1s ease;
   animation: scrollPerspective linear;
   animation-timeline: scroll();
-  animation-range-start: 0;
-  animation-range-end: 340px; */
-  margin-top: 100px;
+  animation-range-start: 100px;
+  animation-range-end: 990px;
+  margin-top: 40px;
   z-index: 1;
   scroll-margin-top: 30px;
 }
 
 @keyframes scrollPerspective {
   from {
-    /* transform: perspective(600px) rotateX(15deg); */
-    /* transform: translateY(0); */
+    transform: perspective(600px) rotateX(50deg);
   }
 
   to {
-    /* transform: perspective(600px) rotateX(0deg); */
-    /* transform: translateY(300px); */
+    transform: perspective(600px) rotateX(0deg);
   }
 }
 

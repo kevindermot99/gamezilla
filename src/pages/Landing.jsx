@@ -90,7 +90,7 @@ function Landing() {
         </div>
       </nav>
 
-      <section className=" flex flex-col items-center justify-start text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[100px] max-sm:mb-[30px] max-sm:px-9">
+      <section className="pb-9 flex flex-col items-center justify-start text-center px-7 relative max-sm:p-0 max-sm:space-y-6 mt-[100px] max-sm:mb-[30px] max-sm:px-9">
         <h1 className="font-extrabold  text-[60px] leading-[60px] text-wrap max-w-[900px] max-sm:text-[40px] max-sm:leading-[45px] max-sm:mt-0">
           <span className={`HeroText`}>Fantastic </span>
           <span className="text-main-color ">Stories, </span> <br />
@@ -107,7 +107,7 @@ function Landing() {
           Open Pagez
         </Link>
 
-        <div className="gradient-moving-bg shadow-3xl flex justify-start items-start max-h-[400px] max-sm:hidden  " id="overview">
+        <div className="gradient-moving-bg shadow-3xl flex justify-start items-start max-sm:hidden  ">
           <img
             src={screenShoot}
             loading="lazy"
@@ -117,7 +117,7 @@ function Landing() {
         </div>
       </section>
 
-      <section className="w-full bg-white border-t-[1px] max-sm:border-none border-stone-300 flex flex-col items-center justify-start p-7 relative z-10" id="features">
+      <section className="w-full bg-white max-sm:border-none flex flex-col items-center justify-start p-7 relative z-10" id="features">
         <h1 className="mt-10 max-sm:mt-0 text-base font-medium leading-8 text-black text-wrap text-center ">
           1,241 People has started using Pagez since the Launch
         </h1>
