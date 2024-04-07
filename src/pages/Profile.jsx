@@ -79,7 +79,7 @@ function Profile() {
 
                             <p className='mt-8 text-sm font-light text-black dark:text-stone-500 '>Required fields have an asterisk: *</p>
 
-                            <form className='w-full h-fit mt-4 flex flex-col gap-5  max-w-[1200px]'>
+                            <form className='w-full h-fit mt-4 flex flex-col gap-5  max-w-[700px]'>
                                 <div className='w-full flex gap-5 max-md:flex-col '>
                                     <label className='w-full '>
                                         <p className={inputTitleStyle} >Username* </p>
@@ -90,33 +90,9 @@ function Profile() {
                                         <input type="email" name="email" value={loggedInUser.email} className={inputStyle} />
                                     </label>
                                 </div>
-                                <div className='w-full flex gap-5 max-md:flex-col '>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle} >Gender</p>
-                                        <select name="displayName" className={inputStyle} >
-                                            <option value="" selected className='hidden '></option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                    </label>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle} >DOB*</p>
-                                        <input type="date" name="displayName" value={loggedInUser.dob} className={inputStyle} />
-                                    </label>
-                                </div>
-                                <div className='w-full flex gap-5 max-md:flex-col '>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle}>Country *</p>
-                                        <input type="text" name="displayName" className={inputStyle} />
-                                    </label>
-                                    <label className='w-1/2 max-md:w-full '>
-                                        <p className={inputTitleStyle} >City*</p>
-                                        <input type="text" name="displayName" className={inputStyle} />
-                                    </label>
-                                </div>
 
-                                <div className='my-8  w-full flex items-start justify-end'>
-                                    <button className='px-6 py-3 bg-main-color font-medium text-sm text-white rounded-lg transition hover:bg-opacity-50 '>Save Changes</button>
+                                <div className='my-4  w-full flex items-start justify-end'>
+                                    <button className='px-6 py-3 bg-main-color font-medium text-sm text-white rounded-lg transition hover:bg-opacity-80 dark:hover:bg-opacity-50 '>Save Changes</button>
                                 </div>
                                 
                             </form>
