@@ -118,10 +118,7 @@ export const users = [
     userName: "Kevin Mboni",
     email: "mbonimpayekevin@gmail.com",
     role: "Host",
-    gender: "Male",
-    country: "Rwanda",
-    city: "Kigali",
-    maturity: "18+",
+    maturity: "Muture",
     avatar: avatar2,
   },
 ];
