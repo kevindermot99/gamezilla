@@ -41,12 +41,12 @@ function Nav({ openSidebar }) {
 
                 <div className="flex w-fit justify-end items-center min-w-[170px] gap-4  ">
 
-                    <Link to={`/manageProfiles/${id}`} className="group navbar-link  ml-5" title="Profiles">
-                        <PiUserSwitchLight className={`text-[32px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
+                    <Link to={`/manageProfiles/${id}`} className="group navbar-link ml-5" title="Profiles">
+                        <PiUserSwitchLight className={`text-[32px] cursor-pointer relative transition text-black dark:text-white group-active:scale-75   ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
                     </Link>
 
                     <Link to={`/myLibrary/${id}`} className="group navbar-link " title="My Library">
-                        <LuLibrary className={`text-[28px] cursor-pointer relative transition text-black dark:text-white ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
+                        <LuLibrary className={`text-[28px] cursor-pointer relative transition text-black dark:text-white group-active:scale-75   ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
                         <Notification label={84} />
                     </Link>
 
