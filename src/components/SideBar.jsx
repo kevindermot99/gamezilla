@@ -42,14 +42,14 @@ const SideBar = React.memo(({ closeSidebar }) => {
     return (
         <>
             <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
-            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between px-3 py-3 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] gap-2 max-md:rounded-r-xl`}>
+            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between p-4 max-sm:p-6 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] gap-2 max-md:rounded-r-xl`}>
 
                 <div className='w-full h-fit'>
                     <div className={`group justify-between items-center w-full mb-6`}>
 
                         <div className={` flex justify-start items-center text-base font-medium cursor-default `}>
                             <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 tracking-wide `}>Pagez</h1>
-                            <a href={AppVersion.LinkToRepo} target='_blank' className='bg-stone-200 dark:bg-dark-navlink  text-xs text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion.Version}</a>
+                            <a href={AppVersion.LinkToRepo} target='_blank' className='bg-stone-200 dark:bg-dark-navlink  text-[10px] text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion.Version}</a>
                         </div>
                     </div>
 
