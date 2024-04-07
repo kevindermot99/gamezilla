@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Browse } from './sections';
-import Nav from './components/Nav';
-import SideBar from './components/SideBar';
-import LogoDarkMode from './assets/images/Pagez_Logo__dark_mode.png'
-import LogoLightMode from './assets/images/Pagez_Logo__light_mode.png'
-import PagezDarkBg from './assets/images/pagez-bg.jpg'
-import { GrClose } from "react-icons/gr";
+import { Browse } from '../sections';
+import Nav from '../components/Nav';
+import SideBar from '../components/SideBar';
+import PagezDarkBg from '../assets/images/pagez-bg.jpg'
 
 
 const Pagez = () => {

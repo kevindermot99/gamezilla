@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing'
-import Pagez from './Pagez';
+import Pagez from './pages/Pagez';
 import Book from './pages/Book';
 import PageError from './pages/PageError';
 import Search from './pages/Search';
