@@ -1,29 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { memo } from 'react';
-import pagesLogo from "../assets/images/pagez-logo.png"
 import { GoHome } from "react-icons/go";
 import { Link, useLocation } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
-import { BiCategoryAlt } from "react-icons/bi";
-import { FaRegHeart } from "react-icons/fa";
-import { TbLayoutSidebarRightExpand } from "react-icons/tb";
-import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import { Books } from '../constants/data';
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoTrendingUp } from "react-icons/io5";
 import { GoHistory } from "react-icons/go";
 import { PiMusicNotesPlusDuotone } from "react-icons/pi";
 import LogoDarkMode from '../assets/images/Pagez_Logo__dark_mode.png'
-import LogoLightMode from '../assets/images/Pagez_Logo__light_mode.png'
-import audio1 from '../assets/musics/1.wav'
 import { BsCloudDownload } from "react-icons/bs";
-import { IoShuffleOutline } from "react-icons/io5";
-import { IoPlaySkipBack } from "react-icons/io5";
-import { FaPlay } from "react-icons/fa";
-import { GiPauseButton } from "react-icons/gi";
-import { IoPlaySkipForward } from "react-icons/io5";
-import { IoRepeatOutline } from "react-icons/io5";
-import { GoLinkExternal } from "react-icons/go";
 import { AppVersion } from '../constants/data';
 import { users } from "../constants/data";
 
