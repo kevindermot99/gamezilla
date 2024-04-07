@@ -85,9 +85,9 @@ function Book() {
                 </div>
 
 
-                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' style={{ backgroundColor: color }}>
+                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
+                    <div style={{ backgroundColor: color }}>
                     <Nav openSidebar={openSidebar} />
-                    <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 pt-4 pb-8 `} >
                                 <div className='h-[200px] w-auto aspect-square shadow-custom'>
@@ -101,6 +101,9 @@ function Book() {
                                 </div>
                             </div>
                         </Reveal>
+                    </div>
+                        
+                    <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <div className='flex flex-col bg-white dark:bg-dark-sidebar h-fit pb-10 px-8 max-md:px-5 flex-1 '>
 
                             <div className='w-full pt-8 flex items-center justify-start gap-6 '>
