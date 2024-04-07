@@ -42,7 +42,7 @@ const SideBar = React.memo(({ closeSidebar }) => {
 
     return (
         <>
-            <div  className={` hidden max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
+            <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
             <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between p-4 max-sm:pb-9 max-sm:pt-4 max-sm:px-4 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:w-[100vw] gap-2 max-md:rounded-r-xl`}>
 
                 <div className='w-full h-fit'>
