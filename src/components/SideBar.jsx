@@ -11,6 +11,7 @@ import LogoDarkMode from '../assets/images/Pagez_Logo__dark_mode.png'
 import { BsCloudDownload } from "react-icons/bs";
 import { AppVersion } from '../constants/data';
 import { users } from "../constants/data";
+import { FiChevronLeft } from "react-icons/fi";
 
 const SideBar = React.memo(({ closeSidebar }) => {
     const location = useLocation()
@@ -41,16 +42,20 @@ const SideBar = React.memo(({ closeSidebar }) => {
 
     return (
         <>
-            <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
-            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between p-4 max-sm:p-6 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:max-w-[80vw] gap-2 max-md:rounded-r-xl`}>
+            <div  className={` hidden max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
+            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between p-4 max-sm:pb-9 max-sm:pt-4 max-sm:px-4 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-hover max-md:dark:bg-opacity-100 max-md:w-[100vw] gap-2 max-md:rounded-r-xl`}>
 
                 <div className='w-full h-fit'>
-                    <div className={`group justify-between items-center w-full mb-6`}>
+                    <div className={`group flex justify-between items-center w-full mb-6`}>
 
                         <div className={` flex justify-start items-center text-base font-medium cursor-default `}>
-                            <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 tracking-wide `}>Pagez</h1>
-                            <a href={AppVersion.LinkToRepo} target='_blank' className='bg-stone-200 dark:bg-dark-navlink  text-[10px] text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalize '>{AppVersion.Version}</a>
+                            <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 max-sm:px-0 max-sm:pr-3 tracking-wide `}>Pagez</h1>
+                            <a href={AppVersion.LinkToRepo} target='_blank' className='bg-stone-200 dark:bg-dark-navlink  text-[10px] text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalizen '>{AppVersion.Version}</a>
                         </div>
+
+                        <button onClick={closeSB} className='text-stone-900 dark:text-stone-400 hidden max-md:block'>
+                            <FiChevronLeft className='h-8 w-8 text-xl bg-stone-400 bg-opacity-25 rounded-md p-1 active:scale-75 transition '/>
+                        </button>
                     </div>
 
                     <ul className={`sidebar w-full h-fit overscroll-contain flex flex-col gap-1`}>
