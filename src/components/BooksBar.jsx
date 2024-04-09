@@ -19,7 +19,7 @@ function BooksBar({ count }) {
         <>
             {Books.slice(0, limit).map((book) => (
 
-                <div key={book.id} className=' group flex flex-col w-fit min-h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover p-3'>
+                <div key={book.id} className=' group flex flex-col w-fit min-h-[100%] rounded-xl transition duration-100 hover:bg-stone-100 dark:hover:bg-dark-hover max-md:hover:bg-inherit dark:max-md:hover:bg-inherit p-3'>
                     <div className='relative h-[180px] w-[180px] aspect-square rounded-md  overflow-clip mb-2 select-none'>
                         <img className="w-full h-full object-cover pointer-events-none" src={book.URL} alt="" />
                         <div className='w-full h-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition'>
@@ -29,7 +29,7 @@ function BooksBar({ count }) {
                         </div>
 
                     </div>
-                    <Link to={`/book/${book.id}`} className=' break-words  whitespace-normal leading-5 my-1 text-base font-normal text-black dark:text-white max-w-[180px] w-fit hover:underline '>{book.title}</Link>
+                    <Link to={`/book/${book.id}`} className=' break-words  whitespace-normal leading-5 my-1 text-base font-normal text-black dark:text-white max-w-[180px] w-fit '>{book.title}</Link>
                     <Link to={`/author/${book.author}`} className=' text-sm font-medium  text-stone-600 dark:text-stone-500 hover:underline'>{book.author}</Link>
                 </div>
 

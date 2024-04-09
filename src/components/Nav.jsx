@@ -41,16 +41,16 @@ function Nav({ openSidebar }) {
 
                 <div className="flex w-fit justify-end items-center min-w-[170px] gap-4  ">
 
-                    <Link to={`/manageProfiles/${id}`} className="group navbar-link ml-5" title="Profiles">
+                    <button className="group navbar-link ml-5" title="Profiles">
                         <PiUserSwitchLight className={`text-[32px] cursor-pointer relative transition text-black dark:text-white group-active:scale-75   ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
-                    </Link>
+                    </button>
 
                     <Link to={`/myLibrary/${id}`} className="group navbar-link " title="My Library">
                         <LuLibrary className={`text-[28px] cursor-pointer relative transition text-black dark:text-white group-active:scale-75   ${location.pathname.includes("/book") || location.pathname.includes("/history") || location.pathname.includes("/recentlyadded") || location.pathname.includes("/liked") || location.pathname.includes("/trending") || location.pathname.includes("/author") || location.pathname.includes("/myLibrary") || location.pathname.includes("/manageProfiles/") ? 'text-white dark:text-white ' : ''}`} />
                         <Notification label={84} />
                     </Link>
 
-                    <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1 ring-1 ring-stone-100 dark:ring-stone-700 shadow">
+                    <Link to={`/profile/${id}`} className="group rounded-full flex items-center justify-center relative ml-1 shadow">
                         <img src={loggedInUser.avatar} className=" h-8 w-8 rounded-full " />
                         <p className=" text-sm font-semibold absolute w-fit whitespace-nowrap py-2 px-3 right-0 -bottom-[140%] bg-stone-100 dark:bg-dark-hover  dark:bg-opacity-30 dark:text-white rounded-lg tranition hidden group-hover:block text-black ">{loggedInUser.userName}</p>
                     </Link>
