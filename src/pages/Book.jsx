@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsCloudDownload } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
+import { RiLoader5Fill } from "react-icons/ri";
 
 const customAnimation = keyframes`
   from {
@@ -31,6 +32,7 @@ function Book() {
 
     const [color, setColor] = useState("transparent")
     const [sidebar, setSideBar] = useState(false);
+    const [innerLoader, setInnerLoader] = useState(true)
 
     const { id } = useParams();
     // console.log(id)
@@ -72,6 +74,12 @@ function Book() {
         localStorage.setItem("nowPlaying", id)
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            setInnerLoader(false)
+        }, 600);
+    },[])
+
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>
 
@@ -87,7 +95,9 @@ function Book() {
 
                 <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
                     <div className='relative ' style={{ backgroundColor: color }}>
-                        <div className='absolute top-0 left-0 h-full w-full z-50 bg-orange-300'> </div>
+                        <div className={`absolute top-0 left-0 h-full w-full z-50 bg-white dark:bg-dark-body flex justify-center items-center transition ${innerLoader ? '' : 'hidden'}`}> 
+                            <RiLoader5Fill className='text-3xl  text-black dark:text-white animate-spinLoader ' /> 
+                        </div>
                     <Nav openSidebar={openSidebar} />
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 max-sm:px-5 pt-4 pb-8 `} >

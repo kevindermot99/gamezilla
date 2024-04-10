@@ -55,6 +55,7 @@ export default {
       animation: {
         fade: 'fadeIn .1s ease-in-out',
         goingTop: 'goingTop .3s',
+        spinLoader: 'spin .6s linear infinite',
       },
 
       // that is actual animation
