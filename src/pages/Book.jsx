@@ -86,7 +86,8 @@ function Book() {
 
 
                 <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
-                    <div style={{ backgroundColor: color }}>
+                    <div className='relative ' style={{ backgroundColor: color }}>
+                        <div className='absolute top-0 left-0 h-full w-full z-50 bg-orange-300'> </div>
                     <Nav openSidebar={openSidebar} />
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 max-sm:px-5 pt-4 pb-8 `} >
