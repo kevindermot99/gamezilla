@@ -51,8 +51,8 @@ const Pagez = () => {
         </div>
 
         <div className=' w-[100%] h-svh overflow-y-auto flex flex-col justify-between items-start'>
-          <div className='w-full overflow-x-auto py-10'>
-            <div className='px-[60px] mb-5 max-md:px-6 max-md:mb-6'>
+          <div className='w-full overflow-x-auto py-8'>
+            <div className='px-8 mb-5 max-md:px-6 max-md:mb-6'>
               <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
                 {greet} Kevin.
               </p>
