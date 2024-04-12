@@ -45,20 +45,18 @@ const Pagez = () => {
     <>
       <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh] overflow-clip   '>
 
-        <img src={PagezDarkBg} className='absolute opacity-10 h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
+        <img src={PagezDarkBg} className='absolute opacity-10 -z-0  h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
         <div className={`w-fit z-20 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? '' : ' max-md:-translate-x-[100vw]'} `}>
           <SideBar closeSidebar={closeSidebar} openSidebar={openSidebar} />
         </div>
 
-        <div className=' w-[100%] h-svh overflow-y-auto flex flex-col justify-between items-start'>
-          <div className='w-full overflow-x-auto py-8'>
-            <div className='px-8 mb-5 max-md:px-6 max-md:mb-6'>
-              <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
-                {greet} Kevin.
-              </p>
-            </div>
-            <Browse />
+        <div className='z-20 w-[100%] h-svh overflow-y-auto py-8 dynamic-scrollbar'>
+          <div className='px-8 mb-5 max-md:px-6 max-md:mb-6'>
+            <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
+              {greet} Kevin.
+            </p>
           </div>
+          <Browse />
         </div>
 
       </main>
