@@ -47,20 +47,17 @@ const Pagez = () => {
 
         <img src={PagezDarkBg} className='absolute opacity-10 h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
         <div className={`w-fit z-20 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? '' : ' max-md:-translate-x-[100vw]'} `}>
-          <SideBar closeSidebar={closeSidebar} />
+          <SideBar closeSidebar={closeSidebar} openSidebar={openSidebar} />
         </div>
 
-        <div className=' w-[100%] h-[100%] max-w-full overflow-x-clip z-0 flex flex-col justify-between items-start overflow-y-auto dynamic-scrollbar '>
-          <div className='h-full w-full flex flex-col'>
-            <Nav openSidebar={openSidebar} />
-            <div className='xl:padding-1 wide:padding-r w-full max-md:mt-3'>
-              <div className='px-[60px] mb-5 max-md:px-6 max-md:mb-6'>
-                <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
-                  {greet} Kevin.
-                </p>
-              </div>
-              <Browse />
+        <div className=' w-[100%] h-svh overflow-y-auto flex flex-col justify-between items-start'>
+          <div className='w-full overflow-x-auto py-10'>
+            <div className='px-[60px] mb-5 max-md:px-6 max-md:mb-6'>
+              <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
+                {greet} Kevin.
+              </p>
             </div>
+            <Browse />
           </div>
         </div>
 
