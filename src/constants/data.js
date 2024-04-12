@@ -1,11 +1,11 @@
-import book1 from "../assets/images/bookcover1.jpg";
-import book2 from "../assets/images/bookcover2.jpg";
-import book3 from "../assets/images/bookcover3.jpg";
-import book4 from "../assets/images/bookcover4.jpg";
-import book5 from "../assets/images/bookcover5.jpg";
-import book6 from "../assets/images/bookcover6.jpg";
-import book7 from "../assets/images/bookcover7.jpg";
-import book8 from "../assets/images/bookcover8.jpg";
+import book1 from "../assets/images/bookcover1.webp";
+import book2 from "../assets/images/bookcover2.webp";
+import book3 from "../assets/images/bookcover3.webp";
+import book4 from "../assets/images/bookcover4.webp";
+import book5 from "../assets/images/bookcover5.webp";
+import book6 from "../assets/images/bookcover6.webp";
+import book7 from "../assets/images/bookcover7.webp";
+import book8 from "../assets/images/bookcover8.webp";
 
 
 import avatar1 from "../assets/avatars/avatar green.png"
