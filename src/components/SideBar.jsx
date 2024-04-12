@@ -14,7 +14,7 @@ import { users } from "../constants/data";
 import { BsLayoutSidebar } from "react-icons/bs";
 import { IoChevronDownOutline } from "react-icons/io5";
 
-const SideBar = (({ closeSidebar }) => {
+const SideBar = (({ toggleSidebar }) => {
     const location = useLocation()
     const [nowPlaying, setNowPlaying] = useState(null);
 
@@ -29,8 +29,8 @@ const SideBar = (({ closeSidebar }) => {
     }, [nowPlayingBookId]);
 
 
-    const closeSB = () => {
-        closeSidebar()
+    const toggleSB = () => {
+        toggleSidebar()
     }
 
     const id = 'QHNXEXCNBQGALHZXXA58'
@@ -43,7 +43,7 @@ const SideBar = (({ closeSidebar }) => {
 
     return (
         <>
-            <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-svh justify-start items-start `}></div>
+            <div onClick={toggleSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-svh justify-start items-start `}></div>
             <div className={` sticky top-0 w-[280px] h-svh overflow-y-auto custom-scrollbar flex flex-col items-start justify-start p-4 bg-stone-100 bg-opacity-50  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 gap-2`}>
 
                 <div className='w-full h-fit'>
@@ -55,7 +55,7 @@ const SideBar = (({ closeSidebar }) => {
                             <IoChevronDownOutline className={`text-[15px]  `} />
                         </div>
 
-                        <button onClick={closeSB} className=' cursor-pointer p-2 transition duration-100 rounded-lg hover:bg-stone-300 hover:bg-opacity-50  dark:hover:bg-dark-navlink '>
+                        <button onClick={toggleSB} className=' cursor-pointer p-2 transition duration-100 rounded-lg hover:bg-stone-300 hover:bg-opacity-50  dark:hover:bg-dark-navlink '>
                             <BsLayoutSidebar className=' text-[20px] opacity-50 ' />
                         </button>
                     </div>
