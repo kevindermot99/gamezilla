@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing'
 import Pagez from './pages/Pagez';
 import Book from './pages/Book';
 import PageError from './pages/PageError';
@@ -23,7 +22,6 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Pagez />} />
-        <Route path='/landingPage' element={<Landing />} />
         <Route path='/search' element={<Search />} />
         <Route path='/search/:keyword' element={<Search />} />
         <Route path='/recentlyadded' element={<RecentlyAdded />} />

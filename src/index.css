@@ -145,12 +145,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.HeroText {
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(to top, #5a5a5a 0%, #000 150%);
-}
-
 .zindex {
   z-index: 10 !important;
 }
@@ -175,26 +169,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media only screen and (max-width: 640px) {}
 
 
-/* .notification {
-  position: absolute;
-  left: 20px;
-  top: -5px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 0;
-  color: white;
-} */
 
-img{
-  /* display: none; */
-}
 
 .stay-at-top {
   position: -webkit-sticky;
