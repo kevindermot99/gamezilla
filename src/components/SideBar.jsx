@@ -43,53 +43,54 @@ const SideBar = React.memo(({ closeSidebar }) => {
     return (
         <>
             <div onClick={closeSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-[100vh] justify-start items-start `}></div>
-            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-between p-4 max-sm:pb-9 max-sm:pt-4 max-sm:px-4 bg-stone-100  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 max-md:w-[100vw] gap-2`}>
+            <div className={` sticky top-0 w-[280px] h-[100vh] overflow-y-auto custom-scrollbar flex flex-col items-start justify-start px-4 py-2 bg-stone-100 bg-opacity-50  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 max-md:w-[100vw] gap-2`}>
+                <div className={` flex justify-start items-center text-base font-medium cursor-default gap-2 `}>
+                    <h1 className={`font-mono text-sm  text-stone-400 dark:text-stone-600`}>Pagez</h1>
+                    <a href={AppVersion.LinkToRepo} target='_blank' className='font-mono text-sm text-stone-400 dark:text-stone-600 capitalizen '>{AppVersion.Version}</a>
+                </div>
 
                 <div className='w-full h-fit'>
-                    <div className={`group flex justify-between items-center w-full mb-6`}>
+                    <div className={`group flex justify-between items-center w-full `}>
 
-                        <div className={` flex justify-start items-center text-base font-medium cursor-default `}>
-                            <h1 className={`logoText text-stone-900 dark:text-stone-400 pt-2 pb-1 px-4 max-sm:px-0 max-sm:pr-3 tracking-wide `}>Pagez</h1>
-                            <a href={AppVersion.LinkToRepo} target='_blank' className='bg-stone-200 dark:bg-dark-navlink  text-[10px] text-stone-400 pt-[4px] pb-[2px] px-2 rounded-xl self-end capitalizen '>{AppVersion.Version}</a>
-                        </div>
+
 
                         <button onClick={closeSB} className='text-stone-900 dark:text-stone-400 hidden max-md:block'>
-                            <FiChevronLeft className='h-8 w-8 text-xl bg-stone-400 bg-opacity-20 dark:bg-opacity-15 rounded-md p-1 active:scale-75 transition '/>
+                            <FiChevronLeft className='h-8 w-8 text-xl bg-stone-400 bg-opacity-20 dark:bg-opacity-15 rounded-md p-1 active:scale-75 transition ' />
                         </button>
                     </div>
 
                     <ul className={`sidebar w-full h-fit overscroll-contain flex flex-col gap-1`}>
-                        <Link to="/" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
+                        <Link to="/" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none '} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
                             <SlCompass className={`text-[19px] mx-3 min-h-7 min-w-5 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Browse</p>
                         </Link>
 
-                        <Link to="/search" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/search' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
+                        <Link to="/search" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/search' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none '} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/search' && 'opacity-100 '}`}></div>
                             <IoSearchOutline className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname === '/search' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Search</p>
                         </Link>
 
-                        <Link to={`/recentlyadded`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/recentlyadded' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
+                        <Link to={`/recentlyadded`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/recentlyadded' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none  '}`}>
                             <div className={` indicator opacity-0 ${location.pathname === '/recentlyadded' && 'opacity-100 '}`}></div>
                             <PiMusicNotesPlusDuotone className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname === '/recentlyadded' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Recently Added</p>
                         </Link>
 
-                        <Link to={`/liked/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname.includes('/liked/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
+                        <Link to={`/liked/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname.includes('/liked/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none  '}`}>
                             <div className={` indicator opacity-0 ${location.pathname.includes('/liked/') && 'opacity-100 '}`}></div>
                             <IoMdHeartEmpty className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname.includes('/liked/') ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Liked</p>
                         </Link>
 
-                        <Link to={`/trending`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/trending' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
+                        <Link to={`/trending`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/trending' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none  '}`}>
                             <div className={` indicator opacity-0 ${location.pathname === '/trending' && 'opacity-100 '}`}></div>
                             <IoTrendingUp className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname === '/trending' ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Trending</p>
                         </Link>
 
-                        <Link to={`/history/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname.includes('/history/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group '}`}>
+                        <Link to={`/history/${id}`} className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname.includes('/history/') && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none  '}`}>
                             <div className={` indicator opacity-0 ${location.pathname.includes('/history/') && 'opacity-100 '}`}></div>
                             <GoHistory className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname.includes('/history/') ? 'opacity-80 ' : 'opacity-30'}`} />
                             <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>History</p>

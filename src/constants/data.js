@@ -15,7 +15,7 @@ import avatar4 from "../assets/avatars/avatar yellow.png"
 import avatar5 from "../assets/avatars/avatar tangerine.png"
 
 export const AppVersion = {
-  Version: "v 1.0",
+  Version: "v1.0",
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
 };
 
