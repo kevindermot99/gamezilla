@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { GoHome } from "react-icons/go";
+import { SlCompass } from "react-icons/sl";
 import { Link, useLocation } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
 import { Books } from '../constants/data';
@@ -61,8 +61,8 @@ const SideBar = React.memo(({ closeSidebar }) => {
                     <ul className={`sidebar w-full h-fit overscroll-contain flex flex-col gap-1`}>
                         <Link to="/" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
-                            <GoHome className={`text-[22px] mx-3 min-h-7 min-w-5 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
-                            <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Home</p>
+                            <SlCompass className={`text-[19px] mx-3 min-h-7 min-w-5 ${location.pathname === '/' ? 'opacity-80 ' : 'opacity-30'}`} />
+                            <p className={` text-sm font-medium dark:text-stone-300 text-stone-700  overflow-clip whitespace-nowrap `}>Browse</p>
                         </Link>
 
                         <Link to="/search" className={`h-[42px] flex items-center justify-start text-[15px] gap-2 px-[5px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 dark:hover:bg-dark-navlink  ${location.pathname === '/search' && 'bg-stone-200 dark:bg-dark-navlink relative pointer-events-nonen group'} `}>
