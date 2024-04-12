@@ -41,6 +41,11 @@ function ManageProfiles() {
     const closeSidebar = () => {
         setSideBar(false)
     }
+
+    useEffect(() => {
+        document.title = 'Manage Profiles';
+    },[])
+
     
 
     return (

@@ -43,6 +43,10 @@ function Profile() {
         return user.id === id;
     }
 
+    useEffect(() => {
+        document.title = loggedInUser.userName;
+      }, [])
+
     const inputStyle = 'w-full ring-2 ring-stone-200 ring-opacity-70 dark:ring-stone-700 dark:ring-opacity-0 text-black dark:text-stone-300 bg-transparent dark:bg-dark-navlink py-2 px-4 rounded-lg outline-none mt-2 focus:ring-main-color'
     const inputTitleStyle = 'text-sm font-semibold text-black dark:text-stone-400 '
 
@@ -64,7 +68,7 @@ function Profile() {
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                         <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
                             
-                        <h1 className='text-[40px] max-sm:text-[25px] max-w-[700px] font-extrabold text-black dark:text-stone-100  pb-5'>Active profile</h1>
+                        <h1 className='text-[40px] max-sm:text-[25px] max-w-[700px] font-extrabold text-black dark:text-stone-200  pb-10'>My profile</h1>
 
                             <div className='flex items-center gap-6 flex-wrap '>
                                 <div className='h-32 w-32 min-w-32 min-h-32 rounded-full ring-1 ring-stone-100 shadow-xl shadow-stone-100 dark:shadow-stone-900 dark:ring-stone-800'>

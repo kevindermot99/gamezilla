@@ -41,6 +41,11 @@ function Liked() {
     const closeSidebar = () => {
         setSideBar(false)
     }
+
+    useEffect(() => {
+        document.title = 'Liked';
+    },[])
+
     
 
     return (

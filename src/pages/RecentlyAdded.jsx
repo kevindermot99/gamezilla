@@ -34,6 +34,10 @@ function RecentlyAdded() {
         setSideBar(false)
     }
 
+    useEffect(() => {
+        document.title = 'Recently Added';
+      }, [])
+
     return (
         <main className={`relative bg-white dark:bg-dark-body overflow-hidden h-[100vh] `}>
 

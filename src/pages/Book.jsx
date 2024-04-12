@@ -72,7 +72,9 @@ function Book() {
         localStorage.setItem("nowPlaying", id)
     }
 
-    
+    useEffect(() => {
+        document.title = res.title;
+    },[])
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>

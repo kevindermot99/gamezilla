@@ -40,6 +40,11 @@ function History() {
         setSideBar(false)
     }
 
+    useEffect(() => {
+        document.title = 'History';
+    },[])
+
+
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>

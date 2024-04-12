@@ -42,6 +42,10 @@ function MyLibrary() {
         setSideBar(false)
     }
     
+    useEffect(() => {
+        document.title = 'My Library';
+    },[])
+
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden  h-[100vh]'>

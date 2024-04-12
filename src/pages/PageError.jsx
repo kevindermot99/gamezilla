@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 function PageError() {
   const location = useLocation()
+
+  useEffect(() => {
+    document.title = 'Page Error 404';
+  }, [])
+
 
   return (
     <div className='p-5 font-mono text-lg leading-relaxed text-black dark:text-white'>

@@ -39,6 +39,11 @@ function Trending() {
     const closeSidebar = () => {
         setSideBar(false)
     }
+
+    useEffect(() => {
+        document.title = 'Trending';
+      }, [])
+
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh] '>
 

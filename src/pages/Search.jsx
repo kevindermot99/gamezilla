@@ -17,6 +17,10 @@ function Search() {
     const closeSidebar = () => {
         setSideBar(false)
     }
+
+    useEffect(() => {
+        document.title = 'Search';
+      }, [])
     
     return (
         <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh]'>

@@ -33,6 +33,10 @@ const Pagez = () => {
     setSideBar(false)
   }
 
+  useEffect(() => {
+    document.title = 'Browse';
+  }, [])
+
 
 
 
