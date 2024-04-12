@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsCloudDownload } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
-import { RiLoader5Fill } from "react-icons/ri";
+import { LuLoader2 } from "react-icons/lu";
 
 const customAnimation = keyframes`
   from {
@@ -77,8 +77,8 @@ function Book() {
     useEffect(() => {
         setTimeout(() => {
             setInnerLoader(false)
-        }, 600);
-    },[])
+        }, 900);
+    }, [])
 
     return (
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>
@@ -93,27 +93,31 @@ function Book() {
                 </div>
 
 
-                <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
-                    <div className='relative ' style={{ backgroundColor: color }}>
-                        <div className={`absolute top-0 left-0 h-full w-full z-50 bg-white dark:bg-dark-body flex justify-center items-center transition ${innerLoader ? '' : 'hidden'}`}> 
-                            <RiLoader5Fill className='text-3xl  text-black dark:text-white animate-spinLoader ' /> 
-                        </div>
-                    <Nav openSidebar={openSidebar} />
-                        <Reveal keyframes={customAnimation} triggerOnce duration={400}>
-                            <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 max-sm:px-5 pt-4 pb-8 `} >
-                                <div className='h-[200px] w-auto aspect-square shadow-custom'>
-                                    <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
-                                </div>
-                                <div className='flex flex-col items-start justify-start gap-4 max-sm:gap-2 text-black dark:text-white py-3 '>
-                                    <h1 className='text-[45px] leading-[45px] max-sm:text-[20px] max-sm:leading-[25px]  max-w-[700px] font-extrabold text-white  max-md:w-full  '>{res.title}</h1>
-                                    <Link to={`/author/${res.author}`} className=' font-semibold text-base text-white hover:underline max-md:w-full '>{res.author}</Link>
-                                    <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed max-md:w-full max-md:line-clamp-3  '>{res.about}</p>
-                                    <p className=' font-normal text-sm text-stone-50 max-md:w-full'>{res.likes} Likes • 13 min 10 sec</p>
-                                </div>
-                            </div>
-                        </Reveal>
+                <div className=' relative w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
+                    <div className='relative min-h-[330px] transition ' style={{ backgroundColor: color }}>
+                        <Nav openSidebar={openSidebar} />
+                        {innerLoader ?
+                            (<div className={`absolute top-0 left-0 h-full w-full z-50 flex justify-center items-center transition `} style={{ backgroundColor: color }}>
+                                <LuLoader2 className='text-[35px]  text-white opacity-55 animate-spinLoader ' />
+                            </div>)
+                            :
+                            (
+                                <Reveal keyframes={customAnimation} triggerOnce duration={400}>
+                                    <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 max-sm:px-5 pt-4 pb-8 `} >
+                                        <div className='h-[200px] w-auto aspect-square shadow-custom'>
+                                            <img className="w-full h-full object-cover pointer-events-none rounded-md " src={res.URL} alt="" />
+                                        </div>
+                                        <div className='flex flex-col items-start justify-start gap-4 max-sm:gap-2 text-black dark:text-white py-3 '>
+                                            <h1 className='text-[45px] leading-[45px] max-sm:text-[20px] max-sm:leading-[25px]  max-w-[700px] font-extrabold text-white  max-md:w-full  '>{res.title}</h1>
+                                            <Link to={`/author/${res.author}`} className=' font-semibold text-base text-white hover:underline max-md:w-full '>{res.author}</Link>
+                                            <p className='font-light text-sm text-stone-50 max-w-[790px] leading-relaxed max-md:w-full max-md:line-clamp-3  '>{res.about}</p>
+                                            <p className=' font-normal text-sm text-stone-50 max-md:w-full'>{res.likes} Likes • 13 min 10 sec</p>
+                                        </div>
+                                    </div>
+                                </Reveal>
+                            )}
                     </div>
-                        
+
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <div className='flex flex-col bg-white dark:bg-dark-sidebar h-fit pb-10 px-8 max-md:px-5 flex-1 '>
 
