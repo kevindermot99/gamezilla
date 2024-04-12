@@ -50,12 +50,8 @@ const Pagez = () => {
           <SideBar closeSidebar={closeSidebar} openSidebar={openSidebar} />
         </div>
 
-        <div className='z-20 w-[100%] h-svh overflow-y-auto py-8 dynamic-scrollbar'>
-          <div className='px-8 mb-5 max-md:px-6 max-md:mb-6'>
-            <p className='text-stone-400 dark:text-stone-400  text-sm tracking-wide font-mono cursor-default'>
-              {greet} Kevin.
-            </p>
-          </div>
+        <div className='z-20 w-[100%] h-svh overflow-y-auto dynamic-scrollbar'>
+          
           <Browse />
         </div>
 

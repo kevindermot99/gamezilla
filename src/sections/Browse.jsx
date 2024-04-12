@@ -22,7 +22,7 @@ const id = '9OF3H8G9C3H9'
 function Browse() {
 
   return (
-    <section className=" flex flex-col gap-2 ml-8 mr-9 overflow-clip relative max-md:ml-3 max-md:mr-3">
+    <section className=" flex flex-col gap-2 py-24  px-10 overflow-clip relative max-md:ml-3 max-md:mr-3">
 
       <Reveal keyframes={customAnimation} triggerOnce duration={400}>
         <h1 className="font-bold text-2xl text-black dark:text-white mb-1 capitalize flex items-center justify-between">
