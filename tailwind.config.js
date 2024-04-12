@@ -37,7 +37,7 @@ export default {
         "dark-sidebar": "#202020",
         "banner-bottom-gradient": "#212121",
         "dark-body": "#212121",
-        "dark-navlink": "#272727",
+        "dark-navlink": "#282828",
         "dark-hover": "#191919",
         "dark-player": "#242424",
       },
