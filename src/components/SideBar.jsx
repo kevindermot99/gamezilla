@@ -55,7 +55,7 @@ const SideBar = (({ toggleSidebar }) => {
                             <IoChevronDownOutline className={`text-[15px]  `} />
                         </div>
 
-                        <button onClick={toggleSB} className=' cursor-pointer p-2 transition duration-100 rounded-lg hover:bg-stone-300 hover:bg-opacity-50  dark:hover:bg-dark-navlink '>
+                        <button onClick={toggleSB} className=' hidden max-md:block cursor-pointer p-2 transition duration-100 rounded-lg hover:bg-stone-300 hover:bg-opacity-50  dark:hover:bg-dark-navlink '>
                             <BsLayoutSidebar className=' text-[20px] opacity-50 ' />
                         </button>
                     </div>

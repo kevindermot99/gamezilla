@@ -3,13 +3,14 @@ import { Browse } from '../sections';
 import Nav from '../components/Nav';
 import SideBar from '../components/SideBar';
 import PagezDarkBg from '../assets/images/pagez-bg.jpg'
+import { BsLayoutSidebar } from "react-icons/bs";
 
 
 const Pagez = () => {
 
   // const [loading, setLoading] = useState(false)
   const [greet, setGreet] = useState("");
-  const [sidebar, setSideBar] = useState(true);
+  const [sidebar, setSideBar] = useState(false);
 
   useEffect(() => {
     const myDate = new Date();
@@ -27,7 +28,6 @@ const Pagez = () => {
 
   const toggleSidebar = () => {
     setSideBar(!sidebar)
-    console.log(sidebar)
   }
 
   useEffect(() => {
@@ -48,8 +48,10 @@ const Pagez = () => {
         </div>
 
         <div className='z-10 w-[100%] h-svh overflow-y-auto dynamic-scrollbar'>
-          <div>
-
+          <div className='pt-4 pl-3'>
+            <button onClick={toggleSidebar} className=' hidden max-md:block cursor-pointer p-2 transition duration-100 rounded-lg hover:bg-stone-300 hover:bg-opacity-50  dark:hover:bg-dark-navlink '>
+              <BsLayoutSidebar className=' text-[24px] opacity-50 ' />
+            </button>
           </div>
           <Browse />
         </div>
