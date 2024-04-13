@@ -65,7 +65,7 @@ const SideBar = (({ toggleSidebar }) => {
                     <ul className={`sidebar w-full h-fit overscroll-contain flex flex-col gap-1 select-none`}>
                         <Link to="/" className={`h-[40px] flex items-center justify-start text-[15px] gap-3 px-[12px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 hover:bg-opacity-50  dark:hover:bg-dark-navlink  ${location.pathname === '/' && 'bg-stone-200 bg-opacity-50 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none '} `}>
                             <div className={` indicator opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
-                            <SlCompass className={`text-[22px] mx-[1px] ${location.pathname === '/' ? 'opacity-100 text-main-color ' : 'opacity-30'}`} />
+                            <SlCompass className={`text-[20px] mx-[1px] ${location.pathname === '/' ? 'opacity-100 text-main-color ' : 'opacity-30'}`} />
                             <p className={` text-sm font-normal tracking-wide overflow-clip whitespace-nowrap ${location.pathname === '/' ? ' dark:text-main-color text-main-color ' : 'text-stone-700  dark:text-slate-300 '} `}>Browse</p>
                         </Link>
 
@@ -95,7 +95,7 @@ const SideBar = (({ toggleSidebar }) => {
 
                         <Link to={`/history/${id}`} className={`h-[40px] flex items-center justify-start text-[15px] gap-3 px-[12px] outline-none w-full transition duration-100 rounded-lg hover:bg-stone-200 hover:bg-opacity-50  dark:hover:bg-dark-navlink  ${location.pathname.includes('/history/') && 'bg-stone-200 bg-opacity-50 dark:bg-dark-navlink relative pointer-events-nonen group pointer-events-none  '}`}>
                             <div className={` indicator opacity-0 ${location.pathname.includes('/history/') && 'opacity-100 '}`}></div>
-                            <GoHistory className={`text-[22px] mx-[1px] ${location.pathname.includes('/history/') ? 'opacity-100 text-main-color ' : 'opacity-30'}`} />
+                            <GoHistory className={`text-[20px] mx-[1px] ${location.pathname.includes('/history/') ? 'opacity-100 text-main-color ' : 'opacity-30'}`} />
                             <p className={` text-sm font-normal  tracking-wide overflow-clip whitespace-nowrap ${location.pathname.includes('/history/') ? ' dark:text-main-color text-main-color ' : 'text-stone-700  dark:text-slate-300 '} `}>History</p>
                         </Link>
 
