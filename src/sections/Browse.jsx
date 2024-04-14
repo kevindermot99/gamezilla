@@ -9,7 +9,7 @@ import { GoChevronRight } from "react-icons/go";
 const customAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translateY(150px);
+    transform: translateY(20px);
   }
 
   to {
@@ -24,7 +24,7 @@ function Browse() {
   return (
     <section className=" flex flex-col gap-2 p-5 max-md:px-0 overflow-clip relative max-md:ml-3 max-md:mr-3 max-w-[1000px] m-auto">
 
-      <Reveal keyframes={customAnimation} triggerOnce duration={900}>
+      <Reveal keyframes={customAnimation} triggerOnce duration={700}>
         <h1 className="font-medium text-xl text-black dark:text-white mb-1 capitalize flex items-center justify-between">
           <span>Trending Now</span>
           <span className="flex items-center justify-end ">
@@ -36,7 +36,7 @@ function Browse() {
         </div>
       </Reveal>
 
-      <Reveal keyframes={customAnimation} triggerOnce duration={900}>
+      <Reveal keyframes={customAnimation} triggerOnce duration={700}>
         <h1 className="font-medium text-xl text-black dark:text-white mb-1 capitalize flex items-center justify-between">
           <span>Recently added</span>
           <Link to={`/recentlyadded`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
@@ -46,7 +46,7 @@ function Browse() {
         </div>
       </Reveal>
 
-      <Reveal keyframes={customAnimation} triggerOnce duration={900}>
+      <Reveal keyframes={customAnimation} triggerOnce duration={700}>
         <h1 className="font-medium text-xl text-black dark:text-white mb-1 capitalize flex items-center justify-between">
           <span>History</span>
           <Link to={`/history/${id}`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
