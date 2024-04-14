@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
-import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import Reveal from "react-awesome-reveal";
@@ -66,7 +64,7 @@ function Profile() {
 
 
                 <div className=' w-full overflow-x-clip z-10 h-fit min-h-[100vh] max-h-[100vh] overflow-y-auto dynamic-scrollbar '>
-                    <Nav openSidebar={openSidebar} />
+                    
                     <Reveal keyframes={customAnimation} triggerOnce duration={300}>
                         <div className='flex flex-col px-16 max-lg:px-10 max-md:px-5 py-3'>
                             

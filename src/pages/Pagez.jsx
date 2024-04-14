@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Browse } from '../sections';
-import Nav from '../components/Nav';
-import SideBar from '../components/SideBar';
 import PagezDarkBg from '../assets/images/pagez-bg.jpg'
 import { BsLayoutSidebar } from "react-icons/bs";
 import BottomBar from '../components/BottomBar';
@@ -44,9 +42,6 @@ const Pagez = () => {
       <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh] overflow-clip   '>
 
         <img src={PagezDarkBg} className='absolute opacity-15 -z-0  h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
-        {/* <div className={`w-fit z-20 max-md:fixed max-md:top-0 max-md:transition max-md:duration-300  ${sidebar ? '' : 'max-md:-translate-x-[280px]'} `}>
-          <SideBar toggleSidebar={toggleSidebar} />
-        </div> */}
 
         <div className='z-10 w-[100%] h-svh overflow-y-auto dynamic-scrollbar'>
           <div className='pt-4 pl-3'>

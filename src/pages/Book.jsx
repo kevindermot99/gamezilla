@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
-import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import { FaPlay } from "react-icons/fa";
@@ -12,6 +10,7 @@ import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsCloudDownload } from "react-icons/bs";
+import BottomBar from '../components/BottomBar';
 
 const customAnimation = keyframes`
   from {
@@ -77,21 +76,16 @@ function Book() {
     },[])
 
     return (
+        <>
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh]'>
 
             {/* <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-300 '></div> */}
 
             <div className='relative text-black dark:text-white flex '>
 
-
-                <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
-                    <SideBar closeSidebar={closeSidebar} />
-                </div>
-
-
                 <div className=' relative w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar transition duration-300 ' >
                     <div className='relative min-h-[330px] transition ' style={{ backgroundColor: color }}>
-                        <Nav openSidebar={openSidebar} />
+                       
                                 <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                                     <div className={` h-fi flex max-md:flex-col gap-6 items-start max-md:items-center justify-start px-9 max-sm:px-5 pt-4 pb-8 `} >
                                         <div className='h-[200px] w-auto aspect-square shadow-custom'>
@@ -178,7 +172,8 @@ function Book() {
             </div>
 
         </main>
-
+        <BottomBar />
+</>
     )
 
 };

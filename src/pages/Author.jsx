@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
-import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import { FaPlay } from "react-icons/fa";
@@ -13,6 +11,7 @@ import { WiTime3 } from "react-icons/wi";
 import { Link } from 'react-router-dom';
 import { MdAdd } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
+import BottomBar from '../components/BottomBar';
 
 const customAnimation = keyframes`
   from {
@@ -49,16 +48,15 @@ function Author() {
 
 
     return (
+        <>
         <main className='relative bg-white dark:bg-dark-body overflow-hidden h-[100vh] '>
 
             {/* <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-0 transition duration-200'></div> */}
 
             <div className='relative text-black dark:text-white flex '>
-                <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
-                    <SideBar closeSidebar={closeSidebar} />
-                </div>
+                
                 <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar' style={{ backgroundColor: color }}>
-                    <Nav openSidebar={openSidebar} />
+                    
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fit flex gap-6 items-start justify-start px-9 py-6 max-md:min-h-[200px] max-md:px-5 `} >
@@ -118,7 +116,8 @@ function Author() {
                 </div>
             </div>
         </main>
-
+        <BottomBar />
+</>
     )
 
 };

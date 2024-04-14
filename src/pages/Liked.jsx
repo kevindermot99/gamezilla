@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
-import SideBar from '../components/SideBar';
 import { useParams } from 'react-router-dom';
 import { Books } from '../constants/data';
 import Reveal from "react-awesome-reveal";
@@ -57,14 +55,8 @@ function Liked() {
 
             <div className='relative text-black dark:text-white flex '>
 
-
-                {/* <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
-                    <SideBar closeSidebar={closeSidebar} />
-                </div> */}
-
-
                 <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar ' style={{ backgroundColor: color }}>
-                    <Nav openSidebar={openSidebar} />
+                    
                     <div className='xl:padding-1 wide:padding-r w-full h-fit overflow-x-clip'>
                         <Reveal keyframes={customAnimation} triggerOnce duration={400}>
                             <div className={` h-fit flex gap-6 items-start justify-start px-9 py-6   max-md:min-h-[200px] max-md:px-5`} >
