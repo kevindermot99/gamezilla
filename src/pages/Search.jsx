@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import SideBar from '../components/SideBar';
 import { GrClose } from "react-icons/gr";
 import { RxLetterCaseCapitalize } from "react-icons/rx";
+import BottomBar from '../components/BottomBar';
 
 
 
@@ -23,11 +24,12 @@ function Search() {
       }, [])
     
     return (
+        <>
         <main className='relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh]'>
 
-            <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
+            {/* <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
                 <SideBar closeSidebar={closeSidebar} />
-            </div>
+            </div> */}
 
             <div className='w-full overflow-x-clip z-0 overflow-y-auto dynamic-scrollbar flex flex-col '>
                 <Nav openSidebar={openSidebar} />
@@ -52,6 +54,8 @@ function Search() {
             </div>
 
         </main>
+        <BottomBar />
+        </>
     )
 }
 

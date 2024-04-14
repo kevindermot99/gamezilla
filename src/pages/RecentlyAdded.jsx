@@ -8,6 +8,7 @@ import { keyframes } from "@emotion/react";
 import { Link } from 'react-router-dom';
 import { WiTime3 } from "react-icons/wi";
 import { GrClose } from "react-icons/gr";
+import BottomBar from '../components/BottomBar';
 
 const customAnimation = keyframes`
   from {
@@ -39,6 +40,7 @@ function RecentlyAdded() {
       }, [])
 
     return (
+        <>
         <main className={`relative bg-white dark:bg-dark-body overflow-hidden h-[100vh] `}>
 
             {/* <div style={{ backgroundColor: color }} className='h-[500px] max-sm:h-[100vh] w-[100%] absolute top-0 left-0 opacity-100 z-10 transition duration-200'></div> */}
@@ -46,9 +48,9 @@ function RecentlyAdded() {
             <div className='relative text-black dark:text-white flex '>
 
 
-                <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
+                {/* <div className={`w-fit z-50 max-md:fixed max-md:top-0 max-md:transition max-md:duration-200  ${sidebar ? 'max-md:opacity-100' : 'max-md:opacity-100 max-md:-translate-x-[100vw]'} `}>
                     <SideBar closeSidebar={closeSidebar} />
-                </div>
+                </div> */}
 
 
                 <div className=' w-full overflow-x-clip z-10 h-fit max-h-[100vh] overflow-y-auto dynamic-scrollbar ' style={{ backgroundColor: color }}>
@@ -114,7 +116,8 @@ function RecentlyAdded() {
             </div>
 
         </main>
-
+        <BottomBar />
+</>
     )
 
 };
