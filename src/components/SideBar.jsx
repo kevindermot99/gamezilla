@@ -16,18 +16,6 @@ import { IoChevronDownOutline } from "react-icons/io5";
 
 const SideBar = (({ toggleSidebar }) => {
     const location = useLocation()
-    const [nowPlaying, setNowPlaying] = useState(null);
-
-
-    const nowPlayingBookId = localStorage.getItem("nowPlaying");
-
-    useEffect(() => {
-        if (nowPlayingBookId) {
-            const res = Books.find(book => book.id === nowPlayingBookId);
-            setNowPlaying(res);
-        }
-    }, [nowPlayingBookId]);
-
 
     const toggleSB = () => {
         toggleSidebar()
@@ -43,7 +31,6 @@ const SideBar = (({ toggleSidebar }) => {
 
     return (
         <>
-            <div onClick={toggleSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-svh justify-start items-start `}></div>
             <div className={` sticky top-0 w-[280px] h-svh overflow-y-auto custom-scrollbar flex flex-col items-start justify-start p-4 bg-stone-100   dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 gap-2`}>
 
                 <div className='w-full h-fit'>

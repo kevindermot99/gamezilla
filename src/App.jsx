@@ -13,30 +13,34 @@ import MyLibrary from './pages/MyLibrary';
 import Profile from './pages/Profile';
 import ManageProfiles from './pages/ManageProfiles';
 import PLayer from './pages/PLayer';
+import BottomBar from './components/BottomBar';
 
 
 function App() {
 
 
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Pagez />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/search/:keyword' element={<Search />} />
-        <Route path='/recentlyadded' element={<RecentlyAdded />} />
-        <Route path='/liked/:id' element={<Liked />} />
-        <Route path='/myLibrary/:id' element={<MyLibrary />} />
-        <Route path='/profile/:id' element={<Profile />} />
-        <Route path='/manageProfiles/:id' element={<ManageProfiles />} />
-        <Route path='/trending' element={<Trending />} />
-        <Route path='/history/:id' element={<History />} />
-        <Route path='/author/:author' element={<Author />} />
-        <Route path='/book/:id' element={<Book />} />
-        <Route path='/player/:id' element={<PLayer />} />
-        <Route path='/*' element={<PageError />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Pagez />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/search/:keyword' element={<Search />} />
+          <Route path='/recentlyadded' element={<RecentlyAdded />} />
+          <Route path='/liked/:id' element={<Liked />} />
+          <Route path='/myLibrary/:id' element={<MyLibrary />} />
+          <Route path='/profile/:id' element={<Profile />} />
+          <Route path='/manageProfiles/:id' element={<ManageProfiles />} />
+          <Route path='/trending' element={<Trending />} />
+          <Route path='/history/:id' element={<History />} />
+          <Route path='/author/:author' element={<Author />} />
+          <Route path='/book/:id' element={<Book />} />
+          <Route path='/player/:id' element={<PLayer />} />
+          <Route path='/*' element={<PageError />} />
+        </Routes>
+      </Router>
+      <BottomBar />
+    </>
   );
 }
 
