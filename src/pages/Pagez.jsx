@@ -34,7 +34,7 @@ const Pagez = () => {
 
   const loggedInUser = users.find(findthis)
   function findthis(user) {
-      return user.id === id;
+    return user.id === id;
   }
   return (
     <>
@@ -42,10 +42,13 @@ const Pagez = () => {
 
         <img src={PagezDarkBg} className='absolute opacity-5 -z-0  h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
 
-        <div className='z-10 w-[100%] h-svh overflow-y-auto dynamic-scrollbar'>
+
+        <div className='z-10 w-[100%] h-svh overflow-y-auto dynamic-scrollbar overflow-clip'>
           <div className='max-w-[1000px] m-auto p-5 text-left my-5 '>
             <h1 className='font-extrabold text-3xl text-black dark:text-white capitalize  '>{greet}</h1>
-            <div className=' flex justify-between '>
+            <div className=' relative flex justify-between  '>
+              <div className='absolute -top-12 left-20  opacity-50 dark:opacity-25 -z-0 w-[150px] h-[90px] rounded-full bg-main-color/20  rotate-45 '></div>
+              <div className='absolute -top-12 left-32   opacity-50 dark:opacity-25 -z-0 w-[150px] h-[90px] rounded-full bg-main-color/20  rotate-45 '></div>
               <p className='font-normal text-base text-black dark:text-white capitalize'>Find your next great Listen</p>
               <div className='relative flex items-center justify-center gap-2'>
                 <div className='relative'>
