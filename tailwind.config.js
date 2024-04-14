@@ -39,7 +39,7 @@ export default {
         "dark-body": "#212121",
         "dark-navlink": "#282828",
         "dark-hover": "#191919",
-        "dark-player": "#242424",
+        "dark-bar": "#292929",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'

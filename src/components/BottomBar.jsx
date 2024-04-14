@@ -25,16 +25,16 @@ function BottomBar() {
     }
 
   return (
-    <div className='fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-dark-navlink dark:bg-opacity-70 backdrop-blur-md ring-1 ring-dark-navlink ring-opacity-5 rounded-full w-full md:max-w-fit h-fit m-auto mb-3 '>
+    <div className='fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-dark-bar dark:bg-opacity-90 backdrop-blur-md ring-1 ring-dark-navlink ring-opacity-5 rounded-full w-full md:max-w-fit h-fit m-auto mb-3 '>
         <div className='flex justify-around py-4 px-6 gap-12 max-sm:gap-5'>
             <Link to="/" className='group' >
-                <SlCompass className={`text-[24px] max-sm:text-[20px]  mx-[1px]  duration-75 transition ${location.pathname === '/' ? 'opacity-100 text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
+                <SlCompass className={`text-[24px] max-sm:text-[20px]  mx-[1px]  duration-75 transition ${location.pathname === '/' ? 'opacity-100 text-main-color dark:text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
             </Link>
             <Link to="/search" className='group' >
-                <IoSearchOutline className={`text-[26px] max-sm:text-[20px] text-black dark:text-white mx-[1px]  duration-75 transition ${location.pathname === '/search' ? 'opacity-100 text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
+                <IoSearchOutline className={`text-[26px] max-sm:text-[20px] text-black dark:text-white mx-[1px]  duration-75 transition ${location.pathname === '/search' ? 'opacity-100 text-main-color dark:text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
             </Link>
             <Link to={`/liked/${id}`} className='group' >
-                <IoMdHeartEmpty className={`text-[26px] max-sm:text-[20px] text-black dark:text-white mx-[1px]  duration-75 transition ${location.pathname.includes('/liked/') ? 'opacity-100 text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
+                <IoMdHeartEmpty className={`text-[26px] max-sm:text-[20px] text-black dark:text-white mx-[1px]  duration-75 transition ${location.pathname.includes('/liked/') ? 'opacity-100 text-main-color dark:text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
             </Link>
             <Link to={`/profile/${id}`} className='group' >
              <img src={loggedInUser.avatar} className='h-6 max-sm:h-5 max-sm:min-w-5 rounded-full mr-2  duration-75 transition' />
