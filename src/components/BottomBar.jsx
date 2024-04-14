@@ -25,7 +25,7 @@ function BottomBar() {
     }
 
   return (
-    <div className='fixed bottom-0 left-0 right-0 z-50 bg-stone-50 dark:bg-dark-navlink bg-opacity-85 dark:bg-opacity-70 backdrop-blur-md ring-1 ring-dark-navlink ring-opacity-5 rounded-full w-full md:max-w-fit h-fit m-auto mb-3 '>
+    <div className='fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-dark-navlink dark:bg-opacity-70 backdrop-blur-md ring-1 ring-dark-navlink ring-opacity-5 rounded-full w-full md:max-w-fit h-fit m-auto mb-3 '>
         <div className='flex justify-around py-4 px-6 gap-12 max-sm:gap-5'>
             <Link to="/" className='group' >
                 <SlCompass className={`text-[24px] max-sm:text-[20px]  mx-[1px]  duration-75 transition ${location.pathname === '/' ? 'opacity-100 text-main-color ' : 'text-black dark:text-white opacity-80'} `} />
