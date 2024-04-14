@@ -13,7 +13,6 @@ import MyLibrary from './pages/MyLibrary';
 import Profile from './pages/Profile';
 import ManageProfiles from './pages/ManageProfiles';
 import PLayer from './pages/PLayer';
-import BottomBar from './components/BottomBar';
 
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
           <Route path='/*' element={<PageError />} />
         </Routes>
       </Router>
-      <BottomBar />
     </>
   );
 }
