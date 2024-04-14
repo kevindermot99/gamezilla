@@ -44,14 +44,14 @@ const SideBar = (({ toggleSidebar }) => {
     return (
         <>
             <div onClick={toggleSB} className={` hidden max-md:flex max-md:fixed max-md:w-full max-md:h-svh justify-start items-start `}></div>
-            <div className={` sticky top-0 w-[280px] h-svh overflow-y-auto custom-scrollbar flex flex-col items-start justify-start p-4 bg-stone-100 bg-opacity-50  dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 gap-2`}>
+            <div className={` sticky top-0 w-[280px] h-svh overflow-y-auto custom-scrollbar flex flex-col items-start justify-start p-4 bg-stone-100   dark:bg-dark-sidebar dark:bg-opacity-50 dark:backdrop-blur-lg max-md:dark:bg-dark-body  max-md:dark:bg-opacity-100 gap-2`}>
 
                 <div className='w-full h-fit'>
                     <div className={`group flex justify-between items-center w-full select-none `}>
                         <div className={`h-[40px] cursor-pointer mb-2 flex items-center justify-start text-[15px] px-[10px] outline-none w-fit max-w-full transition duration-100 rounded-lg hover:bg-stone-200 hover:bg-opacity-50  dark:hover:bg-dark-navlink  `}>
                             <img src={loggedInUser.avatar} className='h-7 rounded-full mr-2' />
                             <div className={` opacity-0 ${location.pathname === '/' && 'opacity-100 '}`}></div>
-                            <p className={` text-sm font-normal tracking-wide overflow-clip whitespace-nowrap truncate max-w-[70px] `}>{loggedInUser.userName}</p>
+                            <p className={` text-sm font-normal tracking-wide overflow-clip whitespace-nowrap truncate max-md:max-w-[70px] md:mr-2 `}>{loggedInUser.userName}</p>
                             <IoChevronDownOutline className={`text-[15px]  `} />
                         </div>
 
