@@ -38,7 +38,7 @@ const Pagez = () => {
   }
   return (
     <>
-      <main className='home relative bg-white dark:bg-dark-body text-black dark:text-white flex h-[100vh] overflow-clip '>
+      <main className='home relative bg-stone-100 dark:bg-dark-body text-black dark:text-white flex h-[100vh] overflow-clip '>
 
         <img src={PagezDarkBg} className='absolute opacity-5 -z-0  h-full w-full object-cover hidden dark:block blur-md ' loading='lazy' />
 
