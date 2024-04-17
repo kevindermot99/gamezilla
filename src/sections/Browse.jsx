@@ -31,7 +31,7 @@ function Browse() {
             <Link to={`/trending`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
           </span>
         </h1>
-        <div className=" bookbar w-fit h-fit grid grid-cols-6 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
+        <div className=" bookbar w-fit h-fit grid grid-cols-5 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
           <BooksBar />
         </div>
       </Reveal>
@@ -41,7 +41,7 @@ function Browse() {
           <span>Recently added</span>
           <Link to={`/recentlyadded`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <div className=" bookbar w-fit h-fit grid grid-cols-6 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
+        <div className=" bookbar w-fit h-fit grid grid-cols-5 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
           <BooksBar />
         </div>
       </Reveal>
@@ -51,7 +51,7 @@ function Browse() {
           <span>History</span>
           <Link to={`/history/${id}`} className="font-medium text-sm lowercase text-stone-500 dark:text-stone-300 hover:underline ">view all</Link>
         </h1>
-        <div className="bookbar w-fit h-fit grid grid-cols-6 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
+        <div className="bookbar w-fit h-fit grid grid-cols-5 max-lg:grid-cols-3 max-sm:grid-cols-3 max-xsmall:grid-cols-2 mb-10">
           <BooksBar />
         </div>
       </Reveal>
