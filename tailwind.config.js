@@ -29,7 +29,8 @@ export default {
       colors: {
         // "main-color": "#8C52FF",
         "main-color": "#6670e5",
-        
+        "light-border-line": "#e8e8e8",
+        "light-text-color": "#191919",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
