@@ -29,30 +29,15 @@ export default {
       colors: {
         // "main-color": "#8C52FF",
         "main-color": "#6670e5",
-        'primary': "#ECEEFF",
-        "coral-red": "#FF6452",
-        "slate-gray": "#6D6D6D",
-        "pale-blue": "#F5F6FF",
-        "white-400": "rgba(255, 255, 255, 0.80)",
-        "dark-sidebar": "#202020",
-        "banner-bottom-gradient": "#212121",
-        "dark-body": "#212121",
-        "dark-navlink": "#282828",
-        "dark-hover": "#191919",
-        "dark-bar": "#292929",
+        
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
-      },
-      backgroundImage: {
-        'hero': "url('assets/images/collection-background.svg')",
-        'card': "url('assets/images/thumbnail-background.svg')",
       },
       screens: {
         "wide": "1440px",
         'xsmall': '290px',
       },
-      
       animation: {
         fade: 'fadeIn .1s ease-in-out',
         goingTop: 'goingTop .3s',
