@@ -10,11 +10,11 @@ function Menu() {
         <div className='h-fit w-fit'>
           <ul className='flex h-full items-center'>
             <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-5'><img className='h-[35px]' src={Logo} alt="" />Pagez</Link>
-            <Link to="/" className='text-[15px] font-medium  flex items-center tracking-tight mr-5'>Explore</Link>
-            <Link to="/" className='text-[15px] font-medium  flex items-center tracking-tight mr-5'></Link>
-            <Link to="/" className='text-[15px] font-medium  flex items-center tracking-tight mr-5'></Link>
-            <div className='w-4 h-[25px] border-l border-l-light-border-line '></div>
-            <Link to="/" className='text-[15px] font-medium  flex items-center tracking-tight mr-5 '>Kid's Section</Link>
+            <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide mr-5'>Explore</Link>
+            <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide mr-5'></Link>
+            <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide mr-5'></Link>
+            <div className='w-4 h-[25px] border-l border-l-light-border-line'></div>
+            <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide mr-5'>Kid's Section</Link>
           </ul>
         </div>
     </div>
