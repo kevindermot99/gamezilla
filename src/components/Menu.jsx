@@ -10,7 +10,7 @@ import { GoGitBranch } from "react-icons/go";
 function Menu() {
   const location = useLocation();
 
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState(null)
   const [resetSearch, setResetSearch] = useState(false)
 
 
@@ -21,8 +21,14 @@ function Menu() {
     }
   }
 
+  const hideWhenEmpty = (e) => {
+    if (e.target.value === '') {
+      setResetSearch(false)
+    }
+  }
+
   const handleResetSearch = () => {
-    setSearchValue('')
+    setSearchValue(null)
     setResetSearch(false)
   }
 
@@ -30,14 +36,18 @@ function Menu() {
     document.title = "Explore Books"
   },[])
 
+  const searchThis = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className='h-[55px] px-[24px] border-b border-light-border-line flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
-        <ul className='flex h-[100%] items-center relative'>
+        <ul className='flex h-[100%] items-center relative text-light-text-color '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px]' src={Logo} alt="" />Pagez</Link>
           <div className='h-full group mr-5'>
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent hover:border-b-light-text-color ${location.pathname === '/' ? ' border-b-light-text-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
-            <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
+            <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
               <Link to={`/search`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
@@ -55,9 +65,9 @@ function Menu() {
         </ul>
       </div>
 
-      <form className='h-full w-full py-[10px] relative flex'>
+      <form onSubmit={searchThis}  className='h-full w-full py-[10px] relative flex text-light-text-color'>
         <label className='w-full relative overflow-hidden'>
-          <input type="search" onChange={handleSearchValue} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-[15px] tracking-tight font-medium ' />
+          <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-[15px] tracking-tight font-medium ' />
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
