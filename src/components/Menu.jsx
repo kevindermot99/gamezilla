@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/images/logo.png'
 import Logo35 from '../assets/images/logo 35.png'
@@ -8,6 +8,22 @@ import { TbSearch } from "react-icons/tb";
 
 function Menu() {
   const location = useLocation();
+
+  const [searchValue, setSearchValue] = useState('')
+  const [resetSearch, setResetSearch] = useState(false)
+
+
+  const handleSearchValue = (e) => {
+    setSearchValue(e.target.value)
+    if (e.target.value !== '') {
+      setResetSearch(true)
+    }
+  }
+
+  const handleResetSearch = () => {
+    setSearchValue('')
+    setResetSearch(false)
+  }
 
   return (
     <div className='h-[55px] px-[24px] border-b border-light-border-line flex items-center justify-between'>
@@ -23,7 +39,7 @@ function Menu() {
               <span className='w-full h-[1px] bg-light-border-line mb-5 mt-3'></span>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/AudioBooks' && 'text-main-color '}`}>Audiobooks</Link>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6  hover:text-main-color transition duration-100 `}>PDF Books</Link>
-              
+
             </div>
           </div>
 
@@ -35,9 +51,11 @@ function Menu() {
       </div>
 
       <form className='h-full w-full py-[10px] relative flex'>
-        <input type="search" placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-sm ' />
-        <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />      
-        <button type='reset' className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold flex items-center tracking-wide px-3 text-main-color `}>Cancel</button>
+        <label className='w-full relative overflow-hidden'>
+          <input type="search" onChange={handleSearchValue} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-sm ' />
+          <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
+          <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
+        </label>
       </form>
     </div>
   )
