@@ -18,13 +18,11 @@
 
 :root {
   /* color-scheme: light dark; */
-  --main-color: #6670e5;
+  --main-color: #00bf62;
   --dark-body-color: #111827;
   --light-scrollbar: #afafaf48;
   --light-scrollbar-hover: #c0c0c091;
   --dark-scrollbar: #273549;
-
-  --theme: #0000ff;
 }
 
 
