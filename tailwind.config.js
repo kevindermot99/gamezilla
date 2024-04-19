@@ -25,6 +25,7 @@ export default {
         salsa: ['salsa', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
         Pacifico: ['Pacifico', 'sans-serif'],
+        SulphurPoint: ['Sulphur Point', 'sans-serif']
       },
       colors: {
         // "main-color": "#8C52FF",
