@@ -4,13 +4,14 @@ import Logo from '../assets/images/logo.png'
 import Logo35 from '../assets/images/logo 35.png'
 import { FaChild } from "react-icons/fa6";
 import { GoChevronDown } from "react-icons/go";
+import { TbSearch } from "react-icons/tb";
 
 function Menu() {
   const location = useLocation();
 
   return (
-    <div className='h-[55px] px-[24px] border-b border-light-border-line flex items-center'>
-      <div className='h-full w-fit'>
+    <div className='h-[55px] px-[24px] border-b border-light-border-line flex items-center justify-between'>
+      <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative'>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px]' src={Logo} alt="" />Pagez</Link>
           <div className='h-full group mr-5'>
@@ -32,6 +33,12 @@ function Menu() {
           <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide mr-5'>Rate This App</Link>
         </ul>
       </div>
+
+      <form className='h-full w-full py-[10px] relative flex'>
+        <input type="search" placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-8 border border-light-border-line text-sm ' />
+        <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />      
+        <button className={`text-[14px] font-semibold flex items-center tracking-wide px-3 text-main-color `}>Clear</button>
+      </form>
     </div>
   )
 }
