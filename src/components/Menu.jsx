@@ -15,10 +15,14 @@ function Menu() {
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px]' src={Logo} alt="" />Pagez</Link>
           <div className='h-full group mr-5'>
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] ${location.pathname === '/' ? 'border-b-[3px]  border-b-light-text-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
-            <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] bg-white border border-light-border-line rounded-lg shadow px-6 py-4 flex-col hidden group-hover:flex `}>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
+            <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
+              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
+              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
+              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
+              <span className='w-full h-[1px] bg-light-border-line mb-5 mt-3'></span>
+              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/AudioBooks' && 'text-main-color '}`}>Audiobooks</Link>
+              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6  hover:text-main-color transition duration-100 `}>PDF Books</Link>
+              
             </div>
           </div>
 
