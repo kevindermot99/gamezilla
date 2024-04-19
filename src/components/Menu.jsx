@@ -52,11 +52,16 @@ function Menu() {
 
       <form className='h-full w-full py-[10px] relative flex'>
         <label className='w-full relative overflow-hidden'>
-          <input type="search" onChange={handleSearchValue} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-sm ' />
+          <input type="search" onChange={handleSearchValue} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-[15px] tracking-tight font-medium ' />
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
       </form>
+
+      <div className={`h-full w-fit min-w-fit py-[10px] relative flex ml-5 space-x-2`}>
+        <Link to={`/`} className={`h-full w-fit flex items-center px-5 text-main-color hover:bg-green-50     border border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
+        <Link to={`/`} className={`h-full w-fit flex items-center px-5 bg-main-color text-white border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
+      </div>
     </div>
   )
 }
