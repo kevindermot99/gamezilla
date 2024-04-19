@@ -5,6 +5,7 @@ import Logo35 from '../assets/images/logo 35.png'
 import { FaChild } from "react-icons/fa6";
 import { GoChevronDown } from "react-icons/go";
 import { TbSearch } from "react-icons/tb";
+import { GoGitBranch } from "react-icons/go";
 
 function Menu() {
   const location = useLocation();
@@ -38,7 +39,7 @@ function Menu() {
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent hover:border-b-light-text-color ${location.pathname === '/' ? ' border-b-light-text-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
             <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
+              <Link to={`/search`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
               <span className='w-full h-[1px] bg-light-border-line mb-5 mt-3'></span>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/AudioBooks' && 'text-main-color '}`}>Audiobooks</Link>
@@ -49,8 +50,8 @@ function Menu() {
 
           <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Library</Link>
           <div className='w-6 h-[25px] border-l border-l-light-border-line'></div>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Repo</Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Rate This App</Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>SC <GoGitBranch className='ml-[5px]'/></Link>
+          {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Rate This App</Link> */}
         </ul>
       </div>
 
