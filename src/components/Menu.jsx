@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/images/logo.png'
 import Logo35 from '../assets/images/logo 35.png'
@@ -24,6 +24,10 @@ function Menu() {
     setSearchValue('')
     setResetSearch(false)
   }
+
+  useEffect(() => {
+    document.title = "Explore Books"
+  },[])
 
   return (
     <div className='h-[55px] px-[24px] border-b border-light-border-line flex items-center justify-between'>
