@@ -35,9 +35,9 @@ function Menu() {
       </div>
 
       <form className='h-full w-full py-[10px] relative flex'>
-        <input type="search" placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-8 border border-light-border-line text-sm ' />
+        <input type="search" placeholder='Search' className='bg-stone-100 rounded-full h-full w-full pl-9 pr-20 border border-light-border-line text-sm ' />
         <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />      
-        <button className={`text-[14px] font-semibold flex items-center tracking-wide px-3 text-main-color `}>Clear</button>
+        <button type='reset' className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold flex items-center tracking-wide px-3 text-main-color `}>Cancel</button>
       </form>
     </div>
   )
