@@ -10,7 +10,7 @@ import { GoGitBranch } from "react-icons/go";
 function Menu() {
   const location = useLocation();
 
-  const [searchValue, setSearchValue] = useState(null)
+  const [searchValue, setSearchValue] = useState('')
   const [resetSearch, setResetSearch] = useState(false)
 
 
@@ -28,7 +28,7 @@ function Menu() {
   }
 
   const handleResetSearch = () => {
-    setSearchValue(null)
+    setSearchValue('')
     setResetSearch(false)
   }
 
