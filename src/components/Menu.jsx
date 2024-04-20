@@ -12,13 +12,20 @@ function Menu() {
 
   const [searchValue, setSearchValue] = useState('')
   const [resetSearch, setResetSearch] = useState(false)
+  const [quickResult, setQuickResult] = useState(false)
 
 
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value)
     if (e.target.value !== '') {
       setResetSearch(true)
+      setQuickResult(true)
     }
+    else {
+      setResetSearch(false)
+      setQuickResult(false)
+    }
+
   }
 
   const hideWhenEmpty = (e) => {
@@ -30,11 +37,12 @@ function Menu() {
   const handleResetSearch = () => {
     setSearchValue('')
     setResetSearch(false)
+    setQuickResult(false)
   }
 
   useEffect(() => {
     document.title = "Explore Books"
-  },[])
+  }, [])
 
   const searchThis = (e) => {
     e.preventDefault();
@@ -60,17 +68,38 @@ function Menu() {
 
           <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Library</Link>
           <div className='w-6 h-[25px] border-l border-l-light-border-line'></div>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>SC <GoGitBranch className='ml-[5px]'/></Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>SC <GoGitBranch className='ml-[5px]' /></Link>
           {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Rate This App</Link> */}
         </ul>
       </div>
 
-      <form onSubmit={searchThis}  className='h-full w-full relative flex text-light-text-color'>
-        <label className='w-full relative overflow-hidden flex flex-col items-center justify-center'>
-          <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-stone-100 rounded-full h-[65%] w-full pl-9 pr-20 border border-light-border-line text-[15px] tracking-tight font-medium ' />
+      <form onSubmit={searchThis} className='h-full w-full relative flex text-light-text-color'>
+        <label className='w-full relative overflow-hidden flex flex-col items-center justify-center z-20'>
+          <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-stone-50 rounded-full h-[65%] w-full pl-9 pr-20 border border-light-border-line text-[15px] tracking-tight font-medium ' />
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
+        <div className={`min-h-[200px] w-full pt-12 pb-5 bg-stone-50 shadow-xl absolute top-[10px]  rounded-2xl transition-opacity flex flex-col ${quickResult ? 'opacity-100  z-10' : 'opacity-0 -z-10'} `}>
+          <div className='px-4 flex flex-col'>
+            <Link to={`/`} className=' px-5 py-3 rounded-xl transition hover:bg-stone-100'>
+              <h1 className=' text-[15px] tracking-tight font-medium '>Home Lander</h1>
+              <p className='text-sm mt-1 truncate whitespace-break-spaces text-light-text-color text-opacity-40 line-clamp-2 w-full '>By: Optio beatae.</p>
+            </Link>
+            <Link to={`/`} className=' px-5 py-3 rounded-xl transition hover:bg-stone-100'>
+              <h1 className=' text-[15px] tracking-tight font-medium '>Home Lander</h1>
+              <p className='text-sm mt-1 truncate whitespace-break-spaces text-light-text-color text-opacity-40 line-clamp-2 w-full '>By: Beatrice Williams</p>
+            </Link>
+            <Link to={`/`} className=' px-5 py-3 rounded-xl transition hover:bg-stone-100'>
+              <h1 className=' text-[15px] tracking-tight font-medium '>Home Lander</h1>
+              <p className='text-sm mt-1 truncate whitespace-break-spaces text-light-text-color text-opacity-40 line-clamp-2 w-full '>By: Jenny Frankins</p>
+            </Link>
+          </div>
+          <span className='w-full h-fit border-b border-light-border-line my-4'></span>
+          <div className='px-4 flex flex-col gap-2'>
+            <Link to={`/`} className=' text-sm tracking-tight w-fit text-light-text-color text-opacity-55 font-medium px-5 rounded-xl transition hover:text-main-color'>Request a book</Link>
+            <Link to={`/`} className=' text-sm tracking-tight w-fit text-light-text-color text-opacity-55 font-medium px-5 rounded-xl transition hover:text-main-color'>Feedback</Link>
+          </div>
+        </div>
       </form>
 
       <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-2`}>
