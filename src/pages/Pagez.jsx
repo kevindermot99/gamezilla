@@ -106,7 +106,7 @@ function Pagez() {
       </section>
 
       {/* BOOKS */}
-      <section className='min-h-[100vh] w-full p-[24px] max-w-[1170px] m-auto'>
+      <section className='min-h-fit w-full p-[24px] max-w-[1170px] m-auto'>
         <h1 className='text-[24px] font-semibold text-light-text-color mb-5'>For You</h1>
         <div className='w-full grid grid-cols-6 max-lg:grid-cols-4 max-sm:grid-cols-2 max gap-4 pb-6 border-b border-light-border-line'>
           {Books.map((book, index) => (
