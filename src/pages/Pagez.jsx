@@ -110,12 +110,12 @@ function Pagez() {
         <div className='w-full grid grid-cols-7 max-lg:grid-cols-4 max-sm:grid-cols-2 max gap-4'>
           {Books.map((book, index) => (
             <div key={index} className='w-fit h-full flex flex-col'>
-            <Link to={`/`} className='w-full h-fit'>
-              <img src={book.URL} className='w-full h-full rounded-xl' alt="" />
+            <Link to={`/`} className='w-full h-fit rounded-sm ring-1 ring-light-border-line'>
+              <img src={book.URL} className='w-full h-full rounded-sm' alt="" />
             </Link>
             <div className='h-fit min-h-fit py-2 flex flex-col gap-1'>
-              <h1 className='text-[15px] font-semibold flex items-center leading-[17px] text-light-text-color'>{book.title}</h1>
-              <h1 className='text-[14px] font-semibold flex items-center leading-[17px] text-light-text-color text-opacity-65'>{book.author}</h1>
+              <h1 className='text-[14px] font-medium flex items-center leading-[17px] text-light-text-color'>{book.title}</h1>
+              <h1 className='text-[13px] font-normal flex items-center leading-[17px] text-light-text-color text-opacity-65'>{book.author}</h1>
             </div>
           </div>
           ))}
