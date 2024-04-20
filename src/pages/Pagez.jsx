@@ -20,7 +20,8 @@ import { keyframes } from "@emotion/react";
 const customAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20%);
+    filter: blur(5px)
   }
 
   100% {
