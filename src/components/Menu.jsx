@@ -76,9 +76,9 @@ function Menu() {
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
-        <div className={`min-h-[200px] w-full pt-12 pb-5 bg-white shadow-xl absolute top-[10px]  rounded-2xl transition-opacity flex flex-col ${quickResult ? 'opacity-100  z-10' : 'opacity-0 -z-10'} `}>
-          <h1 className='px-9 font-medium text-lg pt-1 text-light-text-color text-opacity-40 font-SulphurPoint truncate whitespace-nowrap max-w-[95%] '>Results for ` {searchValue} `</h1>
-          <div className='px-4 flex flex-col mt-4'>
+        <div className={`min-h-fit w-full pt-12 pb-5 bg-white shadow-xl absolute top-[10px]  rounded-2xl transition-opacity flex flex-col ${quickResult ? 'opacity-100  z-10' : 'opacity-0 -z-10'} `}>
+          <h1 className='px-9 font-medium text-sm  pt-1 text-light-text-color text-opacity-40 truncate whitespace-nowrap max-w-[95%] '>Results for ` {searchValue} `</h1>
+          <div className='px-4 flex flex-col mt-3'>
             <Link to={`/`} className='group px-5 py-3 rounded-xl transition hover:bg-stone-50'>
               <h1 className=' text-[15px] tracking-tight font-medium transition group-hover:text-main-color  '>Home Lander</h1>
               <p className='text-sm mt-1 truncate whitespace-break-spaces text-light-text-color text-opacity-60 line-clamp-2 w-full '>By: Optio beatae.</p>
