@@ -33,7 +33,9 @@ const customAnimation = keyframes`
 function Pagez() {
   return (
     <div className=' h-svh overflow-y-auto flex flex-col '>
+      {/* MENU */}
       <Menu />
+
       {/* HERO */}
       <section className='relative overflow-clip min-h-[450px] w-full max-w-[1800px] mx-auto flex items-center py-[40px] px-32 justify-center text-light-text-color  max-lg:hidden '>
         <div className='min-w-fit py-6 top-0 bottom-0 m-auto h-fit flex flex-col justify-center  '>
@@ -96,6 +98,12 @@ function Pagez() {
 
         </div>
       </section>
+
+      {/* BOOKS */}
+      <section className='min-h-[100vh] w-full bg-red-300 '>
+
+      </section>
+
     </div>
   )
 }
