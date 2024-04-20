@@ -49,7 +49,7 @@ function Menu() {
   }
 
   return (
-    <div className='h-[55px] min-h-[55px] px-[24px] border-b text-light-text-color border-light-border-line flex items-center justify-between'>
+    <div className='sticky top-0 z-50 bg-white h-[55px] min-h-[55px] px-[24px] border-b text-light-text-color border-light-border-line flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px] mr-1' src={Logo} alt="" /> Pagez</Link>
