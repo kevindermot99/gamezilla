@@ -17,11 +17,13 @@ import Image12 from '../assets/images/HeroImages/12.webp'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
+import { Books } from '../constants/data'
+
 const customAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(20%);
-    filter: blur(5px)
+    transform: translateY(30px);
+    filter: blur(3px);
   }
 
   100% {
@@ -37,7 +39,7 @@ function Pagez() {
       <Menu />
 
       {/* HERO */}
-      <section className='relative overflow-clip min-h-[450px] w-full max-w-[1800px] mx-auto flex items-center py-[40px] px-32 justify-center text-light-text-color  max-lg:hidden '>
+      <section className='relative overflow-clip min-h-[75vh] max-h-[700px] w-full max-w-[1800px] mx-auto flex items-center py-[40px] px-32 justify-center text-light-text-color  max-lg:hidden border-b border-light-border-line '>
         <div className='min-w-fit py-6 top-0 bottom-0 m-auto h-fit flex flex-col justify-center  '>
           <span className='flex gap-5'>
             <Reveal keyframes={customAnimation} triggerOnce duration={800}>
@@ -64,13 +66,17 @@ function Pagez() {
 
         </div>
 
-        <Reveal keyframes={customAnimation} triggerOnce duration={500}>
-          <div className='w-fit min-w-[750px] flex flex-col items-center gap-2 bg  '>
+        <div className='w-fit min-w-[750px] flex flex-col items-center gap-2 bg  '>
+          <Reveal keyframes={customAnimation} triggerOnce duration={500}>
             <h1 className='text-center font-SulphurPoint font-bold text-[70px] leading-[67px] capitalize '>Explore the Giant <br />Free Book Collection </h1>
+          </Reveal>
+          <Reveal keyframes={customAnimation} triggerOnce duration={600}>
             <p className='text-center font-SulphurPoint font-bold text-lg max-w-[500px]'>A place where stories meet book lovers ! It's free for all. Begin your adventure today</p>
+          </Reveal>
+          <Reveal keyframes={customAnimation} triggerOnce duration={800}>
             <Link to={`/`} className={`h-full w-fit flex items-center px-5 py-2 bg-main-color text-white text-base font-semibold tracking-tight rounded-full mt-4`}>Try Pagez Today</Link>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         <div className=' min-w-fit py-6 top-0 bottom-0 m-auto h-fit flex flex-col justify-center  '>
           <span className='flex gap-5'>
@@ -100,8 +106,21 @@ function Pagez() {
       </section>
 
       {/* BOOKS */}
-      <section className='min-h-[100vh] w-full bg-red-300 '>
-
+      <section className='min-h-[100vh] w-full p-[24px] max-w-[2000px] m-auto'>
+        <div className='w-full grid grid-cols-7 max-lg:grid-cols-4 max-sm:grid-cols-2 max gap-4'>
+          {Books.map((book, index) => (
+            <div key={index} className='w-fit h-full flex flex-col'>
+            <Link to={`/`} className='w-full h-fit'>
+              <img src={book.URL} className='w-full h-full rounded-xl' alt="" />
+            </Link>
+            <div className='h-fit min-h-fit py-2 flex flex-col gap-1'>
+              <h1 className='text-[15px] font-semibold flex items-center leading-[17px] text-light-text-color'>{book.title}</h1>
+              <h1 className='text-[14px] font-semibold flex items-center leading-[17px] text-light-text-color text-opacity-65'>{book.author}</h1>
+            </div>
+          </div>
+          ))}
+          
+        </div>
       </section>
 
     </div>
