@@ -20,7 +20,7 @@ import { keyframes } from "@emotion/react";
 const customAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
   }
 
   100% {
@@ -51,10 +51,10 @@ function Pagez() {
             <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
               <img src={Image5} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200 opacity-80 translate-y-[20px]   ' />
             </Reveal>
-            <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
+            <Reveal keyframes={customAnimation} triggerOnce duration={900}>
               <img src={Image2} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200 opacity-80  -translate-y-10  ' />
             </Reveal>
-            <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
+            <Reveal keyframes={customAnimation} triggerOnce duration={800}>
               <img src={Image4} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200 opacity-80  -translate-y-[30px]    ' />
             </Reveal>
           </span>
@@ -71,14 +71,26 @@ function Pagez() {
 
         <div className=' min-w-fit py-6 top-0 bottom-0 m-auto h-fit flex flex-col justify-center  '>
           <span className='flex gap-5'>
-            <img src={Image8} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 translate-y-[30px]  ' />
-            <img src={Image12} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80   ' />
-            <img src={Image10} className='w-24 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 translate-y-[25px]   ' />
+            <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+              <img src={Image8} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 translate-y-[30px]  ' />
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={700}>
+              <img src={Image12} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80   ' />
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
+              <img src={Image10} className='w-24 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 translate-y-[25px]   ' />
+            </Reveal>
           </span>
           <span className='flex gap-5 mt-5'>
-            <img src={Image9} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 -translate-y-[35px]  ' />
-            <img src={Image11} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 ' />
-            <img src={Image7} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 -translate-y-[25px]' />
+            <Reveal keyframes={customAnimation} triggerOnce duration={1000}>
+              <img src={Image9} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 -translate-y-[35px]  ' />
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={900}>
+              <img src={Image11} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 ' />
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={800}>
+              <img src={Image7} className='w-32 h-fit rounded-2xl shadow-md bg-stone-200   opacity-80 -translate-y-[25px]' />
+            </Reveal>
           </span>
 
         </div>
