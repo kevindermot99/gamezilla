@@ -49,9 +49,9 @@ function Menu() {
   }
 
   return (
-    <div className='h-[55px] min-h-[55px] px-[24px] border-b border-light-border-line flex items-center justify-between'>
+    <div className='h-[55px] min-h-[55px] px-[24px] border-b text-light-text-color border-light-border-line flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
-        <ul className='flex h-[100%] items-center relative text-light-text-color '>
+        <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px]' src={Logo} alt="" />Pagez</Link>
           <div className='h-full group mr-5'>
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent hover:border-b-light-text-color ${location.pathname === '/' ? ' border-b-light-text-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
@@ -65,11 +65,8 @@ function Menu() {
 
             </div>
           </div>
-
           <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Library</Link>
-          <div className='w-6 h-[25px] border-l border-l-light-border-line'></div>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>SC <GoGitBranch className='ml-[5px]' /></Link>
-          {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Rate This App</Link> */}
+
         </ul>
       </div>
 
@@ -103,9 +100,22 @@ function Menu() {
         </div>
       </form>
 
-      <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-2`}>
-        <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 text-main-color hover:bg-green-50     border border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
-        <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 bg-main-color text-white border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
+      <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
+        <div className='flex items-center gap-3 h-full w-fit min-w-fit'>
+          <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 text-main-color hover:bg-green-50     border border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
+          <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 bg-main-color text-white border-light-border-line text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
+        </div>
+        <div className='w-fit h-[25px] border-l border-l-light-border-line'></div>
+        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>SC <GoGitBranch className='ml-[5px]' /></Link>
+        {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-light-text-color'>Rate This App</Link> */}
+        <div className='h-full group text-light-text-color'>
+          <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent`}>Apps <GoChevronDown className='ml-[2px]' /></Link>
+          <div className={`absolute top-[90%] -right-[10px] min-w-[280px] min-h-fit z-10 bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
+            <div></div>
+            <span className='w-full h-[1px] bg-light-border-line mb-5 mt-3'></span>
+            
+          </div>
+        </div>
       </div>
     </div>
   )
