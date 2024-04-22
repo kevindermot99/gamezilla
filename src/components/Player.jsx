@@ -8,6 +8,7 @@ import { IoShuffleOutline } from "react-icons/io5";
 import { IoRepeat } from "react-icons/io5";
 import { IoVolumeHigh } from "react-icons/io5";
 
+
 function Player() {
 
   const id = 'book1';
@@ -46,13 +47,6 @@ function Player() {
     setIsPlaying(!isPlaying);
   };
 
-  const handleSeek = (e) => {
-    const seekTime = parseFloat(e.target.value);
-    setCurrentTime(seekTime);
-    audioRef.current.currentTime = seekTime;
-  };
-
-  
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -60,15 +54,27 @@ function Player() {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
+  const leftFillWidth = { width: `${(currentTime / duration) * 100}%` };
+
   return (
-    <div className='z-10 bg-stone-100 w-full h-[55px] flex justify-around items-center border-t border-t-light-border-line'>
-      <input
-        type="range"
-        className="appearance-none w-full h-4 rounded-full bg-gray-300 outline-none"
-        value={currentTime}
-        max={duration || 0}
-        onChange={handleSeek}
-      />
+    <div className='relative z-10 bg-stone-100 w-full h-[60px] pt-[3px] flex justify-around items-center '>
+
+      <div className='w-full h-[2px] absolute top-0 flex'>
+        <div className="absolute h-[2px] bg-main-color rounded-full -z-0" style={leftFillWidth}></div>
+        <div className="absolute h-[2px] bg-stone-200 rounded-full -z-10 w-full"></div>
+        <input
+          type="range"
+          className="absolute z-10 appearance-none w-full h-[2px] bg-transparent outline-none cursor-pointer"
+          value={currentTime}
+          max={duration || 0}
+          onChange={(e) => {
+            setCurrentTime(e.target.value);
+            audioRef.current.currentTime = e.target.value;
+          }}
+          title='Seek'
+        />
+      </div>
+
       <div className='flex gap-2'>
         <img src={res.URL} className={`h-9`} />
         <span className='flex flex-col text-light-text-color'>
@@ -77,18 +83,17 @@ function Player() {
         </span>
       </div>
       <div className='flex gap-4'>
-        <button><IoShuffleOutline className='text-2xl' /></button>
-        <button className=''><IoPlaySkipBack className='text-xl' /></button>
-        <button onClick={togglePlay} className='bg-main-color text-white h-[35px] w-[35px] flex items-center justify-center rounded-full '>
-          
+        <button><IoShuffleOutline className='text-2xl text-light-text-color transition hover:text-main-color' /></button>
+        <button className=''><IoPlaySkipBack className='text-xl text-light-text-color transition hover:text-main-color  ' /></button>
+        <button onClick={togglePlay} className='bg-light-text-color transition  hover:bg-main-color text-white h-[35px] w-[35px] flex items-center justify-center rounded-full '>
           {isPlaying ? <IoPause className='text-xl ' /> : <IoPlay className='text-2xl pl-[3px]' />}
         </button>
-        <button><IoPlaySkipForward className='text-xl' /></button>
-        <button><IoRepeat className='text-2xl' /></button>
+        <button><IoPlaySkipForward className='text-xl text-light-text-color transition hover:text-main-color' /></button>
+        <button><IoRepeat className='text-2xl text-light-text-color transition hover:text-main-color' /></button>
       </div>
       <div className='flex items-center justify-center '>
         <IoVolumeHigh className='text-2xl' />
-        <input type="range" className='ml-2 appearance-none w-full h-1 rounded-full bg-stone-300  outline-none' />
+        <input type="range" min={0} max={100} className='ml-2 appearance-none w-full h-1 rounded-full bg-stone-300 outline-none' />
         <audio ref={audioRef} src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" />
       </div>
     </div>
