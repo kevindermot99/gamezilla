@@ -85,16 +85,16 @@ function Player() {
       <div className='flex gap-4'>
         <button><IoShuffleOutline className='text-2xl text-light-text-color transition hover:text-main-color' /></button>
         <button className=''><IoPlaySkipBack className='text-xl text-light-text-color transition hover:text-main-color  ' /></button>
-        <button onClick={togglePlay} className='bg-light-text-color transition  hover:bg-main-color text-white h-[35px] w-[35px] flex items-center justify-center rounded-full '>
+        <button onClick={togglePlay} className='bg-light-text-color hover:bg-main-color transition  text-white h-[35px] w-[35px] flex items-center justify-center rounded-full '>
           {isPlaying ? <IoPause className='text-xl ' /> : <IoPlay className='text-2xl pl-[3px]' />}
         </button>
         <button><IoPlaySkipForward className='text-xl text-light-text-color transition hover:text-main-color' /></button>
         <button><IoRepeat className='text-2xl text-light-text-color transition hover:text-main-color' /></button>
       </div>
       <div className='flex items-center justify-center '>
-        <IoVolumeHigh className='text-2xl' />
-        <input type="range" min={0} max={100} className='ml-2 appearance-none w-full h-1 rounded-full bg-stone-300 outline-none' />
-        <audio ref={audioRef} src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" />
+        <IoVolumeHigh className='text-xl' />
+        <input type="range" min={0} max={100} className='ml-2 appearance-none w-[100px] h-1 cursor-pointer rounded-full bg-stone-300 outline-none' />
+        <audio ref={audioRef} src={res.audio} />
       </div>
     </div>
   )

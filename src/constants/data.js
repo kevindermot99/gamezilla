@@ -14,10 +14,13 @@ import avatar3 from "../assets/avatars/avatar red.png"
 import avatar4 from "../assets/avatars/avatar yellow.png"
 import avatar5 from "../assets/avatars/avatar tangerine.png"
 
+import audio1 from '../assets/audios/Harry Potter and the chamber of secrets.mp3'
+
 export const AppVersion = {
   Version: "v1.0",
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
 };
+
 
 export const Books = [
   {
@@ -28,6 +31,7 @@ export const Books = [
     about:
       "Second-year wizard Harry Potter faces peril at Hogwarts when students are petrified, leading him to uncover the hidden Chamber of Secrets to save the school.",
     likes: "1,092,294",
+    audio: audio1,
   },
   {
     id: "book2",
