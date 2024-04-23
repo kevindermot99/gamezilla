@@ -28,8 +28,10 @@ function Home() {
             <button className='bg-stone-400/50 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
           </div>
 
-          <div className='absolute right-12 rounded-xl ring-4 ring-stone-200/10 bg-body-color transition hover:ring-main-color hover:scale-110  max-lg:hidden cursor-pointer   '>
-            <img src={bannerImg} className='h-28 w-full aspect-video object-cover blur-[10px] rounded-xl opacity-35 ' alt="" />
+          <div className='absolute right-12 rounded-xl ring-4 w-[30%] max-w-[240px] p-5 bg-body-color max-lg:hidden  flex items-center justify-start overflow-clip overflow-x-auto  '>
+            <img src={bannerImg} className='h-20 w-full aspect-video object-cover rounded-xl opacity-35 ' alt="" />
+            <img src={bannerImg} className='h-20 w-full aspect-video object-cover rounded-xl opacity-35 ' alt="" />
+            <img src={bannerImg} className='h-20 w-full aspect-video object-cover rounded-xl opacity-35 ' alt="" />
           </div>
         </div>
       </div>
