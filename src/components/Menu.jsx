@@ -38,9 +38,7 @@ function Menu() {
     setQuickResult(false)
   }
 
-  useEffect(() => {
-    document.title = "Explore | GameGrid"
-  }, [])
+  
 
   const searchThis = (e) => {
     e.preventDefault();
