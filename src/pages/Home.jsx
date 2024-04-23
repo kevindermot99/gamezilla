@@ -4,9 +4,27 @@ import { Link } from 'react-router-dom'
 import bannerImg from '../assets/banner.jpg'
 import { PiArrowCounterClockwiseFill } from "react-icons/pi";
 import { PiArrowClockwiseFill } from "react-icons/pi";
+import { Games } from '../constants/data';
 
 
 function Home() {
+
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const randomGames = shuffleArray(Games).slice(0, 1);
+
+  console.log(randomGames)
+
+  
+
+  
   return (
     <div className=' h-svh overflow-y-auto flex flex-col text-text-color'>
       {/* MENU */}
