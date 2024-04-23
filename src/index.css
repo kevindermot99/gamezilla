@@ -64,17 +64,25 @@ html {
 }
 
 
-
-
-
-
-/* CUSTOM SELECT COLORS */
-/* ::-moz-selection {
-  color: white;
-  background: #8c52ff4b;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
 }
 
-::selection {
-  color: white;
-  background: #8c52ff4b;
-} */
+::-webkit-scrollbar-thumb {
+  background-color: #a5a5a527;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--main-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
