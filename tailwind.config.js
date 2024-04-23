@@ -29,9 +29,14 @@ export default {
       },
       colors: {
         // "main-color": "#8C52FF",
-        "main-color": "#00bf62",
-        "light-border-line": "#e8e8e8",
-        "light-text-color": "#191919",
+        "main-color": "#8db580",
+        "body-color": "#1c1c1c",
+        "border-line-color": "#343434",
+        "text-color": "#ebebeb",
+        "text-color": "#ebebeb",
+        "text-color-light": "#7e7e7e",
+        "container-color": "#232323",
+        "footer-color": "#161616",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
