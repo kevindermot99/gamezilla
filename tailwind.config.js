@@ -29,7 +29,7 @@ export default {
       },
       colors: {
         // "main-color": "#8C52FF",
-        "main-color": "#8d50c7",
+        "main-color": "#0197F6",
         "body-color": "#1c1c1c",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
