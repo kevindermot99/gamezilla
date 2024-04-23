@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Pagez from './pages/Pagez';
+import Home from './pages/Home';
 import PageError from './pages/PageError';
 
 
@@ -11,7 +11,7 @@ function App() {
     <div className='flex flex-col h-svh'>
       <Router>
         <Routes>
-          <Route path='/' element={<Pagez />} />
+          <Route path='/' element={<Home />} />
           <Route path='/*' element={<PageError />} />
         </Routes>
       </Router>
