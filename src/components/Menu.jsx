@@ -38,8 +38,6 @@ function Menu() {
     setQuickResult(false)
   }
 
-  
-
   const searchThis = (e) => {
     e.preventDefault();
   }

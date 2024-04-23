@@ -20,14 +20,14 @@ function Home() {
           </h1>
           <p className='font-light text-base max-w-[500px] tracking-wide leading-relaxed '>a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.</p>
           <div className='flex gap-1 items-start justify-start  '>
-            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>action</span>
-            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Shooter</span>
-            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Mission</span>
-            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Advanture</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/20 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>action</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/20 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Shooter</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/20 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Mission</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/20 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Advanture</span>
           </div>
           <div className='flex items-center gap-2'>
             <button className='bg-main-color h-[45px] flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Download</button>
-            <button className='bg-stone-200/10 text-white/60 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
+            <button className='bg-stone-200/10 hover:bg-stone-200/20 text-white/60 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
           </div>
 
           <div className='absolute right-12 mb-20 w-[30%] max-w-[350px] bg-transparent max-lg:hidden overflow-clip '>
@@ -42,8 +42,8 @@ function Home() {
           </div>
 
           <div className='bg-transparent self-center my-4 flex  gap-2'>
-            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:scale-110 transition text-2xl'><PiArrowCounterClockwiseFill /></button>
-            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:scale-110 transition text-2xl'><PiArrowClockwiseFill /></button>
+            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:-rotate-90   transition text-2xl'><PiArrowCounterClockwiseFill /></button>
+            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:rotate-90   transition text-2xl'><PiArrowClockwiseFill /></button>
           </div>
 
         </div>
