@@ -47,13 +47,13 @@ function Menu() {
   }
 
   return (
-    <div className='sticky top-0 z-50 bg-body-color  h-[55px] min-h-[55px] px-[24px] border-b text-light-text-color border-border-line-color flex items-center justify-between'>
+    <div className='fixed top-0 z-50 bg-transparent  h-[80px] w-full min-h-[55px] px-[24px] text-light-text-color flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> GameGrid</Link>
-          <div className='h-full group mr-5'>
-            <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent hover:border-b-main-color  ${location.pathname === '/' ? ' border-b-main-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
-            <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-body-color py-5 border border-border-line-color rounded-lg shadow  flex-col hidden group-hover:flex `}>
+          <div className='h-full group mr-5 flex items-center'>
+            <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-fit  ${location.pathname === '/' ? ' border-b-main-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
+            <div className={`absolute top-[80%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-body-color py-5 border border-border-line-color rounded-lg shadow  flex-col hidden group-hover:flex `}>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
               <Link to={`/search`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
@@ -63,14 +63,14 @@ function Menu() {
 
             </div>
           </div>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-main-color  '>Library</Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit '>Library</Link>
 
         </ul>
       </div>
 
-      <form onSubmit={searchThis} className='h-full w-full max-w-[600px] relative flex text-light-text-color'>
-        <label className='w-full relative overflow-hidden flex flex-col items-center justify-center z-20'>
-          <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-container-color placeholder:text-text-color-light  rounded-full h-[65%] w-full pl-9 pr-20 border border-border-line-color text-[15px] tracking-tight font-medium ' />
+      {/* <form onSubmit={searchThis} className='h-fit w-full max-w-[600px] relative flex text-light-text-color'>
+        <label className='w-full h-fit relative overflow-hidden flex flex-col items-center justify-center z-20'>
+          <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-stone-200 placeholder:text-text-color-light rounded-full h-[40px] w-full pl-9 pr-20 text-[15px] tracking-tight font-medium ' />
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
@@ -88,24 +88,15 @@ function Menu() {
             <Link to={`/`} className=' text-sm tracking-tight w-fit text-text-color-light hover:text-main-color font-medium px-5 rounded-xl transition '>Feedback</Link>
           </div>
         </div>
-      </form>
+      </form> */}
 
       <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
         <div className='flex items-center gap-3 h-full w-fit min-w-fit'>
-          <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 text-main-color bg-main-color/5 text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
-          <Link to={`/`} className={`h-[65%] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
+          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
+          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
-        <div className='w-fit h-[25px] border-l border-l-border-line-color'></div>
-        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-main-color  '>SC <GoGitBranch className='ml-[5px]' /></Link>
-        {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 mr-5 border-[3px] border-transparent hover:border-b-main-color '>Rate This App</Link> */}
-        <div className='h-full group text-light-text-color'>
-          <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent`}>Apps <GoChevronDown className='ml-[2px]' /></Link>
-          <div className={`absolute top-[90%] -right-[10px] min-w-[280px] min-h-fit z-10 bg-body-color py-5 border border-border-line-color rounded-lg shadow  flex-col hidden group-hover:flex `}>
-            <div></div>
-            <span className='w-full h-[1px] bg-border-line-color mb-5 mt-3'></span>
-            
-          </div>
-        </div>
+        <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
+        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit  '>SC <GoGitBranch className='ml-[5px]' /></Link>
       </div>
     </div>
   )
