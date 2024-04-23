@@ -60,7 +60,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 
