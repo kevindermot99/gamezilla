@@ -3,6 +3,12 @@ export const AppVersion = {
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
 };
 
+export const Games = [
+  {
+    
+  }
+]
+
 export const users = [
   {
     id: "QHNXEXCNBQGALHZXXA58",
