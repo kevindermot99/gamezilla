@@ -2,7 +2,8 @@ import React from 'react'
 import Menu from '../components/Menu'
 import { Link } from 'react-router-dom'
 import bannerImg from '../assets/banner.jpg'
-import { FaCirclePlay } from "react-icons/fa6";
+import { PiArrowCounterClockwiseFill } from "react-icons/pi";
+import { PiArrowClockwiseFill } from "react-icons/pi";
 
 
 function Home() {
@@ -28,15 +29,20 @@ function Home() {
             <button className='bg-stone-400/50 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
           </div>
 
-          <div className='absolute right-12 mb-14 w-[30%] max-w-[350px] py-2 bg-transparent max-lg:hidden flex items-center justify-start gap-2 overflow-clip overflow-x-auto  '>
-            <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
-            <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
-            <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+          <div className='absolute right-12 mb-20 w-[30%] max-w-[350px] bg-transparent max-lg:hidden overflow-clip '>
+            <h1 className='text-base font-medium text-text-color/80 '>Screenshots</h1>
+            <div className='w-full h-full overflow-x-auto flex items-center justify-start gap-2 py-3'>
+              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+            </div>
+
           </div>
 
-        <div className='bg-transparent self-center my-4 '>
-          
-        </div>
+          <div className='bg-transparent self-center my-4 flex  gap-2'>
+            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:scale-110 transition text-2xl'><PiArrowCounterClockwiseFill /></button>
+            <button className='bg-stone-400/20 hover:bg-stone-200/30 backdrop-blur-sm flex items-center p-2 rounded-full font-bold active:scale-110 transition text-2xl'><PiArrowClockwiseFill /></button>
+          </div>
 
         </div>
       </div>
