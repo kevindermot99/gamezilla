@@ -2,18 +2,35 @@ import React from 'react'
 import Menu from '../components/Menu'
 import { Link } from 'react-router-dom'
 import bannerImg from '../assets/banner.jpg'
-// importing images
+import { FaCirclePlay } from "react-icons/fa6";
 
 
 function Home() {
   return (
-    <div className=' h-svh overflow-y-auto flex flex-col '>
+    <div className=' h-svh overflow-y-auto flex flex-col text-text-color'>
       {/* MENU */}
       <Menu />
       <div className='relative w-full h-fit min-h-[600px] '>
-        <img src={bannerImg} className='absolute top-0 left-0 -z-10 w-full max-h-full object-cover object-left-top  ' />
-        <div className='z-40 w-full h-full bg-gradient-to-b from-body-color/80 to-transparent  '>
-          
+        <img src={bannerImg} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top    ' />
+        <div className='relative z-10 w-full h-full bg-body-color/65 flex flex-col items-start justify-end gap-3 p-12 '>
+          <h1 className='font-extrabold text-[90px] leading-[80px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
+            BattleField 4
+          </h1>
+          <p className='font-light text-base max-w-[500px] tracking-wide leading-relaxed '>a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.</p>
+          <div className='flex gap-1 items-start justify-start  '>
+            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>action</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Shooter</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Mission</span>
+            <span className='bg-stone-200/10 hover:bg-stone-200/30 px-3 py-1 text-white/60 capitalize rounded-full text-xs cursor-pointer font-light backdrop-blur-sm'>Advanture</span>
+          </div>
+          <div className='flex items-center gap-2'>
+            <button className='bg-main-color h-[45px] flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Download</button>
+            <button className='bg-stone-400/50 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
+          </div>
+
+          <div className='absolute right-12 rounded-xl ring-4 ring-stone-200/10 bg-body-color transition hover:ring-main-color hover:scale-110  max-lg:hidden cursor-pointer   '>
+            <img src={bannerImg} className='h-28 w-full aspect-video object-cover blur-[10px] rounded-xl opacity-35 ' alt="" />
+          </div>
         </div>
       </div>
 
