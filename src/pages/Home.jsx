@@ -13,7 +13,7 @@ function Home() {
       <Menu />
       <div className='relative w-full h-fit min-h-[630px] '>
         <img src={bannerImg} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top    ' />
-        <div className='relative z-10 w-full h-full bg-body-color/65 flex flex-col items-start justify-end gap-3 px-12 py-3 '>
+        <div className='relative z-10 w-full h-full bg-body-color/45 flex flex-col items-start justify-end gap-3 px-12 py-3 '>
           <h1 className='font-extrabold text-[90px] leading-[80px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
             BattleField 4
           </h1>
@@ -32,9 +32,11 @@ function Home() {
           <div className='absolute right-12 mb-20 w-[30%] max-w-[350px] bg-transparent max-lg:hidden overflow-clip '>
             <h1 className='text-base font-medium text-text-color/80 '>Screenshots</h1>
             <div className='w-full h-full overflow-x-auto flex items-center justify-start gap-2 py-3'>
-              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
-              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
-              <img src={bannerImg} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={'https://media.moddb.com/cache/images/members/1/422/421372/thumb_620x2000/bf4_2013-11-24_12-16-14-09.jpg'} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={'https://www.ps3blog.net/wp-content/uploads/Alley.jpg'} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={'https://www.newgamenetwork.com/images/uploads/gallery/BF4/Battlefield4PC24.jpg'} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={'https://www.newgamenetwork.com/images/uploads/gallery/Battlefield3/bf3%202011-11-05%2016-39-32-61.jpg'} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
+              <img src={'https://www.newgamenetwork.com/images/uploads/gallery/Battlefield3/battlefield3_19.jpg'} className='h-32 w-fit object-cover rounded-2xl ' alt="" />
             </div>
 
           </div>
