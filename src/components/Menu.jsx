@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Logo from '../assets/images/logo.png'
-import Logo35 from '../assets/images/logo 35.png'
-import { FaChild } from "react-icons/fa6";
 import { GoChevronDown } from "react-icons/go";
 import { TbSearch } from "react-icons/tb";
 import { GoGitBranch } from "react-icons/go";
@@ -52,7 +49,7 @@ function Menu() {
     <div className='sticky top-0 z-50 bg-white h-[55px] min-h-[55px] px-[24px] border-b text-light-text-color border-light-border-line flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
-          <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px] mr-1' src={Logo} alt="" /> Pagez</Link>
+          <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-6'><img className='h-[35px] mr-1' src='{Logo}' alt="" /> Pagez</Link>
           <div className='h-full group mr-5'>
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-[100%] transition duration-100 border-[3px] border-transparent hover:border-b-light-text-color ${location.pathname === '/' ? ' border-b-light-text-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
             <div className={`absolute top-[90%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-white py-5 border border-light-border-line rounded-lg shadow  flex-col hidden group-hover:flex `}>
@@ -94,7 +91,7 @@ function Menu() {
           </div>
           <span className='w-full h-fit border-b border-light-border-line my-4'></span>
           <div className='px-4 flex flex-col gap-2'>
-            <Link to={`/`} className=' text-sm tracking-tight w-fit text-light-text-color text-opacity-55 font-medium px-5 rounded-xl transition hover:text-main-color'>Request a book</Link>
+            <Link to={`/`} className=' text-sm tracking-tight w-fit text-light-text-color text-opacity-55 font-medium px-5 rounded-xl transition hover:text-main-color'>Request a game</Link>
             <Link to={`/`} className=' text-sm tracking-tight w-fit text-light-text-color text-opacity-55 font-medium px-5 rounded-xl transition hover:text-main-color'>Feedback</Link>
           </div>
         </div>
