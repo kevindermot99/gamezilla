@@ -20,7 +20,7 @@ function Home() {
       {bannerGame &&
         <div className='relative w-full h-fit min-h-[600px] '>
           <img src={bannerGame.banner} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top ' />
-          <div className='absolute top-0 w-full h-full left-0 bg-gradient-to-tr from-body-color/80 to-body-color/10  '></div>
+          <div className='absolute top-0 w-full h-full left-0 bg-gradient-to-tr from-body-color/90 to-body-color/30  '></div>
           <div className='relative z-10 w-full h-full flex flex-col items-start justify-end gap-3 p-12'>
             <h1 className='font-extrabold text-[70px] leading-[85px] lg:max-w-[1000px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
               {bannerGame.title}
