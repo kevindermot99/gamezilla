@@ -17,7 +17,7 @@ function Home() {
 
   const id = localStorage.getItem("BannerMovieId") || '1';
   const bannerGame = Games.find(game => game.id === id)
- 
+
   const handleBanner = (id) => {
     localStorage.setItem("BannerMovieId", id);
   }
@@ -28,12 +28,12 @@ function Home() {
       <Menu />
       {bannerGame &&
         <div className='relative w-full h-fit min-h-[600px] overflow-clip '>
-          <div className={`absolute top-0 left-0 bg-body-color w-full h-full flex items-center justify-center transition-opacity duration-500 z-50 ${!isLoading ? 'opacity-100 z-50 ' : 'opacity-0 -z-0 '}`}>
+          <div className={`absolute top-0 left-0 bg-body-color w-full h-full flex items-center justify-center transition-opacity duration-500 z-10 ${!isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>
             <TbLoader2 className='animate-spinLoader text-text-color-light text-[40px] ' />
           </div>
           <img onLoad={handleLoading} src={bannerGame.banner} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top select-none ' />
-          <div className='absolute top-0 w-full h-full left-0 bg-body-color/60   '></div>
-          <div className='relative z-20 w-full h-full flex flex-col items-start justify-end p-12 max-sm:p-5'>
+          <div className='absolute top-0 w-full h-full left-0 bg-body-color/60'></div>
+          <div className={`relative w-full h-full flex flex-col items-start justify-end p-12 max-sm:p-5 z-10 ${isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>
             <h1 className='font-extrabold text-[65px] transition leading-[80x] lg:max-w-[1000px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
               {bannerGame.title}
             </h1>
@@ -62,7 +62,7 @@ function Home() {
         <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-3'>
           {Games.map((game, index) => (
             <Link key={index} to={`/`} className='group flex flex-col' onClick={() => handleBanner(game.id)}>
-              <div className='p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
+              <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
                 <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-lg opacity-85 group-hover:opacity-65  ' />
               </div>
               <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>

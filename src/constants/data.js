@@ -193,7 +193,7 @@ export const Games = [
   },
   {
     id: '16',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
+    banner: 'https://mrwallpaper.com/images/hd/capcom-resident-evil-village-poster-vm6qlj48jz14xo0l.jpg',
     poster: 'https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png',
     title: 'Resident Evil Village',
     description: 'Face off against grotesque creatures and uncover dark secrets in this survival horror game.',
