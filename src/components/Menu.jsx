@@ -94,11 +94,11 @@ function Menu() {
 
       <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
         <div className='flex items-center gap-3 h-full w-fit min-w-fit'>
-          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full transition hover:opacity-70  `}>Log In</Link>
+          <Link to={`/login`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full transition hover:opacity-70 `}>Log In</Link>
           <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
         <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
-        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></Link>
+        <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
       </div>
     </div>
   )
