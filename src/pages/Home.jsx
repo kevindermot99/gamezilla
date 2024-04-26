@@ -3,6 +3,7 @@ import Menu from '../components/Menu'
 import { Games } from '../constants/data';
 import { FaMedal } from "react-icons/fa6";
 import { FaRankingStar } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -38,10 +39,26 @@ function Home() {
           </div>
           <div className='absolute z-10 bottom-12 right-12 w-fit group '>
             <p className='absolute -top-[50px] -right-5 whitespace-nowrap bg-body-color/50 backdrop-blur-md py-2 px-3 rounded-xl text-sm font-light tracking-wide  text-text-color/70 pointer-events-none opacity-0 scale-95 transition group-hover:opacity-100 group-hover:scale-100 shadow-lg'>Most Downloaded Badge</p>
-            <FaMedal className='text-white/60 text-[40px] cursor-help transition group-hover:text-white/80 group-hover:scale-110   ' />
+            <FaMedal className='text-white/60 text-[35px] cursor-help transition group-hover:text-white/80 group-hover:scale-110   ' />
           </div>
         </div>
       }
+      <div className='p-12 max-w-[1400px] mx-auto'>
+        <h1 className='text-xl '>Explore Games</h1>
+        <div className='grid grid-cols-7 my-8 gap-2'>
+          {Games.map((game, index) => (
+            <Link key={index} to={`/`} className='group'>
+            <div className='p-[2px] ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
+              <img src={game.poster} className='bg-container-color aspect-square object-cover object-top rounded-lg opacity-85 group-hover:opacity-65  ' />
+            </div>
+            <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
+              {game.title}
+            </h1>
+          </Link>
+          ))}
+          
+        </div>
+      </div>
 
     </div>
   )
