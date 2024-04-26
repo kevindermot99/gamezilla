@@ -18,11 +18,11 @@ function Home() {
       {/* MENU */}
       <Menu />
       {bannerGame &&
-        <div className='relative w-full h-fit min-h-[600px] '>
+        <div className='relative w-full h-fit min-h-[600px] overflow-clip '>
           <img src={bannerGame.banner} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top ' />
-          <div className='absolute top-0 w-full h-full left-0 bg-gradient-to-tr from-body-color/90 to-body-color/30  '></div>
+          <div className='absolute top-0 w-full h-full left-0 bg-gradient-to-tr from-body-color to-body-color/30  '></div>
           <div className='relative z-10 w-full h-full flex flex-col items-start justify-end gap-3 p-12'>
-            <h1 className='font-extrabold text-[70px] leading-[85px] lg:max-w-[1000px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
+            <h1 className='font-extrabold text-[75px] transition leading-[85px] lg:max-w-[1000px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
               {bannerGame.title}
             </h1>
             <p className='font-light text-base max-w-[600px] tracking-wide leading-relaxed mb-2 '>
@@ -35,7 +35,7 @@ function Home() {
             </div>
             <div className='flex items-center gap-2'>
               <button className='bg-main-color h-[45px] flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Download</button>
-              <button className='bg-stone-200/10 hover:bg-stone-200/20 text-white/60 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Open Trailer</button>
+              <button className='bg-stone-200/10 hover:bg-stone-200/20 text-white/60 h-[45px] backdrop-blur-sm flex items-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Gameplay</button>
             </div>
 
             
