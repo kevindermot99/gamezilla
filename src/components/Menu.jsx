@@ -4,6 +4,7 @@ import { GoChevronDown } from "react-icons/go";
 import { TbSearch } from "react-icons/tb";
 import { GoGitBranch } from "react-icons/go";
 import Logo from '../assets/logo.png'
+import Badge from './Badge';
 
 function Menu() {
   const location = useLocation();
@@ -47,19 +48,11 @@ function Menu() {
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> GameGrid</Link>
-          <div className='h-full group mr-5 flex items-center'>
-            <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-fit  ${location.pathname === '/' ? ' border-b-main-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
-            <div className={`absolute top-[80%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-body-color/30 backdrop-blur-md py-5 rounded-lg shadow-xl flex-col hidden group-hover:flex `}>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
-              <Link to={`/search`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
-              <span className='w-full h-[1px] bg-border-line-color mb-5 mt-3'></span>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/AudioBooks' && 'text-main-color '}`}>Audiobooks</Link>
-              <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6  hover:text-main-color transition duration-100 `}>PDF Books</Link>
-
-            </div>
-          </div>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit '>Library</Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'> Games</Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Low-end PC's`}>Low-end PC Gamez</Link>
+          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Copyright Claim`}>CC</Link>
+          {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70  '>My Games </Link> */}
 
         </ul>
       </div>
@@ -88,11 +81,11 @@ function Menu() {
 
       <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
         <div className='flex items-center gap-3 h-full w-fit min-w-fit'>
-          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full `}>Log In</Link>
+          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full transition hover:opacity-70  `}>Log In</Link>
           <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
         <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
-        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit  '>SC <GoGitBranch className='ml-[5px]' /></Link>
+        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70  '>SC <GoGitBranch className='ml-[5px]' /></Link>
       </div>
     </div>
   )
