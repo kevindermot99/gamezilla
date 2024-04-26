@@ -44,7 +44,7 @@ function Menu() {
   }
 
   return (
-    <div className='fixed top-0 z-50 bg-transparent  h-[80px] w-full min-h-[55px] px-[24px] text-light-text-color flex items-center justify-between'>
+    <div className='sticky top-0 z-50 h-fit w-full bg-body-color/80 backdrop-blur-sm px-[24px] py-4 text-light-text-color flex items-center justify-between'>
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> GameGrid</Link>
