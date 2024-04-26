@@ -48,12 +48,11 @@ function Menu() {
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> GameGrid</Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'> Games</Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Low-end PC's`}>Low-end PC Gamez</Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Copyright Claim`}>CC</Link>
+          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
+          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'> Games</Link>
+          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Low-end PC Games`}>Low-end PC's</Link>
+          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Copyright Claim`}>Cc</Link>
           {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70  '>My Games </Link> */}
-
         </ul>
       </div>
 
@@ -85,7 +84,7 @@ function Menu() {
           <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
         <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
-        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70  '>SC <GoGitBranch className='ml-[5px]' /></Link>
+        <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></Link>
       </div>
     </div>
   )

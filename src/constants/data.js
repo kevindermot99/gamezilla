@@ -1,4 +1,3 @@
-import { Screenshot } from "@mui/icons-material";
 
 export const AppVersion = {
   Version: "v1.0",
