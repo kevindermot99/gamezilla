@@ -111,7 +111,7 @@ export const Games = [
     banner: 'https://myhotposters.com/cdn/shop/products/mL5984_1024x1024.jpg?v=1643974604',
     poster: 'https://i.ebayimg.com/images/g/YXcAAOSwspNi-6cY/s-l1200.webp',
     title: 'Horizon Forbidden West',
-    description: ' continues the story of Aloy (Ashly Burch), a young hunter of the Nora tribe and a clone of the Old World scientist Elisabet Sobeck, as she leads a band of companions on a quest to the frontier region known as the Forbidden West to find the source of a mysterious plague that kills all it infects.',
+    description: ' continues the story of Aloy (Ashly Burch), a young hunter of the Nora tribe and a clone of the Old World scientist Elisabet Sobeck, as she leads a band of companions on a quest to the frontier region known as the Forbidden West to find the source of a mysterious plague that kills all it infects',
     genres: {
       genre1: 'Action',
       genre2: 'Adventure'
@@ -132,127 +132,67 @@ export const Games = [
   },
   {
     id: '11',
-    banner: 'https://images.nvidia.com/geforce-com/international/geforce-now/games/just-cause-4/just-cause-4-gfn-hero-1920x1080.jpg',
-    poster: 'https://store.steampowered.com/app/517630/Just_Cause_4/',
+    banner: 'https://myhotposters.com/cdn/shop/products/mL2682_1024x1024.jpg?v=1571445578',
+    poster: 'https://m.media-amazon.com/images/M/MV5BMzI2NzNjYjctMmRiZS00MDRjLWFmNDQtOGQzOWVlZjVhOTg2XkEyXkFqcGdeQXVyNzg3NjQyOQ@@._V1_.jpg',
     title: 'Just Cause 4',
-    description: 'Cause chaos and destruction in an open-world sandbox filled with explosive action.',
+    description: 'Rico Rodriguez fights against a paramilitary group called the Black Hand who have very sinister plans to test experimental weather weaponry',
     genres: {
       genre1: 'Action',
-      genre2: 'Adventure'
+      genre2: 'Adventure',
+      genre2: 'Third-person shooter',
     },
-    downloads: 'N/A'
+    downloads: '49234'
   },
   {
     id: '12',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1203220/header.jpg',
-    poster: 'https://store.steampowered.com/app/1203220/Dying_Light_2_Stay_Human/',
+    banner: 'https://cdn.mos.cms.futurecdn.net/4L2MLiPnTT5hMHbCqgyjAc.jpg',
+    poster: 'https://i.gadgets360cdn.com/products/large/dying-1000x1392-1643694120.jpg',
     title: 'Dying Light 2: Stay Human',
-    description: 'Survive in a decaying urban environment filled with infected creatures and warring factions.',
+    description: 'Aiden, a survivor of childhood experiments under the research of GRE, an organization faulted for the current zombie outbreak',
     genres: {
       genre1: 'Action',
-      genre2: 'Survival horror'
+      genre2: 'horror'
     },
-    downloads: 'N/A'
+    downloads: '580399'
   },
   {
     id: '13',
-    banner: 'https://static-ca.ebgames.ca/images/products/733214/3max.jpg',
-    poster: 'https://www.ea.com/en-gb/games/apex-legends',
-    title: 'Apex Legends',
-    description: 'Battle it out in fast-paced, squad-based combat in this free-to-play battle royale game.',
+    banner: 'https://i.ytimg.com/vi/vEwUtcDkOgs/maxresdefault.jpg',
+    poster: 'https://m.media-amazon.com/images/M/MV5BZjBlMGFlYTMtZTY0NS00YTgwLWFjNjMtODUwNWE5NDBiNzk1XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg',
+    title: 'Need For Speed The Run',
+    description: 'Jack Rourke (Sean Faris), an experienced street racer, finds himself in serious trouble with the Mob due to a massive debt with them',
     genres: {
       genre1: 'Action',
-      genre2: 'First-person shooter'
+      genre2: 'Racing'
     },
-    downloads: 'N/A'
+    downloads: '495013'
   },
   {
     id: '14',
-    banner: 'https://static-ca.ebgames.ca/images/products/733214/3max.jpg',
-    poster: 'https://www.ea.com/en-gb/games/apex-legends',
-    title: 'Apex Legends',
-    description: 'Battle it out in fast-paced, squad-based combat in this free-to-play battle royale game.',
+    banner: 'https://images.blz-contentstack.com/v3/assets/bltf408a0557f4e4998/blt87c492aadbab0132/61f1e92205b0f60369b8cd41/20307-mobile-background.png',
+    poster: 'https://image.api.playstation.com/vulcan/img/rnd/202008/1301/raryqz0xAsk3HutslehRAW4A.png',
+    title: 'Call of Duty: Modern Warfare 2',
+    description: 'follows Task Force 141, a multinational special forces unit commanded by Captain Soap MacTavish as they hunt Vladimir Makarov, leader of the Russian Ultranationalist party',
     genres: {
       genre1: 'Action',
       genre2: 'First-person shooter',
     },
-    downloads: "N/A"
+    downloads: "13909322"
+  },
+  {
+    id: '15',
+    banner: 'https://i.ytimg.com/vi/K-5EdHZ0hBs/maxresdefault.jpg',
+    poster: 'https://assets1.ignimgs.com/2017/06/02/need-for-speed-payback-button-00-1496438898941.jpg',
+    title: 'Need For Speed payback',
+    description: `After being double-crossed and forced into exile Tyler and his crew attempt to take down The House who control Fortune Valley's underworld`,
+    genres: {
+      genre1: 'Racing',
+      genre1: 'Advanture',
+    },
+    downloads: '966480'
   },
   {
     id: '16',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1238860/header.jpg',
-    poster: 'https://store.steampowered.com/app/1238860/Back_4_Blood/',
-    title: 'Back 4 Blood',
-    description: 'Fight against hordes of ravenous zombies in intense co-op gameplay from the creators of Left 4 Dead.',
-    genres: {
-      genre1: 'Action',
-      genre2: 'First-person shooter'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '17',
-    banner: 'https://www.gameinformer.com/sites/default/files/styles/thumbnail/public/2022/02/01/7b1f7b3d/elden%20ring%20banner%20-%20revised.png',
-    poster: 'https://en.bandainamcoent.eu/elden-ring/elden-ring',
-    title: 'Elden Ring',
-    description: 'Unravel the mysteries of the Elden Ring and engage in challenging combat in a vast open world.',
-    genres: {
-      genre1: 'Action',
-      genre2: 'Adventure'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '18',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/244850/header.jpg',
-    poster: 'https://store.steampowered.com/app/244850/The_Forest/',
-    title: 'The Forest',
-    description: 'Survive in a mysterious forest filled with cannibalistic mutants in this open-world survival horror game.',
-    genres: {
-      genre1: 'Survival',
-      genre2: 'Horror'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '19',
-    banner: 'https://images.nvidia.com/geforce-com/international/geforce-now/games/horizon-zero-dawn-complete-edition/horizon-zero-dawn-complete-edition-gfn-hero-1920x1080.jpg',
-    poster: 'https://store.steampowered.com/app/1151640/Horizon_Zero_Dawn_Complete_Edition/',
-    title: 'Horizon Zero Dawn',
-    description: 'Uncover the secrets of a post-apocalyptic world overrun by robotic creatures in this action RPG.',
-    genres: {
-      genre1: 'Action',
-      genre2: 'Adventure'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '20',
-    banner: 'https://www.twinfinite.net/wp-content/uploads/2021/07/Nier-Automata.jpg',
-    poster: 'https://store.steampowered.com/app/524220/NieR_Automata/',
-    title: 'NieR: Automata',
-    description: 'Experience a captivating story and fast-paced combat in this action-packed RPG set in a dystopian future.',
-    genres: {
-      genre1: 'Action',
-      genre2: 'Role-playing'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '21',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg',
-    poster: 'https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/',
-    title: 'The Witcher 3: Wild Hunt',
-    description: 'Embark on an epic journey as Geralt of Rivia in this critically acclaimed open-world RPG.',
-    genres: {
-      genre1: 'Action',
-      genre2: 'Adventure',
-      genre3: 'Role-playing'
-    },
-    downloads: 'N/A'
-  },
-  {
-    id: '22',
     banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
     poster: 'https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png',
     title: 'Resident Evil Village',
@@ -261,7 +201,7 @@ export const Games = [
       genre1: 'Survival',
       genre2: 'Horror'
     },
-    downloads: 'N/A'
+    downloads: '134322'
   },
 
 ]
