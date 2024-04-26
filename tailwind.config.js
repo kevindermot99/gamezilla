@@ -49,6 +49,7 @@ export default {
         fade: 'fadeIn .1s ease-in-out',
         goingTop: 'goingTop .3s',
         spinLoader: 'spin .4s linear infinite',
+        zoom: 'zoom .6s linear 1',
       },
 
       // that is actual animation
@@ -60,6 +61,10 @@ export default {
         goingTop: {
           '0%':{transform: 'translateY(100vh) scale(.5)'},
           '100%':{transform: 'translateY(0vh) scale(1)'}
+        },
+        zoom: {
+          '0%':{transform: ' scale(1.1) '},
+          '100%':{transform: ' scale(1)'}
         }
       }),
     },
