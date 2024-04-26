@@ -187,7 +187,7 @@ export const Games = [
     description: `After being double-crossed and forced into exile Tyler and his crew attempt to take down The House who control Fortune Valley's underworld`,
     genres: {
       genre1: 'Racing',
-      genre1: 'Advanture',
+      genre2: 'Advanture',
     },
     downloads: '966480'
   },
