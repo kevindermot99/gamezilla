@@ -61,7 +61,7 @@ function Menu() {
     <div className={`fixed z-20 h-fit w-full px-[24px] py-4 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500  bg-body-color ${scrollPosition > 60 ? 'bg-body-color ' : 'bg-transparent '} `}>
       <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
-          <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> Gamezilla</Link>
+          <Link to="/" className='text-2xl font-bold flex items-center tracking-tight mr-8'>Gamezilla.</Link>
           <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
           <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'> Games</Link>
           <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Low-end PC Games`}>Low-end PC's</Link>
