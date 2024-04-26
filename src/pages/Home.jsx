@@ -38,7 +38,7 @@ function Home() {
           </div>
           <div className='absolute z-10 bottom-12 right-12 w-fit group '>
             <p className='absolute -top-[50px] -right-5 whitespace-nowrap bg-body-color/50 backdrop-blur-md py-2 px-3 rounded-xl text-sm font-light tracking-wide  text-text-color/70 pointer-events-none opacity-0 scale-95 transition group-hover:opacity-100 group-hover:scale-100 shadow-lg'>Most Downloaded Badge</p>
-            <FaMedal className='text-white/40 text-[40px] cursor-help transition group-hover:text-white/60 group-hover:scale-110   ' />
+            <FaMedal className='text-white/60 text-[40px] cursor-help transition group-hover:text-white/80 group-hover:scale-110   ' />
           </div>
         </div>
       }
