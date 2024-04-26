@@ -8,7 +8,7 @@ export const AppVersion = {
 export const Games = [
   {
     id: '1',
-    banner: 'https://wallpapers.com/images/hd/1920x1080-battlefield-4-background-alo4o8v9slydkx3u.jpg',
+    banner: 'https://r4.wallpaperflare.com/wallpaper/452/912/964/battlefield-4-wallpaper-8910a83d416abd8b86b7781f20c1a60d.jpg',
     title: 'Battlefield 4',
     description: 'a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.',
     genres: {
