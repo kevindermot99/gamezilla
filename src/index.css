@@ -63,9 +63,10 @@ html {
   color-scheme: dark;
 }
 
+
 ::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {

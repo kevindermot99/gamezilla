@@ -32,7 +32,7 @@ export const Games = [
   },
   {
     id: '3',
-    banner: 'https://cdnb.artstation.com/p/assets/images/images/061/794/417/large/favorisxp-fryxyt9wiaaykfs.jpg',
+    banner: 'https://cdna.artstation.com/p/assets/images/images/044/454/246/large/glitch5970-sunset-chief.jpg',
     poster: 'https://m.media-amazon.com/images/I/81YMKsZX8ZL._AC_UF894,1000_QL80_.jpg',
     title: 'Halo Infinite',
     description: 'The next chapter of the legendary franchise begins with a new, epic sci-fi adventure.',
