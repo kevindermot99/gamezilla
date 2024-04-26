@@ -15,7 +15,7 @@ export const Games = [
       genre1: 'Action',
       genre2: 'First-person shooter'
     },
-    downloads: '239,924'
+    downloads: '2924'
   },
   {
     id: '2',
@@ -28,7 +28,7 @@ export const Games = [
       genre2: 'First-person shooter',
       genre3: 'Adventure',
     },
-    downloads: '239,924'
+    downloads: '23992'
   },
   {
     id: '3',
@@ -41,7 +41,7 @@ export const Games = [
       genre2: 'First-person shooter',
       genre3: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '85309'
   },
   {
     id: '4',
@@ -54,80 +54,81 @@ export const Games = [
       genre2: 'First-person shooter',
       genre3: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '2947'
   },
   {
     id: '5',
-    banner: 'https://cdn.mos.cms.futurecdn.net/6t8UyQj6T7vRte98cKXzvn-1200-80.jpg',
-    poster: 'https://www.ubisoft.com/en-us/game/far-cry-6',
+    banner: 'https://assetsio.gnwcdn.com/far-cry-6-anton-diego-artwork.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp-',
+    poster: 'https://store.ubisoft.com/on/demandware.static/-/Sites-masterCatalog/default/dw7387f247/images/large/5ecd2c925cdf9a1528a8c1d1.jpg',
     title: 'Far Cry 6',
-    description: 'Fight against tyranny and oppression in a tropical paradise filled with danger and revolution.',
+    description: `A 1967 guerrilla revolution that toppled the presidency of his father led to Yara's isolation from the rest of the world`,
     genres: {
       genre1: 'Action',
       genre2: 'First-person shooter',
       genre3: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '82384'
   },
   {
     id: '6',
-    banner: 'https://image.api.playstation.com/vulcan/ap/rnd/202008/2501/FIdGABRLcUgnXIt3L7tK5TGO.png',
-    poster: 'https://www.playstation.com/en-us/games/god-of-war-ragnarok/',
+    banner: 'https://www.gematsu.com/wp-content/uploads/2021/10/Game-Page-Featured_GoW-Ragnarok.jpg',
+    poster: 'https://m.media-amazon.com/images/M/MV5BMDQ1MmQ5NTItZTk0ZS00M2E5LTkzNmQtNDI2YWMyOGFlZWVjXkEyXkFqcGdeQXVyOTg3NjI1MTg@._V1_.jpg',
     title: 'God of War: Ragnarok',
-    description: 'Join Kratos and Atreus on a journey through Norse mythology in this epic sequel to God of War.',
+    description: 'This centers on Kratos, the God of War, and his now teenage son, Atreus, who are facing the conflict of the upcoming Ragnarök, due to the result of Kratos killing Norse God, Baldur, while setting on their to end tyranny reign of Odin, King of Asgard and while focusing off Atreus, who tries to uncover his origins.',
     genres: {
       genre1: 'Action',
       genre2: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '75643'
   },
   {
     id: '7',
-    banner: 'https://www.mobygames.com/images/covers/l/693049-hitman-3-playstation-5-front-cover.jpg',
-    poster: 'https://hitman.com/global/home',
+    banner: 'https://assets1.ignimgs.com/2021/01/19/hitman-3-1280-1611050387812_160w.jpg?width=1280',
+    poster: 'https://m.media-amazon.com/images/M/MV5BMzU3NGMzMTUtNTgzZS00MTg3LTk2MGYtYmFjMDRiNDJkNTRlXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg',
     title: 'Hitman 3',
-    description: 'Become the ultimate assassin as you travel the world and eliminate high-profile targets.',
+    description: '47 and Grey seek revenge on Providence for turning them both into assassins through childhood conditioning and genetic experimentation, while Diana is motivated by the death of her parents',
     genres: {
       genre1: 'Action',
       genre2: 'Stealth'
     },
-    downloads: 'N/A'
+    downloads: '129424'
   },
   {
     id: '8',
-    banner: 'https://www.somagnews.com/wp-content/uploads/2022/01/Final-Fantasy-XVI-will-be-exclusively-PS5-for-6-months.jpg',
-    poster: 'https://square-enix-games.com/en_GB/games/final-fantasy-xvi',
+    banner: 'https://helios-i.mashable.com/imagery/articles/04JJOJgAq7slrBufh9PGOCO/hero-image.fill.size_1248x702.v1686934620.png',
+    poster: 'https://m.media-amazon.com/images/M/MV5BOTE4NmVjMWItMWQzMy00MDQ5LTk3ZWMtNTRhNDllNjdiMDA1XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg',
     title: 'Final Fantasy XVI',
-    description: 'Embark on a grand adventure in the latest installment of the beloved Final Fantasy series.',
+    description: 'follows Clive Rosfield as he embarks on an epic journey of discovery and revenge',
     genres: {
+      genre2: 'Action',
       genre1: 'Role-playing',
-      genre2: 'Adventure'
+      genre2: 'Adventure',
     },
-    downloads: 'N/A'
+    downloads: '24992'
   },
   {
     id: '9',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1355150/header.jpg',
-    poster: 'https://store.steampowered.com/app/1355150/Horizon_Forbidden_West/',
+    banner: 'https://myhotposters.com/cdn/shop/products/mL5984_1024x1024.jpg?v=1643974604',
+    poster: 'https://i.ebayimg.com/images/g/YXcAAOSwspNi-6cY/s-l1200.webp',
     title: 'Horizon Forbidden West',
-    description: 'Discover a stunning post-apocalyptic world and uncover the mysteries of the Forbidden West.',
+    description: ' continues the story of Aloy (Ashly Burch), a young hunter of the Nora tribe and a clone of the Old World scientist Elisabet Sobeck, as she leads a band of companions on a quest to the frontier region known as the Forbidden West to find the source of a mysterious plague that kills all it infects.',
     genres: {
       genre1: 'Action',
       genre2: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '209860'
   },
   {
     id: '10',
-    banner: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg',
-    poster: 'https://store.steampowered.com/app/1145360/Elden_Ring/',
+    banner: 'https://press-start.com.au/wp-content/uploads/2022/02/Elden-Ring-Reviewwww.jpg',
+    poster: 'https://m.media-amazon.com/images/I/61tttHU3WfL.jpg',
     title: 'Elden Ring',
-    description: 'Journey through a dark fantasy world filled with terrifying enemies and epic bosses.',
+    description: 'takes place in the Lands Between, a fictional realm over which several demigods rule',
     genres: {
       genre1: 'Action',
       genre2: 'Adventure'
     },
-    downloads: 'N/A'
+    downloads: '448022'
   },
   {
     id: '11',
