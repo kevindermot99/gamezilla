@@ -49,7 +49,7 @@ function Menu() {
           <Link to="/" className='text-xl font-bold flex items-center tracking-tighter mr-8'><img src={Logo} className='h-[40px] mr-2' alt="" /> GameGrid</Link>
           <div className='h-full group mr-5 flex items-center'>
             <Link to="/" className={`text-[15px] font-semibold flex items-center tracking-wide h-fit  ${location.pathname === '/' ? ' border-b-main-color ' : ''}`}>Explore <GoChevronDown className='ml-[2px]' /></Link>
-            <div className={`absolute top-[80%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-body-color py-5 border border-border-line-color rounded-lg shadow  flex-col hidden group-hover:flex `}>
+            <div className={`absolute top-[80%] left-[70px] min-w-[180px] min-h-[100px] z-10 bg-body-color/30 backdrop-blur-md py-5 rounded-lg shadow-xl flex-col hidden group-hover:flex `}>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 ${location.pathname === '/' && 'text-main-color '}`}>For You</Link>
               <Link to={`/search`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Search & Explore</Link>
               <Link to={`/`} className={`text-[14px] font-semibold flex items-center tracking-wide px-6 pb-2 hover:text-main-color transition duration-100 `}>Pagez for Kids</Link>
