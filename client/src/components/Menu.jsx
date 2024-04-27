@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { GoChevronDown } from "react-icons/go";
 import { TbSearch } from "react-icons/tb";
 import { GoGitBranch } from "react-icons/go";
 import Logo from '../assets/logo.png'
 import Badge from './Badge';
+import { TbLogout2 } from "react-icons/tb";
+import { RiAccountCircleLine } from "react-icons/ri";
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -14,6 +16,7 @@ function Menu({ userId }) {
   const [quickResult, setQuickResult] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [username, setUserName] = useState('')
+  const navigate = useNavigate()
 
 
   const handleSearchValue = (e) => {
@@ -62,8 +65,15 @@ function Menu({ userId }) {
       const res = localStorage.getItem('gamezillaUsername')
       setUserName(res)
     }
-  },[userId])
-  
+  }, [userId])
+
+  const handleLogout = () => {
+    localStorage.removeItem('gamezillaUsername')
+    localStorage.removeItem('gamezillaUserId')
+
+    window.location.reload()
+  }
+
 
   return (
     <div className={`fixed z-20 h-fit w-full px-[24px] py-4 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500  bg-body-color ${scrollPosition > 60 ? 'bg-body-color ' : 'bg-transparent '} `}>
@@ -105,9 +115,15 @@ function Menu({ userId }) {
           <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
         {userId !== 'none' && (
-          <div className={`flex items-center gap-2 h-full w-fit min-w-fit ${userId === 'none' && 'hidden'}`}>
+          <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
             <p className='bg-main-color  backdrop-blur-md text-white h-8 aspect-square flex items-center justify-center capitalize font-mono font-bold text-2xl rounded-full  '>{username.charAt(0)}</p>
             <p>{username}</p>
+            <div className='absolute top-[30px] pt-3 right-0 w-fit min-w-[200px] h-fit opacity-0 -z-50 pointer-events-none group-hover:opacity-100 group-hover:z-10 -translate-y-4 group-hover:translate-y-0 transition group-hover:pointer-events-auto   '>
+              <div className='bg-container-color bad rounded-lg p-2 w-full h-full'>
+              <button className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color '><RiAccountCircleLine className='text-[25px] transition cursor-pointer ' /> Account</button>
+                <button onClick={handleLogout} className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color '><TbLogout2 className='text-[25px] transition cursor-pointer ' /> Logout</button>
+              </div>
+            </div>
           </div>
         )
         }
