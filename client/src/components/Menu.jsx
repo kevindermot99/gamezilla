@@ -6,13 +6,14 @@ import { GoGitBranch } from "react-icons/go";
 import Logo from '../assets/logo.png'
 import Badge from './Badge';
 
-function Menu() {
+function Menu({ userId }) {
   const location = useLocation();
 
   const [searchValue, setSearchValue] = useState('')
   const [resetSearch, setResetSearch] = useState(false)
   const [quickResult, setQuickResult] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
+  const [username, setUserName] = useState('')
 
 
   const handleSearchValue = (e) => {
@@ -50,12 +51,19 @@ function Menu() {
 
   useEffect(() => {
     window.addEventListener('scroll', changeBg)
-  },[])
+  }, [])
 
   window.addEventListener('load', () => {
     setScrollPosition(window.scrollY)
   })
 
+  useEffect(() => {
+    if (userId !== '') {
+      const res = localStorage.getItem('gamezillaUsername')
+      setUserName(res)
+    }
+  },[userId])
+  
 
   return (
     <div className={`fixed z-20 h-fit w-full px-[24px] py-4 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500  bg-body-color ${scrollPosition > 60 ? 'bg-body-color ' : 'bg-transparent '} `}>
@@ -91,10 +99,19 @@ function Menu() {
       </form> */}
 
       <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
-        <div className='flex items-center gap-3 h-full w-fit min-w-fit'>
+
+        <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
           <Link to={`/login`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full transition hover:opacity-70 `}>Log In</Link>
           <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
+        {userId !== 'none' && (
+          <div className={`flex items-center gap-2 h-full w-fit min-w-fit ${userId === 'none' && 'hidden'}`}>
+            <p className='bg-main-color  backdrop-blur-md text-white h-8 aspect-square flex items-center justify-center capitalize font-mono font-bold text-2xl rounded-full  '>{username.charAt(0)}</p>
+            <p>{username}</p>
+          </div>
+        )
+        }
+
         <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
         <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
       </div>

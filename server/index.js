@@ -23,7 +23,7 @@ app.post('/login', async (req, res) => {
     try{
         const user = await User.findOne({ email, password }) 
         if(user) {
-            res.status(200).json({message: 'Login Successful', userId: user.id})
+            res.status(200).json({message: 'Login Successful', userId: user.id, username: user.username})
         }
         else{
             res.status(401).json({message: 'login Failed'})

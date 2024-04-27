@@ -10,6 +10,19 @@ import { TbLoader2 } from "react-icons/tb";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false)
+  const [userId, setUserId] = useState('');
+
+  // checking logged in user
+  useEffect(() => {
+    const userId = localStorage.getItem('gamezillaUserId')
+    if (userId) {
+      setUserId(userId)
+    }
+    else{
+      setUserId('none')
+    }
+  }, [])
+
 
   const handleLoading = () => {
     setIsLoading(true)
@@ -25,7 +38,7 @@ function Home() {
   return (
     <div className='relative  h-svh flex flex-col text-text-color'>
       {/* MENU */}
-      <Menu />
+      <Menu userId={userId} />
       {bannerGame &&
         <div className='relative w-full h-fit min-h-[600px] overflow-clip bg-body-color '>
           <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-opacity duration-500 z-10 ${!isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>

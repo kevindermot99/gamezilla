@@ -23,7 +23,8 @@ function Login() {
 
             if (response.status === 200) {
                 console.log('Login successful')
-                localStorage.setItem('userId', response.data.userId)
+                localStorage.setItem('gamezillaUserId', response.data.userId)
+                localStorage.setItem('gamezillaUsername', response.data.username)
                 setLoginOut(true)
             } else {
                 console.log('Login Failed')
@@ -47,10 +48,11 @@ function Login() {
         setPassword(e.target.value)
     }
 
+    // checking logged in user
     useEffect(() => {
-        const userId =  localStorage.getItem('userId')
+        const userId =  localStorage.getItem('gamezillaUserId')
         if (userId) {
-            navigate('/')
+            navigate('/', { replace: true })
         }
     },[])
     
@@ -74,7 +76,7 @@ function Login() {
                     <a className='mb-5 text-main-color  font-light flex text-sm self-end'> Forgot Password?</a>
                     <div className='w-full flex gap-2 mb-4 '>
                         <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center '>Cancel</Link>
-                        <button type="submit" name='email' className={` w-full h-[40px] px-4 transition bg-main-color hover:bg-main-color/60 rounded-full text-sm flex items-center justify-center ${authing && 'pointer-events-none '}`} >{authing ? <TbLoader2 className='animate-spinLoader text-white text-[30px] ' /> : 'Login'}</button>
+                        <button type="submit" name='email' className={` w-full h-[40px] px-4 transition bg-main-color hover:bg-main-color/60 rounded-full text-sm flex items-center justify-center ${authing && 'pointer-events-none '}`} >{authing ? <TbLoader2 className='animate-spinLoader text-white text-[25px] ' /> : 'Login'}</button>
                     </div>
                 </form>
             </div>
