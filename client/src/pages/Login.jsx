@@ -63,15 +63,15 @@ function Login() {
             <div className='h-full w-full flex items-center justify-center flex-col'>
                 <form onSubmit={handleLogin} className=' text-text-color w-full max-w-[360px] flex flex-col items-start justify-start '>
                     <h1 className='text-3xl leading-[35px] font-bold '>Login</h1>
-                    <p className='mb-5 text-text-color/20 font-light text-base pt-1'>Hi, Welcome Back</p>
+                    <p className='mb-7 text-text-color/20 font-light text-base pt-2'>Hi, Welcome Back</p>
 
                     <label className='w-full flex flex-col mb-2'>
                         <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Email</h1>
-                        <input onChange={handleEmail} type="email" name='email' placeholder='someone@example.com' className='bg-border-line-color/60  py-2 px-4 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
+                        <input onChange={handleEmail} type="email" name='email' placeholder='someone@example.com' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
                     </label>
                     <label className='w-full flex flex-col mb-4'>
                         <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Password</h1>
-                        <input onChange={handlePassword} type="password" name='password' placeholder='Password' className='bg-border-line-color/60  py-2 px-4 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color   ' />
+                        <input onChange={handlePassword} type="password" name='password' placeholder='Password' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color   ' />
                     </label>
                     <a className='mb-5 text-main-color  font-light flex text-sm self-end'> Forgot Password?</a>
                     <div className='w-full flex gap-2 mb-4 '>

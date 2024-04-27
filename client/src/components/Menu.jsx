@@ -7,6 +7,8 @@ import Logo from '../assets/logo.png'
 import Badge from './Badge';
 import { TbLogout2 } from "react-icons/tb";
 import { RiAccountCircleLine } from "react-icons/ri";
+import { MdOutlineDownloading } from "react-icons/md";
+import { HiCollection } from "react-icons/hi";
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -120,8 +122,11 @@ function Menu({ userId }) {
             <p>{username}</p>
             <div className='absolute top-[30px] pt-3 right-0 w-fit min-w-[200px] h-fit opacity-0 -z-50 pointer-events-none group-hover:opacity-100 group-hover:z-10 -translate-y-4 group-hover:translate-y-0 transition group-hover:pointer-events-auto   '>
               <div className='bg-container-color bad rounded-lg p-2 w-full h-full'>
-              <button className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color '><RiAccountCircleLine className='text-[25px] transition cursor-pointer ' /> Account</button>
-                <button onClick={handleLogout} className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color '><TbLogout2 className='text-[25px] transition cursor-pointer ' /> Logout</button>
+                <button className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color font-normal capitalize '><RiAccountCircleLine className=' text-[25px] cursor-pointer ' /> Account</button>
+                <button className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color font-normal capitalize '><MdOutlineDownloading className=' text-[25px] cursor-pointer ' /> Downloads</button>
+                <button className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-main-color font-normal capitalize '><HiCollection className=' text-[25px] cursor-pointer ' /> Collection</button>
+                <div className='w-full h-[1px] bg-border-line-color/60 my-2'></div>
+                <button onClick={handleLogout} className='text-sm px-2 h-[40px] rounded-lg hover:bg-stone-500/10 w-full text-left flex items-center justify-start gap-2 hover:text-red-500 font-normal capitalize '><TbLogout2 className='text-[25px] cursor-pointer ' /> Logout</button>
               </div>
             </div>
           </div>
