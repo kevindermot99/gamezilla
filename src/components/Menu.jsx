@@ -63,9 +63,7 @@ function Menu() {
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-2xl font-bold flex items-center tracking-tight mr-8'>Gamezilla.</Link>
           <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
-          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'> Games</Link>
-          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Low-end PC Games`}>Low-end PC's</Link>
-          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title={`Copyright Claim`}>Cc</Link>
+          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'>All Games</Link>
           {/* <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70  '>My Games </Link> */}
         </ul>
       </div>
