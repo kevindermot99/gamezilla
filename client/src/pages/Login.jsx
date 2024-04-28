@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { TbLoader2 } from "react-icons/tb";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Login() {
@@ -25,13 +27,19 @@ function Login() {
                 console.log('Login successful')
                 localStorage.setItem('gamezillaUserId', response.data.userId)
                 localStorage.setItem('gamezillaUsername', response.data.username)
+                setAuthing(false)
                 setLoginOut(true)
             } else {
                 console.log('Login Failed')
+                setAuthing(false)
             }
         }
         catch (error) {
-            console.log(error)
+            toast(error.response.data.message, {
+                toastId: "customId"
+            })
+        setAuthing(false)
+
         }
 
     }
@@ -59,6 +67,12 @@ function Login() {
 
     return (
         <div className='px-[24px] py-5 flex flex-col h-full w-full bg-body-color '>
+            <ToastContainer
+                className='select-none'
+                position="bottom-left"
+                draggable
+                autoClose={3000}
+            />
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
                 <form onSubmit={handleLogin} className=' text-text-color w-full max-w-[360px] flex flex-col items-start justify-start '>

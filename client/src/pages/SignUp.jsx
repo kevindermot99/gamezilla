@@ -49,14 +49,14 @@ function SignUp() {
                 })
 
                 if (response.status === 201) {
-                    console.log('account created successful')
+                    // console.log('account created successful')
                     localStorage.setItem('gamezillaUserId', response.data.userId)
                     localStorage.setItem('gamezillaUsername', response.data.username)
                     setPageOut(true)
                     navigate('/', {replace: true })
                 }
                 else {
-                    console.log(response.data.message)
+                    // console.log(response.data.message)
                     toast(response.data.message, {
                         toastId: "customId"
                     })
@@ -65,7 +65,7 @@ function SignUp() {
                 }
             }
             catch (error) {
-                console.log(error)
+                // console.log(error)
                 toast(error.response.data.message, {
                     toastId: "customId"
                 })

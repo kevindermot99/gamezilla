@@ -23,15 +23,19 @@ app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ email, password });
+    const user = await User.findOne({ email });
     if (user) {
-      res.status(200).json({
+      if (password === user.password) {
+        res.status(200).json({
           message: "Login Successful",
           userId: user.id,
           username: user.username,
         });
+      } else {
+        res.status(403).json({ message: "Password incorrect!" });
+      }
     } else {
-      res.status(401).json({ message: "login Failed" });
+      res.status(403).json({ message: "User Doesn't exist!" });
     }
   } catch (err) {
     res.status(500).json({ message: "An error occured during login" });
@@ -48,10 +52,19 @@ app.post("/signup", async (req, res) => {
       res.status(403).json({ message: "Email Already Exists!" });
     } else {
       // new user
-      const newUser = new User({ username: username, password: password, email: email });
+      const newUser = new User({
+        username: username,
+        password: password,
+        email: email,
+      });
       await newUser.save();
-      res.status(201).json({ message: "Account Created Successfully", userId: newUser.id,
-      username: newUser.username, });
+      res
+        .status(201)
+        .json({
+          message: "Account Created Successfully",
+          userId: newUser.id,
+          username: newUser.username,
+        });
     }
   } catch (err) {
     console.error(err);
