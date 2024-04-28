@@ -107,9 +107,9 @@ function SignUp() {
             <div className='h-full w-full flex items-center justify-center flex-col'>
                 <form onSubmit={handleSignUp} className=' text-text-color w-full max-w-[360px] py-[40px] flex flex-col items-start justify-start '>
                         <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
-                    <p className='mb-7 text-text-color/20 font-light text-base pt-2'>Welcome to Gamezilla </p>
+                    <p className='mb-7 text-text-color/20 font-light text-sm pt-2'>Welcome to Gamezilla </p>
                     <div className='w-full flex flex-col mb-2'>
-                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>username</h1>
+                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Username</h1>
                         <input onChange={handleusername} name="username" type="text" required placeholder='eg: Kelly Powel' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
                     </div>
                     <div className='w-full flex flex-col mb-2'>

@@ -80,7 +80,7 @@ function Login() {
                 <form onSubmit={handleLogin} className=' text-text-color w-full max-w-[360px] flex flex-col items-start justify-start '>
                     
                     <h1 className='text-3xl leading-[35px] font-bold '>Login</h1>
-                    <p className='mb-7 text-text-color/20 font-light text-base pt-2'>Hi, Welcome Back</p>
+                    <p className='mb-7 text-text-color/20 font-light text-sm pt-2'>Hi, Welcome Back</p>
 
                     <label className='w-full flex flex-col mb-2'>
                         <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Email</h1>
