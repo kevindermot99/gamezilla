@@ -3,14 +3,15 @@ import Menu from '../components/Menu'
 import { Games } from '../constants/data';
 import { FaMedal } from "react-icons/fa6";
 import { FaRankingStar } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { TbLoader2 } from "react-icons/tb";
-
-
+import View from '../components/View';
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false)
   const [userId, setUserId] = useState('');
+  const [modal, setModal] = useState(false)
+  const [ OpenedModalId, setOpendModalId] = useState('')
 
   // checking logged in user
   useEffect(() => {
@@ -18,7 +19,7 @@ function Home() {
     if (userId) {
       setUserId(userId)
     }
-    else{
+    else {
       setUserId('none')
     }
   }, [])
@@ -35,8 +36,36 @@ function Home() {
     localStorage.setItem("BannerMovieId", id);
   }
 
+  const { modalId } = useParams();
+
+  const handleOpenModal = (id) => {
+    window.history.replaceState(null, "", `/${id}`)
+    setModal(true)
+    setOpendModalId(id)
+  };
+
+  const handleCloseModal = (id) => {
+    window.history.replaceState(null, "", `/`)
+    setModal(false)
+    setOpendModalId('')
+  };
+
+  useEffect(() => {
+    if ( modalId) {
+        setModal(true); 
+      setOpendModalId(modalId)
+
+    } else {
+        setModal(false);
+    }
+}, []);
+
+
   return (
     <div className='relative  h-svh flex flex-col text-text-color'>
+      {modal && (
+        <View OpenedModalId={OpenedModalId} handleCloseModal={handleCloseModal} />
+      )}
       {/* MENU */}
       <Menu userId={userId} />
       {bannerGame &&
@@ -59,7 +88,7 @@ function Home() {
             </div>
             <div className='flex max-sm:flex-wrap items-center gap-2 max-sm:gap-0'>
               <button className='bg-main-color h-[45px] max-sm:w-full flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Download</button>
-              <button className='bg-stone-200/20 hover:bg-stone-200/40 text-white/60 h-[45px] ring-1 ring-stone-300/30 max-sm:w-full backdrop-blur-sm flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Play Teaser </button>
+              <button onClick={() => handleOpenModal(bannerGame.id)} className='bg-stone-200/20 hover:bg-stone-200/40 text-white/60 h-[45px] ring-1 ring-stone-300/30 max-sm:w-full backdrop-blur-sm flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Play Teaser </button>
               <div className='relative w-fit group h-fit min-h-[45px] max-sm:hidden flex items-end ml-1'>
                 <p className='absolute bottom-[55px] -left-[30px] whitespace-nowrap bg-stone-200/10 backdrop-blur-md py-2 px-4 rounded-full text-sm font-medium tracking-wide  text-text-color/70 pointer-events-none opacity-0 scale-95 transition group-hover:opacity-100 group-hover:scale-100 shadow-lg text-center '>Most Downloaded Badge</p>
                 <FaMedal className='text-stone-200/30 text-[35px] cursor-help transition group-hover:text-stone-200/70 group-hover:scale-105 ' />
