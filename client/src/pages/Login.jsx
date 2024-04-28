@@ -75,9 +75,10 @@ function Login() {
                     </label>
                     <a className='mb-5 text-main-color  font-light flex text-sm self-end'> Forgot Password?</a>
                     <div className='w-full flex gap-2 mb-4 '>
-                        <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center '>Cancel</Link>
-                        <button type="submit" name='email' className={` w-full h-[40px] px-4 transition bg-main-color hover:bg-main-color/60 rounded-full text-sm flex items-center justify-center ${authing && 'pointer-events-none '}`} >{authing ? <TbLoader2 className='animate-spinLoader text-white text-[25px] ' /> : 'Login'}</button>
+                        {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
+                        <button type="submit" name='email' className={` w-full h-[40px] px-4 transition bg-main-color hover:bg-main-color/60 rounded-full text-sm flex items-center justify-center font-medium ${authing && 'pointer-events-none '}`} >{authing ? <TbLoader2 className='animate-spinLoader text-white text-[25px] ' /> : 'Login'}</button>
                     </div>
+                    <p className='text-sm font-light text-text-color/60 self-center mt-5'>Don't have an account? <Link to='/signup' className='text-main-color underline' > Sign up </Link></p>
                 </form>
             </div>
         </div>

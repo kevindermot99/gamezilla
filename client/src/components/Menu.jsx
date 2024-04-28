@@ -114,7 +114,7 @@ function Menu({ userId }) {
 
         <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
           <Link to={`/login`} className={`h-[40px] w-fit flex items-center px-5 text-white text-[14px] font-semibold tracking-tight rounded-full transition hover:opacity-70 `}>Log In</Link>
-          <Link to={`/`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
+          <Link to={`/signup`} className={`h-[40px] w-fit flex items-center px-5 bg-main-color text-white text-[14px] font-semibold tracking-tight rounded-full `}>Sign Up</Link>
         </div>
         {userId !== 'none' && (
           <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
