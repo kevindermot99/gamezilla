@@ -4,7 +4,8 @@ import axios from 'axios'
 import { TbLoader2 } from "react-icons/tb";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import emailjs from '@emailjs/browser'
+import { useDataContext } from '../contexts/DataContext';
 
 function SignUp() {
     const [username, setUserName] = useState(null)
@@ -38,7 +39,7 @@ function SignUp() {
 
     const handleSignUp = async (e) => {
         e.preventDefault()
-        setAuthing(true)
+        setAuthing(true)// emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', e.target, 'ux-raMZeiO57IIgRz')
 
         if (password == password2) {
             try {
@@ -49,16 +50,17 @@ function SignUp() {
                 })
 
                 if (response.status === 201) {
-                    // console.log('account created successful')
+                    console.log('account created successful')
                     localStorage.setItem('gamezillaUserId', response.data.userId)
                     localStorage.setItem('gamezillaUsername', response.data.username)
                     setPageOut(true)
                     navigate('/', {replace: true })
+
                 }
                 else {
                     // console.log(response.data.message)
                     toast(response.data.message, {
-                        toastId: "customId"
+                        // toastId: "customId"
                     })
                     setAuthing(false)
 
@@ -67,7 +69,7 @@ function SignUp() {
             catch (error) {
                 // console.log(error)
                 toast(error.response.data.message, {
-                    toastId: "customId"
+                    // toastId: "customId"
                 })
                 setAuthing(false)
 
@@ -75,7 +77,7 @@ function SignUp() {
         }
         else {
             toast("Password doesn't match!", {
-                toastId: "customId"
+                // toastId: "customId"
             })
             setAuthing(false)
         }
@@ -104,7 +106,7 @@ function SignUp() {
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
                 <form onSubmit={handleSignUp} className=' text-text-color w-full max-w-[360px] py-[40px] flex flex-col items-start justify-start '>
-                    <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
+                        <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
                     <p className='mb-7 text-text-color/20 font-light text-base pt-2'>Welcome to Gamezilla </p>
                     <div className='w-full flex flex-col mb-2'>
                         <h1 className=' text-text-color/80 font-light mb-2 text-sm'>username</h1>

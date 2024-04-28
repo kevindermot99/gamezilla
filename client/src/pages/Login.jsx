@@ -6,7 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 function Login() {
+    const [username, setUsername] = useState(null)
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
     const [loginOut, setLoginOut] = useState(false)
@@ -36,7 +38,7 @@ function Login() {
         }
         catch (error) {
             toast(error.response.data.message, {
-                toastId: "customId"
+                // toastId: "customId"
             })
         setAuthing(false)
 
@@ -76,6 +78,7 @@ function Login() {
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
                 <form onSubmit={handleLogin} className=' text-text-color w-full max-w-[360px] flex flex-col items-start justify-start '>
+                    
                     <h1 className='text-3xl leading-[35px] font-bold '>Login</h1>
                     <p className='mb-7 text-text-color/20 font-light text-base pt-2'>Hi, Welcome Back</p>
 

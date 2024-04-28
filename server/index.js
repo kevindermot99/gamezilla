@@ -15,8 +15,26 @@ const userSchema = new mongoose.Schema({
   username: String,
   password: String,
   email: String,
+  verified: String,
 });
 const User = mongoose.model("users", userSchema);
+
+// cheking email
+app.post("/checkemail", async (req, res) => {
+  const email = req.body;
+
+  try {
+    const emailcheck = await User.findOne({ email });
+    if (!emailcheck) {
+      res.status(200).json({ message: "Email available" });
+    } else {
+      res.status(403).json({ message: "Email Already Exists" });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: err });
+  }
+});
 
 // login route
 app.post("/login", async (req, res) => {
@@ -35,14 +53,14 @@ app.post("/login", async (req, res) => {
         res.status(403).json({ message: "Password incorrect!" });
       }
     } else {
-      res.status(403).json({ message: "User Doesn't exist!" });
+      res.status(403).json({ message: "User doesn't exist!" });
     }
   } catch (err) {
     res.status(500).json({ message: "An error occured during login" });
   }
 });
 
-// sigun up route
+// sign up route
 app.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -56,15 +74,14 @@ app.post("/signup", async (req, res) => {
         username: username,
         password: password,
         email: email,
+        verified: false,
       });
       await newUser.save();
-      res
-        .status(201)
-        .json({
-          message: "Account Created Successfully",
-          userId: newUser.id,
-          username: newUser.username,
-        });
+      res.status(201).json({
+        message: "Account Created Successfully",
+        userId: newUser.id,
+        username: newUser.username,
+      });
     }
   } catch (err) {
     console.error(err);
