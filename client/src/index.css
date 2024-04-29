@@ -170,3 +170,6 @@ html {
   overflow: auto;
 }
 
+.scroll-disabled {
+  overflow-y: hidden;
+}
