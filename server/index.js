@@ -36,8 +36,23 @@ app.post("/checkemail", async (req, res) => {
   }
 });
 
+// get userDetails
+app.get("/api/users/:id", async (req, res) => {
+  try{
+    const user = await User.findById(req.params.id);
+    if(!user){
+      return res.status(404).json({ message: 'User not found' });
+    } else{
+      res.status(200).json({ email: user.email });
+    }
+  } catch(err){
+    console.log(err)
+    res.status(500).json({ message: "An error occured " });
+  }
+})
+
 // login route
-appjk.post("/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
