@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,9 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser'
 
 function Vcode({ location }) {
-    const [vcode, setVcode] = useState(null)
+    const [vcode, setVcode] = useState('')
     const [authing, setAuthing] = useState(false)
     const [userEmail, setUserEmail] = useState('')
+    const [username, setUserName] = useState('')
+    const form = useRef()
 
     const { id } = useParams()
     const navigate = useNavigate()
@@ -19,8 +21,11 @@ function Vcode({ location }) {
                 try {
                     const response = await axios.get(`http://localhost:3001/getUser/${id}`)
                     if (response.status === 200) {
-                        // emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', e.target, 'ux-raMZeiO57IIgRz')
                         setUserEmail(response.data.email)
+                        setVcode(response.data.vcode)
+                        setUserName(response.data.username)
+
+                        emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', form.current, 'ux-raMZeiO57IIgRz')
                     }
                 }
                 catch (err) {
@@ -46,8 +51,7 @@ function Vcode({ location }) {
         }
     }
 
-    const handleVcode = (e) => {
-    }
+    
 
     return (
         <div className='px-[24px] py-5 flex flex-col h-full w-full bg-body-color'>
@@ -59,6 +63,11 @@ function Vcode({ location }) {
             />
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
+                <form ref={form} className='flex flex-col gap-3' >
+                    <input type="email" name='email' value={userEmail} onChange={(e) => setUserEmail(e.target.value)} readOnly={true} />
+                    <input type="text" name='vcode' value={vcode} onChange={(e) => setVcode(e.target.value)} readOnly={true} />
+                    <input type="text" name='username' value={username} onChange={(e) => setUserName(e.target.value)} readOnly={true} />
+                </form>
                 <form onSubmit={handleCode} className=' text-text-color w-full max-w-[390px] flex flex-col items-start justify-start '>
                     <h1 className='text-3xl leading-[35px] font-bold '>Verify your Email</h1>
                     <p className='mb-5 text-text-color-light font-light text-sm pt-2 break-all'>we've sent an email at <span className='text-main-color'>{userEmail}</span> that contains a 6 digits code. confirm by entering the code here</p>
