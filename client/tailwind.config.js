@@ -34,7 +34,7 @@ export default {
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
         "text-color": "#ebebeb",
-        "text-color-light": "#7e7e7e",
+        "text-color-light": "#808080",
         "container-color": "#232323",
         "footer-color": "#161616",
       },

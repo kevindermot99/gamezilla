@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
   username: String,
   password: String,
   email: String,
+  vcode: String,
   verified: String,
 });
 const User = mongoose.model("users", userSchema);
@@ -37,19 +38,12 @@ app.post("/checkemail", async (req, res) => {
 });
 
 // get userDetails
-app.get("/api/users/:id", async (req, res) => {
-  try{
-    const user = await User.findById(req.params.id);
-    if(!user){
-      return res.status(404).json({ message: 'User not found' });
-    } else{
-      res.status(200).json({ email: user.email });
-    }
-  } catch(err){
-    console.log(err)
-    res.status(500).json({ message: "An error occured " });
-  }
-})
+app.get("/getUser/:id", async (req, res) => {
+  const id = req.params.id;
+  User.findById({ _id: id })
+    .then((user) => res.json(user))
+    .catch((err) => res.json(err));
+});
 
 // login route
 app.post("/login", async (req, res) => {
@@ -85,7 +79,7 @@ app.post("/login", async (req, res) => {
 
 // sign up route
 app.post("/signup", async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, vcode } = req.body;
 
   try {
     const userExists = await User.findOne({ email });
@@ -97,6 +91,7 @@ app.post("/signup", async (req, res) => {
         username: username,
         password: password,
         email: email,
+        vcode: vcode,
         verified: false,
       });
       await newUser.save();

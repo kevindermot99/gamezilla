@@ -8,12 +8,21 @@ import emailjs from '@emailjs/browser'
 import { useDataContext } from '../contexts/DataContext';
 
 function SignUp() {
+
+    function generateRandomString() {
+        const randomString = Math.random().toString(36).substring(2, 8); // Generate random alphanumeric string
+        return randomString.toUpperCase(); // Convert to uppercase if needed
+    }
+
     const [username, setUserName] = useState(null)
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
     const [password2, setPassword2] = useState(null)
     const [pageOut, setPageOut] = useState(false)
     const [authing, setAuthing] = useState(false)
+    const [vcode, setVcode] = useState(generateRandomString())
+
+    
 
     const navigate = useNavigate()
 
@@ -46,7 +55,8 @@ function SignUp() {
                 const response = await axios.post('http://localhost:3001/signup', {
                     username,
                     email,
-                    password
+                    password,
+                    vcode
                 })
 
                 if (response.status === 201) {
@@ -54,7 +64,7 @@ function SignUp() {
                     localStorage.setItem('gamezillaUserId', response.data.userId)
                     localStorage.setItem('gamezillaUsername', response.data.username)
                     setPageOut(true)
-                    navigate('/', {replace: true })
+                    navigate('/', { replace: true })
 
                 }
                 else {
@@ -81,9 +91,6 @@ function SignUp() {
             })
             setAuthing(false)
         }
-
-
-
     }
 
     // checking logged in user
@@ -105,9 +112,10 @@ function SignUp() {
             />
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
-                <form onSubmit={handleSignUp} className=' text-text-color w-full max-w-[360px] py-[40px] flex flex-col items-start justify-start '>
-                        <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
+                <form onSubmit={handleSignUp} className=' text-text-color w-full max-w-[390px] py-[40px] flex flex-col items-start justify-start '>
+                    <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
                     <p className='mb-7 text-text-color/20 font-light text-sm pt-2'>Welcome to Gamezilla </p>
+                    <input readOnly name="vcode" value={vcode} type="text" className='pointer-events-none hidden' hidden required />
                     <div className='w-full flex flex-col mb-2'>
                         <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Username</h1>
                         <input onChange={handleusername} name="username" type="text" required placeholder='eg: Kelly Powel' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
