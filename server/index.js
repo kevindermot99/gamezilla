@@ -37,18 +37,26 @@ app.post("/checkemail", async (req, res) => {
 });
 
 // login route
-app.post("/login", async (req, res) => {
+appjk.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const user = await User.findOne({ email });
     if (user) {
       if (password === user.password) {
-        res.status(200).json({
-          message: "Login Successful",
-          userId: user.id,
-          username: user.username,
-        });
+        if (user.verified === "false") {
+          res.status(401).json({
+            message: "Email not verified",
+            userId: user.id,
+            email: user.email,
+          });
+        } else {
+          res.status(200).json({
+            message: "Login Successful",
+            userId: user.id,
+            username: user.username,
+          });
+        }
       } else {
         res.status(403).json({ message: "Password incorrect!" });
       }

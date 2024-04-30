@@ -31,15 +31,24 @@ function Login() {
                 localStorage.setItem('gamezillaUsername', response.data.username)
                 setAuthing(false)
                 setLoginOut(true)
-            } else {
+            }
+            else {
                 console.log('Login Failed')
                 setAuthing(false)
             }
         }
         catch (error) {
+            if(error.response.status === 401){
+                navigate(`/vcode/${error.response.data.userId}`)
+                setAuthing(false)   
+            }
+            else{
+               console.log(error)
             toast(error.response.data.message, {
                 // toastId: "customId"
-            })
+            }) 
+            }
+            
         setAuthing(false)
 
         }

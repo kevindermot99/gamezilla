@@ -31,28 +31,9 @@ function Home() {
   const id = localStorage.getItem("BannerMovieId") || '1';
   const bannerGame = Games.find(game => game.id === id)
 
-  const handleBanner = (id) => {
-    localStorage.setItem("BannerMovieId", id);
-  }
-
-
-  const handleOpenModal = (id, event) => {
-    event.preventDefault();
-    setModal(true)
-    setOpendModalId(id)
-  };
-
-  const handleCloseModal = (event) => {
-    event.preventDefault();
-    setModal(false)
-    setOpendModalId('')
-  };
-
-
-
   return (
     <div className={`relative h-svh flex flex-col text-text-color ${modal && 'overflow-y-clip'}`} >
-      
+
 
       {/* MENU */}
       <Menu userId={userId} />
@@ -76,7 +57,7 @@ function Home() {
             </div>
             <div className='flex max-sm:flex-wrap items-center gap-2 max-sm:gap-0'>
               <button className='bg-white text-black    h-[45px] max-sm:w-full flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Download</button>
-              <button onClick={(event) => handleOpenModal(bannerGame.id, event)} className='bg-stone-200/20 hover:bg-stone-200/40 text-white/60 h-[45px] ring-1 ring-stone-300/30 max-sm:w-full backdrop-blur-sm flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>Play Teaser </button>
+              <Link to={`/game/${bannerGame.id}`} className='bg-stone-200/20 hover:bg-stone-200/40 text-white/60 h-[45px] ring-1 ring-stone-300/30 max-sm:w-full backdrop-blur-sm flex items-center max-sm:justify-center px-9 rounded-full text-lg font-bold active:scale-95  transition mt-2 '>About</Link>
               <div className='relative w-fit group h-fit min-h-[45px] max-sm:hidden flex items-end ml-1'>
                 <p className='absolute bottom-[55px] -left-[30px] whitespace-nowrap bg-stone-200/10 backdrop-blur-md py-2 px-4 rounded-full text-sm font-medium tracking-wide  text-text-color/70 pointer-events-none opacity-0 scale-95 transition group-hover:opacity-100 group-hover:scale-100 shadow-lg text-center '>Most Downloaded Badge</p>
                 <FaMedal className='text-stone-200/30 text-[35px] cursor-help transition group-hover:text-stone-200/70 group-hover:scale-105 ' />
@@ -87,24 +68,19 @@ function Home() {
         </div>
       }
 
-      <div className={`absolute bottom-0 w-full h-svh overflow-y-scroll z-50 transition-opacity duration-500 bg-body-color/70 opacity-0 ${modal ? 'opacity-100 ' : 'hidden '}  `}>
-        {/* <View OpenedModalId={OpenedModalId} handleCloseModal={handleCloseModal} /> */}
-        <div onClick={(event) => handleCloseModal(event)}>close</div>
-      </div>
-
       {/* Order By Downloads */}
       <div className='p-12 pb-0 max-sm:p-5 max-w-[1500px] mx-auto'>
         <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Recommended</h1>
         <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-3'>
           {Games.map((game, index) => (
-            <div key={index} onClick={(event) => handleOpenModal(game.id, event)} className='group flex flex-col h-fit'>
+            <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
               <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
                 <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-lg opacity-85 group-hover:opacity-65  ' />
               </div>
               <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
                 {game.title}
               </h1>
-            </div>
+            </Link>
           ))}
 
         </div>
@@ -115,14 +91,14 @@ function Home() {
         <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Newly Added</h1>
         <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-3'>
           {Games.map((game, index) => (
-            <div key={index} onClick={(event) => handleOpenModal(game.id, event)} className='group flex flex-col h-fit'>
+            <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
               <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
                 <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-lg opacity-85 group-hover:opacity-65  ' />
               </div>
               <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
                 {game.title}
               </h1>
-            </div>
+            </Link>
           ))}
 
         </div>
