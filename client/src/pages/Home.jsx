@@ -38,11 +38,11 @@ function Home() {
       {/* MENU */}
       <Menu userId={userId} />
       {bannerGame &&
-        <div className='relative w-full h-fit min-h-[600px] overflow-clip bg-body-color '>
+        <div className='relative w-full h-fit min-h-[600px] overflow-clip bg-gradient-to-t from-body-color  to-body-color/20     '>
           <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-opacity duration-500 z-10 ${!isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>
             <TbLoader2 className='animate-spinLoader text-text-color-light text-[40px] ' />
           </div>
-          <img onLoad={handleLoading} src={bannerGame.banner} className='absolute top-0 left-0 z-0 w-full h-full object-cover object-top select-none opacity-45 ' />
+          <img onLoad={handleLoading} src={bannerGame.banner} className='absolute top-0 left-0 -z-10 w-full h-full object-cover object-top select-none ' />
           <div className={`relative w-full h-full flex flex-col items-start justify-end p-12 max-sm:p-5 z-10 ${isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>
             <h1 className='font-extrabold text-[65px] transition leading-[80x] lg:max-w-[1000px] whitespace-break-spaces break-words truncate max-w-full max-md:text-[35px] max-md:leading-[33px] line-clamp-2 '>
               {bannerGame.title}
@@ -69,9 +69,9 @@ function Home() {
       }
 
       {/* Order By Downloads */}
-      <div className='p-12 pb-0 max-sm:p-5 max-w-[1500px] mx-auto'>
+      <div className='px-12 py-5 pb-0 max-sm:p-5 max-w-[1500px] mx-auto'>
         <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Recommended</h1>
-        <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-3'>
+        <div className='grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-2'>
           {Games.map((game, index) => (
             <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
               <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
@@ -87,9 +87,9 @@ function Home() {
       </div>
 
       {/* Order By Date */}
-      <div className='p-12 max-sm:p-5 max-w-[1500px] mx-auto'>
+      <div className='px-12 py-5 max-sm:p-5 max-w-[1500px] mx-auto'>
         <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Newly Added</h1>
-        <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-3'>
+        <div className='grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 my-8 gap-2'>
           {Games.map((game, index) => (
             <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
               <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
