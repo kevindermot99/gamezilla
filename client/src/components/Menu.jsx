@@ -10,6 +10,8 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { MdOutlineDownloading } from "react-icons/md";
 import { HiCollection } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
+import { BsCart } from "react-icons/bs";
+import { genres } from '../constants/data';
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -79,28 +81,32 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] py-4 text-light-text-color bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] py-4 text-light-text-color flex flex-col gap-5 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
       <div className='w-full flex items-center justify-around'>
         <div>
           <Link to='/' className='font-bold text-2xl font-SulphurPoint flex items-center justify-center gap-2 '>
             <img src={Logo} className="h-9" />
             Gamezilla
+            <p></p>
           </Link>
         </div>
 
         <form onSubmit={searchThis} className='h-fit w-full max-w-[400px] relative flex text-light-text-color'>
           <label className='w-full h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20'>
-            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color ring-1 ring-border-line-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[15px] tracking-tight font-medium ' />
+            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color ring-1 ring-border-line-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
             <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
             <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
           </label>
         </form>
 
-        <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 space-x-5`}>
+        <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 gap-4`}>
+          <Link to={`/signup`} className={` relative mr-3 group `}>
+            <BsCart className='text-xl transition group-hover:text-main-color ' />
+            <Badge count={2} />
+          </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-            <Link to={`/login`} className={`h-[35px] w-fit flex items-center px-5 text-white text-[15px] font-SulphurPoint font-bold tracking-wide rounded-full transition hover:opacity-70 `}>Log In</Link>
-            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[15px] font-SulphurPoint font-bold tracking-wide rounded-full `}>Sign Up</Link>
+            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 font-bold tracking-wide rounded-full capitalize `}>Start Today</Link>
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
@@ -123,6 +129,17 @@ function Menu({ userId }) {
           <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
         </div>
       </div>
+
+      <div className='flex relative w-full max-w-[700px] mx-auto '>
+        <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-body-color w-12 h-full '></div>
+        <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-body-color w-12 h-full '></div>
+        <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
+          {genres.map((genre, index) => (
+            <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:text-main-color whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
+          ))}
+        </div>
+      </div>
+
     </div>
   )
 }

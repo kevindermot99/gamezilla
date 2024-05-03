@@ -4,6 +4,24 @@ export const AppVersion = {
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
 };
 
+export const genres = [
+  "Action",
+  "Sports",
+  "Shooting",
+  "Racing",
+  "War",
+  "Adventure",
+  "Strategy",
+  "Role-Playing",
+  "Simulation",
+  "Puzzle",
+  "Horror",
+  "Fighting",
+  "Platformer",
+  "Stealth",
+  "Survival",
+];
+
 export const Games = [
   {
     id: '1',
