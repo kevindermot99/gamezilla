@@ -43,10 +43,10 @@ function Home() {
         <img src={bannerGame.banner} alt="" className='fixed top-0 left-0 -z-10 opacity-5 blur-lg ' />
       </div>
 
-      {/* Order By Downloads */}
+      {/* publishers */}
       <div className='px-12 pt-5 max-sm:p-5 max-w-[1500px] h-fit mx-auto'>
-        <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Recommended</h1>
-        <div className='grid grid-cols-9 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-8 gap-2  '>
+        <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Publishers</h1>
+        <div className='grid grid-cols-10 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-5 gap-2  '>
           {Games.map((game, index) => (
             <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
               <div className='relative p-1 h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-full'>
@@ -61,14 +61,14 @@ function Home() {
         </div>
       </div>
 
-      {/* Order By Date */}
-      <div className='px-12 pt-5 max-sm:p-5 max-w-[1500px] h-fit mx-auto'>
-        <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Newly Added</h1>
-        <div className='grid grid-cols-9 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-8 gap-2'>
+      {/* Recommended*/}
+      <div className='px-12 pt-5 max-sm:p-5 mt-8 max-w-[1500px] h-fit mx-auto'>
+        <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Recommended</h1>
+        <div className='grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-5 gap-2'>
           {Games.map((game, index) => (
             <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
-              <div className='relative p-[2px] h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-lg'>
-                <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-lg opacity-85 group-hover:opacity-65  ' />
+              <div className='relative p-1 h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-sm'>
+                <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full rounded-sm w-full object-cover object-top opacity-85 group-hover:opacity-65  ' />
               </div>
               <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
                 {game.title}
