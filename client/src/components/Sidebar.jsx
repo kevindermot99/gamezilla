@@ -6,8 +6,8 @@ function Sidebar() {
     <div className='w-[270px] bg-body-color h-full flex flex-col'>
       <h1>Gamezilla</h1>
       <ul>
-        <Link></Link>
-        <Link></Link>
+        <Link>Explore</Link>
+        <Link>Library</Link>
       </ul>
     </div>
   )

@@ -30,7 +30,7 @@ export default {
       colors: {
         // "main-color": "#8C52FF",
         "main-color": "#0197F6",
-        "body-color": "#1c1c1c",
+        "body-color": "#141414",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
         "text-color": "#ebebeb",
