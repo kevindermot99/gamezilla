@@ -52,15 +52,16 @@ function Home() {
         {/* publishers */}
         <div className='px-12 pt-5 max-sm:p-5 max-w-[1500px] h-fit mx-auto'>
           <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Publishers</h1>
-          <div className='grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-5 gap-2  '>
+          <div className='overflow-x-auto p-2 flex mt-5 gap-2 h-fit '>
             {Games.map((game, index) => (
-              <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
-                <div className='relative p-1 h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-full'>
+              <Link key={index} to={`/game/${game.id}`} className='group h-fit aspect-square flex flex-col'>
+                <div className='relative p-1 h-[160px] w-[160px] ring-2 ring-transparent group-hover:ring-main-color rounded-full'>
                   <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-full opacity-85 group-hover:opacity-65  ' />
                 </div>
-                <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
+                <h1 className='font-normal text-sm p-1 break-words whitespace-break-spaces  '>
                   {game.title}
                 </h1>
+                <p className='font-bold text-sm text-text-color-light  '>23,943 Games</p>
               </Link>
             ))}
 
@@ -70,13 +71,13 @@ function Home() {
         {/* Recommended*/}
         <div className='px-12 pt-5 max-sm:p-5 mt-8 max-w-[1500px] h-fit mx-auto'>
           <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Recommended</h1>
-          <div className='grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-5 gap-2'>
+          <div className='grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 mt-5 gap-2'>
             {Games.map((game, index) => (
               <Link key={index} to={`/game/${game.id}`} className='group flex flex-col h-fit'>
                 <div className='relative p-1 h-full w-full ring-2 ring-transparent group-hover:ring-main-color rounded-sm'>
                   <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full rounded-sm w-full object-cover object-top opacity-85 group-hover:opacity-65  ' />
                 </div>
-                <h1 className='font-light text-sm p-1 break-words whitespace-break-spaces  '>
+                <h1 className='font-normal text-sm p-1 break-words whitespace-break-spaces  '>
                   {game.title}
                 </h1>
               </Link>

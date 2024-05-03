@@ -79,22 +79,14 @@ function Menu({ userId }) {
 
   return (
     <div className={` sticky top-0 z-20 h-fit w-full px-[24px] py-2 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
-      {/* <div className='h-full w-fit min-w-fit'>
-        <ul className='flex h-[100%] items-center relative  '>
-          <Link to="/" className='text-2xl font-bold flex items-center tracking-tight mr-8'>Gamezilla.</Link>
-          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='Explore'> Explore </Link>
-          <Link to="/" className='text-[15px] font-medium flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70 ' title='All Games'>All Games</Link>
-          <Link to="/" className='text-[15px] font-semibold flex items-center tracking-wide h-fit mr-5 relative gap-1 transition hover:opacity-70  '>My Games </Link>
-        </ul>
-      </div> */}
-
+    
       <form onSubmit={searchThis} className='h-fit w-full max-w-[400px] relative flex text-light-text-color'>
         <label className='w-full h-fit relative overflow-hidden flex flex-col items-center justify-center z-20'>
           <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-container-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[15px] tracking-tight font-medium ' />
           <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
           <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
         </label>
-        <div className={`min-h-fit w-full pt-6 pb-3 bg-body-color backdrop-blur-sm shadow-xl absolute top-[10px] border border-border-line-color rounded-2xl flex-col ${quickResult ? 'flex ' : 'hidden'} `}>
+        <div className={`min-h-fit w-full pt-6 pb-3 bg-body-color shadow-xl absolute top-[10px] border border-border-line-color/40 rounded-2xl flex-col ${quickResult ? 'flex ' : 'hidden'} `}>
           <div className='px-3 flex flex-col mt-3'>
             <Link to={`/`} className='group px-4 py-2 rounded-xl transition hover:bg-container-color '>
               <h1 className=' text-[15px] tracking-wide font-medium transition group-hover:text-main-color  '>Home Lander</h1>
