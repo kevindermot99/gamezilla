@@ -78,7 +78,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={`fixed z-20 h-fit w-full px-[24px] py-2 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] py-2 text-light-text-color flex items-center justify-between transition-colors ease-in-out duration-500 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
       {/* <div className='h-full w-fit min-w-fit'>
         <ul className='flex h-[100%] items-center relative  '>
           <Link to="/" className='text-2xl font-bold flex items-center tracking-tight mr-8'>Gamezilla.</Link>
