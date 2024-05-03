@@ -28,18 +28,15 @@ function Home() {
     setIsLoading(true)
   }
 
-  const id = localStorage.getItem("BannerMovieId") || '1';
-  const bannerGame = Games.find(game => game.id === id)
-
   return (
     <div className={`relative h-svh flex flex-col text-text-color ${modal && 'overflow-y-clip'}`} >
 
 
       {/* MENU */}
       <Menu userId={userId} />
-      {bannerGame &&
-        <></>
-      }
+      <div className='h-fit min-h-[400px] w-full'>
+
+      </div>
 
       {/* Order By Downloads */}
       <div className='px-12 py-5 pb-0 max-sm:p-5 max-w-[1500px] h-fit mx-auto'>
