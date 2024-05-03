@@ -121,13 +121,16 @@ html {
 }
 
 
+
+
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #a5a5a55e;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

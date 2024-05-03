@@ -52,9 +52,9 @@ function Home() {
         {/* publishers */}
         <div className='px-12 pt-5 max-sm:p-5 max-w-[1500px] h-fit mx-auto'>
           <h1 className='text-2xl tracking-wide font-bold '><span className='text-text-color-light/40 '>#</span>  Publishers</h1>
-          <div className='overflow-x-auto p-2 flex mt-5 gap-2 h-fit '>
+          <div className='overflow-x-auto snap-x snap-mandatory p-2 flex mt-5 gap-1 h-fit '>
             {Games.map((game, index) => (
-              <Link key={index} to={`/game/${game.id}`} className='group h-fit aspect-square flex flex-col'>
+              <Link key={index} to={`/game/${game.id}`} className='group px-1 snap-start h-fit aspect-square flex flex-col'>
                 <div className='relative p-1 h-[160px] w-[160px] ring-2 ring-transparent group-hover:ring-main-color rounded-full'>
                   <img src={game.poster} className='pointer-events-none bg-container-color aspect-square h-full w-full object-cover object-top rounded-full opacity-85 group-hover:opacity-65  ' />
                 </div>
