@@ -38,7 +38,7 @@ function Home() {
       {/* MENU */}
       <Menu userId={userId} />
       {bannerGame &&
-        <div className='relative w-full h-fit min-h-[600px] overflow-clip bg-gradient-to-t from-body-color  to-body-color/20     '>
+        <div className='relative w-full h-fit min-h-[600px] overflow-clip bg-gradient-to-t from-body-color  to-body-color/50  '>
           <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-opacity duration-500 z-10 ${!isLoading ? 'opacity-100 z-10 ' : 'opacity-0 -z-10 '}`}>
             <TbLoader2 className='animate-spinLoader text-text-color-light text-[40px] ' />
           </div>

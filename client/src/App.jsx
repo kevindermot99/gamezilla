@@ -9,7 +9,7 @@ import Game from './pages/Game';
 
 function App() {
   return (
-    <div className='flex flex-col h-svh'>
+    <div className=''>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
