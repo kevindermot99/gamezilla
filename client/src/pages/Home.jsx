@@ -39,7 +39,7 @@ function Home() {
 
       {/* MENU */}
       <Menu userId={userId} />
-      <div className='h-fit min-h-[400px] w-full'>
+      <div className='h-fit min-h-[400px] w-full bg-gradient-to-b from-body-color to-transparent'>
         <img src={bannerGame.banner} alt="" className='fixed top-0 left-0 -z-10 opacity-5 blur-lg ' />
       </div>
 
