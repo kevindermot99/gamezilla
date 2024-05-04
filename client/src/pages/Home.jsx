@@ -54,10 +54,10 @@ function Home() {
       modifier: 1,
       slideShadows: false,
     },
-    // autoplay: {
-    //   delay: 1300,
-    //   pauseOnMouseEnter: true
-    // }
+    autoplay: {
+      delay: 1300,
+      pauseOnMouseEnter: true
+    }
 
   })
 
