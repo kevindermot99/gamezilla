@@ -82,7 +82,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] py-4 text-light-text-color flex flex-col gap-5 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
       <div className='w-full flex items-center justify-around'>
         <div>
@@ -110,7 +110,7 @@ function Menu({ userId }) {
             <Badge count={0} />
           </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 p-2 font-bold tracking-wide rounded-full capitalize `}>Start Today</Link>
+            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 p-2 font-bold tracking-wide rounded-full capitalize `}>Log in</Link>
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
@@ -134,7 +134,7 @@ function Menu({ userId }) {
         </div>
       </div>
 
-      <div className='flex relative w-full max-w-[1000px] mx-auto '>
+      <div className='flex relative w-full max-w-[1200px] mx-auto '>
         <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-body-color w-12 h-full '></div>
         <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-body-color w-12 h-full '></div>
         <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
