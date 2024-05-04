@@ -12,6 +12,7 @@ import { HiCollection } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { genres } from '../constants/data';
+import { RiCustomerService2Line } from "react-icons/ri";
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -85,10 +86,9 @@ function Menu({ userId }) {
 
       <div className='w-full flex items-center justify-around'>
         <div>
-          <Link to='/' className='font-bold text-2xl font-SulphurPoint flex items-center justify-center gap-2 '>
+          <Link to='/' className='font-bold text-2xl font-Inter flex items-center justify-center gap-2 '>
             <img src={Logo} className="h-9" />
             Gamezilla
-            <p></p>
           </Link>
         </div>
 
@@ -101,16 +101,20 @@ function Menu({ userId }) {
         </form>
 
         <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 gap-4`}>
+          <Link to={`/signup`} className={` relative mr-1 group `}>
+            <RiCustomerService2Line className='text-xl transition group-hover:text-main-color ' />
+            {/* <Badge count={2} /> */}
+          </Link>
           <Link to={`/signup`} className={` relative mr-3 group `}>
             <BsCart className='text-xl transition group-hover:text-main-color ' />
-            <Badge count={2} />
+            <Badge count={0} />
           </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 font-bold tracking-wide rounded-full capitalize `}>Start Today</Link>
+            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 p-2 font-bold tracking-wide rounded-full capitalize `}>Start Today</Link>
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
-              <p className='bg-main-color  backdrop-blur-md text-white h-8 aspect-square flex items-center justify-center capitalize font-mono font-bold text-2xl rounded-full  '>{username.charAt(0)}</p>
+              <p className='bg-main-color backdrop-blur-md text-white h-8 aspect-square flex items-center justify-center capitalize font-mono font-bold text-2xl rounded-full  '>{username.charAt(0)}</p>
               <p>{username}</p>
               <div className='absolute top-[30px] pt-3 right-0 w-fit min-w-[200px] h-fit opacity-0 -z-50 pointer-events-none group-hover:opacity-100 group-hover:z-10 -translate-y-4 group-hover:translate-y-0 transition group-hover:pointer-events-auto   '>
                 <div className='bg-container-color bad rounded-lg p-2 w-full h-full'>
@@ -126,16 +130,16 @@ function Menu({ userId }) {
           }
 
           <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
-          <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:opacity-70 ' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
+          <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:text-main-color' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
         </div>
       </div>
 
-      <div className='flex relative w-full max-w-[700px] mx-auto '>
+      <div className='flex relative w-full max-w-[1000px] mx-auto '>
         <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-body-color w-12 h-full '></div>
         <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-body-color w-12 h-full '></div>
         <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
           {genres.map((genre, index) => (
-            <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:text-main-color whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
+            <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:bg-gradient-to-t from-main-color/20 to-main-color/0 border-b-[2px] border-transparent hover:border-main-color  hover:text-white p-3 whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
           ))}
         </div>
       </div>
