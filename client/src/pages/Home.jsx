@@ -70,7 +70,7 @@ function Home() {
         <div className="swiper h-fit">
           <div className="swiper-wrapper w-full h-full px-20 py-4">
             {sortedGames.map((game, index) => (
-              <div className="swiper-slide w-full h-[330px] rounded-3xl overflow-clip relative flex flex-col items-start justify-end ">
+              <div className="swiper-slide w-full h-[380px] rounded-3xl overflow-clip relative flex flex-col items-start justify-end ">
                 <div className='absolute top-0 left-0 right-0 z-10 scale-150 bg-gradient-to-tr from-body-color to-black/10 w-full h-full'></div>
                 <img src={game.banner} className='absolute top-0 left-0 right-0 m-auto z-0  bg-gradient-to-br from-container-color to-border-line-color w-full h-full object-cover object-top scale-105' />
                 <div className='z-20 py-5 px-9'>

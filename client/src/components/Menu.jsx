@@ -84,7 +84,7 @@ function Menu({ userId }) {
   return (
     <div className={` sticky top-0 z-20 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
-      <div className='w-full flex items-center justify-around'>
+      <div className='w-full flex items-center justify-between '>
         <div>
           <Link to='/' className='font-bold text-2xl font-Inter flex items-center justify-center gap-2 '>
             <img src={Logo} className="h-9" />
@@ -134,7 +134,7 @@ function Menu({ userId }) {
         </div>
       </div>
 
-      <div className='flex relative w-full max-w-[1200px] mx-auto '>
+      <div className='flex relative w-full '>
         <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-body-color w-12 h-full '></div>
         <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-body-color w-12 h-full '></div>
         <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
