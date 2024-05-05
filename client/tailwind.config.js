@@ -6,6 +6,28 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    patterns: {
+      opacities: {
+        100: "1",
+        80: ".80",
+        60: ".60",
+        40: ".40",
+        20: ".20",
+        10: ".10",
+        5: ".05",
+      },
+      sizes: {
+        1: "0.25rem",
+        2: "0.5rem",
+        4: "1rem",
+        6: "1.5rem",
+        8: "2rem",
+        16: "4rem",
+        20: "5rem",
+        24: "6rem",
+        32: "8rem",
+      }
+    },
     fontSize: {
       xs: ['12px', '16px'],
       sm: ['14px', '20px'],
@@ -59,15 +81,17 @@ export default {
           '100%': { opacity: '1' },
         },
         goingTop: {
-          '0%':{transform: 'translateY(100vh) scale(.5)'},
-          '100%':{transform: 'translateY(0vh) scale(1)'}
+          '0%': { transform: 'translateY(100vh) scale(.5)' },
+          '100%': { transform: 'translateY(0vh) scale(1)' }
         },
         zoom: {
-          '0%':{transform: ' scale(1.1) '},
-          '100%':{transform: ' scale(1)'}
+          '0%': { transform: ' scale(1.1) ' },
+          '100%': { transform: ' scale(1)' }
         }
       }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-bg-patterns'),
+  ],
 }

@@ -15,6 +15,11 @@ import Sidebar from '../components/Sidebar'
 import { BsCart } from "react-icons/bs";
 import ButtonLink from '../components/ButtonLink';
 import ButtonClick from '../components/ButtonClick';
+import { IoGameControllerOutline } from "react-icons/io5";
+import { HiOutlineUsers } from "react-icons/hi2";
+import { GoGift } from "react-icons/go";
+import { HiMagnifyingGlass } from "react-icons/hi2";
+import { HiMiniFire } from "react-icons/hi2";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false)
@@ -66,52 +71,79 @@ function Home() {
     <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[180px]`} >
       <Menu userId={userId} />
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
-        
+
         <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
           <h1 className='text-[60px] leading-[62px] font-montserrat capitalize font-bold tracking-tight text-center'>Open-Source Game Store <br />for Gamers</h1>
           <p className='font-montserrat font-semibold text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, List, Request a game,... all for absolutely Free of charge.</p>
         </div>
-        
+
         <div className='w-full translate-y-12 z-10 px-4'>
           <form className='relative w-full flex items-center justify-center'>
             <label className='w-full h-[55px] max-w-[500px] relative'>
-            <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium rounded-2xl w-full h-[55px] ring-8 ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color' />
-            <span className='absolute top-0 bottom-0 right-2 m-auto flex h-fit  '>
-              <ButtonClick title={'Search'} type={'submit'} />
-            </span>
+              <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium rounded-2xl w-full h-[55px] ring-8 ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color' />
+              <span className='absolute top-0 bottom-0 right-2 m-auto flex h-fit  '>
+                <ButtonClick title={'Search'} type={'submit'} icon={<HiMagnifyingGlass />} />
+              </span>
             </label>
           </form>
         </div>
 
         <div className='flex items-center justify-center flex-col gap-2 overflow-x-clip overflow-y-visible relative '>
-          <div className='absolute -top-[50px] left-0 right-0 w-full max-w-[1200px] m-auto h-[100px] bg bg-main-color/20 rounded-full blur-[130px] -z-10 pointer-events-none'></div>
+          <div className='absolute -top-[50px] left-0 right-0 w-full max-w-[1200px] m-auto h-[100px] bg bg-main-color/5 rounded-full blur-[130px] -z-10 pointer-events-none'></div>
           <div className='absolute bottom-0 left-0 right-0 w-full h-[160px] z-10 bg-gradient-to-b from-body-color/70 to-body-color flex justify-end items-center flex-col pb-6'>
-            <ButtonLink to={'/'} title={'Browse All Games'} />
+            <ButtonLink to={'/'} title={'Browse All Games'} icon={<HiMiniFire />} />
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
-          {sortedGames.slice(9, 19).map((game, index) => (
-            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
-            </Link>
-          ))}
+            {sortedGames.slice(9, 19).map((game, index) => (
+              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
+                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              </Link>
+            ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
-          {sortedGames.slice(0, 9).map((game, index) => (
-            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
-            </Link>
-          ))}
+            {sortedGames.slice(0, 9).map((game, index) => (
+              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
+                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              </Link>
+            ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
-          {sortedGames.slice(8, 16).map((game, index) => (
-            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
-            </Link>
-          ))}
+            {sortedGames.slice(8, 16).map((game, index) => (
+              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
+                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              </Link>
+            ))}
           </div>
         </div>
-      
+
       </div>
+
+      <div class=" w-full mb-16 relative">
+        <div className='pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-20 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full '>
+        <div className='absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b from-body-color/80 to-body-color/0 '></div>
+        <div className='absolute z-0 bottom-0 left-0 right-0 w-full h-[50%] bg-gradient-to-t from-body-color/80 to-body-color/0 '></div>
+        </div>
+        <div className='w-full h-fit min-h-[500px] z-10 p-20 flex items-center justify-center gap-[10%]'>
+          <div className='flex items-center justify-center flex-col gap-2'>
+            <IoGameControllerOutline className='text-text-color-light text-[40px] pb-1' />
+            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>23,492</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Games uploaded</p>
+          </div>
+
+          <div className='flex items-center justify-center flex-col gap-2'>
+            <HiOutlineUsers className='text-text-color-light text-[40px] pb-1' />
+            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>492</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Gamers joined</p>
+          </div>
+
+          <div className='flex items-center justify-center flex-col gap-2'>
+            <GoGift className='text-text-color-light text-[40px] pb-1' />
+            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>100%</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Free for all</p>
+          </div>
+        </div>
+      </div>
+
       <div className='w-full h-full'>
         <div className='w-full h-fit flex flex-col px-10'>
           <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Most Downloaded Games <br /> of all time.</h1>
