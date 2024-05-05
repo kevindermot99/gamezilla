@@ -3,8 +3,8 @@ import React from 'react'
 const Badge = ({count}) => {
   
   return (
-    <div className=" absolute -top-[7px] left-[16px] bg-white text-black aspect-square h-5 text-center pt-[3px] rounded-full text-xs font-bold font-mono ">
-        {count > 100 ? "99+" : count}
+    <div className=" absolute -top-[7px] -right-[15px] bg-main-color text-white aspect-square h-5 text-center pt-[1px] rounded-full text-[13px] font-bold font-mono ">
+        {count > 9 ? "9+" : count}
     </div>
   )
 }
