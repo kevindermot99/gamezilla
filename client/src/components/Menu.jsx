@@ -83,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-container-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-container-color/90 backdrop-blur-lg  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
       <div className='w-full flex items-center justify-between '>
         <div>
@@ -95,7 +95,7 @@ function Menu({ userId }) {
 
         <form onSubmit={searchThis} className='h-fit w-full max-w-[400px] relative flex text-light-text-color'>
           <label className='w-full h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20'>
-            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color/40 ring-1 ring-border-line-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
+            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color/40 ring-1 ring-border-line-color focus:ring-main-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
             <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
             <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
           </label>

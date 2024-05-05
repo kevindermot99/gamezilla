@@ -62,28 +62,22 @@ function Home() {
   })
 
   return (
-    <div className={`relative h-svh flex flex-col text-text-color mt-[150px]`} >
+    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[150px]`} >
 
       <Menu userId={userId} />
 
-      <div className='w-full h-fit'>
-        <div className="h-fit">
-          <div className="w-full h-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-3 px-10 py-4">
-            {sortedGames.map((game, index) => (
-              <div className="w-full h-[380px] rounded-3xl overflow-clip relative flex flex-col items-start justify-end ">
-                <div className='absolute top-0 left-0 right-0 z-10 scale-150 bg-gradient-to-tr from-black to-black/20 w-full h-full'></div>
-                <img src={game.banner} className='absolute top-0 left-0 right-0 m-auto z-0  bg-gradient-to-br from-container-color to-border-line-color w-full h-full object-cover object-top scale-105' />
-                <div className='z-20 py-5 px-9'>
-                  <h1 className='font-extrabold text-[30px] tracking-tight leading-tight'>{game.title}</h1>
-                  <p className=' line-clamp-2 max-w-[100%] pt-1 font-medium text-[14px] leading-5 capitalize text-text-color/70 '>{game.description}</p>
-                  <div className='flex gap-2 py-4'>
-                    <Button title="Get Game" to={`/game/${game.id}`} />
-                    <button className='bg-white h-9 aspect-square flex justify-center items-center rounded-full '>
-                      <BsCart className='text-black ' />
-                    </button>
-                  </div>
+      <div className='w-full h-fit flex flex-col px-10'>
+        <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center text-text-color'>Most Downloaded Games <br /> of all time.</h1>
+        <h1 className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</h1>
+        <div className="h-fit overflow-x-auto px-2">
+          <div className="w-fit h-full flex items-center justify-center gap-1 p-3">
+            {sortedGames.slice(0, 20).map((game, index) => (
+              <Link to={`/game/${game.id}`} className="group h-full w-full rounded-lg cursor-pointer ">
+                <div className='w-[180px] h-[250px] ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
+                  <img src={game.poster} className='w-full h-full rounded-lg object-cover object-top opacity-70' />
                 </div>
-              </div>
+                <p className='font-DMsans font-bold text-[13px] line-clamp-1 m-1'>{game.title}</p>
+              </Link>
             ))}
           </div>
         </div>

@@ -30,12 +30,12 @@ export default {
       colors: {
         "main-color": "#B931FC",
         // "main-color": "#0197F6",
-        "body-color": "#141414",
+        "body-color": "#1E1F22",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
         "text-color": "#ebebeb",
         "text-color-light": "#808080",
-        "container-color": "#232323",
+        "container-color": "#2B2D31",
         "footer-color": "#161616",
       },
       boxShadow: {
