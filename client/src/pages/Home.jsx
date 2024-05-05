@@ -77,7 +77,8 @@ function Home() {
   // })
 
   return (
-    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[140px]  `} >
+    <div className={` relative h-svh flex flex-col overflow-x-clip text-text-color pt-[140px]  `} >
+      <div className='hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none '></div>
       <Menu userId={userId} />
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
 

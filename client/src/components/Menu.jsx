@@ -83,28 +83,28 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 bg-body-color/90 backdrop-blur-lg ${scrollPosition > 60 ? '  ' : '  '} `}>
+    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' bg-body-color/90 backdrop-blur-lg ' : ' bg-transparent '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
-          <Link to='/' className='font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center mr-7 gap-2 '>
+          <Link to='/' className='font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center mr-7 gap-1 '>
             <img src={Logo} className="h-9" />
             Gamezilla
           </Link>
 
-          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
             Explore
           </Link>
           
-          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
             Games
           </Link>
           
-          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
             Categories
           </Link>
           
-          <Link to={`/`} className='font-bold text-sm px-3 transition-colors duration-150 hover:text-main-color'>
+          <Link to={`/`} className='font-bold text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             FAQs
           </Link>
 
