@@ -83,15 +83,31 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-3 transition-all duration-300 bg-body-color/90 backdrop-blur-lg ${scrollPosition > 60 ? '  ' : '  '} `}>
+    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 bg-body-color/90 backdrop-blur-lg ${scrollPosition > 60 ? '  ' : '  '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
-          <Link to='/' className='font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center gap-2 '>
+          <Link to='/' className='font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center mr-7 gap-2 '>
             <img src={Logo} className="h-9" />
             Gamezilla
           </Link>
-          <Link to={`/`} className='font-bold text-sm px-3 transition-colors duration-150 hover:text-main-color'>Explore</Link>
+
+          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+            Explore
+          </Link>
+          
+          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+            Games
+          </Link>
+          
+          <Link to={`/`} className='font-semibold text-sm px-2 transition-colors duration-150 hover:text-main-color relative'>
+            Categories
+          </Link>
+          
+          <Link to={`/`} className='font-bold text-sm px-3 transition-colors duration-150 hover:text-main-color'>
+            FAQs
+          </Link>
+
         </div>
 
         {/* <form onSubmit={searchThis} className='h-fit w-full bg-orange-500 relative flex items-center justify-center text-light-text-color'>
@@ -103,11 +119,12 @@ function Menu({ userId }) {
         </form> */}
 
         <div className={`h-full w-fit relative flex items-center gap-4`}>
-          <Link to={`/signup`} className={` relative mr-1 group `}>
+          <Link to={`/signup`} className={` relative mr-1 group flex gap-1   items-center justify-start`}>
             <RiCustomerService2Line className='text-xl transition group-hover:text-main-color ' />
             {/* <Badge count={2} /> */}
+            <p className='font-medium transition group-hover:text-main-color '>Get Help</p>
           </Link>
-          <Link to={`/signup`} className={` relative mr-3 group `}>
+          <Link to={`/signup`} className={` relative mr-3 group flex px-1 gap-1 `}>
             <BsCart className='text-xl transition group-hover:text-main-color ' />
             <Badge count={0} />
           </Link>
@@ -136,15 +153,6 @@ function Menu({ userId }) {
         </div>
       </div>
 
-      <div className='flex relative w-full '>
-        {/* <div className={`absolute top-0 left-0 w-12 h-full bg-gradient-to-l from-transparent to-body-color  `}></div>
-        <div className={`absolute top-0 right-0 w-12 h-full bg-gradient-to-r from-transparent to-body-color  `}></div> */}
-        <div className='hide-scroll w-fit mx-auto flex items-center justify-start overflow-x-auto p-0 '>
-          {genres.map((genre, index) => (
-            <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:bg-gradient-to-t from-main-color/20 to-main-color/0 border-b-[2px] border-transparent hover:border-main-color  hover:text-white p-3 whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
-          ))}
-        </div>
-      </div>
 
     </div>
   )
