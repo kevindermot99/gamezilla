@@ -4,6 +4,7 @@ export const AppVersion = {
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
 };
 
+
 export const genres = [
   "Action",
   "Sports",
@@ -23,6 +24,69 @@ export const genres = [
 ];
 
 export const Games = [
+  {
+    id: '17',
+    banner: 'https://i.pinimg.com/736x/7d/a7/06/7da706047b48b12e793f850c4facfa44.jpg',
+    poster: 'https://static.posters.cz/image/750/posters/call-of-duty-black-ops-cover-i8700.jpg',
+    title: 'Call of Duty: Black Ops I',
+    description: `In the 1960s Cold War era, the game tracks CIA agent Alex Mason's quest to recover crucial memories, aiming to uncover a Soviet plot to unleash chemical weapons on the USA.`,
+    genres: ['Shooting', 'Action', 'Adventure'],
+    downloads: '235135'
+  },
+  {
+    id: '18',
+    banner: 'https://i0.wp.com/www.spieltimes.com/wp-content/uploads/2020/06/MafiaDEv.jpg?fit=1024%2C576&ssl=1',
+    poster: 'https://upload.wikimedia.org/wikipedia/en/b/ba/MafiaUSCov.jpg',
+    title: 'Mafia I',
+    description: 'follows the rise and fall of taxi driver-turned-mobster Tommy Angelo within the Salieri crime family.',
+    genres: ['Action', 'Shooting', 'Adventure'],
+    downloads: '357548'
+  },
+  {
+    id: '19',
+    banner: 'https://www.superjumpmagazine.com/content/images/2022/07/crysis-4-teaser-release-date.jpeg',
+    poster: 'https://assets-prd.ignimgs.com/2022/01/05/crysis-1-button-edit-1641406900101.jpg',
+    title: 'Crysis',
+    description: 'North Korean forces led by General Ri-Chan Kyong take control of the Lingshan Islands',
+    genres: ['Action', 'Shooting', 'Adventure'],
+    downloads: '463578'
+  },
+  {
+    id: '20',
+    banner: 'https://wallpapers.com/images/hd/far-cry-5-4k-v8jqjvhhbtl7213t.jpg',
+    poster: 'https://i.gadgets360cdn.com/products/large/MV5BYmQwYmNmZTEtMDE4NC00MGIzLTkxMmEtNjhiN2IwZWUzYWViXkEyXkFqcGdeQXVyNTMxMjgxMzA-.-V1-FMjpg-UX1000-1000x1322-1665990850.jpg',
+    title: 'far cry 5',
+    description: `the game revolves around the Project at Eden's Gate, a doomsday cult that has taken over the county at the command of its charismatic and powerful leader, Joseph Seed`,
+    genres: ['Action', 'Shooting', 'Adventure', 'Survival'],
+    downloads: '965744'
+  },
+  {
+    id: '21',
+    banner: 'https://c4.wallpaperflare.com/wallpaper/741/914/473/machine-race-the-game-nfs-need-for-speed-heat-hd-wallpaper-preview.jpg',
+    poster: 'https://i.ebayimg.com/images/g/SIMAAOSwgyBjBjiL/s-l1600.jpg',
+    title: 'Need for Speed Heat',
+    description: 'The player character arrives at Palm City, a city known for its racing roots and participates in the Speedhunter Showdown, a daytime event sanctioned by the government',
+    genres: ['Racing', 'Adventure'],
+    downloads: '226533'
+  },
+  {
+    id: '22',
+    banner: 'https://c4.wallpaperflare.com/wallpaper/341/385/242/need-for-speed-need-for-speed-rivals-wallpaper-preview.jpg',
+    poster: 'https://i.pinimg.com/736x/be/c6/cc/bec6cc76bc014b97427748513047c9cb.jpg',
+    title: 'Need for Speed Rivals',
+    description: 'A rivalry between cops and racers has broken out in Redview County.',
+    genres: ['Racing', 'Adventure'],
+    downloads: '724654'
+  },
+  {
+    id: '23',
+    banner: 'https://w0.peakpx.com/wallpaper/761/527/HD-wallpaper-need-for-speed-unbound-need-for-speed-unbound-2022-games-ps5-games-xbox-games-pc-games.jpg',
+    poster: 'https://upload.wikimedia.org/wikipedia/en/d/db/Need_for_Speed_Unbound.png',
+    title: 'Need for Speed Unbound',
+    description: 'Unable to stop a robbery at a family auto-shop, two friends are pushed to breaking point, giving the player an opportunity to make their mark on the streets earning rep to go from rookie to top racer by winning the Grand and reclaiming a stolen custom car.',
+    genres: ['Racing', 'Adventure'],
+    downloads: '3472772'
+  },
   {
     id: '1',
     banner: 'https://r4.wallpaperflare.com/wallpaper/452/912/964/battlefield-4-wallpaper-8910a83d416abd8b86b7781f20c1a60d.jpg',
