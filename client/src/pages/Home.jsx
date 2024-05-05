@@ -77,7 +77,7 @@ function Home() {
   // })
 
   return (
-    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[180px]  `} >
+    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[140px]  `} >
       <Menu userId={userId} />
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
 
