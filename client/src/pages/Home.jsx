@@ -24,7 +24,8 @@ import { HiOutlineStar } from "react-icons/hi2";
 import { LuExternalLink } from "react-icons/lu";
 import { TbDoorEnter } from "react-icons/tb";
 import Footer from '../components/Footer';
-
+import Logo from '../assets/logo.png'
+import SquareImage from '../components/SquareImage';
 
 
 
@@ -35,7 +36,6 @@ function Home() {
   const [userId, setUserId] = useState('');
   const [modal, setModal] = useState(false)
   const [OpenedModalId, setOpendModalId] = useState('')
-
 
 
   // checking logged in user
@@ -76,6 +76,10 @@ function Home() {
 
   // })
 
+  // loadedr
+
+
+
   return (
     <div className={` relative h-svh flex flex-col overflow-x-clip text-text-color pt-[140px]  `} >
       <div className='hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none '></div>
@@ -105,22 +109,22 @@ function Home() {
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(9, 19).map((game, index) => (
-              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl' key={index}>
+                <SquareImage src={game.poster} opacity={'40'}  />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(0, 9).map((game, index) => (
-              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl'>
+                <SquareImage src={game.poster} opacity={'40'}  />  
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(8, 16).map((game, index) => (
-              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
-                <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl'>
+                <SquareImage src={game.poster} opacity={'40'}  />  
               </Link>
             ))}
           </div>
@@ -128,7 +132,7 @@ function Home() {
 
       </div>
 
-      <div class=" w-full mb-16 relative">
+      <div className=" w-full mb-16 relative">
         <div className='pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-25 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full '>
           <div className='absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b from-body-color/80 to-body-color/0 '></div>
           <div className='absolute z-0 bottom-0 left-0 right-0 w-full h-[50%] bg-gradient-to-t from-body-color/80 to-body-color/0 '></div>
@@ -161,11 +165,11 @@ function Home() {
           <div className="h-fit overflow-x-auto ">
             <div className="w-fit h-full flex items-center justify-center gap-1 px-2 py-3">
               {sortedGames.slice(0, 20).map((game, index) => (
-                <Link to={`/game/${game.id}`} className="group h-full w-full rounded-lg cursor-pointer ">
-                  <div className='w-[160px] aspect-square ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
-                    <img src={game.poster} className='w-full h-full rounded-lg object-cover object-top opacity-80' />
+                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer ">
+                  <div className=' rounded-xl w-fit h-full'>
+                    <SquareImage src={game.poster} opacity={'60'} />
                   </div>
-                  <p className='font-DMsans font-medium text-[15px] line-clamp-1 text-text-color m-1'>{game.title}</p>
+                  <p className='font-DMsans font-medium text-[15px] line-clamp-1 text-text-color/70 m-1'>{game.title}</p>
                 </Link>
               ))}
             </div>
@@ -177,7 +181,7 @@ function Home() {
       <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 '>
 
         <div className='w-1/2 rounded-bl-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip '>
-          <div class="pattern-boxes pattern-amber-300 origin-top pattern-bg-transparent pattern-size-2 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div>
+          <div className="pattern-boxes pattern-amber-300 origin-top pattern-bg-transparent pattern-size-2 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div>
           <div className='w-full'>
             <div className='flex items-center justify-start gap-1 pb-3 '>
               <div className='relative pb-1'>
@@ -201,7 +205,7 @@ function Home() {
         </div>
 
         <div className='w-1/2 rounded-tr-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip  '>
-        {/* <div class="pattern-dots pattern-stone-200 rotate-[25deg] origin-center pattern-bg-transparent pattern-size-4 pattern-opacity-10 h-[400px] w-[400px] absolute -bottom-[70px] -right-[160px] "></div> */}
+          {/* <div className="pattern-dots pattern-stone-200 rotate-[25deg] origin-center pattern-bg-transparent pattern-size-4 pattern-opacity-10 h-[400px] w-[400px] absolute -bottom-[70px] -right-[160px] "></div> */}
           <div className='w-full'>
             <div className='flex items-center justify-start gap-1 pb-3 '>
               <div className='relative pb-[2px]'>
