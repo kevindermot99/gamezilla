@@ -176,6 +176,7 @@ function Home() {
       <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 '>
 
         <div className='w-1/2 rounded-bl-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip '>
+          <div class="pattern-boxes pattern-amber-300 origin-top pattern-bg-transparent pattern-size-2 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div>
           <div className='w-full'>
             <div className='flex items-center justify-start gap-1 pb-3 '>
               <div className='relative pb-1'>
@@ -194,11 +195,12 @@ function Home() {
           </div>
 
           <div className='w-fit min-w-fit'>
-            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp" className='h-52 rotate-[25deg] origin-center pointer-events-none opacity-65 pt-4 max-lg:hidden' alt="" />
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp" className='h-52 select-none rotate-[25deg] origin-center pointer-events-none opacity-65 pt-4 max-lg:hidden' alt="" />
           </div>
         </div>
 
         <div className='w-1/2 rounded-tr-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip  '>
+        {/* <div class="pattern-dots pattern-stone-200 rotate-[25deg] origin-center pattern-bg-transparent pattern-size-4 pattern-opacity-10 h-[400px] w-[400px] absolute -bottom-[70px] -right-[160px] "></div> */}
           <div className='w-full'>
             <div className='flex items-center justify-start gap-1 pb-3 '>
               <div className='relative pb-[2px]'>
