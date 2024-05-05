@@ -3,7 +3,7 @@ import Menu from '../components/Menu'
 import { Games } from '../constants/data';
 import { FaMedal } from "react-icons/fa6";
 import { FaRankingStar } from "react-icons/fa6";
-import { Link, useParams } from 'react-router-dom';
+import { BrowserRouter, Link, useParams } from 'react-router-dom';
 import { TbLoader2 } from "react-icons/tb";
 import Sidebar from '../components/Sidebar'
 // import Swiper from 'swiper';
@@ -75,7 +75,7 @@ function Home() {
         <div className='w-full translate-y-12 z-10 px-4'>
           <form className='relative w-full flex items-center justify-center'>
             <label className='w-full h-[55px] max-w-[500px] relative'>
-            <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color py-0 px-8 text-black text-lg tracking-tight font-medium rounded-2xl w-full h-[55px] ring-8 ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color' />
+            <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color py-0 pl-7 pr-28 text-black text-lg tracking-tight font-medium rounded-2xl w-full h-[55px] ring-8 ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color' />
             <span className='absolute top-0 bottom-0 right-2 m-auto flex h-fit  '>
               <ButtonClick title={'Search'} type={'submit'} />
             </span>
@@ -83,17 +83,28 @@ function Home() {
           </form>
         </div>
 
-        <div className='flex items-center justify-center flex-col gap-2 overflow-clip'>
+        <div className='flex items-center justify-center flex-col gap-2 overflow-x-clip overflow-y-visible relative '>
+          <div className='absolute -top-[50px] left-0 right-0 w-full max-w-[1200px] m-auto h-[100px] bg bg-main-color/20 rounded-full blur-[130px] -z-10 pointer-events-none'></div>
+          <div className='absolute bottom-0 left-0 right-0 w-full h-[160px] z-10 bg-gradient-to-b from-body-color/70 to-body-color flex justify-end items-center flex-col pb-6'>
+            <ButtonLink to={'/'} title={'Browse All Games'} />
+          </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
           {sortedGames.slice(9, 19).map((game, index) => (
-            <Link to={`/game/${game.id}`}>
+            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
             <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
             </Link>
           ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
           {sortedGames.slice(0, 9).map((game, index) => (
-            <Link to={`/game/${game.id}`}>
+            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
+            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+            </Link>
+          ))}
+          </div>
+          <div className='flex items-start justify-center gap-2 overflow-clip'>
+          {sortedGames.slice(8, 16).map((game, index) => (
+            <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl'>
             <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
             </Link>
           ))}
