@@ -63,7 +63,7 @@ function Home() {
   // })
 
   return (
-    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[150px]`} >
+    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[180px]`} >
       <Menu userId={userId} />
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
         
@@ -72,7 +72,7 @@ function Home() {
           <p className='font-DMsans font-semibold text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, List, Request a game,... all for absolutely Free of charge.</p>
         </div>
         
-        <div className='w-full translate-y-12 z-10 '>
+        <div className='w-full translate-y-12 z-10 px-4'>
           <form className='relative w-full flex items-center justify-center'>
             <label className='w-full h-[55px] max-w-[500px] relative'>
             <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color py-0 px-8 text-black text-lg tracking-tight font-medium rounded-2xl w-full h-[55px] ring-8 ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color' />
@@ -85,13 +85,17 @@ function Home() {
 
         <div className='flex items-center justify-center flex-col gap-2 overflow-clip'>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
-          {sortedGames.map((img, index) => (
-            <img src={img.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+          {sortedGames.slice(9, 19).map((game, index) => (
+            <Link to={`/game/${game.id}`}>
+            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+            </Link>
           ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
-          {sortedGames.slice(0, 9).map((img, index) => (
-            <img src={img.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+          {sortedGames.slice(0, 9).map((game, index) => (
+            <Link to={`/game/${game.id}`}>
+            <img src={game.poster} key={index} className='w-[160px] min-w-[160px] aspect-square object-top object-cover rounded-xl opacity-40 transition-all duration-300 hover:opacity-100 cursor-pointer ' />
+            </Link>
           ))}
           </div>
         </div>
@@ -105,7 +109,7 @@ function Home() {
             <div className="w-fit h-full flex items-center justify-center gap-1 px-2 py-3">
               {sortedGames.slice(0, 20).map((game, index) => (
                 <Link to={`/game/${game.id}`} className="group h-full w-full rounded-lg cursor-pointer ">
-                  <div className='w-[200px] h-[250px] ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
+                  <div className='w-[180px] aspect-square ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
                     <img src={game.poster} className='w-full h-full rounded-lg object-cover object-top opacity-80' />
                   </div>
                   <p className='font-DMsans font-bold text-[13px] line-clamp-1 m-1'>{game.title}</p>
