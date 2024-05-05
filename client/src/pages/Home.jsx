@@ -83,7 +83,7 @@ function Home() {
 
         <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
           <h1 className='text-[60px] leading-[62px] font-montserrat capitalize font-bold tracking-tight text-center'>Open-Source Game Store <br />for Gamers</h1>
-          <p className='font-montserrat font-semibold text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, List, Request a game,... all for absolutely Free of charge.</p>
+          <p className='font-montserrat font-semibold text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, Request games all for absolutely Free of charge.</p>
         </div>
 
         <div className='w-full translate-y-12 z-10 px-4'>
