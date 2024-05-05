@@ -13,7 +13,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { genres } from '../constants/data';
 import { RiCustomerService2Line } from "react-icons/ri";
-import Button from './Button';
+import ButtonLink from './ButtonLink';
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -85,23 +85,24 @@ function Menu({ userId }) {
   return (
     <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-container-color/90 backdrop-blur-lg  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
-      <div className='w-full flex items-center justify-between '>
-        <div>
-          <Link to='/' className='font-bold text-2xl font-Inter flex items-center justify-center gap-2 '>
+      <div className='w-full h-fit flex items-center justify-between'>
+        <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
+          <Link to='/' className='font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center gap-2 '>
             <img src={Logo} className="h-9" />
             Gamezilla
           </Link>
+          <Link to={`/`} className='font-bold text-sm px-3 transition-colors duration-150 hover:text-main-color'>Explore</Link>
         </div>
 
-        <form onSubmit={searchThis} className='h-fit w-full max-w-[400px] relative flex text-light-text-color'>
-          <label className='w-full h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20'>
+        {/* <form onSubmit={searchThis} className='h-fit w-full bg-orange-500 relative flex items-center justify-center text-light-text-color'>
+          <label className={`w-full max-w-[400px] h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20 `}>
             <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color/40 ring-1 ring-border-line-color focus:ring-main-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
             <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
             <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
           </label>
-        </form>
+        </form> */}
 
-        <div className={`h-full w-fit min-w-fit relative flex items-center ml-5 gap-4`}>
+        <div className={`h-full w-fit relative flex items-center gap-4`}>
           <Link to={`/signup`} className={` relative mr-1 group `}>
             <RiCustomerService2Line className='text-xl transition group-hover:text-main-color ' />
             {/* <Badge count={2} /> */}
@@ -111,7 +112,7 @@ function Menu({ userId }) {
             <Badge count={0} />
           </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-          <Button title="Login" to={'/login'} />
+          <ButtonLink title="Login" to={'/login'} />
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
