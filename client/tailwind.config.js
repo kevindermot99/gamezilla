@@ -28,8 +28,8 @@ export default {
         SulphurPoint: ['Sulphur Point', 'sans-serif']
       },
       colors: {
-        // "main-color": "#8C52FF",
-        "main-color": "#0197F6",
+        "main-color": "#B931FC",
+        // "main-color": "#0197F6",
         "body-color": "#141414",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
