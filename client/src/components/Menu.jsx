@@ -83,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-container-color/90 backdrop-blur-lg  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-3 transition-all duration-300 bg-body-color/90 backdrop-blur-lg ${scrollPosition > 60 ? '  ' : '  '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
@@ -112,7 +112,7 @@ function Menu({ userId }) {
             <Badge count={0} />
           </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-          <ButtonLink title="Login" to={'/login'} />
+          <ButtonLink title="Join Today" to={'/login'} />
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
@@ -137,9 +137,9 @@ function Menu({ userId }) {
       </div>
 
       <div className='flex relative w-full '>
-        <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-container-color  w-12 h-full '></div>
-        <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-container-color  w-12 h-full '></div>
-        <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
+        {/* <div className={`absolute top-0 left-0 w-12 h-full bg-gradient-to-l from-transparent to-body-color  `}></div>
+        <div className={`absolute top-0 right-0 w-12 h-full bg-gradient-to-r from-transparent to-body-color  `}></div> */}
+        <div className='hide-scroll w-fit mx-auto flex items-center justify-start overflow-x-auto p-0 '>
           {genres.map((genre, index) => (
             <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:bg-gradient-to-t from-main-color/20 to-main-color/0 border-b-[2px] border-transparent hover:border-main-color  hover:text-white p-3 whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
           ))}
