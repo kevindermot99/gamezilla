@@ -13,6 +13,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { genres } from '../constants/data';
 import { RiCustomerService2Line } from "react-icons/ri";
+import Button from './Button';
 
 function Menu({ userId }) {
   const location = useLocation();
@@ -82,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` sticky top-0 z-20 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-body-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
+    <div className={` fixed top-0 z-50 h-fit w-full px-[24px] pt-4 text-light-text-color flex flex-col gap-5 bg-container-color  ${scrollPosition > 20 ? '  ' : '  '} `}>
 
       <div className='w-full flex items-center justify-between '>
         <div>
@@ -94,7 +95,7 @@ function Menu({ userId }) {
 
         <form onSubmit={searchThis} className='h-fit w-full max-w-[400px] relative flex text-light-text-color'>
           <label className='w-full h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20'>
-            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color ring-1 ring-border-line-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
+            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color/40 ring-1 ring-border-line-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
             <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
             <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
           </label>
@@ -110,7 +111,7 @@ function Menu({ userId }) {
             <Badge count={0} />
           </Link>
           <div className={`flex items-center gap-3 h-full w-fit min-w-fit ${userId !== 'none' && 'hidden'}`}>
-            <Link to={`/signup`} className={`h-[35px] w-fit flex items-center px-5 bg-main-color text-white text-[13px] transition hover:bg-main-color/90 p-2 font-bold tracking-wide rounded-full capitalize `}>Log in</Link>
+          <Button title="Login" to={'/login'} />
           </div>
           {userId !== 'none' && (
             <div className={`group flex items-center gap-2 h-full w-fit min-w-fit cursor-default relative ${userId === 'none' && 'hidden'}`}>
@@ -135,8 +136,8 @@ function Menu({ userId }) {
       </div>
 
       <div className='flex relative w-full '>
-        <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-body-color w-12 h-full '></div>
-        <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-body-color w-12 h-full '></div>
+        <div className='absolute top-0 left-0 bg-gradient-to-l from-transparent to-container-color  w-12 h-full '></div>
+        <div className='absolute top-0 right-0 bg-gradient-to-r from-transparent to-container-color  w-12 h-full '></div>
         <div className='hide-scroll w-full flex items-center justify-start gap-5 overflow-x-auto py-0 px-10 '>
           {genres.map((genre, index) => (
             <Link key={index} className={`text-xs font-semibold tracking-wide uppercase transition hover:bg-gradient-to-t from-main-color/20 to-main-color/0 border-b-[2px] border-transparent hover:border-main-color  hover:text-white p-3 whitespace-nowrap text-text-color-light snap-start `} to={`/`}>{genre}</Link>
