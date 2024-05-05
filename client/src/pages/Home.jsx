@@ -20,6 +20,15 @@ import { HiOutlineUsers } from "react-icons/hi2";
 import { GoGift } from "react-icons/go";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { HiMiniFire } from "react-icons/hi2";
+import { HiOutlineStar } from "react-icons/hi2";
+import { LuExternalLink } from "react-icons/lu";
+import { TbDoorEnter } from "react-icons/tb";
+import Footer from '../components/Footer';
+
+
+
+
+
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false)
@@ -68,7 +77,7 @@ function Home() {
   // })
 
   return (
-    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[180px]`} >
+    <div className={`relative h-svh flex flex-col overflow-x-clip text-text-color mt-[180px]  `} >
       <Menu userId={userId} />
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
 
@@ -119,32 +128,32 @@ function Home() {
       </div>
 
       <div class=" w-full mb-16 relative">
-        <div className='pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-20 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full '>
-        <div className='absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b from-body-color/80 to-body-color/0 '></div>
-        <div className='absolute z-0 bottom-0 left-0 right-0 w-full h-[50%] bg-gradient-to-t from-body-color/80 to-body-color/0 '></div>
+        <div className='pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-25 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full '>
+          <div className='absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b from-body-color/80 to-body-color/0 '></div>
+          <div className='absolute z-0 bottom-0 left-0 right-0 w-full h-[50%] bg-gradient-to-t from-body-color/80 to-body-color/0 '></div>
         </div>
-        <div className='w-full h-fit min-h-[500px] z-10 p-20 flex items-center justify-center gap-[10%]'>
+        <div className='w-full h-fit min-h-[500px] z-10 p-20 flex items-center justify-center gap-[8%]'>
           <div className='flex items-center justify-center flex-col gap-2'>
-            <IoGameControllerOutline className='text-text-color-light text-[40px] pb-1' />
-            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>23,492</h1>
-            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Games uploaded</p>
+            <IoGameControllerOutline className='text-main-color  text-[45px]' />
+            <h1 className='font-montserrat font-bold text-text-color text-[60px] leading-[50px] py-2'>23,492</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[20px] '>Games uploaded</p>
           </div>
 
           <div className='flex items-center justify-center flex-col gap-2'>
-            <HiOutlineUsers className='text-text-color-light text-[40px] pb-1' />
-            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>492</h1>
-            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Gamers joined</p>
+            <HiOutlineUsers className='text-main-color  text-[45px]' />
+            <h1 className='font-montserrat font-bold text-text-col6r text-[70px] leading-[50px] py-2'>492</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[20px] '>Gamers joined</p>
           </div>
 
           <div className='flex items-center justify-center flex-col gap-2'>
-            <GoGift className='text-text-color-light text-[40px] pb-1' />
-            <h1 className='font-montserrat font-bold text-text-color text-[48px] leading-[40px] py-2'>100%</h1>
-            <p className='font-montserrat font-semibold text-text-color-light text-[18px] '>Free for all</p>
+            <GoGift className='text-main-color  text-[45px]' />
+            <h1 className='font-montserrat font-bold text-6ext-color text-[70px] leading-[50px] py-2'>100%</h1>
+            <p className='font-montserrat font-semibold text-text-color-light text-[20px] '>Free for all</p>
           </div>
         </div>
       </div>
 
-      <div className='w-full h-full'>
+      <div className='w-full h-fit py-14'>
         <div className='w-full h-fit flex flex-col px-10'>
           <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Most Downloaded Games <br /> of all time.</h1>
           <h1 className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</h1>
@@ -152,10 +161,10 @@ function Home() {
             <div className="w-fit h-full flex items-center justify-center gap-1 px-2 py-3">
               {sortedGames.slice(0, 20).map((game, index) => (
                 <Link to={`/game/${game.id}`} className="group h-full w-full rounded-lg cursor-pointer ">
-                  <div className='w-[180px] aspect-square ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
+                  <div className='w-[160px] aspect-square ring-2 rounded-lg ring-transparent transition group-hover:ring-main-color p-[2px]'>
                     <img src={game.poster} className='w-full h-full rounded-lg object-cover object-top opacity-80' />
                   </div>
-                  <p className='font-DMsans font-bold text-[13px] line-clamp-1 m-1'>{game.title}</p>
+                  <p className='font-DMsans font-medium text-[15px] line-clamp-1 text-text-color m-1'>{game.title}</p>
                 </Link>
               ))}
             </div>
@@ -163,6 +172,57 @@ function Home() {
         </div>
 
       </div>
+
+      <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 '>
+
+        <div className='w-1/2 rounded-bl-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip '>
+          <div className='w-full'>
+            <div className='flex items-center justify-start gap-1 pb-3 '>
+              <div className='relative pb-1'>
+                <TbDoorEnter className='text-[23px] text-[#b48a4a]' />
+              </div>
+              <p className='text-[15px] leading-[18px] text-[#b48a4a] font-montserrat font-semibold w-full max-w-[90%] line-clamp-4 text-left flex items-center gap-3 whitespace-nowrap'>
+                Join Gamezilla
+              </p>
+            </div>
+            <h1 className='text-[23px] leading-[28px] capitalize font-montserrat font-bold w-full text-left tracking-tight text-text-color '>Join the community!</h1>
+            <p className='text-[15px] leading-[18px] font-DMsans  font-medium w-full max-w-[100%] line-clamp-4 text-left text-text-color-light pb-4'>and Get access to New Games every month, don't miss out </p>
+            <div className='flex items-center justify-start gap-5 w-full mt-1'>
+              <Link to={`/`} className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left bg-[#333535] text-[#b48a4a] hover:bg-[#424444]/80 transition-all'>Join Gamezilla</Link>
+              <Link to={`/`} className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold w-fit text-left text-text-color/70 hover:underline '>Read FAQs</Link>
+            </div>
+          </div>
+
+          <div className='w-fit min-w-fit'>
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp" className='h-52 rotate-[25deg] origin-center pointer-events-none opacity-65 pt-4 max-lg:hidden' alt="" />
+          </div>
+        </div>
+
+        <div className='w-1/2 rounded-tr-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip  '>
+          <div className='w-full'>
+            <div className='flex items-center justify-start gap-1 pb-3 '>
+              <div className='relative pb-[2px]'>
+                <HiOutlineStar className='text-[23px] pointer-events-none text-[#A6A7A8]' />
+              </div>
+              <p className='text-[15px] leading-[18px] pointer-events-none text-[#A6A7A8] font-montserrat font-semibold w-full line-clamp-4 text-left  flex items-center gap-3 whitespace-nowrap'>
+                Rate Gamezilla
+              </p>
+            </div>
+            <h1 className='text-[23px] leading-[28px] pointer-events-none capitalize font-montserrat font-bold w-full text-left tracking-tight text-text-color '>Star on GitHub</h1>
+            <p className='text-[15px] leading-[18px] pointer-events-none font-DMsans  font-medium w-full max-w-[100%] line-clamp-4 text-left text-text-color-light pb-4'>show us some love by giving a star to our Repository </p>
+            <div className='flex items-center justify-start gap-5 w-fit mt-1'>
+              <a href="" className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left bg-[#333535] text-[#A6A7A8] flex items-center justify-center gap-2 hover:bg-[#424444]/80 transition-all'><LuExternalLink /> Open GitHub</a>
+            </div>
+          </div>
+
+          <div className='w-fit min-w-fit'>
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-5562375-4642720.png?f=webp" className='h-52 rotate-[25deg] pointer-events-none origin-center opacity-65 pt-4 max-lg:hidden' alt="" />
+          </div>
+        </div>
+
+      </div>
+
+      <Footer />
     </div>
   )
 }
