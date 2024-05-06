@@ -86,20 +86,20 @@ function Home() {
 
   return (
     <div className={` relative h-svh flex flex-col overflow-x-clip text-text-color pt-[140px]  `} >
-      <div className='hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none '></div>
+      <div className='hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0.02] '></div>
       <Menu userId={userId} />
 
       {/* hero */}
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
 
         <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
-          <h1 className='text-[60px] leading-[62px] font-montserrat capitalize font-bold tracking-tight text-center'>Open-Source Game Store <br />for Gamers</h1>
-          <p className='font-montserrat font-semibold text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, Request games all for absolutely Free of charge.</p>
+          <h1 className='text-[60px] leading-[62px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  '>Open-Source Game Store <br />for Gamers</h1>
+          <p className='font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light text-[17px] text-center max-w-[400px]'> Browse, Download, Request games all for absolutely Free of charge.</p>
         </div>
 
         <div className='w-full translate-y-12 z-10 px-4'>
           <form className='relative w-full flex items-center justify-center'>
-            <label className='w-full h-[55px] max-w-[500px] relative ring-8 ring-body-color bg-body-color rounded-2xl'>
+            <label className='w-full h-[55px] max-w-[500px] relative ring-8 dark:ring-body-color ring-white dark:bg-body-color bg-stone-100 rounded-2xl'>
               <input type="search" name="search" autoComplete='off' placeholder='Search for Games' className=' placeholder:text-text-color-light bg-text-color/90 py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium rounded-2xl w-full h-[55px] ring-[20px] ring-transparent transition duration-500 focus:ring-8 focus:ring-main-color' />
               <span className='absolute top-0 bottom-0 right-2 m-auto flex h-fit  '>
                 <ButtonClick title={'Search'} type={'submit'} icon={<HiMagnifyingGlass />} />
@@ -109,27 +109,26 @@ function Home() {
         </div>
 
         <div className='flex items-center justify-center flex-col gap-2 overflow-x-clip overflow-y-visible relative '>
-          <div className='absolute -top-[50px] left-0 right-0 w-full max-w-[1200px] m-auto h-[100px] bg bg-main-color/5 rounded-full blur-[130px] -z-10 pointer-events-none'></div>
-          <div className='absolute bottom-0 left-0 right-0 w-full h-[160px] z-10 bg-gradient-to-b from-body-color/70 to-body-color flex justify-end items-center flex-col pb-6'>
+          <div className='absolute bottom-0 left-0 right-0 w-full h-[160px] z-10 bg-gradient-to-b dark:from-body-color/70 from-white/70 dark:to-body-color to-white flex justify-end items-center flex-col pb-6'>
             <ButtonLink to={'/'} title={'Browse All Games'} icon={<HiMiniFire />} />
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(9, 19).map((game, index) => (
-              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] ' key={index}>
+              <Link to={`/game/${game.id}`} className=' rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] ' key={index}>
                 <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(0, 9).map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
+              <Link to={`/game/${game.id}`} key={index} className=' rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
                 <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(8, 16).map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
+              <Link to={`/game/${game.id}`} key={index} className=' rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
                 <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
