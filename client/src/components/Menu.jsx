@@ -83,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-40 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' bg-body-color/90 backdrop-blur-lg ' : ' bg-transparent '} `}>
+    <div className={` fixed top-0 z-40 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' bg-body-color/90 backdrop-blur-sm ' : ' bg-transparent '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
