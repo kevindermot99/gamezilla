@@ -200,7 +200,7 @@ function Home() {
           </div>
 
           <div className='w-fit min-w-fit'>
-            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp" className='h-52 select-none rotate-[25deg] origin-center pointer-events-none opacity-65 pt-4 max-lg:hidden' alt="" />
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp" className='h-52 rotate-[25deg] origin-center pointer-events-none select-none opacity-65 pt-4 max-lg:hidden' alt="" />
           </div>
         </div>
 
@@ -223,7 +223,7 @@ function Home() {
           </div>
 
           <div className='w-fit min-w-fit'>
-            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-5562375-4642720.png?f=webp" className='h-52 rotate-[25deg] pointer-events-none origin-center opacity-65 pt-4 max-lg:hidden' alt="" />
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-5562375-4642720.png?f=webp" className='h-52 rotate-[25deg] pointer-events-none select-none origin-center opacity-65 pt-4 max-lg:hidden' alt="" />
           </div>
         </div>
 
