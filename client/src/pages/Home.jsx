@@ -109,22 +109,22 @@ function Home() {
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(9, 19).map((game, index) => (
-              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl' key={index}>
-                <SquareImage src={game.poster} opacity={'40'}  />
+              <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] ' key={index}>
+                <SquareImage src={game.poster} opacity={'40'} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(0, 9).map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl'>
-                <SquareImage src={game.poster} opacity={'40'}  />  
+              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
+                <SquareImage src={game.poster} opacity={'40'} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(8, 16).map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl'>
-                <SquareImage src={game.poster} opacity={'40'}  />  
+              <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
+                <SquareImage src={game.poster} opacity={'40'} />
               </Link>
             ))}
           </div>
@@ -161,12 +161,12 @@ function Home() {
       <div className='w-full h-fit py-14'>
         <div className='w-full h-fit flex flex-col px-10'>
           <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Most Downloaded Games <br /> of all time.</h1>
-          <h1 className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</h1>
+          <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</p>
           <div className="h-fit overflow-x-auto ">
             <div className="w-fit h-full flex items-center justify-center gap-1 px-2 py-3">
               {sortedGames.slice(0, 20).map((game, index) => (
                 <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer ">
-                  <div className=' rounded-xl w-fit h-full'>
+                  <div className=' rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px]'>
                     <SquareImage src={game.poster} opacity={'60'} />
                   </div>
                   <p className='font-DMsans font-medium text-[15px] line-clamp-1 text-text-color/70 m-1'>{game.title}</p>
@@ -176,6 +176,21 @@ function Home() {
           </div>
         </div>
 
+      </div>
+
+      <div className='w-full h-fit px-10 py-8 flex flex-col'>
+
+        <div className='h-fit min-h-fit flex flex-col '>
+          <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Recently Uploaded</h1>
+          <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>The most recent games </p>
+          <div className="w-fit h-fit flex flex-wrap  mx-auto mt-6 "> 
+            {Games.slice(0, 16).map((game, index) => (
+              <Link to={`/game/${game.id}`} key={index} className="group rounded-lg w-fit  h-full max-h-[210px] cursor-pointer flex flex-col items-center justify-center ">
+                
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 '>
