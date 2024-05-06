@@ -83,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-40 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' bg-body-color/90 backdrop-blur-sm ' : ' bg-transparent '} `}>
+    <div className={` fixed top-0 z-40 h-fit w-full px-[24px] py-3 text-light-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' bg-container-color/80 backdrop-blur-sm ' : ' bg-transparent '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
@@ -110,14 +110,7 @@ function Menu({ userId }) {
 
         </div>
 
-        {/* <form onSubmit={searchThis} className='h-fit w-full bg-orange-500 relative flex items-center justify-center text-light-text-color'>
-          <label className={`w-full max-w-[400px] h-fit relative overflow-hidden p-[2px] flex flex-col items-center justify-center z-20 `}>
-            <input type="search" onChange={handleSearchValue} onKeyDown={hideWhenEmpty} value={searchValue} placeholder='Search' className='bg-body-color/40 ring-1 ring-border-line-color focus:ring-main-color  placeholder:text-text-color-light rounded-full h-[35px] w-full pl-9 pr-20 text-[14px] font-medium ' />
-            <TbSearch className='text-lg absolute top-0 bottom-0 my-auto left-[12px] text-light-text-color opacity-40 ' />
-            <button onClick={handleResetSearch} className={`absolute top-0 bottom-0 my-auto right-[8px] text-[14px] font-semibold items-center tracking-wide px-3 text-main-color transition  ${resetSearch ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} `}>Cancel</button>
-          </label>
-        </form> */}
-
+      
         <div className={`h-full w-fit relative flex items-center gap-4`}>
           <Link to={`/signup`} className={` relative mr-1 group flex gap-1   items-center justify-start`}>
             <RiCustomerService2Line className='text-xl transition group-hover:text-main-color ' />
