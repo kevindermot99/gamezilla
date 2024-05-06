@@ -189,23 +189,23 @@ function Home() {
       </div>
 
       {/* CAT */}
-      <div className='w-full h-fit gap-10 flex justify-between items-start px-16 pb-14 max-w-[2000px] mx-auto '>
+      <div className='w-full h-fit gap-4 flex justify-between items-start px-16 pb-14 max-w-[2000px] mx-auto '>
 
         <div className='w-1/2 rounded-bl-[40px] rounded-tr-[40px] h-full bg-gradient-to-tl dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip '>
           {/* <div className="pattern-dots pattern-amber-300 origin-top pattern-bg-transparent pattern-size-4 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div> */}
           <div className='w-full'>
             <div className='flex items-center justify-start gap-1 pb-3 '>
               <div className='relative pb-1'>
-                <TbDoorEnter className='text-[23px] text-[#b48a4a]' />
+                <TbDoorEnter className='text-[23px] dark:text-[#A6A7A8] text-body-color' />
               </div>
-              <p className='text-[15px] leading-[18px] text-[#b48a4a] font-montserrat font-semibold w-full max-w-[90%] line-clamp-4 text-left flex items-center gap-3 whitespace-nowrap'>
+              <p className='text-[15px] leading-[18px] dark:text-[#A6A7A8] text-body-color font-montserrat font-semibold w-full max-w-[90%] line-clamp-4 text-left flex items-center gap-3 whitespace-nowrap'>
                 Join Gamezilla
               </p>
             </div>
             <h1 className='text-[23px] leading-[28px] capitalize font-montserrat font-bold w-full text-left tracking-tight text-body-color dark:text-text-color '>Join the community!</h1>
             <p className='text-[15px] leading-[18px] font-DMsans  font-medium w-full max-w-[100%] line-clamp-4 text-left text-text-color-light pb-4'>and Get access to New Games every month, don't miss out </p>
             <div className='flex items-center justify-start gap-5 w-full mt-1'>
-              <Link to={`/`} className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left dark:bg-[#333535] bg-stone-300/50  text-[#b48a4a] hover:opacity-80 transition-all'>Join Gamezilla</Link>
+              <Link to={`/`} className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left dark:bg-[#333535] bg-stone-300/50 dark:text-[#A6A7A8] text-body-color hover:opacity-80 transition-all'>Join Gamezilla</Link>
               <Link to={`/`} className='text-[15px] leading-[15px] capitalize font-DMsans font-semibold w-fit text-left text-text-color/70 hover:underline '>Read FAQs</Link>
             </div>
           </div>
@@ -241,27 +241,13 @@ function Home() {
       </div>
 
       {/*  */}
-      <div className='w-full h-fit py-14'>
-        <div className='w-full h-fit flex flex-col px-16'>
-          <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight  text-body-color dark:text-text-color'>Most Downloaded Games <br /> of all time.</h1>
-          <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</p>
-          <div className="h-fit mt-9 ">
-            <div className="gridRespo ">
-              {Games.slice(0, 15).map((game, index) => (
-                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-2">
-                  <div className=' rounded-xl h-[250px] '>
-                    <PosterImage src={game.poster} title={game.title} />
-                  </div>
-                  <p className='font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70 pt-2 px-1'>{game.title}</p>
-                  <p className='font-normal text-[13px] line-clamp-1  text-body-color dark:text-text-color-light max-w-[90%] px-1'>{game.description}</p>
-                  <p className='mb-2 font-semibold text-[13px] text-text-color-light flex items-center justify-between p-1 '><span className='flex items-center gap-1'><FaDownload /> {numberFormat(game.downloads)}</span><span className=' text-green-600 dark:text-green-800 '>$0.00</span></p>
-                  <ButtonLink title={"Add to cart"} icon={<BsCart />} />
-                </Link>
-              ))}
-            </div>
-          </div>
+      <div className='w-full h-fit py-14 dark:bg-footer-color/40 bg-stone-100'>
+        <div className='w-full h-fit flex flex-col px-16 '>
+        <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
+          <h1 className='text-[60px] leading-[64px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  '>Discover Gaming's <br /> Biggest Hits!</h1>
+          <p className='font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light text-[17px] text-center max-w-[430px]'>Ready for gaming greatness? Our blockbuster game collection awaits!</p>
         </div>
-
+        </div>
       </div>
 
       <Footer />

@@ -61,7 +61,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light dark;
 }
 
 .hero{
@@ -151,11 +151,11 @@ html {
 }
 
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 9px;
   height: 9px;
-}
-
+} */
+/* 
 ::-webkit-scrollbar-thumb {
   background-color: #66666634;
   border-radius: 3px;
@@ -193,7 +193,7 @@ html {
 
 ::-webkit-scrollbar-corner {
   background-color: transparent; 
-}
+} */
 
 
 .popup {

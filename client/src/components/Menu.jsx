@@ -97,11 +97,11 @@ function Menu({ userId }) {
           </Link>
           
           <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
-            Games
+            Library
           </Link>
           
           <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
-            Categories
+            Collections
           </Link>
           
           <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color'>
