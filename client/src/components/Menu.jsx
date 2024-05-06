@@ -92,19 +92,23 @@ function Menu({ userId }) {
             Gamezilla
           </Link>
 
-          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
             Explore
           </Link>
           
-          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
             Games
           </Link>
           
-          <Link to={`/`} className='font-semibold text-sm px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
             Categories
           </Link>
           
-          <Link to={`/`} className='font-bold text-sm px-1 transition-colors duration-150 hover:text-main-color'>
+          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color'>
+            Wallpapers
+          </Link>
+
+          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color'>
             FAQs
           </Link>
 
