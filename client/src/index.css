@@ -70,7 +70,13 @@ html {
   opacity: 0.02;
 }
 
-
+.gridRespo{
+  max-width: 1800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
 
 
 .Toastify__toast-container{
