@@ -26,7 +26,7 @@ import { TbDoorEnter } from "react-icons/tb";
 import Footer from '../components/Footer';
 import Logo from '../assets/logo.png'
 import SquareImage from '../components/SquareImage';
-
+import { FaDownload } from "react-icons/fa";
 
 
 
@@ -78,12 +78,17 @@ function Home() {
 
   // loadedr
 
+  function numberFormat(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
 
 
   return (
     <div className={` relative h-svh flex flex-col overflow-x-clip text-text-color pt-[140px]  `} >
       <div className='hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none '></div>
       <Menu userId={userId} />
+
+      {/* hero */}
       <div className='w-full h-fit flex flex-col py-8 gap-5 mb-10'>
 
         <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
@@ -110,21 +115,21 @@ function Home() {
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(9, 19).map((game, index) => (
               <Link to={`/game/${game.id}`} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] ' key={index}>
-                <SquareImage src={game.poster} opacity={'40'} />
+                <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(0, 9).map((game, index) => (
               <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
-                <SquareImage src={game.poster} opacity={'40'} />
+                <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
           </div>
           <div className='flex items-start justify-center gap-2 overflow-clip'>
             {sortedGames.slice(8, 16).map((game, index) => (
               <Link to={`/game/${game.id}`} key={index} className='bg-body-color rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] '>
-                <SquareImage src={game.poster} opacity={'40'} />
+                <SquareImage src={game.poster} title={game.title} />
               </Link>
             ))}
           </div>
@@ -132,6 +137,7 @@ function Home() {
 
       </div>
 
+      {/* showcase */}
       <div className=" w-full mb-16 relative">
         <div className='pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-25 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full '>
           <div className='absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b from-body-color/80 to-body-color/0 '></div>
@@ -158,18 +164,22 @@ function Home() {
         </div>
       </div>
 
+      {/* most downloaded */}
       <div className='w-full h-fit py-14'>
         <div className='w-full h-fit flex flex-col px-10'>
           <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Most Downloaded Games <br /> of all time.</h1>
           <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</p>
-          <div className="h-fit overflow-x-auto ">
-            <div className="w-fit h-full flex items-center justify-center gap-1 px-2 py-3">
-              {sortedGames.slice(0, 20).map((game, index) => (
-                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer ">
-                  <div className=' rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px]'>
-                    <SquareImage src={game.poster} opacity={'60'} />
+          <div className="h-fit mt-9 ">
+            <div className="gridRespo ">
+              {Games.slice(0, 15).map((game, index) => (
+                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-2">
+                  <div className=' rounded-xl h-[250px] '>
+                    <SquareImage src={game.poster} title={game.title} />
                   </div>
-                  <p className='font-DMsans font-medium text-[15px] line-clamp-1 text-text-color/70 m-1'>{game.title}</p>
+                  <p className='font-montserrat font-bold text-base line-clamp-1 text-text-color/70 pt-2 px-1'>{game.title}</p>
+                  <p className='font-normal text-[13px] line-clamp-1 text-text-color-light/60 max-w-[90%] px-1'>{game.description}</p>
+                  <p className='mb-2 font-semibold text-[13px] text-text-color-light flex items-center justify-between p-1 '><span className='flex items-center gap-1'><FaDownload /> {numberFormat(game.downloads)}</span><span className='text-green-800 '>$0.00</span></p>
+                  <ButtonLink title={"Add to cart"} icon={<BsCart />} />
                 </Link>
               ))}
             </div>
@@ -178,22 +188,8 @@ function Home() {
 
       </div>
 
-      <div className='w-full h-fit px-10 py-8 flex flex-col'>
-
-        <div className='h-fit min-h-fit flex flex-col '>
-          <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Recently Uploaded</h1>
-          <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>The most recent games </p>
-          <div className="w-fit h-fit flex flex-wrap  mx-auto mt-6 "> 
-            {Games.slice(0, 16).map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className="group rounded-lg w-fit  h-full max-h-[210px] cursor-pointer flex flex-col items-center justify-center ">
-                
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 '>
+      {/* CAT */}
+      <div className='w-full h-fit gap-0 flex justify-between items-start px-10 pb-14 max-w-[2000px] mx-auto '>
 
         <div className='w-1/2 rounded-bl-[40px] h-full bg-container-color/40 px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip '>
           <div className="pattern-boxes pattern-amber-300 origin-top pattern-bg-transparent pattern-size-2 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div>
@@ -239,6 +235,30 @@ function Home() {
 
           <div className='w-fit min-w-fit'>
             <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-5562375-4642720.png?f=webp" className='h-52 rotate-[25deg] pointer-events-none select-none origin-center opacity-65 pt-4 max-lg:hidden' alt="" />
+          </div>
+        </div>
+
+      </div>
+
+      {/*  */}
+      <div className='w-full h-fit mb-12'>
+        <div className='w-full h-fit flex flex-col px-10'>
+          <h1 className='text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight text-text-color'>Most Downloaded Games <br /> of all time.</h1>
+          <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</p>
+          <div className="h-fit mt-9 ">
+            <div className="gridRespo ">
+              {Games.slice(0, 15).map((game, index) => (
+                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-2">
+                  <div className=' rounded-xl h-[250px] '>
+                    <SquareImage src={game.poster} title={game.title} />
+                  </div>
+                  <p className='font-montserrat font-bold text-base line-clamp-1 text-text-color/70 pt-2 px-1'>{game.title}</p>
+                  <p className='font-normal text-[13px] line-clamp-1 text-text-color-light/60 max-w-[90%] px-1'>{game.description}</p>
+                  <p className='mb-2 font-semibold text-[13px] text-text-color-light flex items-center justify-between p-1 '><span className='flex items-center gap-1'><FaDownload /> {numberFormat(game.downloads)}</span><span className='text-green-800 '>$0.00</span></p>
+                  <ButtonLink title={"Add to cart"} icon={<BsCart />} />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
