@@ -171,15 +171,17 @@ function Home() {
           <p className='text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4'>Top ranked by downloads count</p>
           <div className="h-fit mt-9 ">
             <div className="gridRespo ">
-              {Games.slice(0, 15).map((game, index) => (
-                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-10">
-                  <div className=' rounded-xl h-[250px] '>
+              {Games.slice(0, 18).map((game, index) => (
+                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-2 relative">
+                  <div className=' h-[250px] '>
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
                   <p className='font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70 pt-2 px-1'>{game.title}</p>
-                  <p className='font-normal text-[13px] line-clamp-1  text-body-color dark:text-text-color-light max-w-[90%] px-1'>{game.description}</p>
+                  <p className='font-normal text-[13px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] px-1'>{game.description}</p>
                   <p className='mb-2 font-semibold text-[13px] text-text-color-light flex items-center justify-between p-1 '><span className='flex items-center gap-1'><FaDownload /> {numberFormat(game.downloads)}</span><span className=' text-green-600 dark:text-green-800 '>$0.00</span></p>
-                  <ButtonLink title={"Add to cart"} icon={<BsCart />} />
+                  <button className={`absolute top-3 right-1 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-main-color p-2 rounded-full`}>
+                    <BsCart className='text-xl '/>
+                  </button>
                 </Link>
               ))}
             </div>
