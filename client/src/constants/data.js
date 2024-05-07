@@ -88,6 +88,15 @@ export const Games = [
     downloads: '3472772'
   },
   {
+    id: '24',
+    banner: 'https://sm.ign.com/ign_br/screenshot/default/1200-800_z1xw.jpg',
+    poster: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Cyberpunk_2077_box_art.jpg/220px-Cyberpunk_2077_box_art.jpg',
+    title: 'Cyberpunk 2077',
+    description: `In a neon-lit city, hackers clash with corporations. Rebels fight for freedom in a dystopian future, where technology blurs the line between humanity and machine.`,
+    genres: ['Shooting', 'Action', 'Adventure'],
+    downloads: '8304772'
+  },
+  {
     id: '1',
     banner: 'https://r4.wallpaperflare.com/wallpaper/452/912/964/battlefield-4-wallpaper-8910a83d416abd8b86b7781f20c1a60d.jpg',
     poster: 'https://www.bluedogposters.com.au/cdn/shop/products/01-7024_l_a256d841-3760-47a7-b847-b45be4182739-battlefield-4-cover-large-regular-posters_1400x.jpg',
