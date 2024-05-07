@@ -247,6 +247,10 @@ function Home() {
           <h1 className='text-[60px] leading-[64px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  '>Discover Gaming's <br /> Biggest Hits!</h1>
           <p className='font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light text-[17px] text-center max-w-[430px]'>Ready for gaming greatness? Our blockbuster game collection awaits!</p>
         </div>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
         </div>
       </div>
 
