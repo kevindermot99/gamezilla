@@ -83,7 +83,7 @@ function Menu({ userId }) {
 
 
   return (
-    <div className={` fixed top-0 z-40 h-fit w-full px-[24px] py-3  text-body-color dark:text-text-color flex flex-col gap-3 transition-all duration-300 ${scrollPosition > 60 ? ' dark:bg-container-color/80 bg-white/95 backdrop-blur-sm ' : ' bg-transparent '} `}>
+    <div className={`  top-0 z-40 h-fit w-full px-[24px] py-3  text-body-color dark:text-text-color flex flex-col gap-3 bg-transparent ${scrollPosition > 60 ? '  ' : '  '} `}>
 
       <div className='w-full h-fit flex items-center justify-between'>
         <div className='w-fit min-w-fit h-full flex items-center justify-start gap-4 '>
@@ -92,23 +92,23 @@ function Menu({ userId }) {
             Gamezilla
           </Link>
 
-          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             Explore
           </Link>
           
-          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             Library
           </Link>
           
-          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color relative'>
+          <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             Collections
           </Link>
           
-          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color'>
+          <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             Wallpapers
           </Link>
 
-          <Link to={`/`} className='font-medium text-base px-1 transition-colors duration-150 hover:text-main-color'>
+          <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
             FAQs
           </Link>
 
@@ -119,7 +119,7 @@ function Menu({ userId }) {
           <Link to={`/signup`} className={` relative mr-1 group flex gap-1   items-center justify-start`}>
             <RiCustomerService2Line className='text-xl transition group-hover:text-main-color ' />
             {/* <Badge count={2} /> */}
-            <p className='font-medium transition group-hover:text-main-color '>Get Help</p>
+            <p className='font-medium text-sm transition group-hover:text-main-color '>Get Help</p>
           </Link>
           <Link to={`/signup`} className={` relative mr-3 group flex px-1 gap-1 `}>
             <BsCart className='text-xl transition group-hover:text-main-color ' />
@@ -146,7 +146,7 @@ function Menu({ userId }) {
           }
 
           <div className='w-fit h-[25px] border-l border-l-stone-300'></div>
-          <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-[15px] font-semibold flex items-center tracking-wide h-fit transition hover:text-main-color' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
+          <a href="https://github.com/kevindermot99/gamezilla" target='_blank' className='text-sm font-semibold flex items-center tracking-wide h-fit transition hover:text-main-color' title={`Source Code`} >SC <GoGitBranch className='ml-[5px]' /></a>
         </div>
       </div>
 
