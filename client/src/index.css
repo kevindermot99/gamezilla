@@ -182,7 +182,9 @@ html {
   background-color: #88888881;
 }
 
-
+.custom-video {
+  transition: volume 300ms ease; // Apply CSS transition for volume changes
+}
 ::-webkit-scrollbar-thumb:active {
   background-color: var(--main-color);
 }
