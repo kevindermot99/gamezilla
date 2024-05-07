@@ -172,7 +172,7 @@ function Home() {
           <div className="h-fit mt-9 ">
             <div className="gridRespo ">
               {Games.slice(0, 15).map((game, index) => (
-                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-2">
+                <Link to={`/game/${game.id}`} key={index} className="group h-full w-full rounded-lg cursor-pointer mb-10">
                   <div className=' rounded-xl h-[250px] '>
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
@@ -246,10 +246,9 @@ function Home() {
         <div className='w-full h-fit flex items-center justify-center flex-col gap-4 z-20'>
           <h1 className='text-[60px] leading-[64px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  '>Discover Gaming's <br /> Biggest Hits!</h1>
           <p className='font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light text-[17px] text-center max-w-[430px]'>Ready for gaming greatness? Our blockbuster game collection awaits!</p>
-        </div>
-        <div>
-          <span></span>
-          <span></span>
+          <div className=''>
+            <video src=""></video>
+          </div>
         </div>
         </div>
       </div>

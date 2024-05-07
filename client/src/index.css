@@ -74,7 +74,7 @@ html {
   max-width: 1800px;
   margin: 0 auto;
   display: grid;
-  gap: 10px;
+  gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
