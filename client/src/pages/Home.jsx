@@ -257,8 +257,7 @@ function Home() {
 
       {/* CAT */}
       <div className="w-full h-fit gap-4 flex justify-between items-start px-16 pb-14 max-w-[2000px] mx-auto ">
-        <div className="w-1/2 rounded-bl-[40px] rounded-tr-[40px] h-full bg-gradient-to-tl dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip ">
-          {/* <div className="pattern-dots pattern-amber-300 origin-top pattern-bg-transparent pattern-size-4 pattern-opacity-5 h-full w-full absolute bottom-0 -left-0 opacity-[0.04] -z-10  "></div> */}
+        {/* <div className="w-1/2 rounded-bl-[40px] rounded-tr-[40px] h-full bg-gradient-to-tl dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip ">
           <div className="w-full">
             <div className="flex items-center justify-start gap-1 pb-3 ">
               <div className="relative pb-1">
@@ -297,9 +296,9 @@ function Home() {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-1/2 rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip  ">
+        <div className="w-full rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-5 flex items-center justify-center gap-2 relative overflow-clip  ">
           {/* <div className="pattern-dots pattern-stone-200 rotate-[25deg] origin-center pattern-bg-transparent pattern-size-4 pattern-opacity-10 h-[400px] w-[400px] absolute -bottom-[70px] -right-[160px] "></div> */}
           <div className="w-full">
             <div className="flex items-center justify-start gap-1 pb-3 ">
@@ -307,14 +306,14 @@ function Home() {
                 <HiOutlineStar className="text-[23px] pointer-events-none dark:text-[#A6A7A8] text-body-color" />
               </div>
               <p className="text-[15px] leading-[18px] pointer-events-none dark:text-[#A6A7A8] text-body-color font-montserrat font-semibold w-full line-clamp-4 text-left  flex items-center gap-3 whitespace-nowrap">
-                Rate Gamezilla
+                Star Gamezilla
               </p>
             </div>
             <h1 className="text-[23px] leading-[28px] pointer-events-none capitalize font-montserrat font-bold w-full text-left tracking-tight text-body-color dark:text-text-color ">
-              Star on GitHub
+              Star us on GitHub
             </h1>
-            <p className="text-[15px] leading-[18px] pointer-events-none font-DMsans  font-medium w-full max-w-[100%] line-clamp-4 text-left text-text-color-light pb-4">
-              show us some love by giving a star to our Repository{" "}
+            <p className="text-[15px] leading-[22px] pointer-events-none font-DMsans font-medium w-full max-w-[80%] line-clamp-4 text-left text-text-color-light pt-2 pb-4">
+              Please star us on GitHub. Your support encourages us to upload more games, expanding our collection and providing even more entertainment options for our community.
             </p>
             <div className="flex items-center justify-start gap-5 w-fit mt-1">
               <a
