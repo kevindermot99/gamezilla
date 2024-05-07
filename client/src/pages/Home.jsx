@@ -82,22 +82,20 @@ function Home() {
   function numberFormat(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-  
 
   const handlemuted = () => {
-    setMuted(!muted); 
+    setMuted(!muted);
   };
-
 
   return (
     <div
-      className={` relative h-svh flex flex-col overflow-x-clip text-text-color pt-[140px]  `}
+      className={` relative h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
       <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0.02] "></div>
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full h-fit flex flex-col py-8 gap-5">
+      <div className="w-full h-fit flex flex-col py-8 gap-5 mt-12">
         <div className="w-full h-fit flex items-center justify-center flex-col gap-4 z-20">
           <h1 className="text-[60px] leading-[64px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  ">
             Get Access to Hundreds <br /> of Free Games!
@@ -339,48 +337,43 @@ function Home() {
       </div>
 
       {/*  */}
-      <div className="w-full h-fit pt-14 pb-[80px] bg-stone-100 dark:bg-footer-color">
+      <div className="w-full h-fit t-14 pb-[80px] ">
         <div className="w-full h-fit flex flex-col px-16">
           <div className="w-full h-fit flex items-center justify-center flex-col gap-4 z-20">
-            <h1 className="text-[40px] leading-[44px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  ">
-              Our blockbuster <br /> game collection awaits!
-            </h1>
-            <Link
-              to={`/`}
-              className="font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light hover:text-main-color text-[17px] text-center max-w-[430px] flex items-center gap-1 "
-            >
-              Explore Collections
-              <GoArrowRight className="text-xl " />
-            </Link>
-            <div className=" w-full max-w-[1400px] max-h-[490px] h-fit aspect-video bg-transparent  mt-3 relative">
+            
+            <div className=" w-full max-w-[1400px] max-h-[530px] h-fit aspect-video bg-transparent  mt-3 relative">
               <button
                 onClick={handlemuted}
-                className="absolute top-3 right-3 font-montserrat font-bold transition active:scale-90 bg-text-color-light/15 hover:bg-text-color-light/40 backdrop-blur-md cursor-pointer z-20 p-3 rounded-xl   "
+                className="group absolute top-3 right-3 font-montserrat font-bold transition backdrop-blur-md active:scale-90  text-black dark:text-text-color/70 dark:hover:text-white dark:backdrop-blur-md bg-white  dark:bg-footer-color/75 dark:hover:bg-text-color-light/40 cursor-pointer z-20 p-3 rounded-xl   "
               >
                 {muted ? (
-                  <TbVolume3 className="text-xl" />
+                  <TbVolume3 className="text-xl transition dark:text-text-color/70 dark:group-hover:text-white " />
                 ) : (
-                  <TbVolume className="text-xl" />
+                  <TbVolume className="text-xl transition dark:text-text-color/70 dark:group-hover:text-white " />
                 )}
 
                 {/* */}
               </button>
-              <div className="absolute top-0 left-0 w-full h-full rounded-b-2xl bg-gradient-to-t from-footer-color to-transparent aspect-square z-10 flex flex-col items-start justify-end p-10">
-                <h1 className=" text-[55px] leading-[75px] font-bold tracking-tight font-montserrat">
-                  Cyberpunk 2077
-                </h1>
-                <p className="font-montserrat font-semibold tracking-wider text-text-color/70 text-[14px] max-w-[700px] mb-5">
-                  In a neon-lit city, hackers clash with corporations. Rebels
-                  fight for freedom in a dystopian future, where technology
-                  blurs the line between humanity and machine.
-                </p>
-                <Link
-                  to={`/`}
-                  className="text-[14px] text-text-color/70 hover:text-white hover bg-text-color-light/15 hover:bg-text-color-light/40 transition duration-300 font-bold font-montserrat flex items-center gap-2 py-4 px-8 rounded-xl   "
-                >
-                  Explore Collection
-                  <GoArrowRight className="text-lg " />
-                </Link>
+              <div className="absolute top-0 left-0 w-full h-full rounded-b-2xl bg-gradient-to-t from-footer-color/60 to-transparent aspect-square z-10 flex items-end justify-start gap-7 p-10 ">
+                <div className="bg-footer-color w-[190px] rounded-xl overflow-clip ">
+                  <PosterImage src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Cyberpunk_2077_box_art.jpg/220px-Cyberpunk_2077_box_art.jpg" className="" />
+                </div>
+                <div>
+                  <h1 className=" text-[55px] leading-[75px] font-bold tracking-tight font-montserrat">
+                    Cyberpunk 2077
+                  </h1>
+                  <p className="font-montserrat font-semibold tracking-wider text-text-color/70 text-[14px] max-w-[700px] mb-5">
+                    In a neon-lit city, hackers clash with corporations. Rebels
+                    fight for freedom in a dystopian future, where technology
+                    blurs the line between humanity and machine.
+                  </p>
+                  <Link
+                    to={`/`}
+                    className="text-[15px] text-black dark:text-text-color/70 dark:hover:text-white dark:backdrop-blur-md bg-white  dark:bg-footer-color/75 dark:hover:bg-text-color-light/40 transition duration-300 font-bold font-montserrat flex items-center gap-2 py-3 px-6 w-fit rounded-xl   "
+                  >
+                    GET
+                  </Link>
+                </div>
               </div>
               <video
                 id="myVideo"
@@ -388,9 +381,19 @@ function Home() {
                 muted={muted}
                 autoPlay
                 loop
+                playsinline
                 className="custom-video w-full h-full object-cover object-center rounded-2xl  pointer-events-none z-0"
               ></video>
             </div>
+
+            <Link
+              to={`/`}
+              className="font-montserrat font-semibold self-end text-body-color/80 dark:text-text-color-light hover:text-main-color text-[17px] text-center max-w-[430px] flex items-center gap-1 "
+            >
+              Explore Collections
+              <GoArrowRight className="text-xl " />
+            </Link>
+
           </div>
         </div>
       </div>
