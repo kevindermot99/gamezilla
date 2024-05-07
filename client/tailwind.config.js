@@ -58,7 +58,7 @@ export default {
         "text-color": "#ebebeb",
         "text-color-light": "#808080",
         "container-color": "#2B2D31",
-        "footer-color": "#161616",
+        "footer-color": "#1B1C1D",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
