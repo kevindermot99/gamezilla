@@ -220,7 +220,7 @@ function Home() {
           </p>
           <div className="h-fit mt-9 ">
             <div className="gridRespo ">
-              {Games.slice(0, 18).map((game, index) => (
+              {Games.slice(0, 12).map((game, index) => (
                 <Link
                   to={`/game/${game.id}`}
                   key={index}
@@ -236,12 +236,12 @@ function Home() {
                     {game.title}
                   </p>
                   
-                  <p className="mb-2 font-normal text-[14px] text-text-color flex items-center justify-between pt-3 ">
-                    <span className="flex items-center gap-1 bg-main-color text-white py-1 px-2 text-[10px] rounded-md">
+                  <p className="font-montserrat mb-2 font-normal text-[14px] text-text-color flex items-center justify-between pt-3 ">
+                    <span className="flex items-center gap-1 font-montserrat bg-main-color/50 text-white py-1 px-2 text-[11px] rounded-md">
                       -100%
                     </span>
-                    <span className="flex items-center gap-2">
-                      <s>$12.00</s>
+                    <span className="flex items-center gap-2 font-montserrat text-[11px]">
+                      {/* <s></s> */}
                       $0.00
                     </span>
                   </p>
