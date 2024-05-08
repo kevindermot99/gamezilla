@@ -91,7 +91,7 @@ function Home() {
     <div
       className={` relative h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
-      <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0.02] "></div>
+      {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
       <Menu userId={userId} />
 
       {/* hero */}
@@ -170,47 +170,8 @@ function Home() {
         </div>
       </div>
 
-      {/* showcase */}
-      <div className=" w-full relative">
-        <div className="pattern-dots pattern-main-color pattern-bg-transparent pattern-size-4 opacity-25 pattern-opacity-60 absolute top-0 -z-10 left-0 w-full h-full ">
-          <div className="absolute z-0 top-0 left-0 right-0 w-full h-[50%] bg-gradient-to-b dark:from-body-color/80 from-white/90 to-transparent "></div>
-          <div className="absolute z-0 bottom-0 left-0 right-0 w-full h-[50%] bg-gradient-to-t dark:from-body-color/80 from-white/90 to-transparent "></div>
-        </div>
-        <div className="w-full h-fit min-h-[500px] z-10 p-20 flex items-center justify-center gap-[8%]">
-          <div className="flex items-center justify-center flex-col gap-2">
-            <IoGameControllerOutline className="text-main-color  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[60px] leading-[50px] py-2">
-              23,492
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[20px] ">
-              Games uploaded
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center flex-col gap-2">
-            <HiOutlineUsers className="text-main-color  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[70px] leading-[50px] py-2">
-              492
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[20px] ">
-              Gamers joined
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center flex-col gap-2">
-            <GoGift className="text-main-color  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[70px] leading-[50px] py-2">
-              100%
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[20px] ">
-              Free for all
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* most downloaded */}
-      <div className="w-full h-fit py-14">
+      <div className="w-full h-fit pt-14">
         <div className="w-full h-fit flex flex-col px-10 max-w-[1200px] mx-auto">
           <h1 className="text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight  text-body-color dark:text-text-color">
             Most Downloaded Games <br /> of all time.
@@ -235,7 +196,7 @@ function Home() {
                   <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70">
                     {game.title}
                   </p>
-                  
+
                   <p className="font-montserrat mb-2 font-normal text-[14px] text-text-color flex items-center justify-between pt-3 ">
                     <span className="flex items-center gap-1 font-montserrat bg-main-color/50 text-white py-1 px-2 text-[11px] rounded-md">
                       -100%
@@ -257,8 +218,43 @@ function Home() {
         </div>
       </div>
 
+      {/* showcase */}
+      <div className=" w-full relative">
+        <div className="w-full max-w-[3800px] mx-auto h-fit min-h-[400px] z-10 p-20 flex items-center justify-center gap-[15%]">
+          <div className="flex items-center justify-center flex-col gap-2">
+            <IoGameControllerOutline className="text-main-color/60  text-[45px]" />
+            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
+              23,492
+            </h1>
+            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
+              Games uploaded
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center flex-col gap-2">
+            <HiOutlineUsers className="text-main-color/60  text-[45px]" />
+            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
+              492
+            </h1>
+            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
+              Gamers joined
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center flex-col gap-2">
+            <GoGift className="text-main-color/60  text-[45px]" />
+            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
+              100%
+            </h1>
+            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
+              Free for all
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* CAT */}
-      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-14 max-w-[1200px] mx-auto ">
+      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-10 max-w-[1200px] mx-auto ">
         <div className="w-full rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-5 flex items-center justify-center gap-2 relative overflow-clip  ">
           <div className="w-full">
             <div className="flex items-center justify-start gap-1 pb-3 ">
@@ -295,11 +291,6 @@ function Home() {
             />
           </div>
         </div>
-      </div>
-
-      {/*  */}
-      <div className="w-full h-fit pb-[80px] flex flex-col justify-center items-center max-w-[1200px] mx-auto ">
-        
       </div>
 
       <Footer />
