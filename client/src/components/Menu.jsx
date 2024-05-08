@@ -101,7 +101,7 @@ function Menu({ userId }) {
           </Link>
           
           <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
-            Bundles
+            Collections
           </Link>
           
           <Link to={`/`} className='font-medium text-sm px-1 transition-colors duration-150 hover:text-main-color'>
