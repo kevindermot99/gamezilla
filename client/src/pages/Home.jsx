@@ -211,7 +211,7 @@ function Home() {
 
       {/* most downloaded */}
       <div className="w-full h-fit py-14">
-        <div className="w-full h-fit flex flex-col px-16">
+        <div className="w-full h-fit flex flex-col px-10 max-w-[1200px] mx-auto">
           <h1 className="text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight  text-body-color dark:text-text-color">
             Most Downloaded Games <br /> of all time.
           </h1>
@@ -226,20 +226,22 @@ function Home() {
                   key={index}
                   className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                 >
-                  <div className=" h-[250px] ">
+                  <div className=" h-[230px] ">
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
-                  <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70 pt-2 px-1">
+                  <p className="font-normal text-[11px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] py-1 uppercase">
+                    Base Game
+                  </p>
+                  <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70">
                     {game.title}
                   </p>
-                  <p className="font-normal text-[13px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] px-1">
-                    {game.description}
-                  </p>
-                  <p className="mb-2 font-semibold text-[13px] text-text-color-light flex items-center justify-between p-1 ">
-                    <span className="flex items-center gap-1">
-                      <FaDownload /> {numberFormat(game.downloads)}
+                  
+                  <p className="mb-2 font-normal text-[14px] text-text-color flex items-center justify-between pt-3 ">
+                    <span className="flex items-center gap-1 bg-main-color text-white py-1 px-2 text-[10px] rounded-md">
+                      -100%
                     </span>
-                    <span className=" text-green-600 dark:text-green-800 ">
+                    <span className="flex items-center gap-2">
+                      <s>$12.00</s>
                       $0.00
                     </span>
                   </p>
@@ -256,50 +258,8 @@ function Home() {
       </div>
 
       {/* CAT */}
-      <div className="w-full h-fit gap-4 flex justify-between items-start px-16 pb-14 max-w-[2000px] mx-auto ">
-        {/* <div className="w-1/2 rounded-bl-[40px] rounded-tr-[40px] h-full bg-gradient-to-tl dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-12 flex items-center justify-center gap-2 relative overflow-clip ">
-          <div className="w-full">
-            <div className="flex items-center justify-start gap-1 pb-3 ">
-              <div className="relative pb-1">
-                <TbDoorEnter className="text-[23px] dark:text-[#A6A7A8] text-body-color" />
-              </div>
-              <p className="text-[15px] leading-[18px] dark:text-[#A6A7A8] text-body-color font-montserrat font-semibold w-full max-w-[90%] line-clamp-4 text-left flex items-center gap-3 whitespace-nowrap">
-                Join Gamezilla
-              </p>
-            </div>
-            <h1 className="text-[23px] leading-[28px] capitalize font-montserrat font-bold w-full text-left tracking-tight text-body-color dark:text-text-color ">
-              Join the community!
-            </h1>
-            <p className="text-[15px] leading-[18px] font-DMsans  font-medium w-full max-w-[100%] line-clamp-4 text-left text-text-color-light pb-4">
-              and Get access to New Games every month, don't miss out{" "}
-            </p>
-            <div className="flex items-center justify-start gap-5 w-full mt-1">
-              <Link
-                to={`/`}
-                className="text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left dark:bg-[#333535] bg-stone-300/50 dark:text-[#A6A7A8] text-body-color hover:opacity-80 transition-all"
-              >
-                Join Gamezilla
-              </Link>
-              <Link
-                to={`/`}
-                className="text-[15px] leading-[15px] capitalize font-DMsans font-semibold w-fit text-left text-text-color/70 hover:underline "
-              >
-                Read FAQs
-              </Link>
-            </div>
-          </div>
-
-          <div className="w-fit min-w-fit">
-            <img
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/badge-11414370-9197805.png?f=webp"
-              className="h-52 rotate-[25deg] origin-center pointer-events-none select-none dark:opacity-65 opacity-90 pt-4 max-lg:hidden"
-              alt=""
-            />
-          </div>
-        </div> */}
-
+      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-14 max-w-[1200px] mx-auto ">
         <div className="w-full rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-5 flex items-center justify-center gap-2 relative overflow-clip  ">
-          {/* <div className="pattern-dots pattern-stone-200 rotate-[25deg] origin-center pattern-bg-transparent pattern-size-4 pattern-opacity-10 h-[400px] w-[400px] absolute -bottom-[70px] -right-[160px] "></div> */}
           <div className="w-full">
             <div className="flex items-center justify-start gap-1 pb-3 ">
               <div className="relative pb-[2px]">
@@ -313,7 +273,9 @@ function Home() {
               Star us on GitHub
             </h1>
             <p className="text-[15px] leading-[22px] pointer-events-none font-DMsans font-medium w-full max-w-[80%] line-clamp-4 text-left text-text-color-light pt-2 pb-4">
-              Please star us on GitHub. Your support encourages us to upload more games, expanding our collection and providing even more entertainment options for our community.
+              Please star us on GitHub. Your support encourages us to upload
+              more games, expanding our collection and providing even more
+              entertainment options for our community.
             </p>
             <div className="flex items-center justify-start gap-5 w-fit mt-1">
               <a
@@ -336,65 +298,8 @@ function Home() {
       </div>
 
       {/*  */}
-      <div className="w-full h-fit t-14 pb-[80px] ">
-        <div className="w-full h-fit flex flex-col px-16">
-          <div className="w-full h-fit flex items-center justify-center flex-col gap-4 z-20">
-            
-            <div className=" w-full max-w-[1400px] max-h-[530px] h-fit aspect-video bg-transparent  mt-3 relative">
-              <button
-                onClick={handlemuted}
-                className="group absolute top-3 right-3 font-montserrat font-bold transition backdrop-blur-md active:scale-90  text-black dark:text-text-color/70 dark:hover:text-white dark:backdrop-blur-md bg-white  dark:bg-footer-color/75 dark:hover:bg-text-color-light/40 cursor-pointer z-20 p-3 rounded-xl   "
-              >
-                {muted ? (
-                  <TbVolume3 className="text-xl transition dark:text-text-color/70 dark:group-hover:text-white " />
-                ) : (
-                  <TbVolume className="text-xl transition dark:text-text-color/70 dark:group-hover:text-white " />
-                )}
-
-                {/* */}
-              </button>
-              <div className="absolute top-0 left-0 w-full h-full rounded-b-2xl bg-gradient-to-t from-footer-color/60 to-transparent aspect-square z-10 flex items-end justify-start gap-7 p-10 ">
-                <div className="bg-footer-color w-[190px] rounded-xl overflow-clip ">
-                  <PosterImage src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Cyberpunk_2077_box_art.jpg/220px-Cyberpunk_2077_box_art.jpg" className="" />
-                </div>
-                <div>
-                  <h1 className=" text-[55px] leading-[75px] font-bold tracking-tight font-montserrat">
-                    Cyberpunk 2077
-                  </h1>
-                  <p className="font-montserrat font-semibold tracking-wider text-text-color/70 text-[14px] max-w-[700px] mb-5">
-                    In a neon-lit city, hackers clash with corporations. Rebels
-                    fight for freedom in a dystopian future, where technology
-                    blurs the line between humanity and machine.
-                  </p>
-                  <Link
-                    to={`/`}
-                    className="text-[15px] text-black dark:text-text-color/70 dark:hover:text-white dark:backdrop-blur-md bg-white  dark:bg-footer-color/75 dark:hover:bg-text-color-light/40 transition duration-300 font-bold font-montserrat flex items-center gap-2 py-3 px-6 w-fit rounded-xl   "
-                  >
-                    GET
-                  </Link>
-                </div>
-              </div>
-              <video
-                id="myVideo"
-                src={VideoSample}
-                muted={muted}
-                autoPlay
-                loop
-                playsinline
-                className="custom-video w-full h-full object-cover object-center rounded-2xl  pointer-events-none z-0"
-              ></video>
-            </div>
-
-            <Link
-              to={`/`}
-              className="font-montserrat font-semibold self-end text-body-color/80 dark:text-text-color-light hover:text-main-color text-[17px] text-center max-w-[430px] flex items-center gap-1 "
-            >
-              Explore Collections
-              <GoArrowRight className="text-xl " />
-            </Link>
-
-          </div>
-        </div>
+      <div className="w-full h-fit pb-[80px] flex flex-col justify-center items-center max-w-[1200px] mx-auto ">
+        
       </div>
 
       <Footer />
