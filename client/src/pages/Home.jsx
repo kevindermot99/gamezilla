@@ -32,6 +32,7 @@ import VideoSample from "../assets/Cyberpunk 2077.mp4";
 import { TbVolume } from "react-icons/tb";
 import { TbVolume3 } from "react-icons/tb";
 import { GoArrowRight } from "react-icons/go";
+import CollectionImage from "../components/CollectionImage";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -172,7 +173,7 @@ function Home() {
 
       {/* most downloaded */}
       <div className="w-full h-fit pt-14">
-        <div className="w-full h-fit flex flex-col px-10 max-w-[1200px] mx-auto">
+        <div className="w-full h-fit flex flex-col px-10 max-w-[1100px] mx-auto">
           <h1 className="text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight  text-body-color dark:text-text-color">
             Most Downloaded Games <br /> of all time.
           </h1>
@@ -181,7 +182,7 @@ function Home() {
           </p>
           <div className="h-fit mt-9 ">
             <div className="gridRespo ">
-              {Games.slice(0, 12).map((game, index) => (
+              {Games.slice(0, 10  ).map((game, index) => (
                 <Link
                   to={`/game/${game.id}`}
                   key={index}
@@ -218,7 +219,39 @@ function Home() {
         </div>
       </div>
 
-      {/* showcase */}
+      {/* Our Collections */}
+      <div className="w-full h-fit pt-14">
+        <div className="w-full h-fit flex flex-col px-10 max-w-[1100px] mx-auto">
+          <p className="text-base leading-[15px] capitalize font-DMsans font-medium w-full text-left text-text-color-light pt-2">
+            Our Collections
+          </p>
+          <div className="h-fit mt-7 ">
+            <div className="gridRespoCollection ">
+              {Games.slice(0, 8).map((game, index) => (
+                <div
+                  to={`/game/${game.id}`}
+                  key={index}
+                  className="group h-full w-full rounded-lg mb-2 relative"
+                >
+                  <div className=" h-[160px] rounded-2xl overflow-clip ">
+                    <CollectionImage src={game.banner} title={game.title} />
+                  </div>
+                  <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70 pt-3">
+                    {game.title}
+                  </p>
+                  <p className="font-normal text-sm line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] py-1">
+                    Base Game
+                  </p>
+
+                  <Link to={`/`} className="font-montserrat font-normal text-base hover:underline text-text-color flex items-center justify-between pt-2 ">Discover</Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Growth */}
       <div className=" w-full relative">
         <div className="w-full max-w-[3800px] mx-auto h-fit min-h-[400px] z-10 p-20 flex items-center justify-center gap-[15%]">
           <div className="flex items-center justify-center flex-col gap-2">
@@ -254,7 +287,7 @@ function Home() {
       </div>
 
       {/* CAT */}
-      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-10 max-w-[1200px] mx-auto ">
+      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-10 max-w-[1100px] mx-auto ">
         <div className="w-full rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-5 flex items-center justify-center gap-2 relative overflow-clip  ">
           <div className="w-full">
             <div className="flex items-center justify-start gap-1 pb-3 ">
@@ -294,6 +327,7 @@ function Home() {
       </div>
 
       <Footer />
+
     </div>
   );
 }
