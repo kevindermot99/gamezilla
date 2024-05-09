@@ -33,6 +33,7 @@ import { FaRegEye } from "react-icons/fa6";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import MiniNavBar from "../components/MiniNavBar";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -40,7 +41,6 @@ function Home() {
   const [modal, setModal] = useState(false);
   const [OpenedModalId, setOpendModalId] = useState("");
   const [muted, setMuted] = useState(true);
-  const [activeWindow, setActiveWindow] = useState('discover')
 
   // checking logged in user
   useEffect(() => {
@@ -90,6 +90,7 @@ function Home() {
     setMuted(!muted);
   };
 
+
   return (
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
@@ -97,31 +98,13 @@ function Home() {
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
       <Menu userId={userId} />
 
+      <div className="mb-2 w-full h-0"></div>
+
       {/* mini Navbar */}
-      <div className="h-fit w-full max-w-[1100px] p-5 mx-auto sticky top-[-5px] z-30 bg-body-color flex items-center justify-start gap-2 ">
-        <form className="mr-3">
-          <input
-            type="search"
-            name="search"
-            className="bg-stone-100 placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 py-3 font-medium text-sm tracking-tight w-full max-w-[260px] "
-            autoComplete="on"
-            placeholder="Search Game"
-          />
-        </form>
-        <button
-          className={`px-2 py-2 text-[15px] font-DMsans font-medium tracking-tight ${activeWindow === 'discover' ? 'text-white' : 'text-text-color-light' }`}
-        >
-          Discover
-        </button>
-        <button
-          className={`px-2 py-2 text-[15px] font-DMsans font-medium tracking-tight ${activeWindow === 'discover' ? 'text-text-color-light' : 'text-white' }`}
-        >
-          Browse
-        </button>
-      </div>
+      <MiniNavBar />
 
       {/* Discover */}
-      <div className={`w-full h-fit ${activeWindow === 'discover' ? '' : 'hidden' }`}>
+      <div className={`w-full h-fit mt-3 `}>
         {/* hero */}
         <div className="w-full max-w-[1100px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 ">
           <div className="w-3/4 min-h-full h-fit  ">
@@ -281,9 +264,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-      {/* Browse */}
-      <div className={`bg-orange-400 h-[700px] ${activeWindow === 'browse' ? '' : 'hidden' }`}></div>
 
       <Footer />
     </div>
