@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 function MiniNavBar() {
     const location = useLocation()
   return (
-    <div className='w-full h-fit bg-white dark:bg-body-color sticky top-[-2px] z-30'>
+    <div className='w-full h-fit bg-white dark:bg-body-color'>
     <div className="h-fit w-full max-w-[1100px] px-5 py-3 mx-auto flex items-center justify-start gap-3 ">
         <form className="">
           <input
@@ -17,12 +17,13 @@ function MiniNavBar() {
           />
         </form>
         <Link to={`/`}
-          className={`px-3 h-[45px] flex items-center justify-center border-b-[2px] border-transparent text-[15px] font-DMsans font-medium tracking-tight  ${location.pathname === '/' ? 'text-black dark:text-white border-main-color ' : 'text-black dark:text-text-color-light'}`}
+          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${location.pathname === '/' ? 'text-black dark:text-white ' : 'text-black dark:text-text-color-light'}`}
         >
           Discover
         </Link>
         <Link to={`/browse`}
-          className={`px-3 h-[45px] flex items-center justify-center border-b-[2px] border-transparent text-[15px] font-DMsans font-medium tracking-tight text-black dark:text-text-color-light  ${location.pathname === '/browse' ? 'text-black dark:text-white border-main-color ' : 'text-black dark:text-text-color-light'}`}
+        
+          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight text-black dark:text-text-color-light  ${location.pathname === '/browse' ? 'text-black dark:text-white ' : 'text-black dark:text-text-color-light'}`}
         >
           Browse
         </Link>
