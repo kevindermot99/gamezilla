@@ -12,7 +12,7 @@ function PosterImage({ src, title }) {
     setLoading(false)
   }
   return (
-    <div className={`relative flex w-full h-full opacity-80 transition-all duration-300 hover:opacity-100 cursor-pointer group`} title={title}>
+    <div className={`relative flex w-full h-full cursor-pointer group`} title={title}>
       {loading &&
         <div className='w-full h-full absolute dark:bg-body-color bg-white ring-2 ring-white dark:ring-body-color flex justify-center items-center '>
           {/* <CgSpinner className='animate-spinLoader text-text-color-light/90 text-[40px]' /> */}

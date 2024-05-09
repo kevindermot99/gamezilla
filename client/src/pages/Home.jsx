@@ -198,8 +198,8 @@ function Home() {
                     {game.title}
                   </p>
 
-                  <p className="font-montserrat mb-2 font-normal text-[14px] text-text-color flex items-center justify-between pt-3 ">
-                    <span className="flex items-center gap-1 font-montserrat bg-main-color/50 text-white py-1 px-2 text-[11px] rounded-md">
+                  <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-between pt-3 ">
+                    <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[11px] rounded-md">
                       -100%
                     </span>
                     <span className="flex items-center gap-2 font-montserrat text-[11px]">
