@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 function MiniNavBar() {
     const location = useLocation()
   return (
-    <div className='w-full h-fit bg-white dark:bg-body-color'>
+    <div className='w-full h-fit bg-white dark:bg-body-color sticky top-[-2px] z-40'>
     <div className="h-fit w-full max-w-[1100px] px-5 py-3 mx-auto flex items-center justify-start gap-3 ">
         <form className="">
           <input
