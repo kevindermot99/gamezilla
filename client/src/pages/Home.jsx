@@ -94,12 +94,9 @@ function Home() {
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full max-w-[1050px] mx-auto h-fit  flex items-start justify-start p-2 gap-2 mt-12">
-        <div className="w-2/3 min-h-full h-fit  ">
-          <Swiper
-            spaceBetween={0}
-            className="h-[400px] w-full flex relative "
-          >
+      <div className="w-full max-w-[1050px] mx-auto h-fit  flex items-start justify-start p-2 gap-3 mt-12">
+        <div className="w-3/4 min-h-full h-fit  ">
+          <Swiper spaceBetween={0} className="h-[400px] w-full flex relative ">
             {Games.map((game, index) => (
               <SwiperSlide
                 key={index}
@@ -147,7 +144,23 @@ function Home() {
             ))}
           </Swiper>
         </div>
-        <div className="w-1/3 min-h-full h-fit bg-orange-500 "></div>
+        <div className="w-1/4 flex flex-col gap-3 h-[400px] overflow-y-scroll pr-3 ">
+          {Games.map((game, index) => (
+            <div
+              key={index}
+              className="min-h-[60px] py-3 w-full flex items-center gap-2 overflow-clip relative cursor-pointer hover:bg-stone-100 dark:hover:bg-container-color/90 "
+            >
+              <div className=" h-[60px] min-w-[50px] overflow-clip flex">
+                <img
+                  src={game.poster}
+                  className="h-fit min-h-[100%] min-w-[100%] w-[50px]  "
+                  alt=""
+                />
+              </div>
+              <h1 className="line-clamp-2 text-sm text-black dark:text-text-color ">{game.title}</h1>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* most downloaded */}
