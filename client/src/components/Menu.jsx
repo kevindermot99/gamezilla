@@ -85,10 +85,10 @@ function Menu({ userId }) {
       } `}
     >
       <div className="w-full h-fit flex items-center justify-between">
-        <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
+        <div className="w-fit min-w-fit h-full flex items-center justify-start gap-0 ">
           <Link
             to="/"
-            className="font-bold text-2xl font-Inter tracking-tighter flex items-center justify-center mr-3 gap-1 "
+            className="font-bold text-2xl tracking-tighter flex items-center justify-center mr-5 gap-1 "
           >
             <img src={Logo} className="h-9" />
             Gamezilla
@@ -96,14 +96,14 @@ function Menu({ userId }) {
 
           <Link
             to={`/`}
-            className="text-sm px-1 transition-colors duration-150 hover:text-main-color"
+            className="text-[15px] text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
           >
             Library
           </Link>
 
           <Link
             to={`/`}
-            className="text-sm px-1 transition-colors duration-150 hover:text-main-color"
+            className="text-[15px] text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
           >
             Collections
           </Link>
@@ -121,7 +121,7 @@ function Menu({ userId }) {
           {userId === "none" ? (
             <Link 
               to={`/login`}
-              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200 text-black dark:text-text-color dark:bg-stone-400/20  mr-2 `}
+              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
             >
               <AiOutlineUser className="text-[18px]" />
             </Link>
