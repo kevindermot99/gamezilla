@@ -80,7 +80,7 @@ function Menu({ userId }) {
 
   return (
     <div
-      className={`  top-0 z-40 h-fit w-full px-[24px] py-4 bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
+      className={`  top-0 z-40 h-fit w-full px-[24px] py-4 bg-stone-50 dark:bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
@@ -96,14 +96,14 @@ function Menu({ userId }) {
 
           <Link
             to={`/`}
-            className="text-[15px] text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
+            className="text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
           >
             Library
           </Link>
 
           <Link
             to={`/`}
-            className="text-[15px] text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
+            className="text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
           >
             Collections
           </Link>
@@ -114,14 +114,14 @@ function Menu({ userId }) {
             to={`/login`}
             className={` relative group flex px-1 gap-1 `}
           >
-            <BsCart className="text-xl text-text-color" />
+            <BsCart className="text-xl dark:text-text-color text-black" />
             {/* <Badge count={0} /> */}
           </Link>
 
           {userId === "none" ? (
             <Link 
               to={`/login`}
-              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
+              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200/60 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
             >
               <AiOutlineUser className="text-[18px]" />
             </Link>
@@ -161,7 +161,7 @@ function Menu({ userId }) {
             </div>
           )}
 
-          <div className="w-fit h-[25px] border-l border-l-stone-300"></div>
+          <div className="w-fit h-[25px] border-l border-l-stone-500/60"></div>
           <a
             href="https://github.com/kevindermot99/gamezilla"
             target="_blank"

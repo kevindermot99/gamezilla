@@ -85,7 +85,7 @@ export const Games = [
     title: 'Need for Speed Unbound',
     description: 'Unable to stop a robbery at a family auto-shop, two friends are pushed to breaking point, giving the player an opportunity to make their mark on the streets earning rep to go from rookie to top racer by winning the Grand and reclaiming a stolen custom car.',
     genres: ['Racing', 'Adventure'],
-    downloads: '3472772'
+    downloads: '32472772'
   },
   {
     id: '24',
@@ -268,7 +268,7 @@ export const Games = [
       genre1: 'Action',
       genre2: 'First-person shooter',
     },
-    downloads: "13909322"
+    downloads: "1209322"
   },
   {
     id: '15',
