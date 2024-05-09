@@ -16,8 +16,6 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
 
 function Menu({ userId }) {
-  const location = useLocation();
-
   const [searchValue, setSearchValue] = useState("");
   const [resetSearch, setResetSearch] = useState(false);
   const [quickResult, setQuickResult] = useState(false);
@@ -96,14 +94,14 @@ function Menu({ userId }) {
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 border-b-[2px] border-transparent ${location.pathname === '' && 'border-main-color'}`}
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4`}
           >
             Library
           </Link>
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 border-b-[2px] border-transparent ${location.pathname === '' && 'border-main-color'}`}
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4`}
           >
             Collections
           </Link>
