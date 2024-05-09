@@ -132,11 +132,11 @@ function Home() {
                     <div className="w-full h-fit flex items-center justify-between pt-5">
                       <Link
                         to={`/`}
-                        className="bg-text-color/10 hover:bg-text-color/20 text-white font-semibold tracking-wider text-sm  py-[12px] px-12 rounded-xl"
+                        className="bg-text-color/10 hover:bg-text-color/20 text-white font-semibold tracking-wider text-sm  py-[12px] px-12 rounded-sm "
                       >
                         GET
                       </Link>
-                      <div className="flex items-center justify-end gap-3 bg-transparen py-3 px-4 rounded-xl">
+                      <div className="flex items-center justify-end gap-2 bg-transparen py-3 px-4 rounded-xl">
                         <span className="flex items-center justify-center text-xs">
                           2008
                         </span>
@@ -144,7 +144,7 @@ function Home() {
                           &#x2022;
                         </span>
                         <span className="flex items-center justify-center text-xs">
-                          <LiaDownloadSolid className="text-sm" />{" "}
+                          <LiaDownloadSolid className="text-base " />{" "}
                           {numberFormat(game.downloads)}
                         </span>
                         <span className="flex items-center justify-center text-xs">
@@ -181,7 +181,7 @@ function Home() {
           </div>
         </div>
 
-        {/* most downloaded */}
+        {/* For you */}
         <div className="w-full h-fit pt-7">
           <div className="w-full h-fit flex flex-col max-w-[1100px] px-5 mx-auto">
             <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
@@ -189,13 +189,13 @@ function Home() {
             </h1>
             <div className="h-fit ">
               <div className="gridRespo ">
-                {Games.slice(0, 10).map((game, index) => (
+                {Games.slice(0, 12).map((game, index) => (
                   <Link
                     to={`/game/${game.id}`}
                     key={index}
                     className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                   >
-                    <div className=" ">
+                    <div className="transition group-hover:opacity-90 dark:opacity-80 ">
                       <PosterImage src={game.poster} title={game.title} />
                     </div>
                     <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
@@ -204,20 +204,14 @@ function Home() {
                     <p className="text-[16px] font-light capitalize line-clamp-1  text-black dark:text-text-color">
                       {game.title}
                     </p>
-
-                    <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-start gap-2 pt-2 ">
-                      {/* <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[9px] rounded-md">
-                      -100%
-                    </span> */}
-                      <span className="flex items-center gap-2 text-sm">
-                        {/* <s></s> */}
-                        $0.00
-                      </span>
+                    <p className="font-normal text-[13px] line-clamp-2  text-black dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
+                      free
                     </p>
+
                     <button
                       className={`absolute top-3 right-1 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-white dark:bg-body-color p-2 rounded-full`}
                     >
-                      <BsCart className="text-xl " />
+                      <BsCart className="text-xl text-black dark:text-white " />
                     </button>
                   </Link>
                 ))}
