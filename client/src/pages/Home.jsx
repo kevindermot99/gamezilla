@@ -3,7 +3,7 @@ import Menu from "../components/Menu";
 import { Games } from "../constants/data";
 import { FaMedal } from "react-icons/fa6";
 import { FaRankingStar } from "react-icons/fa6";
-import { BrowserRouter, Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { TbLoader2 } from "react-icons/tb";
 import Sidebar from "../components/Sidebar";
 import { BsCart } from "react-icons/bs";
@@ -78,6 +78,12 @@ function Home() {
   const handlemuted = () => {
     setMuted(!muted);
   };
+
+  // // resetting the scroll position
+  // const { pathname } = useLocation();
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
 
   return (
