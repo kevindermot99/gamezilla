@@ -94,7 +94,7 @@ function Home() {
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full max-w-[1050px] mx-auto h-fit  flex items-start justify-start p-2 gap-3 mt-12">
+      <div className="w-full max-w-[1000px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 mt-12">
         <div className="w-3/4 min-h-full h-fit  ">
           <Swiper spaceBetween={0} className="h-[400px] w-full flex relative ">
             {Games.map((game, index) => (
@@ -144,7 +144,7 @@ function Home() {
             ))}
           </Swiper>
         </div>
-        <div className="w-1/4 flex flex-col gap-3 h-[400px] overflow-y-scroll pr-3 ">
+        <div className="w-1/4 min-w-[230px] flex flex-col gap-3 h-[400px] overflow-y-scroll pr-3 ">
           {Games.map((game, index) => (
             <div
               key={index}
@@ -165,7 +165,7 @@ function Home() {
 
       {/* most downloaded */}
       <div className="w-full h-fit pt-7">
-        <div className="w-full h-fit flex flex-col px-11 max-w-[1100px] mx-auto">
+        <div className="w-full h-fit flex flex-col max-w-[1000px] px-5 mx-auto">
           <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
             For You
           </h1>
@@ -177,7 +177,7 @@ function Home() {
                   key={index}
                   className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                 >
-                  <div className=" h-[250px] ">
+                  <div className=" h-[220px] max-sm:h-[270px] ">
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
                   <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
@@ -210,7 +210,7 @@ function Home() {
 
       {/* Our Collections */}
       <div className="w-full h-fit pt-7">
-        <div className="w-full h-fit flex flex-col px-10 max-w-[1100px] mx-auto">
+        <div className="w-full h-fit flex flex-col max-w-[1000px] px-5 mx-auto">
           <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
             Our Collections
           </h1>
