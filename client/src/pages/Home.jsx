@@ -27,6 +27,9 @@ import { TbVolume } from "react-icons/tb";
 import { TbVolume3 } from "react-icons/tb";
 import { GoArrowRight } from "react-icons/go";
 import CollectionImage from "../components/CollectionImage";
+import { LiaDownloadSolid } from "react-icons/lia";
+import { FaRegEye } from "react-icons/fa6";
+
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -91,15 +94,55 @@ function Home() {
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full max-w-[1050px] mx-auto h-fit bg-green-400 flex items-start justify-start p-2 gap-2 mt-12">
-        <div className="w-2/3 min-h-full h-fit bg-orange-500 ">
+      <div className="w-full max-w-[1050px] mx-auto h-fit  flex items-start justify-start p-2 gap-2 mt-12">
+        <div className="w-2/3 min-h-full h-fit  ">
           <Swiper
-          spaceBetween={10}
-          className="h-[400px] w-full flex relative "
+            spaceBetween={0}
+            className="h-[400px] w-full flex relative "
           >
             {Games.map((game, index) => (
-              <SwiperSlide key={index} className="h-full w-full flex overflow-clip relative ">
-                <img src={game.banner} className="w-full h-full object-cover" alt="" />
+              <SwiperSlide
+                key={index}
+                className="h-full w-full flex overflow-clip  relative "
+              >
+                <img
+                  src={game.banner}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/90 to-transparent flex flex-col items-start justify-end p-8 cursor-default ">
+                  <h1 className="text-[37px] leading-[40px] font-bold font-montserrat tracking-tight capitalize line-clamp-2 max-w-[80%] text-white">
+                    {game.title}
+                  </h1>
+                  <p className="text-[15px] leading-[20px] font-medium capitalize line-clamp-2 max-w-[70%] text-text-color pt-[6px]">
+                    {game.description}
+                  </p>
+                  <div className="w-full h-fit flex items-center justify-between pt-5">
+                    <Link
+                      to={`/`}
+                      className="bg-text-color/10 hover:bg-text-color/20 text-white font-semibold tracking-wider text-sm  py-[12px] px-12 rounded-xl"
+                    >
+                      GET
+                    </Link>
+                    <div className="flex items-center justify-end gap-3 bg-text-color/10 py-3 px-4 rounded-xl">
+                      <span className="flex items-center justify-center text-xs">
+                        2008
+                      </span>
+                      <span className="flex items-center justify-center text-xs">
+                        &#x2022;
+                      </span>
+                      <span className="flex items-center justify-center text-xs">
+                        <LiaDownloadSolid className="text-sm" /> 12M
+                      </span>
+                      <span className="flex items-center justify-center text-xs">
+                        &#x2022;
+                      </span>
+                      <span className="flex items-center justify-center gap-1 text-xs">
+                        <FaRegEye className="text-sm" /> 234K
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -108,7 +151,7 @@ function Home() {
       </div>
 
       {/* most downloaded */}
-      <div className="w-full h-fit pt-14">
+      <div className="w-full h-fit pt-7">
         <div className="w-full h-fit flex flex-col px-11 max-w-[1100px] mx-auto">
           <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
             For You
@@ -124,17 +167,17 @@ function Home() {
                   <div className=" h-[250px] ">
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
-                  <p className="font-normal text-[10px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                  <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                     Base Game
                   </p>
-                  <p className="text-[16px] font-light capitalize line-clamp-1  text-body-color dark:text-text-color">
+                  <p className="text-[16px] font-light capitalize line-clamp-1  text-black dark:text-text-color">
                     {game.title}
                   </p>
 
-                  <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-start gap-2 pt-3 ">
-                    <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[9px] rounded-md">
+                  <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-start gap-2 pt-2 ">
+                    {/* <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[9px] rounded-md">
                       -100%
-                    </span>
+                    </span> */}
                     <span className="flex items-center gap-2 text-sm">
                       {/* <s></s> */}
                       $0.00
