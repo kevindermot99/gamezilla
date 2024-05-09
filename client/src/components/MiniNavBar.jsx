@@ -11,19 +11,19 @@ function MiniNavBar() {
           <input
             type="search"
             name="search"
-            className="bg-stone-100 placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 h-[45px] font-medium text-sm w-full max-w-[260px] "
+            className="bg-stone-100 text-black dark:text-white placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 h-[45px] font-medium text-sm w-full max-w-[260px] "
             autoComplete="on"
             placeholder="Search Game"
           />
         </form>
         <Link to={`/`}
-          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${location.pathname === '/' ? 'text-black dark:text-white ' : 'text-black dark:text-text-color-light'}`}
+          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${location.pathname === '/' ? 'text-black dark:text-white border-b-[2px] border-main-color ' : 'text-black dark:text-text-color-light'}`}
         >
           Discover
         </Link>
         <Link to={`/browse`}
         
-          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight text-black dark:text-text-color-light  ${location.pathname === '/browse' ? 'text-black dark:text-white ' : 'text-black dark:text-text-color-light'}`}
+          className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${location.pathname === '/browse' ? 'text-black dark:text-white border-b-[2px] border-main-color ' : 'text-black dark:text-text-color-light'}`}
         >
           Browse
         </Link>
