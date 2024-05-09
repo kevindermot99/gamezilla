@@ -91,13 +91,20 @@ function Home() {
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full max-w-[1100px] mx-auto h-fit min-h-[400px] bg-green-400 flex items-start justify-start py-8 gap-5 mt-12">
-      <div className="w-2/3">
-
-      </div>
-      <div className="w-1/3">
-
-      </div>
+      <div className="w-full max-w-[1050px] mx-auto h-fit bg-green-400 flex items-start justify-start p-2 gap-2 mt-12">
+        <div className="w-2/3 min-h-full h-fit bg-orange-500 ">
+          <Swiper
+          spaceBetween={10}
+          className="h-[400px] w-full flex relative "
+          >
+            {Games.map((game, index) => (
+              <SwiperSlide key={index} className="h-full w-full flex overflow-clip relative ">
+                <img src={game.banner} className="w-full h-full object-cover" alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="w-1/3 min-h-full h-fit bg-orange-500 "></div>
       </div>
 
       {/* most downloaded */}
@@ -166,7 +173,8 @@ function Home() {
                     {game.title}
                   </p>
                   <p className="font-normal text-sm line-clamp-2  text-body-color dark:text-text-color-light py-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Totam
                   </p>
 
                   <Link
@@ -181,8 +189,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-    
 
       <Footer />
     </div>
