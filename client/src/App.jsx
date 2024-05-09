@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Vcode from './pages/Vcode';
 import Game from './pages/Game';
+import Browse from './pages/Browse';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/browse' element={<Browse />} />
           <Route path='/game/:id' element={<Game />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
