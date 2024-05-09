@@ -6,12 +6,6 @@ import { FaRankingStar } from "react-icons/fa6";
 import { BrowserRouter, Link, useParams } from "react-router-dom";
 import { TbLoader2 } from "react-icons/tb";
 import Sidebar from "../components/Sidebar";
-// import Swiper from 'swiper';
-// import { Navigation, Pagination, Autoplay, FreeMode } from 'swiper/modules';
-// Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/effect-coverflow';
-// import 'swiper/css/pagination';
 import { BsCart } from "react-icons/bs";
 import ButtonLink from "../components/ButtonLink";
 import ButtonClick from "../components/ButtonClick";
@@ -33,6 +27,9 @@ import { TbVolume } from "react-icons/tb";
 import { TbVolume3 } from "react-icons/tb";
 import { GoArrowRight } from "react-icons/go";
 import CollectionImage from "../components/CollectionImage";
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -52,8 +49,6 @@ function Home() {
   }, []);
 
   const sortedGames = Games.sort(() => Math.random() - 0.5);
-
-  // // swiper init
   // const swiper = new Swiper('.swiper', {
   //   // configure Swiper to use modules
   //   modules: [Navigation, Pagination, Autoplay, FreeMode],
@@ -96,79 +91,13 @@ function Home() {
       <Menu userId={userId} />
 
       {/* hero */}
-      <div className="w-full h-fit flex flex-col py-8 gap-5 mt-12">
-        <div className="w-full h-fit flex items-center justify-center flex-col gap-4 z-20">
-          <h1 className="text-[60px] leading-[64px] font-montserrat capitalize font-bold tracking-tight text-center text-body-color dark:text-text-color  ">
-            Get Access to Hundreds <br /> of Free Games!
-          </h1>
-          <p className="font-montserrat font-semibold  text-body-color/80 dark:text-text-color-light text-[17px] text-center max-w-[400px]">
-            Browse, download, and request games all absolutely free of charge
-          </p>
-        </div>
+      <div className="w-full max-w-[1100px] mx-auto h-fit min-h-[400px] bg-green-400 flex items-start justify-start py-8 gap-5 mt-12">
+      <div className="w-2/3">
 
-        <div className="w-full translate-y-12 z-10 px-4">
-          <form className="relative w-full flex items-center justify-center">
-            <label className="w-full h-[55px] max-w-[500px] relative ring-4 dark:ring-body-color ring-white dark:bg-body-color bg-stone-100">
-              <input
-                type="search"
-                name="search"
-                autoComplete="off"
-                placeholder="Search for Games"
-                className=" placeholder:text-text-color-light bg-text-color/90 py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium w-full h-[55px] ring-[20px] ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color"
-              />
-              <span className="absolute top-0 bottom-0 right-2 m-auto flex h-fit  ">
-                <ButtonClick
-                  title={"Search"}
-                  type={"submit"}
-                  icon={<HiMagnifyingGlass />}
-                />
-              </span>
-            </label>
-          </form>
-        </div>
+      </div>
+      <div className="w-1/3">
 
-        <div className="flex items-center justify-center flex-col gap-2 overflow-x-clip overflow-y-visible relative ">
-          <div className="absolute bottom-0 left-0 right-0 w-full h-[160px] z-10 bg-gradient-to-b dark:from-body-color/70 from-white/70 dark:to-body-color to-white flex justify-end items-center flex-col pb-6">
-            <ButtonLink
-              to={"/"}
-              title={"Browse All Games"}
-              icon={<HiMiniFire />}
-            />
-          </div>
-          <div className="flex items-start justify-center gap-2 overflow-clip">
-            {sortedGames.slice(9, 19).map((game, index) => (
-              <Link
-                to={`/game/${game.id}`}
-                className="w-[160px] h-[160px] min-w-[160px] min-h-[160px] "
-                key={index}
-              >
-                <SquareImage src={game.poster} title={game.title} />
-              </Link>
-            ))}
-          </div>
-          <div className="flex items-start justify-center gap-2 overflow-clip">
-            {sortedGames.slice(0, 9).map((game, index) => (
-              <Link
-                to={`/game/${game.id}`}
-                key={index}
-                className=" rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] "
-              >
-                <SquareImage src={game.poster} title={game.title} />
-              </Link>
-            ))}
-          </div>
-          <div className="flex items-start justify-center gap-2 overflow-clip">
-            {sortedGames.slice(8, 16).map((game, index) => (
-              <Link
-                to={`/game/${game.id}`}
-                key={index}
-                className=" rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] "
-              >
-                <SquareImage src={game.poster} title={game.title} />
-              </Link>
-            ))}
-          </div>
-        </div>
+      </div>
       </div>
 
       {/* most downloaded */}
