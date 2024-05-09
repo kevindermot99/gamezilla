@@ -75,7 +75,7 @@ function Menu() {
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4`}
+            className={`text-[15px] font-DMsans font-medium tracking-tight transition-colors py-2 px-4 ${location.pathname === '/' ? 'text-black dark:text-white border-b-[2px] border-main-color ' : 'text-black dark:text-text-color/80'}`}
           >
             Library
           </Link>
