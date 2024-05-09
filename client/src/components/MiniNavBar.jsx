@@ -5,12 +5,13 @@ import { useLocation } from 'react-router-dom'
 function MiniNavBar() {
     const location = useLocation()
   return (
-    <div className="h-fit w-full max-w-[1100px] px-5 py-3 mx-auto sticky top-[-2px] z-30 bg-body-color flex items-center justify-start gap-3 ">
+    <div className='w-full h-fit bg-body-color sticky top-[-2px] z-30'>
+    <div className="h-fit w-full max-w-[1100px] px-5 py-3 mx-auto flex items-center justify-start gap-3 ">
         <form className="">
           <input
             type="search"
             name="search"
-            className="bg-stone-100 placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 h-[45px] font-medium text-sm tracking-tight w-full max-w-[260px] "
+            className="bg-stone-100 placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 h-[45px] font-medium text-sm w-full max-w-[260px] "
             autoComplete="on"
             placeholder="Search Game"
           />
@@ -25,6 +26,7 @@ function MiniNavBar() {
         >
           Browse
         </Link>
+      </div>
       </div>
   )
 }
