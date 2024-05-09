@@ -29,11 +29,11 @@ import { GoArrowRight } from "react-icons/go";
 import CollectionImage from "../components/CollectionImage";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaRegEye } from "react-icons/fa6";
+import MiniNavBar from "../components/MiniNavBar";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import MiniNavBar from "../components/MiniNavBar";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
