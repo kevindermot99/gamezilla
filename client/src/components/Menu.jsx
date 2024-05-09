@@ -15,9 +15,20 @@ import { genres } from "../constants/data";
 import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
 
-function Menu({ userId }) {
+function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
+    const [userId, setUserId] = useState("");
+
+  // checking logged in user
+  useEffect(() => {
+    const userId = localStorage.getItem("gamezillaUserId");
+    if (userId) {
+      setUserId(userId);
+    } else {
+      setUserId("none");
+    }
+  }, []);
 
 
   const changeBg = () => {
