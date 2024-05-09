@@ -144,7 +144,7 @@ function Home() {
             ))}
           </Swiper>
         </div>
-        <div className="w-1/4 min-w-[230px] flex flex-col gap-3 h-[400px] overflow-y-scroll pr-3 ">
+        <div className="w-1/4 min-w-[230px] flex flex-col gap-3 h-[400px] overflow-y-scroll pr-3 overscroll-contain ">
           {Games.map((game, index) => (
             <div
               key={index}

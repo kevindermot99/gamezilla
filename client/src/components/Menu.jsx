@@ -80,7 +80,7 @@ function Menu({ userId }) {
 
   return (
     <div
-      className={`  top-0 z-40 h-fit w-full px-[24px] py-3  text-body-color dark:text-text-color flex flex-col gap-3 bg-transparent ${
+      className={`  top-0 z-40 h-fit w-full px-[24px] py-4 bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
@@ -121,7 +121,7 @@ function Menu({ userId }) {
           {userId === "none" ? (
             <Link 
               to={`/login`}
-              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200 text-black dark:text-text-color dark:bg-container-color mr-2 `}
+              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200 text-black dark:text-text-color dark:bg-stone-400/20  mr-2 `}
             >
               <AiOutlineUser className="text-[18px]" />
             </Link>
