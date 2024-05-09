@@ -7,12 +7,14 @@ import SignUp from './pages/SignUp';
 import Vcode from './pages/Vcode';
 import Game from './pages/Game';
 import Browse from './pages/Browse';
+import Menu from './components/Menu';
 
 function App() {
 
 
   return (
     <div className=''>
+       {/* <Menu  /> */}
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />

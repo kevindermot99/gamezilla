@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GoChevronDown } from "react-icons/go";
 import { TbSearch } from "react-icons/tb";
 import { GoGitBranch } from "react-icons/go";
@@ -16,39 +16,9 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
 
 function Menu({ userId }) {
-  const [searchValue, setSearchValue] = useState("");
-  const [resetSearch, setResetSearch] = useState(false);
-  const [quickResult, setQuickResult] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
-  const navigate = useNavigate();
 
-  const handleSearchValue = (e) => {
-    setSearchValue(e.target.value);
-    if (e.target.value !== "") {
-      setResetSearch(true);
-      setQuickResult(true);
-    } else {
-      setResetSearch(false);
-      setQuickResult(false);
-    }
-  };
-
-  const hideWhenEmpty = (e) => {
-    if (e.target.value === "") {
-      setResetSearch(false);
-    }
-  };
-
-  const handleResetSearch = () => {
-    setSearchValue("");
-    setResetSearch(false);
-    setQuickResult(false);
-  };
-
-  const searchThis = (e) => {
-    e.preventDefault();
-  };
 
   const changeBg = () => {
     setScrollPosition(window.scrollY);

@@ -37,20 +37,9 @@ import "swiper/css";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
-  const [userId, setUserId] = useState("");
   const [modal, setModal] = useState(false);
   const [OpenedModalId, setOpendModalId] = useState("");
   const [muted, setMuted] = useState(true);
-
-  // checking logged in user
-  useEffect(() => {
-    const userId = localStorage.getItem("gamezillaUserId");
-    if (userId) {
-      setUserId(userId);
-    } else {
-      setUserId("none");
-    }
-  }, []);
 
   const sortedBydowns = Games.sort((a, b) => b.downloads - a.downloads);
   const top5 = sortedBydowns.slice(0, 5);
@@ -96,7 +85,6 @@ function Home() {
       className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
-      <Menu userId={userId} />
 
       <div className="mb-2 w-full h-0"></div>
 
