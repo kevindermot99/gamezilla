@@ -96,14 +96,14 @@ function Menu({ userId }) {
 
           <Link
             to={`/`}
-            className="text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 border-b-[2px] border-transparent ${location.pathname === '' && 'border-main-color'}`}
           >
             Library
           </Link>
 
           <Link
             to={`/`}
-            className="text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 rounded-md duration-150 hover:bg-stone-500/20"
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4 border-b-[2px] border-transparent ${location.pathname === '' && 'border-main-color'}`}
           >
             Collections
           </Link>
