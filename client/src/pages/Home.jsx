@@ -108,13 +108,13 @@ function Home() {
 
         <div className="w-full translate-y-12 z-10 px-4">
           <form className="relative w-full flex items-center justify-center">
-            <label className="w-full h-[55px] max-w-[500px] relative ring-8 dark:ring-body-color ring-white dark:bg-body-color bg-stone-100 rounded-2xl">
+            <label className="w-full h-[55px] max-w-[500px] relative ring-4 dark:ring-body-color ring-white dark:bg-body-color bg-stone-100">
               <input
                 type="search"
                 name="search"
                 autoComplete="off"
                 placeholder="Search for Games"
-                className=" placeholder:text-text-color-light bg-text-color/90 py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium rounded-2xl w-full h-[55px] ring-[20px] ring-transparent transition duration-500 focus:ring-8 focus:ring-main-color"
+                className=" placeholder:text-text-color-light bg-text-color/90 py-0 pl-7 pr-28 text-black text-[16px] tracking-tight font-medium w-full h-[55px] ring-[20px] ring-transparent transition duration-500 focus:ring-4 focus:ring-main-color"
               />
               <span className="absolute top-0 bottom-0 right-2 m-auto flex h-fit  ">
                 <ButtonClick
@@ -139,7 +139,7 @@ function Home() {
             {sortedGames.slice(9, 19).map((game, index) => (
               <Link
                 to={`/game/${game.id}`}
-                className=" rounded-xl  w-[160px] h-[160px] min-w-[160px] min-h-[160px] "
+                className="w-[160px] h-[160px] min-w-[160px] min-h-[160px] "
                 key={index}
               >
                 <SquareImage src={game.poster} title={game.title} />
@@ -173,42 +173,39 @@ function Home() {
 
       {/* most downloaded */}
       <div className="w-full h-fit pt-14">
-        <div className="w-full h-fit flex flex-col px-10 max-w-[1100px] mx-auto">
-          <h1 className="text-[28px] leading-[32px] capitalize font-DMsans font-bold w-full text-center tracking-tight  text-body-color dark:text-text-color">
-            Most Downloaded Games <br /> of all time.
+        <div className="w-full h-fit flex flex-col px-11 max-w-[1100px] mx-auto">
+          <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
+            For You
           </h1>
-          <p className="text-[14px] leading-[15px] capitalize font-DMsans font-medium w-full text-center text-text-color-light pt-2 mb-4">
-            Top ranked by downloads count
-          </p>
-          <div className="h-fit mt-9 ">
+          <div className="h-fit ">
             <div className="gridRespo ">
-              {Games.slice(0, 10  ).map((game, index) => (
+              {Games.slice(0, 10).map((game, index) => (
                 <Link
                   to={`/game/${game.id}`}
                   key={index}
                   className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                 >
-                  <div className=" h-[230px] ">
+                  <div className=" h-[250px] ">
                     <PosterImage src={game.poster} title={game.title} />
                   </div>
-                  <p className="font-normal text-[11px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] py-1 uppercase">
+                  <p className="font-normal text-[10px] line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                     Base Game
                   </p>
-                  <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70">
+                  <p className="text-[16px] font-light capitalize line-clamp-1  text-body-color dark:text-text-color">
                     {game.title}
                   </p>
 
-                  <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-between pt-3 ">
-                    <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[11px] rounded-md">
+                  <p className="font-montserrat mb-2 font-normal text-[14px] dark:text-text-color text-black flex items-center justify-start gap-2 pt-3 ">
+                    <span className="flex items-center gap-1 font-montserrat dark:bg-main-color/50 bg-main-color text-white py-1 px-2 text-[9px] rounded-md">
                       -100%
                     </span>
-                    <span className="flex items-center gap-2 font-montserrat text-[11px]">
+                    <span className="flex items-center gap-2 text-sm">
                       {/* <s></s> */}
                       $0.00
                     </span>
                   </p>
                   <button
-                    className={`absolute top-3 right-1 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-main-color p-2 rounded-full`}
+                    className={`absolute top-3 right-1 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-white dark:bg-body-color p-2 rounded-full`}
                   >
                     <BsCart className="text-xl " />
                   </button>
@@ -220,30 +217,35 @@ function Home() {
       </div>
 
       {/* Our Collections */}
-      <div className="w-full h-fit pt-14">
+      <div className="w-full h-fit pt-7">
         <div className="w-full h-fit flex flex-col px-10 max-w-[1100px] mx-auto">
-          <p className="text-base leading-[15px] capitalize font-DMsans font-medium w-full text-left text-text-color-light pt-2">
+          <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
             Our Collections
-          </p>
-          <div className="h-fit mt-7 ">
+          </h1>
+          <div className="h-fit mt-5 ">
             <div className="gridRespoCollection ">
-              {Games.slice(0, 8).map((game, index) => (
+              {Games.slice(0, 3).map((game, index) => (
                 <div
                   to={`/game/${game.id}`}
                   key={index}
                   className="group h-full w-full rounded-lg mb-2 relative"
                 >
-                  <div className=" h-[160px] rounded-2xl overflow-clip ">
+                  <div className=" h-[160px] ">
                     <CollectionImage src={game.banner} title={game.title} />
                   </div>
-                  <p className="font-montserrat font-bold text-base line-clamp-1  text-body-color dark:text-text-color/70 pt-3">
+                  <p className="text-[16px] font-light capitalize line-clamp-1  text-body-color dark:text-text-color pt-3">
                     {game.title}
                   </p>
-                  <p className="font-normal text-sm line-clamp-2  text-body-color dark:text-text-color-light max-w-[90%] py-1">
-                    Base Game
+                  <p className="font-normal text-sm line-clamp-2  text-body-color dark:text-text-color-light py-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam 
                   </p>
 
-                  <Link to={`/`} className="font-montserrat font-normal text-base hover:underline text-text-color flex items-center justify-between pt-2 ">Discover</Link>
+                  <Link
+                    to={`/`}
+                    className="font-montserrat font-normal text-sm w-fit hover:underline text-text-color flex items-center justify-between pt-2 "
+                  >
+                    Discover
+                  </Link>
                 </div>
               ))}
             </div>
@@ -251,83 +253,9 @@ function Home() {
         </div>
       </div>
 
-      {/* Growth */}
-      <div className=" w-full relative">
-        <div className="w-full max-w-[3800px] mx-auto h-fit min-h-[400px] z-10 p-20 flex items-center justify-center gap-[15%]">
-          <div className="flex items-center justify-center flex-col gap-2">
-            <IoGameControllerOutline className="text-main-color/60  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
-              23,492
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
-              Games uploaded
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center flex-col gap-2">
-            <HiOutlineUsers className="text-main-color/60  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
-              492
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
-              Gamers joined
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center flex-col gap-2">
-            <GoGift className="text-main-color/60  text-[45px]" />
-            <h1 className="font-montserrat font-bold dark:text-text-color text-body-color text-[40px] leading-[50px] py-2">
-              100%
-            </h1>
-            <p className="font-montserrat font-semibold text-text-color-light text-[17px] ">
-              Free for all
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* CAT */}
-      <div className="w-full h-fit gap-4 flex justify-between items-start px-10 pb-10 max-w-[1100px] mx-auto ">
-        <div className="w-full rounded-tr-[40px] rounded-bl-[40px] h-full bg-gradient-to-br dark:from-container-color/60 from-stone-200/70 to-transparent px-12 py-5 flex items-center justify-center gap-2 relative overflow-clip  ">
-          <div className="w-full">
-            <div className="flex items-center justify-start gap-1 pb-3 ">
-              <div className="relative pb-[2px]">
-                <HiOutlineStar className="text-[23px] pointer-events-none dark:text-[#A6A7A8] text-body-color" />
-              </div>
-              <p className="text-[15px] leading-[18px] pointer-events-none dark:text-[#A6A7A8] text-body-color font-montserrat font-semibold w-full line-clamp-4 text-left  flex items-center gap-3 whitespace-nowrap">
-                Star Gamezilla
-              </p>
-            </div>
-            <h1 className="text-[23px] leading-[28px] pointer-events-none capitalize font-montserrat font-bold w-full text-left tracking-tight text-body-color dark:text-text-color ">
-              Star us on GitHub
-            </h1>
-            <p className="text-[15px] leading-[22px] pointer-events-none font-DMsans font-medium w-full max-w-[80%] line-clamp-4 text-left text-text-color-light pt-2 pb-4">
-              Please star us on GitHub. Your support encourages us to upload
-              more games, expanding our collection and providing even more
-              entertainment options for our community.
-            </p>
-            <div className="flex items-center justify-start gap-5 w-fit mt-1">
-              <a
-                href=""
-                className="text-[15px] leading-[15px] capitalize font-DMsans font-semibold px-5 py-4 rounded-xl w-fit text-left dark:bg-[#333535] bg-stone-300/50 dark:text-[#A6A7A8] text-body-color flex items-center justify-center gap-2 hover:opacity-80 transition-all"
-              >
-                <LuExternalLink /> Open GitHub
-              </a>
-            </div>
-          </div>
-
-          <div className="w-fit min-w-fit">
-            <img
-              src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-5562375-4642720.png?f=webp"
-              className="h-52 rotate-[25deg] pointer-events-none select-none origin-center dark:opacity-65 opacity-90 pt-4 max-lg:hidden"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
+    
 
       <Footer />
-
     </div>
   );
 }

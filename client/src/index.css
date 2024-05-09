@@ -82,7 +82,7 @@ html {
   max-width: 1800px;
   margin: 0 auto;
   display: grid;
-  gap: 14px;
+  gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
