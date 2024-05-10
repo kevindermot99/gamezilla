@@ -74,7 +74,7 @@ function Login() {
     <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
       <ToastContainer
         className="select-none"
-        position="bottom-left"
+        position="bottom-right"
         draggable
         autoClose={3000}
       />
@@ -127,7 +127,7 @@ function Login() {
             <button
               type="submit"
               name="email"
-              className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black hover:opacity-85 text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
             >

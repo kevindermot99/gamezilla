@@ -21,11 +21,13 @@ function Vcode({ location }) {
                 try {
                     const response = await axios.get(`http://localhost:3001/getUser/${id}`)
                     if (response.status === 200) {
-                        setUserEmail(response.data.email)
-                        setVcode(response.data.vcode)
-                        setUserName(response.data.username)
-
-                        emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', {vcode, username, userEmail}, 'ux-raMZeiO57IIgRz')
+                        const emailParams = {
+                            userEmail: response.data.email,
+                            vcode: response.data.vcode, 
+                            username: response.data.username,
+                        }
+                        console.log(emailParams)
+                        emailjs.send('service_x6h8r6n', 'template_5jde4cn', emailParams, 'ux-raMZeiO57IIgRz')
                     }
                 }
                 catch (err) {
