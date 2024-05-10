@@ -60,7 +60,7 @@ function Menu() {
 
   return (
     <div
-      className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-0 h-[60px] bg-stone-100 dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 ${
+      className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-0 h-[60px] bg-white shadow dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
@@ -94,7 +94,7 @@ function Menu() {
             genres
             <IoChevronDownSharp />
             {/* ganres dropdown */}
-            <div className="h-0 group-hover:h-[350px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+            <div className="h-0 group-hover:h-[350px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-white shadow dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
               <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                 {Genres.map((genre, index) => (
                   <div
