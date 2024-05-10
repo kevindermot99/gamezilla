@@ -14,6 +14,7 @@ import { BsCart } from "react-icons/bs";
 import { genres } from "../constants/data";
 import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
+import { IoChevronDownSharp } from "react-icons/io5";
 
 function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -59,7 +60,7 @@ function Menu() {
 
   return (
     <div
-      className={`h-fit w-full px-[24px] py-4 bg-stone-100 dark:bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
+      className={`min-h-fit w-full px-[24px] py-0 h-[60px] bg-stone-100 dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
@@ -75,17 +76,27 @@ function Menu() {
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
+            className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
           >
-            Library
+            All games
           </Link>
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
+            className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
           >
-            Collections
+            collections
           </Link>
+          <button
+            className={`group text-[15px] h-[60px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1 flex items-center gap-1`}
+          >
+            genres
+            <IoChevronDownSharp  />
+            <div className="h-[400px] w-full absolute top-[60px] bg-container-color left-0 right-0 mx-auto z-30 hidden group-hover:flex transition-all cursor-default">
+              
+            </div>
+
+          </button>
         </div>
 
         <div className={`h-full w-fit relative flex items-center gap-4`}>
