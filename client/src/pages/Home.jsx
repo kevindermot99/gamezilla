@@ -6,7 +6,7 @@ import { FaRankingStar } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { TbLoader2 } from "react-icons/tb";
 import Sidebar from "../components/Sidebar";
-import { BsCart } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
 import ButtonLink from "../components/ButtonLink";
 import ButtonClick from "../components/ButtonClick";
 import { IoGameControllerOutline } from "react-icons/io5";
@@ -217,14 +217,13 @@ function Home() {
             <div className="h-fit ">
               <div className="gridRespo ">
                 {Games.slice(0, 12).map((game, index) => (
-                  <Link
-                    to={`/game/${game.id}`}
+                  <div
                     key={index}
                     className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                   >
-                    <div className="transition group-hover:opacity-90 dark:opacity-80 ">
+                    <Link to={`/game/${game.id}`} className="transition group-hover:opacity-90 dark:opacity-80 ">
                       <PosterImage src={game.poster} title={game.title} />
-                    </div>
+                    </Link>
                     <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
@@ -236,11 +235,12 @@ function Home() {
                     </p>
 
                     <button
-                      className={`absolute top-3 right-1 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-white dark:bg-body-color p-2 rounded-full`}
+                      title="Add to Wishlist"
+                      className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-body-color/60 backdrop-blur-md p-1 rounded-full`}
                     >
-                      <BsCart className="text-xl text-black dark:text-white " />
+                      <FiPlus className="text-xl text-white " />
                     </button>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
