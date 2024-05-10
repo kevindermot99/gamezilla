@@ -18,7 +18,7 @@ import ButtonLink from "./ButtonLink";
 function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
-    const [userId, setUserId] = useState("");
+    const [userId, setUserId] = useState("none");
 
   // checking logged in user
   useEffect(() => {
@@ -59,15 +59,15 @@ function Menu() {
 
   return (
     <div
-      className={`  top-0 z-40 h-fit w-full px-[24px] py-4 bg-stone-50 dark:bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
+      className={`h-fit w-full px-[24px] py-4 bg-stone-100 dark:bg-container-color/60 text-body-color dark:text-text-color flex flex-col gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
       <div className="w-full h-fit flex items-center justify-between">
-        <div className="w-fit min-w-fit h-full flex items-center justify-start gap-0 ">
+        <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
           <Link
             to="/"
-            className="font-bold text-2xl tracking-tighter flex items-center justify-center mr-5 gap-1 "
+            className="font-bold text-2xl tracking-tighter flex items-center justify-center mr-3 gap-1 "
           >
             <img src={Logo} className="h-9" />
             Gamezilla
@@ -75,14 +75,14 @@ function Menu() {
 
           <Link
             to={`/`}
-            className={`text-[15px] font-DMsans font-medium tracking-tight transition-colors py-2 px-4 ${location.pathname === '/' ? 'text-black dark:text-white border-b-[2px] border-main-color ' : 'text-black dark:text-text-color/80'}`}
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
           >
             Library
           </Link>
 
           <Link
             to={`/`}
-            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors py-2 px-4`}
+            className={`text-[15px] text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
           >
             Collections
           </Link>
@@ -100,7 +100,7 @@ function Menu() {
           {userId === "none" ? (
             <Link 
               to={`/login`}
-              className={`flex items-center justify-center gap-3 h-full aspect-square rounded-full min-w-fit bg-stone-200/60 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
+              className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
             >
               <AiOutlineUser className="text-[18px]" />
             </Link>
@@ -140,7 +140,7 @@ function Menu() {
             </div>
           )}
 
-          <div className="w-fit h-[25px] border-l border-l-stone-500/60"></div>
+          <div className="w-fit h-[25px] border-l-[2px] border-l-stone-500/60"></div>
           <a
             href="https://github.com/kevindermot99/gamezilla"
             target="_blank"

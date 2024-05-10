@@ -90,6 +90,8 @@ function Home() {
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
+
+      <Menu />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 
       <div className="mb-2 w-full h-0"></div>

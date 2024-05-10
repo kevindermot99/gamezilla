@@ -15,6 +15,7 @@ function Browse() {
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
+      <Menu />
       <div className="mb-2 w-full h-0"></div>
 
       {/* mini Navbar */}
