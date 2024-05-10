@@ -93,14 +93,14 @@ function Menu() {
             <IoChevronDownSharp />
 
             {/* ganres dropdown */}
-            <div className="h-0 group-hover:h-[70vh] w-full opacity-100 group-hover:opacity-100 z-30 bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+            <div className="h-0 group-hover:h-[70vh] w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 shadow-md dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
               <div className="p-5 h-full w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                 {Genres.map((genre, index) => (
                   <div to={`/`} key={index} className="flex flex-col items-start justify-start bg-orange" >
-                    <h1 className="text-sm">{genre.section}</h1> 
+                    <h1 className="text-sm text-black dark:text-white">{genre.section}</h1> 
                       <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
                         {genre.genres.map((gen, index) => (
-                          <Link to={`/`} className="text-text-color/50 line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-main-color " >
+                          <Link to={`/`} className="text-black/60 dark:text-text-color/50 text-[13px] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white hover:translate-x-1 transition  " >
                             <span>&#x2022;</span>
                             {gen}
                           </Link>
