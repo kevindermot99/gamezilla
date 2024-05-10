@@ -32,6 +32,7 @@ import { FaRegEye } from "react-icons/fa6";
 import MiniNavBar from "../components/MiniNavBar";
 
 // Swiper
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -85,12 +86,10 @@ function Home() {
   //   window.scrollTo(0, 0);
   // }, [pathname]);
 
-
   return (
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col gap-1 overflow-x-clip text-text-color  `}
     >
-
       <Menu />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 
@@ -106,6 +105,13 @@ function Home() {
           <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
             <Swiper
               spaceBetween={0}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
               className="h-[400px] w-full flex relative "
             >
               {top5.map((game, index) => (
