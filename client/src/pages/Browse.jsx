@@ -6,17 +6,16 @@ import { useLocation } from "react-router-dom";
 
 function Browse() {
   // resetting the scroll position
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // const { pathname } = useLocation();
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
+      className={` relative h-fit max-sm:h-svh flex flex-col gap-1 overflow-x-clip text-text-color  `}
     >
       <Menu />
-      <div className="mb-2 w-full h-0"></div>
 
       {/* mini Navbar */}
       <MiniNavBar />

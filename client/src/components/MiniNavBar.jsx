@@ -5,14 +5,14 @@ import { useLocation } from 'react-router-dom'
 function MiniNavBar() {
     const location = useLocation()
   return (
-    <div className='w-full h-fit bg-white dark:bg-body-color sticky top-[-2px] z-40'>
+    <div className='w-full h-fit bg-white dark:bg-body-color sticky top-[-1px] z-20'>
     <div className="h-fit w-full max-w-[1100px] px-5 py-3 mx-auto flex items-center justify-start gap-3 ">
         <form className="">
           <input
             type="search"
             name="search"
-            className="bg-stone-100 text-black dark:text-white placeholder:text-text-color-light/80 dark:bg-container-color/60 px-4 h-[45px] font-medium text-sm w-full max-w-[260px] "
-            autoComplete="on"
+            className="bg-stone-100 text-black dark:text-white placeholder:text-text-color-light/80 dark:bg-container-color px-4 h-[45px] font-medium text-sm w-full max-w-[260px] "
+            autoComplete="off"
             placeholder="Search Game"
           />
         </form>

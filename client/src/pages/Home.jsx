@@ -88,22 +88,22 @@ function Home() {
 
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
+      className={` relative h-fit max-sm:h-svh flex flex-col gap-1 overflow-x-clip text-text-color  `}
     >
 
       <Menu />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 
-      <div className="mb-2 w-full h-0"></div>
+      {/* <div className="mb-2 w-full h-0"></div> */}
 
       {/* mini Navbar */}
       <MiniNavBar />
 
       {/* Discover */}
-      <div className={`w-full h-fit mt-3 `}>
+      <div className={`w-full h-fit `}>
         {/* hero */}
         <div className="w-full max-w-[1100px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 ">
-          <div className="w-3/4 min-h-full h-fit  ">
+          <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
             <Swiper
               spaceBetween={0}
               className="h-[400px] w-full flex relative "
@@ -156,7 +156,7 @@ function Home() {
               ))}
             </Swiper>
           </div>
-          <div className="w-1/4 min-w-[230px] flex flex-col gap-3 h-[400px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
+          <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[400px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
             {Games.map((game, index) => (
               <div
                 key={index}
