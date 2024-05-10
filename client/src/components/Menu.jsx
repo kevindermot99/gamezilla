@@ -11,15 +11,15 @@ import { MdOutlineDownloading } from "react-icons/md";
 import { HiCollection } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
-import { genres } from "../constants/data";
 import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
 import { IoChevronDownSharp } from "react-icons/io5";
+import { Genres } from "../constants/data";
 
 function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
-    const [userId, setUserId] = useState("none");
+  const [userId, setUserId] = useState("none");
 
   // checking logged in user
   useEffect(() => {
@@ -30,7 +30,6 @@ function Menu() {
       setUserId("none");
     }
   }, []);
-
 
   const changeBg = () => {
     setScrollPosition(window.scrollY);
@@ -91,25 +90,37 @@ function Menu() {
             className={`group text-[15px] h-[60px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1 flex items-center gap-1`}
           >
             genres
-            <IoChevronDownSharp  />
-            <div className="h-[400px] w-full absolute top-[60px] bg-container-color left-0 right-0 mx-auto z-30 hidden group-hover:flex transition-all cursor-default">
-              
-            </div>
+            <IoChevronDownSharp />
 
+            {/* ganres dropdown */}
+            <div className="h-0 group-hover:h-[70vh] w-full opacity-100 group-hover:opacity-100 z-30 bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+              <div className="p-5 h-full w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
+                {Genres.map((genre, index) => (
+                  <div to={`/`} key={index} className="flex flex-col items-start justify-start bg-orange" >
+                    <h1 className="text-sm">{genre.section}</h1> 
+                      <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
+                        {genre.genres.map((gen, index) => (
+                          <Link to={`/`} className="text-text-color/50 line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-main-color " >
+                            <span>&#x2022;</span>
+                            {gen}
+                          </Link>
+                        ))}
+                      </div> 
+                  </div>
+                ))}
+              </div>
+            </div>
           </button>
         </div>
 
         <div className={`h-full w-fit relative flex items-center gap-4`}>
-          <Link
-            to={`/login`}
-            className={` relative group flex px-1 gap-1 `}
-          >
+          <Link to={`/login`} className={` relative group flex px-1 gap-1 `}>
             <BsCart className="text-xl dark:text-text-color text-black" />
             {/* <Badge count={0} /> */}
           </Link>
 
           {userId === "none" ? (
-            <Link 
+            <Link
               to={`/login`}
               className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
             >
