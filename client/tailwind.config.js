@@ -57,7 +57,7 @@ export default {
         "text-color": "#ebebeb",
         "text-color": "#ebebeb",
         "text-color-light": "#808080",
-        "container-color": "#2B2D31",
+        "container-color": "#26272B",
         "footer-color": "#1B1C1D",
       },
       boxShadow: {
