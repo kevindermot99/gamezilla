@@ -25,7 +25,7 @@ function Vcode({ location }) {
                         setVcode(response.data.vcode)
                         setUserName(response.data.username)
 
-                        emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', form.current, 'ux-raMZeiO57IIgRz')
+                        emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', {vcode, username, userEmail}, 'ux-raMZeiO57IIgRz')
                     }
                 }
                 catch (err) {
@@ -63,11 +63,6 @@ function Vcode({ location }) {
             />
             <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
             <div className='h-full w-full flex items-center justify-center flex-col'>
-                <form ref={form} className='flex flex-col gap-3' >
-                    <input type="email" name='email' value={userEmail} onChange={(e) => setUserEmail(e.target.value)} readOnly={true} />
-                    <input type="text" name='vcode' value={vcode} onChange={(e) => setVcode(e.target.value)} readOnly={true} />
-                    <input type="text" name='username' value={username} onChange={(e) => setUserName(e.target.value)} readOnly={true} />
-                </form>
                 <form onSubmit={handleCode} className=' text-text-color w-full max-w-[390px] flex flex-col items-start justify-start '>
                     <h1 className='text-3xl leading-[35px] font-bold '>Verify your Email</h1>
                     <p className='mb-5 text-text-color-light font-light text-sm pt-2 break-all'>we've sent an email at <span className='text-main-color'>{userEmail}</span> that contains a 6 digits code. confirm by entering the code here</p>
