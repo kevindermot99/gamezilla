@@ -15,6 +15,7 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import ButtonLink from "./ButtonLink";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { Genres } from "../constants/data";
+import { GoHeart } from "react-icons/go";
 
 function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -86,45 +87,76 @@ function Menu() {
           >
             collections
           </Link>
+
           <button
             className={`group text-[15px] h-[60px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1 flex items-center gap-1`}
           >
             genres
             <IoChevronDownSharp />
-
             {/* ganres dropdown */}
             <div className="h-0 group-hover:h-[450px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
               <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                 {Genres.map((genre, index) => (
-                  <div to={`/`} key={index} className="flex flex-col items-start justify-start bg-orange" >
-                    <h1 className="text-sm text-black dark:text-white">{genre.section}</h1> 
-                      <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
-                        {genre.genres.map((gen, index) => (
-                          <Link to={`/`} className="text-border-line-color/80   dark:text-text-color/50 text-[1em] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  " >
-                            <span>&#x2022;</span>
-                            {gen}
-                          </Link>
-                        ))}
-                      </div> 
+                  <div
+                    to={`/`}
+                    key={index}
+                    className="flex flex-col items-start justify-start bg-orange"
+                  >
+                    <h1 className="text-sm text-black dark:text-white">
+                      {genre.section}
+                    </h1>
+                    <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
+                      {genre.genres.map((gen, index) => (
+                        <Link
+                          to={`/`}
+                          className="text-border-line-color/80   dark:text-text-color/50 text-[1em] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  "
+                        >
+                          <span>&#x2022;</span>
+                          {gen}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </button>
+
+          <Link
+            to={`/`}
+            className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
+          >
+            Support
+          </Link>
         </div>
 
         <div className={`h-full w-fit relative flex items-center gap-4`}>
-          <Link to={`/login`} className={` relative group flex px-1 gap-1 `}>
+          <Link to={`/login`} className={` relative group flex px-1 gap-1  h-[35px] items-center`}>
+            <GoHeart className="text-xl dark:text-text-color text-black" />
+            <Badge count={4} />
+            <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
+              Wishlist
+            </p>
+          </Link>
+
+          <Link to={`/login`} className={` relative group flex px-1 gap-1 h-[35px] items-center `}>
             <BsCart className="text-xl dark:text-text-color text-black" />
-            {/* <Badge count={0} /> */}
+            <Badge count={24} />
+            <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
+              Cart
+            </p>
           </Link>
 
           {userId === "none" ? (
-            <Link
-              to={`/login`}
-              className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  mr-2 `}
+            <Link to={`/login`} className={` relative group px-1 `}>
+            <div
+              className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
             >
               <AiOutlineUser className="text-[18px]" />
+            </div>
+              <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
+                Profile
+              </p>
             </Link>
           ) : (
             <div
