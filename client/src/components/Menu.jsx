@@ -69,7 +69,7 @@ function Menu() {
             to="/"
             className="font-bold text-2xl tracking-tighter flex items-center justify-center mr-3 gap-1 "
           >
-            <img src={Logo} className="h-9" />
+            <img src={Logo} className="h-11" />
             Gamezilla
           </Link>
 
@@ -93,7 +93,7 @@ function Menu() {
             <IoChevronDownSharp />
 
             {/* ganres dropdown */}
-            <div className="h-0 group-hover:h-[450px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 shadow-md dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+            <div className="h-0 group-hover:h-[450px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
               <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                 {Genres.map((genre, index) => (
                   <div to={`/`} key={index} className="flex flex-col items-start justify-start bg-orange" >
