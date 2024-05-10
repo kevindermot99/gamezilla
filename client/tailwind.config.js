@@ -70,7 +70,7 @@ export default {
       animation: {
         fade: 'fadeIn .1s ease-in-out',
         goingTop: 'goingTop .3s',
-        spinLoader: 'spin 1s linear infinite',
+        spinLoader: 'spin .4s linear infinite',
         zoom: 'zoom .6s linear 1',
       },
 
