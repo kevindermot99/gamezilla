@@ -129,30 +129,27 @@ html {
 }
 
 .Toastify__toast-body {
-  color: #444C63;
-  color: #aaaaaa;
-  font-weight: lighter;
-  font-size: 14px;
+  color: black;
+  font-size: 13px;
   padding: 0px;
   width: 100%;
   height: fit-content;
-  font-weight: 400;
-  margin-left: 25px !important;
-  padding: 15px 0;
+  font-weight: 500;
+  margin-left: 18px !important;
+  padding: 10px 0;
   margin: 0;
-  margin-right: 60px;
   min-height: unset;
 } 
 
 .Toastify__toast{
   position: relative;
-  background-color:#202020;
+  background-color:#fff;
   padding: 0;
   margin: 0;
   margin-top: 8px;
   display: flex;
   height: fit-content;
-  border-radius: 12px;
+  border-radius: 0;
   min-height: unset;
 
 }
