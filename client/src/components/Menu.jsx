@@ -59,7 +59,7 @@ function Menu() {
 
   return (
     <div
-      className={`min-h-fit w-full px-[24px] py-0 h-[60px] bg-stone-100 dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 ${
+      className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-0 h-[60px] bg-stone-100 dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 ${
         scrollPosition > 60 ? "  " : "  "
       } `}
     >
@@ -93,14 +93,14 @@ function Menu() {
             <IoChevronDownSharp />
 
             {/* ganres dropdown */}
-            <div className="h-0 group-hover:h-[70vh] w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 shadow-md dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
-              <div className="p-5 h-full w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
+            <div className="h-0 group-hover:h-[450px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-stone-100 shadow-md dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+              <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                 {Genres.map((genre, index) => (
                   <div to={`/`} key={index} className="flex flex-col items-start justify-start bg-orange" >
                     <h1 className="text-sm text-black dark:text-white">{genre.section}</h1> 
                       <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
                         {genre.genres.map((gen, index) => (
-                          <Link to={`/`} className="text-black/60 dark:text-text-color/50 text-[13px] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white hover:translate-x-1 transition  " >
+                          <Link to={`/`} className="text-border-line-color/80   dark:text-text-color/50 text-[1em] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  " >
                             <span>&#x2022;</span>
                             {gen}
                           </Link>
