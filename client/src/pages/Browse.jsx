@@ -13,7 +13,7 @@ function Browse() {
 
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col gap-1 overflow-x-clip text-text-color  `}
+      className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
       <Menu />
 

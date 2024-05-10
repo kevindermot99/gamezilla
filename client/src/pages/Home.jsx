@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Menu from "../components/Menu";
 import { Games } from "../constants/data";
 import { FaMedal } from "react-icons/fa6";
@@ -32,9 +32,10 @@ import { FaRegEye } from "react-icons/fa6";
 import MiniNavBar from "../components/MiniNavBar";
 
 // Swiper
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, EffectCreative } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/effect-creative";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -86,9 +87,16 @@ function Home() {
   //   window.scrollTo(0, 0);
   // }, [pathname]);
 
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}`;
+  };
+
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col gap-1 overflow-x-clip text-text-color  `}
+      className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
       <Menu />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
@@ -105,16 +113,33 @@ function Home() {
           <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
             <Swiper
               spaceBetween={0}
-              centeredSlides={true}
+              effect={"creative"}
+              creativeEffect={{
+                prev: {
+                  shadow: true,
+                  translate: [0, 0, -400],
+                },
+                next: {
+                  translate: ["100%", 0, 0],
+                },
+              }}
+              onAutoplayTimeLeft={onAutoplayTimeLeft}
+              // centeredSlides={true}
               loop={true}
               autoplay={{
                 delay: 4500,
                 disableOnInteraction: false,
               }}
-              modules={[Autoplay]}
+              modules={[Autoplay, EffectCreative]}
               className="h-[400px] w-full flex relative "
             >
-              {top5.map((game, index) => (
+              <div className="autoplay-progress bg-text-color/10 dark:bg-body-color/40 backdrop-blur rounded-full text-white " slot="container-end">
+                <svg viewBox="0 0 48 48" className="stroke-white" ref={progressCircle}>
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span ref={progressContent} className="font-montserrat text-sm   "></span>
+              </div>
+              {sortedGames.map((game, index) => (
                 <SwiperSlide
                   key={index}
                   className="h-full w-full flex overflow-clip  relative "
@@ -163,7 +188,7 @@ function Home() {
             </Swiper>
           </div>
           <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[400px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
-            {Games.map((game, index) => (
+            {sortedGames.slice(0, 20).map((game, index) => (
               <div
                 key={index}
                 className="min-h-[60px] py-3 w-full snap-start flex items-center gap-2 overflow-clip relative cursor-pointer hover:bg-stone-100 dark:hover:bg-container-color/90 "
@@ -175,7 +200,7 @@ function Home() {
                     alt=""
                   />
                 </div>
-                <h1 className="line-clamp-2 text-sm text-black dark:text-text-color ">
+                <h1 className="line-clamp-2 max-w-[70%]  text-sm text-black dark:text-text-color ">
                   {game.title}
                 </h1>
               </div>
