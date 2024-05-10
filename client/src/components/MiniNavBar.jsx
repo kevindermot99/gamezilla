@@ -12,8 +12,8 @@ function MiniNavBar() {
             to={`/`}
             className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${
               location.pathname === "/"
-                ? "text-black dark:text-white border-b-[2px] border-main-color "
-                : "text-black dark:text-text-color-light"
+                ? "text-black dark:text-white border-b-[2px] border-black dark:border-white "
+                : "text-black/50 dark:text-text-color-light"
             }`}
           >
             Discover
@@ -22,8 +22,8 @@ function MiniNavBar() {
             to={`/browse`}
             className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${
               location.pathname === "/browse"
-                ? "text-black dark:text-white border-b-[2px] border-main-color "
-                : "text-black dark:text-text-color-light"
+                ? "text-black dark:text-white border-b-[2px] border-black dark:border-white "
+                : "text-black/50 dark:text-text-color-light"
             }`}
           >
             Browse
