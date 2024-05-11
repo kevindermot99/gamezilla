@@ -49,7 +49,7 @@ function SignUp() {
           localStorage.setItem("gamezillaUserId", response.data.userId);
           localStorage.setItem("gamezillaUsername", response.data.username);
           setPageOut(true);
-          navigate("/", { replace: true });
+          window.location.reload();
         } else {
           // console.log(response.data.message)
           toast(response.data.message, {
@@ -160,7 +160,10 @@ function SignUp() {
               }`}
             >
               {authing ? (
-                <TbLoader2 className="animate-spinLoader text-white dark:text-black text-[25px] " />
+                <div className="flex items-center justify-center gap-1">
+                <TbLoader2 className="animate-spinLoader text-[23px] " />
+                <span className="capitalize ">creating</span>
+              </div>
               ) : (
                 "Create account"
               )}
