@@ -165,7 +165,7 @@ function Menu() {
               </p>
             </Link>
           ) : (
-            <Link to={`/account/${userId}`} className={` relative group px-1 `}>
+            <Link to={`/profile/${userId}`} className={` relative group px-1 `}>
               <div
                 className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
               >
