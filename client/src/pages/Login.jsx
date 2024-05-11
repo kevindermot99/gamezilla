@@ -9,7 +9,6 @@ import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
 function Login() {
   const [username, setUsername] = useState(null);
-  const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [loginOut, setLoginOut] = useState(false);
   const [authing, setAuthing] = useState(false);
@@ -21,7 +20,7 @@ function Login() {
     setAuthing(true);
     try {
       const response = await axios.post("http://localhost:3001/login", {
-        email,
+        username,
         password,
       });
 
@@ -54,8 +53,8 @@ function Login() {
     navigate("/");
   }
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
   };
 
   const handlePassword = (e) => {
@@ -100,13 +99,14 @@ function Login() {
         >
           <label className="w-full flex flex-col mb-3">
             <h1 className=" text-black dark:text-text-color-light font-medium mb-2 text-sm">
-              Email
+              Username
             </h1>
             <input
-              onChange={handleEmail}
-              type="email"
+              onChange={handleUsername}
+              type="text"
               name="email"
-              placeholder="Someone@example.com"
+              autoComplete="off"
+              placeholder="username"
               className="bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
             />
           </label>
@@ -126,7 +126,7 @@ function Login() {
             {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
             <button
               type="submit"
-              name="email"
+              name="submit"
               className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
@@ -138,10 +138,10 @@ function Login() {
               )}
             </button>
           </div>
-          <a className=" text-black dark:text-white font-semibold underline flex text-sm self-center mt-3">
+          {/* <a className=" text-black dark:text-white font-semibold underline flex text-sm self-center mt-3">
             {" "}
             Forgot Password?
-          </a>
+          </a> */}
           <p className="text-sm font-light text-black dark:text-text-color-light self-center mt-2">
             Don't have an account?{" "}
             <Link

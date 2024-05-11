@@ -154,7 +154,7 @@ function SignUp() {
             {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
             <button
               type="submit"
-              name="email"
+              name="submit"
               className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
@@ -162,7 +162,7 @@ function SignUp() {
               {authing ? (
                 <TbLoader2 className="animate-spinLoader text-white dark:text-black text-[25px] " />
               ) : (
-                "Login"
+                "Create account"
               )}
             </button>
           </div>

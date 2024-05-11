@@ -14,7 +14,7 @@ mongoose.connect(
 const userSchema = new mongoose.Schema({
   username: String,
   password: String,
-  email: String,  
+  email: String,
 });
 const User = mongoose.model("users", userSchema);
 
@@ -45,30 +45,22 @@ app.get("/getUser/:id", async (req, res) => {
 
 // login route
 app.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
   try {
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ username: username });
     if (user) {
       if (password === user.password) {
-        if (user.verified === "false") {
-          res.status(401).json({
-            message: "Email not verified",
-            userId: user.id,
-            email: user.email,
-          });
-        } else {
-          res.status(200).json({
-            message: "Login Successful",
-            userId: user.id,
-            username: user.username,
-          });
-        }
+        res.status(200).json({
+          message: "Login Successful",
+          userId: user.id,
+          username: user.username,
+        });
       } else {
         res.status(403).json({ message: "Password incorrect!" });
       }
     } else {
-      res.status(403).json({ message: "User doesn't exist!" });
+      res.status(403).json({ message: "Account doesn't exist!" });
     }
   } catch (err) {
     res.status(500).json({ message: "An error occured during login" });
