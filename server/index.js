@@ -14,9 +14,7 @@ mongoose.connect(
 const userSchema = new mongoose.Schema({
   username: String,
   password: String,
-  email: String,
-  vcode: String,
-  verified: String,
+  email: String,  
 });
 const User = mongoose.model("users", userSchema);
 
@@ -79,20 +77,17 @@ app.post("/login", async (req, res) => {
 
 // sign up route
 app.post("/signup", async (req, res) => {
-  const { username, email, password, vcode } = req.body;
+  const { username, password } = req.body;
 
   try {
-    const userExists = await User.findOne({ email });
+    const userExists = await User.findOne({ username: username });
     if (userExists) {
-      res.status(403).json({ message: "Email Already Exists!" });
+      res.status(403).json({ message: "username Taken" });
     } else {
       // new user
       const newUser = new User({
         username: username,
         password: password,
-        email: email,
-        vcode: vcode,
-        verified: false,
       });
       await newUser.save();
       res.status(201).json({

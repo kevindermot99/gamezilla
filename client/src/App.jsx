@@ -4,10 +4,8 @@ import Home from "./pages/Home";
 import PageError from "./pages/PageError";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Vcode from "./pages/Vcode";
 import Game from "./pages/Game";
 import Browse from "./pages/Browse";
-import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -19,7 +17,6 @@ function App() {
           <Route path="/game/:id" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/vcode/:id" element={<Vcode />} />
           <Route path="/*" element={<PageError />} />
         </Routes>
       </Router>
