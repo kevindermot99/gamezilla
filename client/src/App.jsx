@@ -9,13 +9,23 @@ import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 
 function App() {
+  const [userId, setUserId] = useState(null)
+  useEffect(() => {
+    const lcs_id = localStorage.getItem("gamezillaUserId");
+    if (lcs_id) {
+      setUserId(lcs_id);
+      console.log(lcs_id)
+    } else {
+      setUserId(null);
+    }
+  }, []);
   return (
     <div className="">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/browse" element={<Browse />} />
-          <Route path="/profile/:id" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile userId={userId} />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />

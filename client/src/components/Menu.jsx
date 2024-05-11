@@ -109,6 +109,7 @@ function Menu() {
                       {genre.genres.map((gen, index) => (
                         <Link
                           to={`/`}
+                          key={index}
                           className="text-border-line-color/80   dark:text-text-color/50 text-[1em] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  "
                         >
                           <span>&#x2022;</span>
