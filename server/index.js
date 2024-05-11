@@ -35,21 +35,18 @@ app.post("/checkemail", async (req, res) => {
   }
 });
 
-  // get userDetails
+// get userDetails
 app.get("/getuser/:id", async (req, res) => {
   const id = req.params.id;
-  try{
-    const user = await User.findById({ _id: id })
+  try {
+    const user = await User.findById({ _id: id });
     if (user) {
       res.status(200).json({ user });
     } else {
       res.status(400).json({ message: "user doesnt exist" });
     }
-    res.status(200).json({user})
-  }
-  catch(err){
-    console.log('hehehe')
-    res.status(500).json({message: err}); 
+  } catch (err) {
+    res.status(500).json({ message: err });
   }
 });
 
