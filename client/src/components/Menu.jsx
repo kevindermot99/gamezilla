@@ -168,7 +168,7 @@ function Menu() {
           ) : (
             <Link to={`/profile/${userId}`} className={` relative group px-1 `}>
               <div
-                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-white ring-1 ring-black dark:ring-white   font-Inter font-bold  text-[18px]  uppercase `}
+                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-white ring-1 ring-black dark:ring-white   font-Inter font-bold  text-[18px] `}
               >
                 {username.charAt(0)}
               </div>
