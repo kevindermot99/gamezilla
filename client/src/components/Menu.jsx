@@ -136,8 +136,8 @@ function Menu() {
             to={`/login`}
             className={` relative group flex px-1 gap-1  h-[35px] items-center`}
           >
-            <GoHeart className="text-xl dark:text-text-color text-black" />
-            <Badge count={4} />
+            <GoHeart className="text-2xl dark:text-text-color text-black" />
+            <Badge count={0} />
             <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
               Wishlist
             </p>
@@ -147,8 +147,8 @@ function Menu() {
             to={`/login`}
             className={` relative group flex px-1 gap-1 h-[35px] items-center `}
           >
-            <BsCart className="text-xl dark:text-text-color text-black" />
-            <Badge count={24} />
+            <BsCart className="text-2xl dark:text-text-color text-black" />
+            <Badge count={20} />
             <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
               Cart
             </p>
@@ -157,7 +157,7 @@ function Menu() {
           {userId === "none" ? (
             <Link to={`/login`} className={` relative group px-1 `}>
               <div
-                className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
+                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
               >
                 <AiOutlineUser className="text-[18px]" />
               </div>
@@ -168,9 +168,9 @@ function Menu() {
           ) : (
             <Link to={`/profile/${userId}`} className={` relative group px-1 `}>
               <div
-                className={`flex items-center justify-center gap-3 h-[35px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
+                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-white ring-1 ring-black dark:ring-white   font-Inter font-bold  text-[18px]  uppercase `}
               >
-                <AiOutlineUser className="text-[18px]" />
+                {username.charAt(0)}
               </div>
               <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-text-color/10 backdrop-blur-sm  text-white text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
                 {username}
