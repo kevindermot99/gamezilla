@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import { TbLoader2 } from "react-icons/tb";
-import { PiSpinnerGapLight } from "react-icons/pi";
-import { CgSpinner } from "react-icons/cg";
 import logo48 from '../assets/logo48.png'
 
 
