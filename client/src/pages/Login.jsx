@@ -127,7 +127,7 @@ function Login() {
             <button
               type="submit"
               name="submit"
-              className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
             >
