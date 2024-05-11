@@ -38,9 +38,19 @@ app.post("/checkemail", async (req, res) => {
   // get userDetails
 app.get("/getuser/:id", async (req, res) => {
   const id = req.params.id;
-  const user = await User.findById({ _id: id })
-    .then(res.json(user))
-    .catch((err) => res.json(err));
+  try{
+    const user = await User.findById({ _id: id })
+    if (user) {
+      res.status(200).json({ user });
+    } else {
+      res.status(400).json({ message: "user doesnt exist" });
+    }
+    res.status(200).json({user})
+  }
+  catch(err){
+    console.log('hehehe')
+    res.status(500).json({message: err}); 
+  }
 });
 
 // login route

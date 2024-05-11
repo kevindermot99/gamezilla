@@ -13,16 +13,21 @@ function Profile({ userId }) {
   }, []);
 
   useEffect(() => {
-    const getuser = async () => {
-      try {
-        const res = await axios.get(`http://localhost:3001/getuser/${userId}`);
-        console.log(res.data);
-        setUser(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-  }, []);
+    if(userId){
+      const id = userId
+      const getuser = async () => {
+        try {
+          const res = await axios.get(`http://localhost:3001/getuser/${id}`);
+          console.log(res.data);
+          setUser(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+  
+      getuser()
+    }
+  }, [userId]);
 
   return (
     <div
