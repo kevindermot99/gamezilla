@@ -31,7 +31,7 @@ input:-webkit-autofill:focus {
 }
 
 input[data-autocompleted] {
-  background-color: transparent !important;
+  background-color: red !important;
 }
 
 input[type="search"]::-webkit-search-decoration,

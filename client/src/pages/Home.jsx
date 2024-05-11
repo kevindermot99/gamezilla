@@ -36,6 +36,7 @@ import { Autoplay, EffectCreative } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
+import SWPImage from "../components/SWPImage";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -144,10 +145,8 @@ function Home() {
                   key={index}
                   className="h-full w-full flex overflow-clip  relative "
                 >
-                  <img
+                  <SWPImage
                     src={game.banner}
-                    className="w-full h-full object-cover"
-                    alt=""
                   />
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/90 to-transparent flex flex-col items-start justify-end p-8 cursor-default ">
                     <h1 className="text-[37px] leading-[40px] font-bold font-montserrat tracking-tight capitalize line-clamp-2 max-w-[80%] text-white">

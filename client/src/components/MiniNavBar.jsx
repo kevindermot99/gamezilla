@@ -33,7 +33,7 @@ function MiniNavBar() {
           <input
             type="search"
             name="search"
-            className="h-[45px] w-full bg-stone-200 dark:bg-container-color  text-black dark:text-white placeholder:text-text-color-light  px-4 font-medium text-sm  "
+            className="h-[45px] w-full bg-stone-100 dark:bg-container-color  text-black dark:text-white placeholder:text-text-color-light  px-4 font-medium text-sm  "
             autoComplete="off"
             placeholder="Search Game"
           />
