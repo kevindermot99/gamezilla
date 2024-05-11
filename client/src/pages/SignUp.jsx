@@ -1,147 +1,182 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { TbLoader2 } from "react-icons/tb";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser'
-import { useDataContext } from '../contexts/DataContext';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Logo from "../assets/logo.png";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
 function SignUp() {
+  const [username, setUserName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [password2, setPassword2] = useState(null);
+  const [pageOut, setPageOut] = useState(false);
+  const [authing, setAuthing] = useState(false);
 
-    function generateRandomString() {
-        const randomString = Math.random().toString(36).substring(2, 8); // Generate random alphanumeric string
-        return randomString.toUpperCase(); // Convert to uppercase if needed
-    }
+  const navigate = useNavigate();
 
-    const [username, setUserName] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
-    const [password2, setPassword2] = useState(null)
-    const [pageOut, setPageOut] = useState(false)
-    const [authing, setAuthing] = useState(false)
-    const [vcode, setVcode] = useState(generateRandomString())
+  if (pageOut) {
+    navigate("/", { replace: true });
+  }
 
-    
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
 
-    const navigate = useNavigate()
+  const handlePassword2 = (e) => {
+    setPassword2(e.target.value);
+  };
 
-    if (pageOut) {
-        navigate('/', { replace: true })
-    }
+  const handleusername = (e) => {
+    setUserName(e.target.value);
+  };
 
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    setAuthing(true);
+    if (password == password2) {
+      try {
+        const response = await axios.post("http://localhost:3001/signup", {
+          username,
+          email,
+          password,
+        });
 
-    const handlePassword = (e) => {
-        setPassword(e.target.value)
-    }
-
-    const handlePassword2 = (e) => {
-        setPassword2(e.target.value)
-    }
-
-    const handleusername = (e) => {
-        setUserName(e.target.value)
-    }
-
-    const handleSignUp = async (e) => {
-        e.preventDefault()
-        setAuthing(true)// emailjs.sendForm('service_x6h8r6n', 'template_5jde4cn', e.target, 'ux-raMZeiO57IIgRz')
-
-        if (password == password2) {
-            try {
-                const response = await axios.post('http://localhost:3001/signup', {
-                    username,
-                    email,
-                    password,
-                    vcode
-                })
-
-                if (response.status === 201) {
-                    console.log('account created successful')
-                    localStorage.setItem('gamezillaUserId', response.data.userId)
-                    localStorage.setItem('gamezillaUsername', response.data.username)
-                    setPageOut(true)
-                    navigate('/', { replace: true })
-
-                }
-                else {
-                    // console.log(response.data.message)
-                    toast(response.data.message, {
-                        // toastId: "customId"
-                    })
-                    setAuthing(false)
-
-                }
-            }
-            catch (error) {
-                // console.log(error)
-                toast(error.response.data.message, {
-                    // toastId: "customId"
-                })
-                setAuthing(false)
-
-            }
+        if (response.status === 201) {
+          console.log("account created successful");
+          localStorage.setItem("gamezillaUserId", response.data.userId);
+          localStorage.setItem("gamezillaUsername", response.data.username);
+          setPageOut(true);
+          navigate("/", { replace: true });
+        } else {
+          // console.log(response.data.message)
+          toast(response.data.message, {
+            // toastId: "customId"
+          });
+          setAuthing(false);
         }
-        else {
-            toast("Password doesn't match!", {
-                // toastId: "customId"
-            })
-            setAuthing(false)
-        }
+      } catch (error) {
+        // console.log(error)
+        toast(error.response.data.message, {
+          // toastId: "customId"
+        });
+        setAuthing(false);
+      }
+    } else {
+      toast("Passwords doesn't match!", {
+        // toastId: "customId"
+      });
+      setAuthing(false);
     }
+  };
 
-    // checking logged in user
-    useEffect(() => {
-        const userId = localStorage.getItem('gamezillaUserId')
-        if (userId) {
-            navigate('/', { replace: true })
-        }
-    }, [])
+  // checking logged in user
+  useEffect(() => {
+    const userId = localStorage.getItem("gamezillaUserId");
+    if (userId) {
+      navigate("/", { replace: true });
+    }
+  }, []);
 
-
-    return (
-        <div className='px-[24px] py-5 flex flex-col h-full w-full bg-body-color '>
-            <ToastContainer
-                className='select-none'
-                position="bottom-left"
-                draggable
-                autoClose={3000}
-            />
-            <Link to={'/'} className='text-2xl font-bold flex items-center tracking-tight mr-8 w-fit'>Gamezilla.</Link>
-            <div className='h-full w-full flex items-center justify-center flex-col'>
-                <form onSubmit={handleSignUp} className=' text-text-color w-full max-w-[390px] py-[40px] flex flex-col items-start justify-start '>
-                    <h1 className='text-3xl leading-[35px] font-bold '>SignUp</h1>
-                    <p className='mb-7 text-text-color/20 font-light text-sm pt-2'>Welcome to Gamezilla </p>
-                    <input readOnly name="vcode" value={vcode} type="text" className='pointer-events-none hidden' hidden required />
-                    <div className='w-full flex flex-col mb-2'>
-                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Username</h1>
-                        <input onChange={handleusername} name="username" type="text" required placeholder='eg: Kelly Powel' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
-                    </div>
-                    <div className='w-full flex flex-col mb-2'>
-                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Email</h1>
-                        <input onChange={handleEmail} name="email" type="email" required placeholder='someone@example.com' className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color  ' />
-                    </div>
-                    <label className='w-full flex flex-col mb-4'>
-                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Create a Password</h1>
-                        <input onChange={handlePassword} type="password" required placeholder='Password' autoComplete="off" className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color   ' />
-                    </label>
-                    <label className='w-full flex flex-col mb-4'>
-                        <h1 className=' text-text-color/80 font-light mb-2 text-sm'>Re-enter Password</h1>
-                        <input onChange={handlePassword2} type="password" required placeholder='Password' autoComplete="off" className='bg-border-line-color/60  py-3 px-5 w-full rounded-full placeholder:text-text-color-light/70 text-sm focus:ring-[2px] focus:ring-main-color   ' />
-                    </label>
-
-                    <div className='w-full flex gap-2 mb-4 mt-5 '>
-                        {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center '>Cancel</Link> */}
-                        <button type="submit" name='email' className={` w-full h-[40px] px-4 transition bg-main-color hover:bg-main-color/60 rounded-full text-sm flex items-center justify-center font-medium ${authing && 'pointer-events-none '}`} >{authing ? <TbLoader2 className='animate-spinLoader text-white text-[25px] ' /> : 'Create Account'}</button>
-                    </div>
-                    <p className='text-sm font-light text-text-color/60 self-center mt-5'>Already have an account? <Link to='/login' className='text-main-color underline' > Login </Link></p>
-                </form>
-            </div>
+  return (
+    <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
+      <ToastContainer
+        className="select-none"
+        position="bottom-right"
+        draggable
+        autoClose={3000}
+      />
+      <div className="h-fit w-full max-w-[350px] flex items-start justify-center flex-col">
+        <Link
+          to={`/`}
+          className="text-black dark:text-text-color-light bg-stone-200 dark:bg-border-line-color/60 p-1 aspect-square rounded-full"
+        >
+          <MdOutlineKeyboardBackspace className="text-lg " />
+        </Link>
+        <div className="font-bold text-[30px] h-fit leading-[30px] tracking-tighter flex flex-col items-center justify-start w-full gap-0 mb-1 ">
+          <img src={Logo} className="h-16" />
+          Gamezilla
         </div>
-    )
+
+        <p className="mb-5 text-black/60 dark:text-text-color-light text-center font-medium text-sm w-full">
+          Sign up and let's pick up where we left off!
+        </p>
+        <form
+          onSubmit={handleSignUp}
+          className=" text-black dark:text-text-color w-full flex flex-col items-start justify-start mt-3 "
+        >
+          
+          <label className="w-full flex flex-col mb-2">
+            <h1 className=" text-black dark:text-text-color-light font-medium mb-2 text-sm">
+              Username
+            </h1>
+            <input
+              onChange={handleusername}
+              name="username"
+              type="text"
+              minLength={5}
+              required
+              placeholder="Create username"
+              autoComplete="off"
+              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm "
+            />
+          </label>
+          <label className="w-full flex flex-col mb-4">
+            <h1 className=" text-black dark:text-text-color-light font-medium mb-2 text-sm">
+              Create a Password
+            </h1>
+            <input
+              onChange={handlePassword}
+              type="password"
+              required
+              placeholder="Create Password"
+              autoComplete="off"
+              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
+            />
+          </label>
+          <label className="w-full flex flex-col mb-4">
+            <h1 className=" text-black dark:text-text-color-light font-medium mb-2 text-sm">
+              Re-enter Password
+            </h1>
+            <input
+              onChange={handlePassword2}
+              type="password"
+              required
+              placeholder="Re-enter Password"
+              autoComplete="off"
+              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
+            />
+          </label>
+
+          <div className="w-full flex gap-2 mb-4 mt-2 ">
+            {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
+            <button
+              type="submit"
+              name="email"
+              className={` w-full h-[40px] px-4 transition hover:ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-body-color bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+                authing && "pointer-events-none "
+              }`}
+            >
+              {authing ? (
+                <TbLoader2 className="animate-spinLoader text-white dark:text-black text-[25px] " />
+              ) : (
+                "Login"
+              )}
+            </button>
+          </div>
+          <p className="text-sm font-light text-black dark:text-text-color-light self-center mt-2">
+            Already have an account?{" "}
+            <Link to="/login" className="text-black dark:text-white font-semibold underline">
+              {" "}
+              Login{" "}
+            </Link>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default SignUp
+export default SignUp;
