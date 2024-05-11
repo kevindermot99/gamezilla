@@ -10,7 +10,6 @@ import { MdOutlineKeyboardBackspace } from "react-icons/md";
 function Login() {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
-  const [loginOut, setLoginOut] = useState(false);
   const [authing, setAuthing] = useState(false);
 
   const navigate = useNavigate();
@@ -29,29 +28,19 @@ function Login() {
         localStorage.setItem("gamezillaUserId", response.data.userId);
         localStorage.setItem("gamezillaUsername", response.data.username);
         setAuthing(false);
-        setLoginOut(true);
+        window.location.reload();
       } else {
         console.log("Login Failed");
         setAuthing(false);
       }
     } catch (error) {
-      if (error.response.status === 401) {
-        navigate(`/vcode/${error.response.data.userId}`);
-        setAuthing(false);
-      } else {
-        console.log(error);
-        toast(error.response.data.message, {
-          // toastId: "customId"
-        });
-      }
-
+      console.log(error);
+      toast(error.response.data.message, {
+        // toastId: "customId"
+      });
       setAuthing(false);
     }
   };
-
-  if (loginOut) {
-    navigate("/");
-  }
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -68,7 +57,7 @@ function Login() {
       navigate("/", { replace: true });
     }
   }, [userId]);
-  
+
   return userId === null ? (
     <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
       <ToastContainer
@@ -132,7 +121,10 @@ function Login() {
               }`}
             >
               {authing ? (
-                <TbLoader2 className="animate-spinLoader text-white dark:text-black text-[25px] " />
+                <div className="flex items-center justify-center gap-1">
+                  <TbLoader2 className="animate-spinLoader text-[23px] " />
+                  <span className="capitalize ">logging in</span>
+                </div>
               ) : (
                 "Login"
               )}
