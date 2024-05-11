@@ -7,9 +7,14 @@ import SignUp from "./pages/SignUp";
 import Game from "./pages/Game";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
+import axios from "axios";
+
 
 function App() {
   const [userId, setUserId] = useState(null)
+  const [userName, setuserName] = useState("");
+  
+
   useEffect(() => {
     const id = localStorage.getItem("gamezillaUserId");
     if (id) {
@@ -18,13 +23,30 @@ function App() {
       setUserId(null);
     }
   }, []);
+  
+  useEffect(() => {
+    if (userId) {
+      const id = userId;
+      const getuser = async () => {
+        try {
+          const res = await axios.get(`http://localhost:3001/getuser/${id}`);
+          // console.log(res.data.user);
+          setuserName(res.data.user.username);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+      getuser();
+    }
+  }, [userId]);
   return (
     <div className="">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/browse" element={<Browse />} />
-          <Route path="/profile/:id" element={<Profile userId={userId} />} />
+          <Route path="/profile/:id" element={<Profile userId={userId} userName={userName} />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
