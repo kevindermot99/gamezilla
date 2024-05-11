@@ -3,10 +3,25 @@ import Menu from "../components/Menu";
 import MiniNavBar from "../components/MiniNavBar";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 function Profile({ userId }) {
+  const [user, setUser] = useState("");
+
   useEffect(() => {
     document.title = "Profile";
+  }, []);
+
+  useEffect(() => {
+    const getuser = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3001/getuser/${userId}`);
+        console.log(res.data);
+        setUser(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
   }, []);
 
   return (

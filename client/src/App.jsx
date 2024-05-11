@@ -11,10 +11,9 @@ import Profile from "./pages/Profile";
 function App() {
   const [userId, setUserId] = useState(null)
   useEffect(() => {
-    const lcs_id = localStorage.getItem("gamezillaUserId");
-    if (lcs_id) {
-      setUserId(lcs_id);
-      console.log(lcs_id)
+    const id = localStorage.getItem("gamezillaUserId");
+    if (id) {
+      setUserId(id);
     } else {
       setUserId(null);
     }

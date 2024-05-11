@@ -35,11 +35,11 @@ app.post("/checkemail", async (req, res) => {
   }
 });
 
-// get userDetails
-app.get("/getUser/:id", async (req, res) => {
+  // get userDetails
+app.get("/getuser/:id", async (req, res) => {
   const id = req.params.id;
-  User.findById({ _id: id })
-    .then((user) => res.json(user))
+  const user = await User.findById({ _id: id })
+    .then(res.json(user))
     .catch((err) => res.json(err));
 });
 
