@@ -62,14 +62,14 @@ function Login() {
   };
 
   // checking logged in user
+  const userId = localStorage.getItem("gamezillaUserId");
   useEffect(() => {
-    const userId = localStorage.getItem("gamezillaUserId");
     if (userId) {
       navigate("/", { replace: true });
     }
-  }, []);
-
-  return (
+  }, [userId]);
+  
+  return userId === null ? (
     <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
       <ToastContainer
         className="select-none"
@@ -155,7 +155,7 @@ function Login() {
         </form>
       </div>
     </div>
-  );
+  ) : null;
 }
 
 export default Login;
