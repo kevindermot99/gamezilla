@@ -7,6 +7,7 @@ import axios from "axios";
 import { TbLoader2 } from "react-icons/tb";
 import { IoHeartDislikeOutline } from "react-icons/io5";
 import { VscHistory } from "react-icons/vsc";
+import { GrEdit } from "react-icons/gr";
 
 function Profile({ userId, userName }) {
   const [authing, setAuthing] = useState(false);
@@ -39,7 +40,7 @@ function Profile({ userId, userName }) {
       <Menu />
 
       <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-0 max-w-[1100px] mx-auto">
-        <p className="font-bold text-black dark:text-text-color text-[20px] capitalize truncate max-w-[90%] leading-[28px] ">
+        <p className="font-bold text-black dark:text-text-color text-[20px] capitalize truncate max-w-[90%] leading-[28px] mb-5 ">
           My profile
         </p>
         <div className="w-full h-fit flex flex-col items-center justify-start mb-5">
@@ -49,7 +50,7 @@ function Profile({ userId, userName }) {
           <p className="font-bold text-black dark:text-text-color text-[25px] truncate max-w-[90%] leading-[28px] ">
             {userName}
           </p>
-          <p className="font-medium text-black/60 dark:text-text-color-light text-base truncate max-w-[90%]">
+          <p className="font-medium text-black/60 dark:text-text-color-light text-base truncate mt-2 max-w-[90%]">
             mbonimpayekevin@gmail.com
           </p>
           <div className="flex items-center justify-between gap-3 text-black dark:text-text-color w-fit mt-3">
