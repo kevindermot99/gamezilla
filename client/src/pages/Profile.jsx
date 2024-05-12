@@ -120,10 +120,10 @@ function Profile({ userId, userName, userEmail }) {
               {emailAuthing ? (
                 <div className="flex items-center justify-center gap-1">
                   <TbLoader2 className="animate-spinLoader text-[23px] " />
-                  <span className="capitalize ">adding</span>
+                  <span >Adding</span>
                 </div>
               ) : (
-                "add"
+                "Add"
               )}
             </button>
           </div>
