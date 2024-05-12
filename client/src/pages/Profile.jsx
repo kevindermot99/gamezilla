@@ -32,12 +32,12 @@ function Profile({ userId, userName }) {
 
   return loggedInUser !== null ? (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
+      className={` relative h-fit flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
       <Menu />
 
-      <div className=" w-full h-full flex justify-center items-start p-5 gap-5 max-w-[1100px] mx-auto">
-        <div className="w-1/3 h-fit bg-stone-100 dark:bg-container-color sticky top-20 flex flex-col items-center justify-start p-6">
+      <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-10 max-w-[1100px] mx-auto">
+        <div className="w-full h-fit flex flex-col items-center justify-start">
           <div className="h-[100px] w-fit p-5 aspect-square rounded-full ring-2 ring-black dark:ring-text-color  text-black dark:text-text-color flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
             {userName.charAt(0)}
           </div>
@@ -47,23 +47,35 @@ function Profile({ userId, userName }) {
           <p className="font-medium text-black/60 dark:text-text-color-light text-base truncate max-w-[90%]">
             mbonimpayekevin@gmail.com
           </p>
-          <div className="flex items-center justify-between gap-2 text-black dark:text-text-color w-full mt-3">
-            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-200 dark:hover:bg-gray-300/10 cursor-pointer   ">
-              <h1 className="font-extrabold text-[22px] leading-[20px] truncate max-w-[90%]">
-                3
+          <div className="flex items-center justify-between gap-2 text-black dark:text-text-color w-full max-w-[600px] mt-3">
+            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
+                33
               </h1>
               <p className="capitalize font-medium text-sm  ">wishlist</p>
             </span>
-            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-200 dark:hover:bg-gray-300/10 cursor-pointer   ">
-              <h1 className="font-extrabold text-[22px] leading-[20px] truncate max-w-[90%]">
-                32
+            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
+                30.3K
               </h1>
-              <p className="capitalize font-medium text-sm  ">My Downloads</p>
+              <p className="capitalize font-medium text-sm  ">Downloads</p>
+            </span>
+            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
+                139M
+              </h1>
+              <p className="capitalize font-medium text-sm  ">Collection views</p>
             </span>
           </div>
+          <div className="w-full flex items-center justify-center gap-3">
+          <button
+            className={` w-full max-w-[200px] h-[40px] px-4 transition bg-stone-100 dark:bg-container-color text-black dark:text-white text-sm flex items-center justify-center font-medium mt-4`}
+          >
+            Settings
+          </button>
           <button
             onClick={handeLogout}
-            className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
+            className={` w-full max-w-[200px] h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
               authing && "pointer-events-none "
             }`}
           >
@@ -76,8 +88,10 @@ function Profile({ userId, userName }) {
               "Logout"
             )}
           </button>
+
+          </div>
         </div>
-        <div className="w-2/3 h-fit min-h-[900px] bg-stone-100 dark:bg-container-color"></div>
+        <div className="w-full h-[100vh] bg-stone-100 dark:bg-container-color"></div>
       </div>
 
       {/* <Footer /> */}
