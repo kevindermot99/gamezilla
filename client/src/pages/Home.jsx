@@ -128,7 +128,7 @@ function Home() {
               // centeredSlides={true}
               loop={true}
               autoplay={{
-                delay: 4500,
+                delay: 10000,
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, EffectCreative]}
