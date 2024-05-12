@@ -50,6 +50,16 @@ function Login() {
     setPassword(e.target.value);
   };
 
+  const handleShowPassword = () => {
+    const input = document.getElementById("password")
+    if(input.type === 'password'){
+      input.type = 'text'
+    }
+    else{
+      input.type = 'password'
+    }
+  }
+
   // checking logged in user
   const userId = localStorage.getItem("gamezillaUserId");
   useEffect(() => {
@@ -107,11 +117,16 @@ function Login() {
               onChange={handlePassword}
               type="password"
               name="password"
+              id="password"
               placeholder="Password"
               className="bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm   "
             />
           </label>
-          <div className="w-full flex gap-2 mb-4 mt-2 ">
+          <label className="flex items-center justify-start select-none gap-2 cursor-pointer">
+            <input type="checkbox" className=" accent-black dark:accent-white h-4 w-4" onClick={handleShowPassword} />
+            <p className="text-black dark:text-text-color-light font-medium text-sm capitalize">Show password</p>
+          </label>
+          <div className="w-full flex gap-2 mb-4 mt-6 ">
             {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
             <button
               type="submit"
