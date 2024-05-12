@@ -16,6 +16,9 @@ import ButtonLink from "./ButtonLink";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { Genres } from "../constants/data";
 import { GoHeart } from "react-icons/go";
+import { MdClose } from "react-icons/md";
+import { IoBagOutline } from "react-icons/io5";
+import { BiCart } from "react-icons/bi";
 
 function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -42,16 +45,17 @@ function Menu() {
   }, [userId]);
 
   const showCartBar = () => {
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
     document.body.style.paddingRight = `${scrollbarWidth}px`;
     document.body.style.overflowY = "hidden";
-    setCartbar(true)
+    setCartbar(true);
   };
 
   const hideCartBar = () => {
-    document.body.style.paddingRight = '0';
+    document.body.style.paddingRight = "0";
     document.body.style.overflowY = "auto";
-    setCartbar(false)
+    setCartbar(false);
   };
 
   return (
@@ -64,10 +68,40 @@ function Menu() {
           onClick={hideCartBar}
           className={`h-full w-full absolute top-0 left-0 right-0 bottom-0 m-auto z-10 bg-black/20 dark:bg-black/70 `}
         ></div>
-        <div className={`absolute top-0 right-0 bg-white h-full w-[90%] max-w-[450px] z-20 
-        ${cartbar ? "transition duration-300 translate-x-[0px]  " : "translate-x-[100%]"}`}
-        > </div>
-
+        <div
+          className={`absolute top-0 right-0 bg-white dark:bg-body-color h-full max-h-[100vh] max-sm:h-svh w-[90%] max-w-[350px] z-20 flex flex-col justify-between ${
+            cartbar
+              ? "transition duration-300 translate-x-[0px] "
+              : "translate-x-[100px]"
+          }`}
+        >
+          <div className="w-full h-fit p-4 relative flex items-center justify-center shadow">
+            <button onClick={hideCartBar} className="text-black dark:text-white  bg-stone-200 dark:bg-gray-300/10 p-2 aspect-square rounded-full active:scale-75  transition duration-100 absolute top-0 bottom-0 left-5 h-fit m-auto">
+              <MdClose />
+            </button>
+            <p className="font-medium text-sm text-black dark:text-white ">
+              Your Cart (0)
+            </p>
+          </div>
+          <div className="h-full w-full overflow-y-auto ">
+            <div className="h-full w-full ">
+              <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
+                <BsCart className="text-[40px]" />
+                <p className="text-sm">No items</p>
+              </div>
+            </div>
+          </div>
+          <div className="h-fit min-h-fit w-full p-4 ">
+            <button
+              className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium cursor-not-allowed `}
+            >
+              <div className="flex items-center justify-center gap-1">
+                <IoBagOutline className="text-lg " />
+                <span className="capitalize">proceed to checkout</span>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
       <div
         className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-0 h-[60px] bg-white shadow dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 `}
