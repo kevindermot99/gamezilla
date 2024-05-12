@@ -13,6 +13,7 @@ import axios from "axios";
 function App() {
   const [userId, setUserId] = useState(null)
   const [userName, setuserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           const res = await axios.get(`http://localhost:3001/getuser/${id}`);
           // console.log(res.data.user);
           setuserName(res.data.user.username);
+          setUserEmail(res.data.user.email)
         } catch (err) {
           console.log(err);
         }
@@ -46,7 +48,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/browse" element={<Browse />} />
-          <Route path="/profile/:id" element={<Profile userId={userId} userName={userName} />} />
+          <Route path="/profile/:id" element={<Profile userId={userId} userName={userName} userEmail={userEmail} />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
