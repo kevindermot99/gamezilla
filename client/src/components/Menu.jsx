@@ -75,7 +75,7 @@ function Menu() {
               : "translate-x-[100px]"
           }`}
         >
-          <div className="w-full h-fit p-4 relative flex items-center justify-center shadow">
+          <div className="w-full h-fit p-5 relative flex items-center justify-center shadow">
             <button onClick={hideCartBar} className="text-black dark:text-white  bg-stone-200 dark:bg-gray-300/10 p-2 aspect-square rounded-full active:scale-75  transition duration-100 absolute top-0 bottom-0 left-5 h-fit m-auto">
               <MdClose />
             </button>
@@ -190,7 +190,7 @@ function Menu() {
               className={` relative group flex px-1 gap-1 h-[35px] items-center `}
             >
               <BsCart className="text-2xl dark:text-text-color text-black" />
-              <Badge count={20} />
+              <Badge count={0} />
               <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-white backdrop-blur-sm text-white dark:text-black text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
                 Cart
               </p>
