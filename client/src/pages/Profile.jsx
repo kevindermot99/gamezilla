@@ -37,6 +37,9 @@ function Profile({ userId, userName }) {
       <Menu />
 
       <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-10 max-w-[1100px] mx-auto">
+          <p className="font-bold text-black dark:text-text-color text-[20px] capitalize truncate max-w-[90%] leading-[28px] ">
+            My profile
+          </p>
         <div className="w-full h-fit flex flex-col items-center justify-start">
           <div className="h-[100px] w-fit p-5 aspect-square rounded-full ring-2 ring-black dark:ring-text-color  text-black dark:text-text-color flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
             {userName.charAt(0)}
@@ -47,24 +50,18 @@ function Profile({ userId, userName }) {
           <p className="font-medium text-black/60 dark:text-text-color-light text-base truncate max-w-[90%]">
             mbonimpayekevin@gmail.com
           </p>
-          <div className="flex items-center justify-between gap-2 text-black dark:text-text-color w-full max-w-[600px] mt-3">
-            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+          <div className="flex items-center justify-between gap-3 text-black dark:text-text-color w-fit mt-3">
+            <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
               <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
                 33
               </h1>
-              <p className="capitalize font-medium text-sm  ">wishlist</p>
+              <p className="capitalize font-medium text-sm  ">Games wishlisted</p>
             </span>
-            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+            <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
               <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
                 30.3K
               </h1>
-              <p className="capitalize font-medium text-sm  ">Downloads</p>
-            </span>
-            <span className="w-1/2 flex flex-col justify-center items-center p-3 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
-              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
-                139M
-              </h1>
-              <p className="capitalize font-medium text-sm  ">Collection views</p>
+              <p className="capitalize font-medium text-sm  ">Games Purchased</p>
             </span>
           </div>
           <div className="w-full flex items-center justify-center gap-3">
