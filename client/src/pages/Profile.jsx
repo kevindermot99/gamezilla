@@ -11,16 +11,28 @@ import { GrEdit } from "react-icons/gr";
 
 function Profile({ userId, userName, userEmail }) {
   const [authing, setAuthing] = useState(false);
-  const [emailAuthing, setEmailAuthing] = useState(false)
-  const [addEmail, setAddEmail] = useState(false);
+  const [emailAuthing, setEmailAuthing] = useState(false);
+  const [editProfile, setEditProfile] = useState(false);
   const [newEmail, setNewEmail] = useState("");
+  const [newUserName, setNewUserName] = useState("");
+  const [fetching, setFetching] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if(userEmail){
-      setNewEmail(userEmail)
+    if (userEmail) {
+      setNewEmail(userEmail);
     }
-  },[userEmail])
+    if (userName) {
+      setNewUserName(userName);
+    }
+  }, [userEmail, userName]);
+
+  // hide loader fetching when fetched
+  useEffect(() => {
+    if(userEmail && userName){
+      setFetching(false)
+    }
+  },[userName, userEmail])
 
   const handeLogout = () => {
     setAuthing(true);
@@ -32,27 +44,32 @@ function Profile({ userId, userName, userEmail }) {
   };
 
   // toggling add email pop up
-  const handleAddEmail = () => {
-    setAddEmail(true);
+  const handleEditProfile = () => {
+    setEditProfile(true);
   };
 
-  const handleCloseAddEmail = () => {
-    setAddEmail(false);
+  const handleCloseEditProfile = () => {
+    setEditProfile(false);
   };
 
   const handleChangeEmail = async (e) => {
     e.preventDefault();
-    setEmailAuthing(true)
+    setEmailAuthing(true);
     try {
-      const updateEmail = await axios.post("http://localhost:3001/updateEmail", {
+      const updateUser = await axios.post("http://localhost:3001/updateUser", {
+        newUserName,
         newEmail,
         userId,
       });
-      if (updateEmail) {
-        window.location.reload();
+      if (updateUser) {
+        localStorage.setItem("gamezillaUserId", userId);
+        localStorage.setItem("gamezillaUsername", newUserName);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       }
     } catch (err) {
-      setEmailAuthing(false)
+      setEmailAuthing(false);
       console.log(err);
     }
   };
@@ -77,31 +94,48 @@ function Profile({ userId, userName, userEmail }) {
       {/* add email overlay */}
       <div
         className={`fixed top-0 left-0 w-full h-full -z-10  ${
-          addEmail ? "transition duration-300 opacity-100 z-50 " : "opacity-0"
+          editProfile
+            ? "transition duration-300 opacity-100 z-50 "
+            : "opacity-0"
         }`}
       >
         <div
-          onClick={handleCloseAddEmail}
+          onClick={handleCloseEditProfile}
           className={`h-full w-full absolute top-0 left-0 right-0 bottom-0 m-auto z-10 bg-black/20 `}
         ></div>
         <form
           onSubmit={handleChangeEmail}
           className={` absolute top-0 left-0 right-0 bottom-0 m-auto bg-white dark:bg-container-color h-fit w-fit p-7 z-20 rounded-sm ${
-            addEmail
+            editProfile
               ? "transition duration-300 translate-y-0  "
               : "translate-y-16 "
           }`}
         >
           <label className="w-full flex flex-col mb-3">
-            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-2 select-none ">
+            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none ">
               <GrEdit />
-              add email
+              {userName ? "edit username" : "add username"}
+            </span>
+            <input
+              type="username"
+              name="username"
+              id="username"
+              required
+              value={newUserName}
+              onChange={(e) => setNewUserName(e.target.value)}
+              placeholder="ex: KingKenny"
+              className="bg-stone-200  dark:bg-gray-300/10  text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
+            />
+          </label>
+          <label className="w-full flex flex-col mb-3">
+            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none ">
+              <GrEdit />
+              {userEmail ? "edit email" : "add email"}
             </span>
             <input
               type="email"
               name="email"
               id="email"
-              required
               value={newEmail}
               onChange={(e) => setNewEmail(e.target.value)}
               placeholder="someone@gmail.com"
@@ -120,10 +154,10 @@ function Profile({ userId, userName, userEmail }) {
               {emailAuthing ? (
                 <div className="flex items-center justify-center gap-1">
                   <TbLoader2 className="animate-spinLoader text-[23px] " />
-                  <span >Adding</span>
+                  <span>Saving</span>
                 </div>
               ) : (
-                "Add"
+                "Save"
               )}
             </button>
           </div>
@@ -131,100 +165,106 @@ function Profile({ userId, userName, userEmail }) {
       </div>
 
       <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-0 max-w-[1100px] mx-auto">
-        <p className="font-bold text-black dark:text-text-color text-[20px] capitalize truncate max-w-[90%] leading-[28px] mb-5 ">
-          My profile
-        </p>
-        <div className="w-full h-fit flex flex-col items-center justify-start mb-5">
-          <div className="h-[100px] w-fit p-5 aspect-square rounded-full ring-2 ring-black dark:ring-text-color  text-black dark:text-text-color flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
-            {userName.charAt(0)}
-          </div>
-          <p className="font-bold text-black dark:text-text-color text-[25px] leading-[28px] ">
-            {userName}
-          </p>
-          <p className="font-medium text-black/60 dark:text-text-color-light text-base mt-2 flex items-start justify-center ">
-            {userEmail ? (
+        {fetching ? (
+          <TbLoader2 className="animate-spinLoader text-[25px] text-black dark:text-white " />
+        ) : (
+          <>
+            <p className="relative font-bold flex w-full justify-center items-center text-black dark:text-text-color text-[20px] capitalize mb-5 ">
+              My profile
               <span
-                className="group gap-1 lowercase p-0 relative max-w-[230px] line-clamp-1 break-words px-7   "
+                onClick={handleEditProfile}
+                title="edit profile"
+                className="absolute right-0 top-0 bottom-0 m-auto flex items-center justify-center h-[35px] aspect-square rounded-full cursor-pointer bg-stone-100 dark:bg-container-color hover:bg-stone-200 dark:hover:bg-gray-300/10 active:scale-90 "
               >
-                {userEmail}
-                <GrEdit onClick={handleAddEmail} className="absolute top-0 right-1 cursor-pointer hidden group-hover:block"/>
+                <GrEdit className="  font-medium text-[15px] " />
               </span>
-            ) : (
-              <span
-                onClick={handleAddEmail}
-                className="flex items-center justify-center gap-1 lowercase p-0 cursor-pointer hover:underline select-none "
-              >
-                <GrEdit />
-                add email
-              </span>
-            )}
-          </p>
-          <div className="flex items-center justify-between gap-3 text-black dark:text-text-color w-fit mt-3">
-            <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
-              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
-                33
-              </h1>
-              <p className="capitalize font-medium text-sm  ">
-                Games wishlisted
+            </p>
+            <div className="w-full h-fit flex flex-col items-center justify-start mb-5">
+              <div className="h-[100px] w-fit p-5 aspect-square rounded-full ring-2 ring-black dark:ring-text-color  text-black dark:text-text-color flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+                {userName && userName.charAt(0)}
+              </div>
+              <p className="font-bold text-black dark:text-text-color text-[25px] leading-[28px] ">
+                {userName}
               </p>
-            </span>
-            <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
-              <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
-                30.3K
-              </h1>
-              <p className="capitalize font-medium text-sm  ">
-                Games Purchased
+              <p className="font-medium text-black/60 dark:text-text-color-light text-base mt-2 flex items-start justify-center ">
+                {userEmail ? (
+                  <span className="group gap-1 lowercase p-0 relative max-w-[350px] line-clamp-1 break-words px-7   ">
+                    {userEmail}
+                  </span>
+                ) : (
+                  <span className="group gap-1 lowercase p-0 relative max-w-[350px] line-clamp-1 break-words px-7   ">
+                    no email
+                  </span>
+                )}
               </p>
-            </span>
-          </div>
-          <div className="w-full flex items-center justify-center gap-3">
-            <button
-              className={` w-full max-w-[200px] h-[40px] px-4 transition bg-stone-100 dark:bg-container-color text-black dark:text-white text-sm flex items-center justify-center font-medium mt-4`}
-            >
-              Settings
-            </button>
-            <button
-              onClick={handeLogout}
-              className={` w-full max-w-[200px] h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
-                authing && "pointer-events-none "
-              }`}
-            >
-              {authing ? (
-                <div className="flex items-center justify-center gap-1">
-                  <TbLoader2 className="animate-spinLoader text-[23px] " />
-                  <span className="capitalize ">logging out</span>
+              <div className="flex items-center justify-between gap-3 text-black dark:text-text-color w-fit mt-3">
+                <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+                  <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
+                    33
+                  </h1>
+                  <p className="capitalize font-medium text-sm  ">
+                    Games wishlisted
+                  </p>
+                </span>
+                <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+                  <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
+                    30.3K
+                  </h1>
+                  <p className="capitalize font-medium text-sm  ">
+                    Games Purchased
+                  </p>
+                </span>
+              </div>
+              <div className="w-full flex items-center justify-center gap-3">
+                <button
+                  className={` w-full max-w-[200px] h-[40px] px-4 transition bg-stone-100 dark:bg-container-color text-black dark:text-white text-sm flex items-center justify-center font-medium mt-4`}
+                >
+                  Settings
+                </button>
+                <button
+                  onClick={handeLogout}
+                  className={` w-full max-w-[200px] h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
+                    authing && "pointer-events-none "
+                  }`}
+                >
+                  {authing ? (
+                    <div className="flex items-center justify-center gap-1">
+                      <TbLoader2 className="animate-spinLoader text-[23px] " />
+                      <span className="capitalize ">logging out</span>
+                    </div>
+                  ) : (
+                    "Logout"
+                  )}
+                </button>
+              </div>
+            </div>
+            <div className="w-full h-fit flex flex-col p-5">
+              <p className="font-bold text-black dark:text-text-color text-[20px] h-fit leading-[28px] capitalize ">
+                wishlist <span className="text-base font-normal ">(0)</span>
+              </p>
+              <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
+                <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
+                  <IoHeartDislikeOutline className="text-[40px]" />
+                  <p className="text-sm">No items in your wishlist</p>
                 </div>
-              ) : (
-                "Logout"
-              )}
-            </button>
-          </div>
-        </div>
-        <div className="w-full h-fit flex flex-col p-5">
-          <p className="font-bold text-black dark:text-text-color text-[20px] h-fit leading-[28px] capitalize ">
-            wishlist <span className="text-base font-normal ">(0)</span>
-          </p>
-          <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
-            <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
-              <IoHeartDislikeOutline className="text-[40px]" />
-              <p className="text-sm">No items in your wishlist</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="w-full h-fit flex flex-col p-5">
-          <p className="font-bold text-black dark:text-text-color text-[20px] h-fit leading-[28px] capitalize ">
-            Purchase history <span className="text-base font-normal ">(0)</span>
-          </p>
-          <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
-            <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
-              <VscHistory className="text-[40px]" />
-              <p className="text-sm">You haven't purchased any item yet</p>
+            <div className="w-full h-fit flex flex-col p-5">
+              <p className="font-bold text-black dark:text-text-color text-[20px] h-fit leading-[28px] capitalize ">
+                Purchase history{" "}
+                <span className="text-base font-normal ">(0)</span>
+              </p>
+              <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
+                <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
+                  <VscHistory className="text-[40px]" />
+                  <p className="text-sm">You haven't purchased any item yet</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </>
+        )}
       </div>
 
-      <Footer />
     </div>
   ) : null;
 }

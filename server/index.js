@@ -35,21 +35,22 @@ app.post("/checkemail", async (req, res) => {
   }
 });
 
-// update Email
-app.post("/updateEmail", async (req, res) => {
-  const { newEmail, userId } = req.body;
+// update user
+app.post("/updateUser", async (req, res) => {
+  const { newUserName, newEmail, userId } = req.body;
 
   try {
     const updateUser = await User.findByIdAndUpdate(
       { _id: userId },
-      { email: newEmail }
+      {username: newUserName, email: newEmail},
+      {new: true}
     );
     
     if (!updateUser) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    return res.status(200).json({ message: "Updated successfully" });
+    return res.status(200).json({message: "updated Successfully"});
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Internal server error" });

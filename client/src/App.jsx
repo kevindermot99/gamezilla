@@ -12,8 +12,8 @@ import axios from "axios";
 
 function App() {
   const [userId, setUserId] = useState(null)
-  const [userName, setuserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
+  const [userName, setuserName] = useState(null);
+  const [userEmail, setUserEmail] = useState(null);
   
 
   useEffect(() => {
