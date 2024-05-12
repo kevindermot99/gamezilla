@@ -234,7 +234,7 @@ function Home() {
                     </p>
 
                     <button
-                      title="Add to Wishlist"
+                      title="Add to cart"
                       className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-body-color/60 backdrop-blur-md p-1 rounded-full`}
                     >
                       <FiPlus className="text-xl text-white " />
