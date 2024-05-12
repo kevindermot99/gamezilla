@@ -157,7 +157,7 @@ function Menu() {
           {userId === "none" ? (
             <Link to={`/login`} className={` relative group px-1 `}>
               <div
-                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-stone-300 text-black dark:text-text-color dark:bg-stone-500/20  `}
+                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-text-color ring-1 ring-black dark:ring-text-color font-Inter font-bold  text-[18px]  `}
               >
                 <AiOutlineUser className="text-[18px]" />
               </div>
@@ -168,7 +168,7 @@ function Menu() {
           ) : (
             <Link to={`/profile/${userId}`} className={` relative group px-1 `}>
               <div
-                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-white ring-1 ring-black dark:ring-white   font-Inter font-bold  text-[18px] `}
+                className={`flex items-center justify-center gap-3 h-[32px] aspect-square rounded-full min-w-fit bg-transparent text-black dark:text-text-color ring-1 ring-black dark:ring-text-color font-Inter font-bold  text-[18px] `}
               >
                 {username.charAt(0)}
               </div>
