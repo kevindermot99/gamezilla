@@ -29,7 +29,7 @@ function Profile({ userId, userName, userEmail }) {
 
   // hide loader fetching when fetched
   useEffect(() => {
-    if(userEmail && userName){
+    if(userEmail !== null && userName !== null){
       setFetching(false)
     }
   },[userName, userEmail])
