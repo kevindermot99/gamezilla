@@ -29,10 +29,10 @@ function Profile({ userId, userName, userEmail }) {
 
   // hide loader fetching when fetched
   useEffect(() => {
-    if(userEmail !== null && userName !== null){
-      setFetching(false)
+    if (userEmail !== null && userName !== null) {
+      setFetching(false);
     }
-  },[userName, userEmail])
+  }, [userName, userEmail]);
 
   const handeLogout = () => {
     setAuthing(true);
@@ -91,7 +91,7 @@ function Profile({ userId, userName, userEmail }) {
     >
       <Menu />
 
-      {/* add email overlay */}
+      {/* edit profile overlay */}
       <div
         className={`fixed top-0 left-0 w-full h-full -z-10  ${
           editProfile
@@ -101,7 +101,7 @@ function Profile({ userId, userName, userEmail }) {
       >
         <div
           onClick={handleCloseEditProfile}
-          className={`h-full w-full absolute top-0 left-0 right-0 bottom-0 m-auto z-10 bg-black/20 `}
+          className={`h-full w-full absolute top-0 left-0 right-0 bottom-0 m-auto z-10 bg-black/20 dark:bg-black/40 `}
         ></div>
         <form
           onSubmit={handleChangeEmail}
@@ -112,8 +112,8 @@ function Profile({ userId, userName, userEmail }) {
           }`}
         >
           <label className="w-full flex flex-col mb-3">
-            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none ">
-              <GrEdit />
+            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none text-sm ">
+              {/* <GrEdit /> */}
               {userName ? "edit username" : "add username"}
             </span>
             <input
@@ -121,6 +121,7 @@ function Profile({ userId, userName, userEmail }) {
               name="username"
               id="username"
               required
+              minLength={5}
               value={newUserName}
               onChange={(e) => setNewUserName(e.target.value)}
               placeholder="ex: KingKenny"
@@ -128,8 +129,8 @@ function Profile({ userId, userName, userEmail }) {
             />
           </label>
           <label className="w-full flex flex-col mb-3">
-            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none ">
-              <GrEdit />
+            <span className="flex items-center justify-start gap-1 lowercase p-1 text-black dark:text-white mb-1 select-none text-sm ">
+              {/* <GrEdit /> */}
               {userEmail ? "edit email" : "add email"}
             </span>
             <input
@@ -142,12 +143,12 @@ function Profile({ userId, userName, userEmail }) {
               className="bg-stone-200  dark:bg-gray-300/10  text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
             />
           </label>
-          <div className="w-full flex justify-end gap-2 ">
+          <div className="w-full flex justify-end gap-2 mt-5 ">
             {/* <Link to="/" name='email' className=' w-full h-[40px] px-4 transition bg-border-line-color/60 hover:bg-border-line-color rounded-full text-sm flex items-center justify-center font-medium '>Cancel</Link> */}
             <button
               type="submit"
               name="submit"
-              className={` w-1/3 h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-1/3 min-w-fit cursor-pointer h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 emailAuthing && "pointer-events-none "
               }`}
             >
@@ -157,7 +158,7 @@ function Profile({ userId, userName, userEmail }) {
                   <span>Saving</span>
                 </div>
               ) : (
-                "Save"
+                "Save Changes"
               )}
             </button>
           </div>
@@ -166,7 +167,25 @@ function Profile({ userId, userName, userEmail }) {
 
       <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-0 max-w-[1100px] mx-auto">
         {fetching ? (
-          <TbLoader2 className="animate-spinLoader text-[25px] text-black dark:text-white " />
+          <div className="w-full h-full flex items-center justify-start flex-col p-10">
+            <div className="h-[100px] w-fit p-5 aspect-square rounded-full bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+              
+            </div>
+            <div className="w-[190px] p-4 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+              
+            </div>
+            <div className="w-[160px] p-3 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+              
+            </div>
+            <div className="flex gap-5 mt-4">
+            <div className="w-[190px] p-6 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+              
+              </div>
+              <div className="w-[190px] p-6 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 ">
+              
+            </div>
+            </div>
+          </div>
         ) : (
           <>
             <p className="relative font-bold flex w-full justify-center items-center text-black dark:text-text-color text-[20px] capitalize mb-5 ">
@@ -264,7 +283,6 @@ function Profile({ userId, userName, userEmail }) {
           </>
         )}
       </div>
-
     </div>
   ) : null;
 }
