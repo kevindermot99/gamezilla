@@ -20,7 +20,7 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 
-function Menu() {
+function Menu({ cartCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
   const [userId, setUserId] = useState("none");
@@ -190,7 +190,7 @@ function Menu() {
               className={` relative group flex px-1 gap-1 h-[35px] items-center `}
             >
               <BsCart className="text-2xl dark:text-text-color text-black" />
-              <Badge count={0} />
+              <Badge count={cartCount} />
               <p className="absolute top-[60px] group-hover:top-[65px] transition-all duration-150 z-40 left-[-50px] right-[-50px] mx-auto w-fit px-3 flex items-center bg-body-color dark:bg-white backdrop-blur-sm text-white dark:text-black text-sm py-1 font-montserrat font-medium opacity-0 translate-y-[-10px] pointer-events-none group-hover:opacity-100 ">
                 Cart
               </p>
