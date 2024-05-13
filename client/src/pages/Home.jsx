@@ -43,44 +43,22 @@ function Home() {
   const [modal, setModal] = useState(false);
   const [OpenedModalId, setOpendModalId] = useState("");
   const [muted, setMuted] = useState(true);
-  const [cartCount, setCartCount] = useState(0)
+  const [cartCount, setCartCount] = useState(0);
 
   const sortedBydowns = Games.sort((a, b) => b.downloads - a.downloads);
   const top5 = sortedBydowns.slice(0, 5);
-
-  const sortedGames = Games.sort(() => Math.random() - 0.5);
-  // const swiper = new Swiper('.swiper', {
-  //   // configure Swiper to use modules
-  //   modules: [Navigation, Pagination, Autoplay, FreeMode],
-  //   // Optional parameters
-  //   direction: 'horizontal',
-  //   loop: false,
-  //   slidesPerView: 2.3,
-  //   loop: true,
-  //   effect: "coverflow",
-  //   spaceBetween: 10,
-  //   coverflowEffect: {
-  //     rotate: 0,
-  //     stretch: 0,
-  //     depth: 0,
-  //     modifier: 1,
-  //     slideShadows: false,
-  //   },
-  //   autoplay: {
-  //     delay: 1300,
-  //     pauseOnMouseEnter: true
-  //   }
-
-  // })
-
-  // loadedr
 
   function numberFormat(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  const handlemuted = () => {
-    setMuted(!muted);
+  const handleCartCount = () => {
+    const localStorageCount = localStorage.getItem("cartCount")
+    if(localStorageCount){
+      localStorage.setItem("cartCount", (localStorageCount+1))
+    } else{
+      localStorage.setItem("cartCount", 1)
+    }
   };
 
   // // resetting the scroll position
@@ -92,7 +70,7 @@ function Home() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}`;
   };
 
@@ -135,20 +113,28 @@ function Home() {
               modules={[Autoplay, EffectCreative]}
               className="h-[400px] w-full flex relative "
             >
-              <div className="autoplay-progress bg-text-color/10 dark:bg-body-color/40 backdrop-blur rounded-full text-white " slot="container-end">
-                <svg viewBox="0 0 48 48" className="stroke-white" ref={progressCircle}>
+              <div
+                className="autoplay-progress bg-text-color/10 dark:bg-body-color/40 backdrop-blur rounded-full text-white "
+                slot="container-end"
+              >
+                <svg
+                  viewBox="0 0 48 48"
+                  className="stroke-white"
+                  ref={progressCircle}
+                >
                   <circle cx="24" cy="24" r="20"></circle>
                 </svg>
-                <span ref={progressContent} className="font-montserrat text-sm   "></span>
+                <span
+                  ref={progressContent}
+                  className="font-montserrat text-sm   "
+                ></span>
               </div>
-              {sortedGames.map((game, index) => (
+              {sortedBydowns.map((game, index) => (
                 <SwiperSlide
                   key={index}
                   className="h-full w-full flex overflow-clip  relative "
                 >
-                  <SWPImage
-                    src={game.banner}
-                  />
+                  <SWPImage src={game.banner} />
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/90 to-transparent flex flex-col items-start justify-end p-8 cursor-default ">
                     <h1 className="text-[37px] leading-[40px] font-bold font-montserrat tracking-tight capitalize line-clamp-2 max-w-[80%] text-white">
                       {game.title}
@@ -188,7 +174,7 @@ function Home() {
             </Swiper>
           </div>
           <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[400px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
-            {sortedGames.slice(0, 20).map((game, index) => (
+            {sortedBydowns.map((game, index) => (
               <div
                 key={index}
                 className="min-h-[60px] py-3 w-full snap-start flex items-center gap-2 overflow-clip relative cursor-pointer hover:bg-stone-100 dark:hover:bg-container-color/90 "
@@ -216,14 +202,17 @@ function Home() {
             </h1>
             <div className="h-fit ">
               <div className="gridRespo ">
-                {Games.slice(0, 12).map((game, index) => (
+                {top5.map((game, index) => (
                   <div
                     key={index}
                     className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
                   >
-                    <Link to={`/game/${game.id}`} className="transition group-hover:opacity-90 dark:opacity-80 ">
+                    <div
+                      // to={`/game/${game.id}`}
+                      className="transition group-hover:opacity-90 dark:opacity-80 "
+                    >
                       <PosterImage src={game.poster} title={game.title} />
-                    </Link>
+                    </div>
                     <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
@@ -235,6 +224,7 @@ function Home() {
                     </p>
 
                     <button
+                      onClick={handleCartCount}
                       title="Add to cart"
                       className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-body-color/60 backdrop-blur-md p-1 rounded-full`}
                     >
