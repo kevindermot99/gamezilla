@@ -20,11 +20,12 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 
-function Menu({ cartCount }) {
+function Menu() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
   const [userId, setUserId] = useState("none");
   const [cartbar, setCartbar] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
   // checking logged in user
   useEffect(() => {
@@ -43,6 +44,33 @@ function Menu({ cartCount }) {
       setUserName(res);
     }
   }, [userId]);
+
+  // counting the cartCount length
+  useEffect(() => {
+    const countArray = localStorage.getItem("cartCount");
+    if (countArray) {
+      const parsedCountArray = JSON.parse(countArray);
+      setCartCount(parsedCountArray.length);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleCountChange = () => {
+      const countArray = localStorage.getItem("cartCount");
+      if (countArray) {
+        const parsedCountArray = JSON.parse(countArray);
+        setCartCount(parsedCountArray.length);
+      }
+    };
+
+    // Listen to storage events to update cart count
+    window.addEventListener("storage", handleCountChange);
+
+    return () => {
+      // Cleanup event listener on component unmount
+      window.removeEventListener("storage", handleCountChange);
+    };
+  }, []);
 
   const showCartBar = () => {
     const scrollbarWidth =
@@ -76,7 +104,10 @@ function Menu({ cartCount }) {
           }`}
         >
           <div className="w-full h-fit p-5 relative flex items-center justify-center shadow">
-            <button onClick={hideCartBar} className="text-black dark:text-white  bg-stone-200 dark:bg-gray-300/10 p-2 aspect-square rounded-full active:scale-75  transition duration-100 absolute top-0 bottom-0 left-5 h-fit m-auto">
+            <button
+              onClick={hideCartBar}
+              className="text-black dark:text-white  bg-stone-200 dark:bg-gray-300/10 p-2 aspect-square rounded-full active:scale-75  transition duration-100 absolute top-0 bottom-0 left-5 h-fit m-auto"
+            >
               <MdClose />
             </button>
             <p className="font-medium text-sm text-black dark:text-white ">

@@ -46,7 +46,7 @@ function App() {
     <div className="">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home userName={userName} />} />
           <Route path="/browse" element={<Browse />} />
           <Route path="/profile/:id" element={<Profile userId={userId} userName={userName} userEmail={userEmail} />} />
           <Route path="/game/:id" element={<Game />} />
