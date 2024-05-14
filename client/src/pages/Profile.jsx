@@ -178,12 +178,12 @@ function Profile({ userId, userName, userEmail }) {
       <div className=" w-full h-full flex flex-col justify-center items-center p-5 gap-0 max-w-[1100px] mx-auto">
         {fetching ? (
           <div className="w-full h-full flex items-center justify-start flex-col p-10">
-            <div className="h-[100px] w-fit p-5 aspect-square rounded-full bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
-            <div className="w-[190px] p-4 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
-            <div className="w-[160px] p-3 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
+            <div className="h-[100px] w-fit p-5 aspect-square rounded-full bg-stone-200 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
+            <div className="w-[190px] p-4 bg-stone-200 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
+            <div className="w-[160px] p-3 bg-stone-200 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
             <div className="flex gap-5 mt-4">
-              <div className="w-[190px] p-6 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
-              <div className="w-[190px] p-6 bg-stone-100 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
+              <div className="w-[190px] p-6 bg-stone-200 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
+              <div className="w-[190px] p-6 bg-stone-200 dark:bg-container-color animate-pulse  flex justify-center items-center text-[50px] font-bold font-montserrat mb-3 "></div>
             </div>
           </div>
         ) : (
