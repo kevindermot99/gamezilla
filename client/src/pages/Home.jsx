@@ -14,6 +14,9 @@ import { LiaDownloadSolid } from "react-icons/lia";
 import { FaRegEye } from "react-icons/fa6";
 import MiniNavBar from "../components/MiniNavBar";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // Swiper
 import { Autoplay, EffectCreative } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,11 +37,17 @@ function Home() {
     const localStorageCount = localStorage.getItem("cartCount")
     if(localStorageCount){
       const cartCountArray = JSON.parse(localStorageCount)
+
+      // increment cart and save to lcst
       if(!cartCountArray.includes(id)){
         cartCountArray.push(id)
         localStorage.setItem("cartCount", JSON.stringify(cartCountArray))
         setCartCount(cartCount+1)
       }
+      else{
+        toast("Item already in yout cart")
+      }
+
     } else{
       localStorage.setItem("cartCount", JSON.stringify([id]))
       setCartCount(cartCount+1)
@@ -71,6 +80,12 @@ function Home() {
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
+      <ToastContainer
+        className="select-none"
+        position="bottom-right"
+        draggable
+        autoClose={3000}
+      />
       <Menu cartCount={cartCount} />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 

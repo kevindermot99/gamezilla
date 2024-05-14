@@ -44,6 +44,7 @@ function Menu({cartCount}) {
     }
   }, [userId]);
 
+  // get cart items
 
   const showCartBar = () => {
     const scrollbarWidth =
@@ -84,7 +85,7 @@ function Menu({cartCount}) {
               <MdClose />
             </button>
             <p className="font-medium text-sm text-black dark:text-white ">
-              Your Cart (0)
+              Your Cart ({cartCount})
             </p>
           </div>
           <div className="h-full w-full overflow-y-auto ">
