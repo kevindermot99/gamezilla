@@ -20,12 +20,11 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 
-function Menu() {
+function Menu({cartCount}) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
   const [userId, setUserId] = useState("none");
   const [cartbar, setCartbar] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
 
   // checking logged in user
   useEffect(() => {
@@ -45,32 +44,6 @@ function Menu() {
     }
   }, [userId]);
 
-  // counting the cartCount length
-  useEffect(() => {
-    const countArray = localStorage.getItem("cartCount");
-    if (countArray) {
-      const parsedCountArray = JSON.parse(countArray);
-      setCartCount(parsedCountArray.length);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleCountChange = () => {
-      const countArray = localStorage.getItem("cartCount");
-      if (countArray) {
-        const parsedCountArray = JSON.parse(countArray);
-        setCartCount(parsedCountArray.length);
-      }
-    };
-
-    // Listen to storage events to update cart count
-    window.addEventListener("storage", handleCountChange);
-
-    return () => {
-      // Cleanup event listener on component unmount
-      window.removeEventListener("storage", handleCountChange);
-    };
-  }, []);
 
   const showCartBar = () => {
     const scrollbarWidth =

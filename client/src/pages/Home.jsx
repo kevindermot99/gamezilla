@@ -7,25 +7,8 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { TbLoader2 } from "react-icons/tb";
 import Sidebar from "../components/Sidebar";
 import { FiPlus } from "react-icons/fi";
-import ButtonLink from "../components/ButtonLink";
-import ButtonClick from "../components/ButtonClick";
-import { IoGameControllerOutline } from "react-icons/io5";
-import { HiOutlineUsers } from "react-icons/hi2";
-import { GoGift } from "react-icons/go";
-import { HiMagnifyingGlass } from "react-icons/hi2";
-import { HiMiniFire } from "react-icons/hi2";
-import { HiOutlineStar } from "react-icons/hi2";
-import { LuExternalLink } from "react-icons/lu";
-import { TbDoorEnter } from "react-icons/tb";
 import Footer from "../components/Footer";
-import Logo from "../assets/logo.png";
-import SquareImage from "../components/SquareImage";
-import { FaDownload } from "react-icons/fa";
 import PosterImage from "../components/PosterImage";
-import VideoSample from "../assets/Cyberpunk 2077.mp4";
-import { TbVolume } from "react-icons/tb";
-import { TbVolume3 } from "react-icons/tb";
-import { GoArrowRight } from "react-icons/go";
 import CollectionImage from "../components/CollectionImage";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaRegEye } from "react-icons/fa6";
@@ -39,7 +22,7 @@ import "swiper/css/effect-creative";
 import SWPImage from "../components/SWPImage";
 
 function Home() {
-
+  const [cartCount, setCartCount] = useState(0);
   const sortedBydowns = Games.sort((a, b) => b.downloads - a.downloads);
   const top5 = sortedBydowns.slice(0, 5);
 
@@ -54,11 +37,22 @@ function Home() {
       if(!cartCountArray.includes(id)){
         cartCountArray.push(id)
         localStorage.setItem("cartCount", JSON.stringify(cartCountArray))
+        setCartCount(cartCount+1)
       }
     } else{
       localStorage.setItem("cartCount", JSON.stringify([id]))
+      setCartCount(cartCount+1)
     }
   };
+
+  // get count when page loads 
+  useEffect(() => {
+    const storedCount = localStorage.getItem("cartCount")
+    if(storedCount){
+      const storedCountLength = JSON.parse(storedCount)
+      setCartCount(storedCountLength.length)
+    }
+  }, [])
 
   // // resetting the scroll position
   // const { pathname } = useLocation();
@@ -77,7 +71,7 @@ function Home() {
     <div
       className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
-      <Menu />
+      <Menu cartCount={cartCount} />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 
       {/* <div className="mb-2 w-full h-0"></div> */}
