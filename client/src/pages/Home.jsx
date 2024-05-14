@@ -78,7 +78,7 @@ function Home() {
 
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col gap-3 overflow-x-clip text-text-color  `}
+      className={` relative h-fit max-sm:h-svh flex flex-col overflow-x-clip text-text-color  `}
     >
       <ToastContainer
         className="select-none"
@@ -97,7 +97,7 @@ function Home() {
       {/* Discover */}
       <div className={`w-full h-fit `}>
         {/* hero */}
-        <div className="w-full max-w-[1100px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 ">
+        <div className="w-full max-w-[1200px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 ">
           <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
             <Swiper
               spaceBetween={0}
@@ -119,7 +119,7 @@ function Home() {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, EffectCreative]}
-              className="h-[400px] w-full flex relative "
+              className="h-[450px] w-full flex relative "
             >
               <div
                 className="autoplay-progress bg-text-color/10 dark:bg-body-color/40 backdrop-blur rounded-full text-white "
@@ -181,7 +181,7 @@ function Home() {
               ))}
             </Swiper>
           </div>
-          <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[400px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
+          <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[450px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
             {sortedBydowns.map((game, index) => (
               <div
                 key={index}
@@ -204,13 +204,13 @@ function Home() {
 
         {/* For you */}
         <div className="w-full h-fit pt-7">
-          <div className="w-full h-fit flex flex-col max-w-[1100px] px-5 mx-auto">
+          <div className="w-full h-fit flex flex-col max-w-[1200px] px-5 mx-auto">
             <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
               For You
             </h1>
             <div className="h-fit ">
               <div className="gridRespo ">
-                {Games.map((game, index) => (
+                {Games.slice(0,14).map((game, index) => (
                   <div
                     key={index}
                     className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
