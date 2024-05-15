@@ -43,6 +43,7 @@ function Home() {
         cartCountArray.push(id)
         localStorage.setItem("cartCount", JSON.stringify(cartCountArray))
         setCartCount(cartCount+1)
+        toast("Item added to cart")
       }
       else{
         toast("Item already in yout cart")
@@ -187,10 +188,10 @@ function Home() {
                 key={index}
                 className="min-h-[60px] py-3 w-full snap-start flex items-center gap-2 overflow-clip relative cursor-pointer hover:bg-stone-100 dark:hover:bg-container-color/90 "
               >
-                <div className=" h-[60px] min-w-[50px] overflow-clip flex">
+                <div className=" h-[70px] w-[50px] overflow-clip flex justify-start">
                   <img
                     src={game.poster}
-                    className="h-fit min-h-[100%] min-w-[100%] w-[50px]  "
+                    className="h-fit min-h-[100%] min-w-[100%] w-[50px] object-cover "
                     alt=""
                   />
                 </div>
