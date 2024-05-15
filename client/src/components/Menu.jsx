@@ -20,6 +20,8 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 
+
+
 function Menu({ cartCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
@@ -49,7 +51,7 @@ function Menu({ cartCount }) {
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem("cartCount"));
 
-    if (cartItems && cartItems.lenght > 0) {
+    if (cartItems) {
       setCartItemsArray(cartItems);
     }
   }, []);
@@ -99,13 +101,9 @@ function Menu({ cartCount }) {
           <div className="h-full w-full overflow-y-auto ">
             <div className="h-full w-full ">
               <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
-                {setCartItemsArray !== "" ? (
+                {cartItemsArray !== '' ? (
                   <span>
-                    {cartItemsArray && (
-                      cartItemsArray.map((items, index) => {
-                        "heheh"
-                      })
-                    ) }
+                    {cartItemsArray}
                   </span>
                 ) : (
                   <span className="flex items-center justify-center flex-col gap-2">
