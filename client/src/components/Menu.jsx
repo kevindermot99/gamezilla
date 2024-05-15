@@ -19,6 +19,7 @@ import { GoHeart } from "react-icons/go";
 import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
+import { Games } from "../constants/data";
 
 
 
@@ -28,6 +29,7 @@ function Menu({ cartCount }) {
   const [userId, setUserId] = useState("none");
   const [cartbar, setCartbar] = useState(false);
   const [cartItemsArray, setCartItemsArray] = useState("");
+  const [itemData, setItemData] = useState('')
 
   // checking logged in user
   useEffect(() => {
@@ -100,10 +102,12 @@ function Menu({ cartCount }) {
           </div>
           <div className="h-full w-full overflow-y-auto ">
             <div className="h-full w-full ">
-              <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
+              <div className="w-full h-full flex flex-col items-start justify-start p-5 gap-2 text-black/40 dark:text-text-color/40 ">
                 {cartItemsArray !== '' ? (
                   <span>
-                    {cartItemsArray}
+                    {Games.find(game => game.id === cartItemsArray).map((item, index) => {
+                      {item}
+                    })}
                   </span>
                 ) : (
                   <span className="flex items-center justify-center flex-col gap-2">
@@ -114,7 +118,7 @@ function Menu({ cartCount }) {
               </div>
             </div>
           </div>
-          <div className="h-fit min-h-fit w-full p-4 ">
+          <div className="h-fit min-h-fit w-full p-5 ">
             <button
               className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium cursor-not-allowed `}
             >
