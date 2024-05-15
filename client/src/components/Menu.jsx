@@ -105,7 +105,7 @@ function Menu({ cartCount }) {
               <div className="w-full h-full flex flex-col items-start justify-start p-5 gap-2 text-black/40 dark:text-text-color/40 ">
                 {cartItemsArray !== '' ? (
                   <span>
-                    {Games.find(game => game.id === cartItemsArray).map((item, index) => {
+                    {Games.filter(game => cartItemsArray.includes(game.id)).map((item, index) => {
                       {item}
                     })}
                   </span>
