@@ -21,15 +21,13 @@ import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 import { Games } from "../constants/data";
 
-
-
 function Menu({ cartCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
   const [userId, setUserId] = useState("none");
   const [cartbar, setCartbar] = useState(false);
   const [cartItemsArray, setCartItemsArray] = useState("");
-  const [itemData, setItemData] = useState('')
+  const [itemData, setItemData] = useState("");
 
   // checking logged in user
   useEffect(() => {
@@ -103,12 +101,32 @@ function Menu({ cartCount }) {
           <div className="h-full w-full overflow-y-auto ">
             <div className="h-full w-full ">
               <div className="w-full h-full flex flex-col items-start justify-start p-5 gap-2 text-black/40 dark:text-text-color/40 ">
-                {cartItemsArray !== '' ? (
-                  <span>
-                    {Games.filter(game => cartItemsArray.includes(game.id)).map((item, index) => {
-                      {item}
-                    })}
-                  </span>
+                {cartItemsArray !== "" ? (
+                  <div className="w-full h-fit text-white text-sm flex flex-col gap-2">
+                    {cartItemsArray.map((item, index) => (
+                      <div
+                        key={index}
+                        className="w-full flex items-center bg-container-color rounded-md p-2 justify-start gap-3"
+                      >
+                        <div>{index + 1}.</div>
+                        <div className="flex gap-3 capitalize">
+                          <img
+                            src={Games.find((game) => game.id === item).poster}
+                            className="h-20 max-w-16 min-w-16 object-cover"
+                            alt=""
+                          />
+                          <div className="px-1">
+                            <p className=" font-semibold ">
+                              {Games.find((game) => game.id === item).title}
+                            </p>
+                            <div className="flex items-center">
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <span className="flex items-center justify-center flex-col gap-2">
                     <BsCart className="text-[40px]" />
