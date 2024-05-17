@@ -20,6 +20,7 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 import { Games } from "../constants/data";
+import { IconTrash } from '@tabler/icons-react';
 
 function Menu({ cartCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -121,7 +122,7 @@ function Menu({ cartCount }) {
                             </p>
                             <div className="w-full h-fit flex justify-between items-start text-text-color-light ">
                               <p className=" font-semibold ">$0.00</p>
-                              <button></button>
+                              <button><IconTrash stroke={2} size={20} /></button>
                             </div>
                           </div>
                         </div>
