@@ -102,25 +102,26 @@ function Menu({ cartCount }) {
             <div className="h-full w-full ">
               <div className="w-full h-full flex flex-col items-start justify-start p-5 gap-2 text-black/40 dark:text-text-color/40 ">
                 {cartItemsArray !== "" ? (
-                  <div className="w-full h-fit text-white text-sm flex flex-col gap-2">
+                  <div className="w-full h-fit text-black dark:text-white text-sm flex flex-col gap-2">
                     {cartItemsArray.map((item, index) => (
                       <div
                         key={index}
-                        className="w-full flex items-center bg-container-color rounded-md p-2 justify-start gap-3"
+                        className="w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
-                        <div>{index + 1}.</div>
-                        <div className="flex gap-3 capitalize">
+                        <div className="font-bold ">{index + 1}.</div>
+                        <div className="flex gap-3 capitalize w-full h-full">
                           <img
                             src={Games.find((game) => game.id === item).poster}
-                            className="h-20 max-w-16 min-w-16 object-cover"
+                            className="h-16 max-w-12 min-w-12 object-cover"
                             alt=""
                           />
-                          <div className="px-1">
-                            <p className=" font-semibold ">
+                          <div className="px-1 w-full h-full flex flex-col justify-between items-start">
+                            <p className=" font-semibold line-clamp-2  max-w-[150px] ">
                               {Games.find((game) => game.id === item).title}
                             </p>
-                            <div className="flex items-center">
-
+                            <div className="w-full h-fit flex justify-between items-start text-text-color-light ">
+                              <p className=" font-semibold ">$0.00</p>
+                              <button></button>
                             </div>
                           </div>
                         </div>
@@ -128,7 +129,7 @@ function Menu({ cartCount }) {
                     ))}
                   </div>
                 ) : (
-                  <span className="flex items-center justify-center flex-col gap-2">
+                  <span className="h-full w-full flex items-center justify-center flex-col gap-2">
                     <BsCart className="text-[40px]" />
                     <p className="text-sm">Cart Empty</p>
                   </span>
