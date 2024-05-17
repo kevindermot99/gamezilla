@@ -59,7 +59,7 @@ function Home() {
   useEffect(() => {
     const storedCount = localStorage.getItem("cartCount")
     if(storedCount){
-      const storedCountLength = JSON.parse(storedCount)
+      const storedCountLength = JSON.parse(localStorage.getItem("cartCount"))
       setCartCount(storedCountLength.length)
     }
   }, [])

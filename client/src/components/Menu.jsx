@@ -20,7 +20,7 @@ import { MdClose } from "react-icons/md";
 import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 import { Games } from "../constants/data";
-import { IconTrash } from '@tabler/icons-react';
+import { IconTrash } from "@tabler/icons-react";
 
 function Menu({ cartCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -50,19 +50,23 @@ function Menu({ cartCount }) {
 
   // get cart items
   useEffect(() => {
-    const cartItems = JSON.parse(localStorage.getItem("cartCount"));
+    // const cartItems = JSON.parse(localStorage.getItem("cartCount"));
 
-    if (cartItems) {
-      setCartItemsArray(cartItems);
-    }
+    // if (cartItems) {
+    //   setCartItemsArray(cartItems);
+    // }
   }, []);
 
   const showCartBar = () => {
     const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
+    window.innerWidth - document.documentElement.clientWidth;
     document.body.style.paddingRight = `${scrollbarWidth}px`;
     document.body.style.overflowY = "hidden";
     setCartbar(true);
+    // const cartItems = JSON.parse(localStorage.getItem("cartCount"));
+    // if (cartItems) {
+    //   setCartItemsArray(cartItems);
+    // }
   };
 
   const hideCartBar = () => {
@@ -70,6 +74,8 @@ function Menu({ cartCount }) {
     document.body.style.overflowY = "auto";
     setCartbar(false);
   };
+
+  const deleteItem = () => {};
 
   return (
     <>
@@ -104,10 +110,10 @@ function Menu({ cartCount }) {
               <div className="w-full h-full flex flex-col items-start justify-start p-5 gap-2 text-black/40 dark:text-text-color/40 ">
                 {cartItemsArray !== "" ? (
                   <div className="w-full h-fit text-black dark:text-white text-sm flex flex-col gap-2">
-                    {cartItemsArray.map((item, index) => (
+                    {/* {cartItemsArray.map((item, index) => (
                       <div
                         key={index}
-                        className="w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
+                        className="w-full flex items-center bg-stone-100/50  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
                         <div className="font-bold ">{index + 1}.</div>
                         <div className="flex gap-3 capitalize w-full h-full">
@@ -122,12 +128,14 @@ function Menu({ cartCount }) {
                             </p>
                             <div className="w-full h-fit flex justify-between items-start text-text-color-light ">
                               <p className=" font-semibold ">$0.00</p>
-                              <button><IconTrash stroke={2} size={20} /></button>
+                              <button onClick={deleteItem} className="active:scale-75 transition duration-150 cursor-pointer hover:text-main-color p-1 rounded-md hover:bg-stone-200   hover:dark:bg-gray-400/10  ">
+                                <IconTrash stroke={2} size={20} />
+                              </button>
                             </div>
                           </div>
                         </div>
                       </div>
-                    ))}
+                    ))} */}
                   </div>
                 ) : (
                   <span className="h-full w-full flex items-center justify-center flex-col gap-2">
