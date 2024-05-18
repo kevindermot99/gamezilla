@@ -27,7 +27,7 @@ import SWPImage from "../components/SWPImage";
 function Home() {
   const [cartCount, setCartCount] = useState(0);
   const sortedBydowns = Games.sort((a, b) => b.downloads - a.downloads);
-  const top5 = sortedBydowns.slice(0, 5);
+  const top5 = sortedBydowns.slice(0, 10);
 
   function numberFormat(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -64,8 +64,8 @@ function Home() {
 
   // update Count
   const updateCount = (count) => {
-    setCartCount(count)
-  }
+    setCartCount(count);
+  };
 
   // // resetting the scroll position
   // const { pathname } = useLocation();
@@ -101,7 +101,7 @@ function Home() {
       {/* Discover */}
       <div className={`w-full h-fit `}>
         {/* hero */}
-        <div className="w-full max-w-[1200px] px-5 mx-auto h-fit  flex items-start justify-start gap-3 ">
+        <div className="w-full max-w-[1200px] px-5 mx-auto h-fit  flex items-start justify-start gap-1 ">
           <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
             <Swiper
               spaceBetween={0}
@@ -144,7 +144,7 @@ function Home() {
               {top5.map((game, index) => (
                 <SwiperSlide
                   key={index}
-                  className="h-full w-full flex overflow-clip  relative "
+                  className="h-full w-full flex overflow-clip rounded-md relative "
                 >
                   <SWPImage src={game.banner} />
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/90 to-transparent flex flex-col items-start justify-end p-8 cursor-default ">
@@ -185,24 +185,40 @@ function Home() {
               ))}
             </Swiper>
           </div>
-          <div className="w-1/4 max-md:hidden flex flex-col gap-3 h-[450px] overflow-y-scroll snap-y snap-mandatory pr-3 overscroll-contain ">
-            {sortedBydowns.map((game, index) => (
-              <div
-                key={index}
-                className="min-h-[60px] py-3 w-full snap-start flex items-center gap-2 overflow-clip relative cursor-pointer hover:bg-stone-100 dark:hover:bg-container-color/90 "
-              >
-                <div className=" h-[70px] w-[50px] overflow-clip flex justify-start">
-                  <img
-                    src={game.poster}
-                    className="h-fit min-h-[100%] min-w-[100%] w-[50px] object-cover "
-                    alt=""
-                  />
+          <div className="w-1/4 max-md:hidden h-[450px]">
+            <div className="h-[23px] flex items-start justify-start">
+              <h1 className="px-2 text-sm font-semibold leading-none text-black dark:text-text-color capitalize">Top 10 most downloaded</h1>
+            </div>
+            <div className=" flex flex-col gap-1 h-[427px] overflow-y-auto snap-y snap-mandatory pr-1 overscroll-contain ">
+              {top5.map((game, index) => (
+                <div
+                  key={index}
+                  className="h-fit w-full p-1 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                >
+                  <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
+                    <img
+                      src={game.poster}
+                      className="h-full w-full min-w-fit object-cover object-top bg-text-color-light/10 dark:bg-text-color-light/40 "
+                    />
+                  </div>
+                  <div>
+                    <h1 className="line-clamp-1 mb-1 text-sm text-black dark:text-text-color capitalize font-medium ">
+                      {game.title}
+                    </h1>
+                    <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
+                      {game.genres.slice(0, 2).map((gen, index) => (
+                        <span
+                          className="whitespace-nowrap py-1 px-2 bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                          key={index}
+                        >
+                          {gen}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
                 </div>
-                <h1 className="line-clamp-2 max-w-[70%]  text-sm text-black dark:text-text-color ">
-                  {game.title}
-                </h1>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
