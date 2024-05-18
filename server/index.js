@@ -40,24 +40,30 @@ app.post("/updateUser", async (req, res) => {
   const { newUserName, newEmail, userId } = req.body;
 
   try {
-    const updateUser = await User.findByIdAndUpdate(
-      { _id: userId },
-      {username: newUserName, email: newEmail},
-      {new: true}
-    );
-    
-    if (!updateUser) {
-      return res.status(404).json({ message: "User not found" });
-    }
+    const usernameVerify = await User.findOne({ username: newUserName, _id: {$ne: userId}});
+    if (!usernameVerify) {
+      const updateUser = await User.findByIdAndUpdate(
+        { _id: userId },
+        { username: newUserName, email: newEmail },
+        { new: true }
+      );
 
-    return res.status(200).json({message: "updated Successfully"});
+      if (!updateUser) {
+        res.status(404).json({ message: "User not found" });
+      }
+      else{
+        res.status(200).json({ message: "updated Successfully" });
+      }
+    } else {
+      res.status(403).json({ message: "username is taken" });
+    }
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Internal server error" });
   }
 });
 
-// get userDetails
+// get userDetails api
 app.get("/getuser/:id", async (req, res) => {
   const id = req.params.id;
   try {
@@ -72,7 +78,7 @@ app.get("/getuser/:id", async (req, res) => {
   }
 });
 
-// login route
+// login api
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -96,14 +102,14 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// sign up route
+// sign up api
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
   try {
     const userExists = await User.findOne({ username: username });
     if (userExists) {
-      res.status(403).json({ message: "username Taken" });
+      res.status(403).json({ message: "username is taken" });
     } else {
       // new user
       const newUser = new User({

@@ -9,6 +9,9 @@ import { IoHeartDislikeOutline } from "react-icons/io5";
 import { VscHistory } from "react-icons/vsc";
 import { GrEdit } from "react-icons/gr";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Profile({ userId, userName, userEmail }) {
   const [authing, setAuthing] = useState(false);
   const [emailAuthing, setEmailAuthing] = useState(false);
@@ -71,7 +74,7 @@ function Profile({ userId, userName, userEmail }) {
         newEmail,
         userId,
       });
-      if (updateUser) {
+      if (updateUser.status == 200) {
         localStorage.setItem("gamezillaUserId", userId);
         localStorage.setItem("gamezillaUsername", newUserName);
         setTimeout(() => {
@@ -80,7 +83,9 @@ function Profile({ userId, userName, userEmail }) {
       }
     } catch (err) {
       setEmailAuthing(false);
-      console.log(err);
+      toast(err.response.data.message, {
+        // toastId: "customId"
+      });
     }
   };
 
@@ -100,7 +105,12 @@ function Profile({ userId, userName, userEmail }) {
       className={` relative h-fit flex flex-col gap-3 overflow-x-clip text-text-color  `}
     >
       <Menu cartCount={cartCount} />
-
+      <ToastContainer
+        className="select-none"
+        position="bottom-left"
+        draggable
+        autoClose={3000}
+      />
       {/* edit profile overlay */}
       <div
         className={`fixed top-0 left-0 w-full h-full -z-10  ${
@@ -158,7 +168,7 @@ function Profile({ userId, userName, userEmail }) {
             <button
               type="submit"
               name="submit"
-              className={` w-1/3 min-w-fit cursor-pointer h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` select-none w-1/3 min-w-fit cursor-pointer h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 emailAuthing && "pointer-events-none "
               }`}
             >
