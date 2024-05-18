@@ -18,10 +18,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Swiper
-import { Autoplay, EffectCreative } from "swiper/modules";
+import { Autoplay, EffectCreative, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
+import 'swiper/css/navigation';
 import SWPImage from "../components/SWPImage";
 
 function Home() {
@@ -99,7 +100,7 @@ function Home() {
       <div className="w-full mx-auto h-fit  flex items-start justify-start gap-2 max-w-[1300px] px-7">
         <div className="w-[75%] max-md:w-full min-h-full h-fit ">
           <Swiper
-            spaceBetween={0}
+            spaceBetween={100}
             effect={"creative"}
             creativeEffect={{
               prev: {
@@ -238,45 +239,47 @@ function Home() {
           <div className={`w-full h-fit `}>
             {/* For you */}
             <div className="w-full h-fit pt-7 ">
-              <div className="w-full h-fit flex flex-col mx-auto">
-                <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color pb-5">
-                  For You
-                </h1>
-                <div className="h-fit ">
-                  <div className="gridRespo ">
-                    {Games.slice(0, 14).map((game, index) => (
-                      <div
-                        key={index}
-                        className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
-                      >
-                        <div
-                          // to={`/game/${game.id}`}
-                          className="transition group-hover:opacity-90 dark:opacity-80 "
-                        >
-                          <PosterImage src={game.poster} title={game.title} />
-                        </div>
-                        <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
-                          Base Game
-                        </p>
-                        <p className="text-[14px] font-normal capitalize truncate pr-2 text-black dark:text-text-color">
-                          {game.title}
-                        </p>
-                        <p className="font-normal text-[13px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
-                          free
-                        </p>
+              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-5">
+                For You
+              </h1>
+              <Swiper
+                spaceBetween={10}
+                slidesPerView={6}
+                loop={false}
+                className="h-fit w-full flex relative "
+                navigation={true} 
+                modules={[Navigation]}
+              >
+                {top5.map((game, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className="h-full flex flex-col overflow-clip relative group w-full "
+                  >
+                    <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
+                      <PosterImage
+                        src={game.poster}
+                      />
+                    </Link>
 
-                        <button
-                          onClick={() => handleCartCount(game.id)}
-                          title="Add to cart"
-                          className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-border-line-color/60 backdrop-blur-md p-1 rounded-full`}
-                        >
-                          <FiPlus className="text-xl text-white " />
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                    <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                      Base Game
+                    </p>
+                    <p className="text-[14px] font-normal capitalize truncate pr-2 text-black dark:text-text-color">
+                      {game.title}
+                    </p>
+                    <p className="font-normal text-[13px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
+                      free
+                    </p>
+                    <button
+                      onClick={() => handleCartCount(game.id)}
+                      title="Add to cart"
+                      className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-border-line-color/60 backdrop-blur-md p-1 rounded-full`}
+                    >
+                      <FiPlus className="text-xl text-white " />
+                    </button>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
             {/* Our Collections */}
