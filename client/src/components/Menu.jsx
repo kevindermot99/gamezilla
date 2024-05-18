@@ -23,7 +23,6 @@ import { Games } from "../constants/data";
 import { IconTrash } from "@tabler/icons-react";
 import { PiGithubLogoLight } from "react-icons/pi";
 
-
 function Menu({ cartCount, updateCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [username, setUserName] = useState("");
@@ -79,21 +78,20 @@ function Menu({ cartCount, updateCount }) {
   //set cartCountArray to filterd minus item
   const deleteItem = (item) => {
     if (cartItemsArray.includes(item)) {
-      const updatedCountArray = cartItemsArray.filter((id) => id !== item)
-      if(updatedCountArray){
-        setCartItemsArray(updatedCountArray)
-        localStorage.setItem("cartCount", JSON.stringify(updatedCountArray))
+      const updatedCountArray = cartItemsArray.filter((id) => id !== item);
+      if (updatedCountArray) {
+        setCartItemsArray(updatedCountArray);
+        localStorage.setItem("cartCount", JSON.stringify(updatedCountArray));
       }
-      updateCount(updatedCountArray.length)
+      updateCount(updatedCountArray.length);
     }
   };
-
 
   return (
     <>
       <div
         className={`fixed top-0 left-0 w-full h-full -z-10 
-      ${cartbar ? "transition duration-300 opacity-100 z-50 " : "opacity-0"}`}
+      ${cartbar ? "transition duration-300 opacity-100 z-50 " : " opacity-0"}`}
       >
         <div
           onClick={hideCartBar}
@@ -103,7 +101,7 @@ function Menu({ cartCount, updateCount }) {
           className={`absolute top-0 right-0 bg-white dark:bg-body-color h-full max-h-[100vh] max-sm:h-svh w-[90%] max-w-[350px] z-20 flex flex-col justify-between ${
             cartbar
               ? "transition duration-300 translate-x-[0px] "
-              : "translate-x-[100px]"
+              : "translate-x-[100%]"
           }`}
         >
           <div className="w-full h-fit p-5 relative flex items-center justify-center shadow">
@@ -127,9 +125,7 @@ function Menu({ cartCount, updateCount }) {
                         key={index}
                         className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
-                        <div className="font-bold px-1 ">
-                          {index+1}.
-                        </div>
+                        <div className="font-bold px-1 ">{index + 1}.</div>
                         <div className="flex gap-3 capitalize w-full h-full">
                           <img
                             src={Games.find((game) => game.id === item).poster}
@@ -137,7 +133,10 @@ function Menu({ cartCount, updateCount }) {
                             alt=""
                           />
                           <div className="px-1 w-full h-full flex flex-col justify-between items-start">
-                            <Link to={`/`} className=" font-semibold line-clamp-2  max-w-[150px] hover:underline ">
+                            <Link
+                              to={`/`}
+                              className=" font-semibold line-clamp-2  max-w-[150px] hover:underline "
+                            >
                               {Games.find((game) => game.id === item).title}
                             </Link>
                             <div className="w-full h-fit flex justify-between items-end text-text-color-light ">
@@ -166,7 +165,11 @@ function Menu({ cartCount, updateCount }) {
           </div>
           <div className="h-fit min-h-fit w-full p-5 ">
             <p className="text-xs pb-2 text-right text-text-color-light">
-              You have <span className="text-black dark:text-white font-bold">{cartCount}</span> items in your cart
+              You have{" "}
+              <span className="text-black dark:text-white font-bold">
+                {cartCount}
+              </span>{" "}
+              items in your cart
             </p>
             <p className="pb-5 text-black dark:text-white flex justify-between items-center font-semibold text-sm">
               <span>Subtotal:</span>
@@ -188,10 +191,10 @@ function Menu({ cartCount, updateCount }) {
         </div>
       </div>
       <div
-        className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-0 h-[60px] bg-white shadow dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 `}
+        className={`sticky top-0 z-30 min-h-fit w-full px-[25px] py-0 h-[60px] bg-white shadow dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 `}
       >
-        <div className="w-full h-fit flex items-center justify-between">
-          <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
+        <div className="w-full h-fit flex items-center justify-between gap-4">
+          {/* <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
             <Link
               to="/"
               className="font-bold text-2xl tracking-tighter flex items-center justify-center mr-3 gap-1 "
@@ -219,7 +222,6 @@ function Menu({ cartCount, updateCount }) {
             >
               genres
               <IoChevronDownSharp />
-              {/* ganres dropdown */}
               <div className="h-0 group-hover:h-[350px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-white shadow dark:bg-container-color absolute top-[60px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
                 <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                   {Genres.map((genre, index) => (
@@ -255,7 +257,24 @@ function Menu({ cartCount, updateCount }) {
             >
               Support
             </Link>
-          </div>
+          </div> */}
+          <Link
+            to="/"
+            className="font-bold text-2xl w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-1 "
+          >
+            <img src={Logo} className="h-11" />
+            Gamezilla
+          </Link>
+
+          <form className=" w-full max-w-[600px]">
+            <input
+              type="search"
+              name="search"
+              className="h-[35px] w-full bg-stone-100 dark:bg-gray-400/10  text-black dark:text-white placeholder:text-text-color-light  px-6 font-medium text-sm rounded-full  "
+              autoComplete="off"
+              placeholder="Search Game"
+            />
+          </form>
 
           <div className={`h-full w-fit relative flex items-center gap-4`}>
             <Link
@@ -306,17 +325,6 @@ function Menu({ cartCount, updateCount }) {
                 </p>
               </Link>
             )}
-
-            <div className="w-fit h-[25px] border-l-[2px] border-l-stone-500/60"></div>
-            <a
-              href="https://github.com/kevindermot99/gamezilla"
-              target="_blank"
-              className="font-semibold flex items-center justify-center h-[35px] bg-stone-100 dark:bg-gray-400/15 hover:bg-stone-200 dark:hover:bg-gray-400/30 transition  text-black/95 dark:text-white/95 px-4 text-sm rounded-md"
-              title={`Source Code`}
-            >
-              {/* <PiGithubLogoLight className="text-[28px]" /> */}
-              <GoGitBranch className="mr-1 text-lg" /> GHub
-            </a>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ function MiniNavBar() {
   const location = useLocation();
   return (
     <div className="w-full h-fit bg-white dark:bg-body-color ">
-      <div className="h-fit w-full max-w-[1200px] px-5 py-6 mx-auto flex items-center justify-between gap-3 ">
+      <div className="h-fit w-full max-w-[1300px] px-7 pb-5 pt-3 mx-auto flex items-center justify-between gap-3 ">
         <div className="w-3/4 flex items-center gap-3 ">
           <Link
             to={`/`}
@@ -29,7 +29,7 @@ function MiniNavBar() {
             Browse
           </Link>
         </div>
-        <form className=" w-1/4">
+        {/* <form className=" w-1/4">
           <input
             type="search"
             name="search"
@@ -37,7 +37,7 @@ function MiniNavBar() {
             autoComplete="off"
             placeholder="Search Game"
           />
-        </form>
+        </form> */}
       </div>
     </div>
   );
