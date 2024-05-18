@@ -126,7 +126,7 @@ html {
 .Toastify__toast-container{
   height: fit-content;
   min-height: unset;
-  z-index: 20 !important;
+  /* z-index: 60 !important; */
 }
 
 .Toastify__toast-body {

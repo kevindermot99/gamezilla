@@ -123,10 +123,10 @@ function Menu({ cartCount, updateCount }) {
                     {cartItemsArray.map((item, index) => (
                       <div
                         key={index}
-                        className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
+                        className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-sm p-2 justify-start gap-2"
                       >
                         <div className="font-bold px-1 ">
-                          {Games.find((game) => game.id === item).id}.
+                          {index+1}.
                         </div>
                         <div className="flex gap-3 capitalize w-full h-full">
                           <img
@@ -135,9 +135,9 @@ function Menu({ cartCount, updateCount }) {
                             alt=""
                           />
                           <div className="px-1 w-full h-full flex flex-col justify-between items-start">
-                            <p className=" font-semibold line-clamp-2  max-w-[150px] ">
+                            <Link to={`/`} className=" font-semibold line-clamp-2  max-w-[150px] hover:underline ">
                               {Games.find((game) => game.id === item).title}
-                            </p>
+                            </Link>
                             <div className="w-full h-fit flex justify-between items-end text-text-color-light ">
                               <p className=" font-semibold ">$0.00</p>
                               <button
@@ -163,6 +163,9 @@ function Menu({ cartCount, updateCount }) {
             </div>
           </div>
           <div className="h-fit min-h-fit w-full p-5 ">
+            <p className="text-xs pb-2 text-right text-text-color-light">
+              You have <span className="text-black dark:text-white font-bold">{cartCount}</span> items in your cart
+            </p>
             <p className="pb-5 text-black dark:text-white flex justify-between items-center font-semibold text-sm">
               <span>Subtotal:</span>
               <span>$0.00</span>
@@ -176,7 +179,7 @@ function Menu({ cartCount, updateCount }) {
             >
               <div className="flex items-center justify-center gap-1">
                 <IoBagOutline className="text-lg " />
-                <span className="capitalize">proceed to checkout</span>
+                <span className="capitalize">proceed to download</span>
               </div>
             </button>
           </div>
