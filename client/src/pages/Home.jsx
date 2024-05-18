@@ -40,10 +40,10 @@ function Home() {
 
       // increment cart and save to lcst
       if (!cartCountArray.includes(id)) {
+        toast("Item added to cart");
         cartCountArray.push(id);
         localStorage.setItem("cartCount", JSON.stringify(cartCountArray));
         setCartCount(cartCount + 1);
-        toast("Item added to cart");
       } else {
         toast("Item already in yout cart");
       }
@@ -238,7 +238,7 @@ function Home() {
                     <button
                       onClick={() => handleCartCount(game.id)}
                       title="Add to cart"
-                      className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-body-color/60 backdrop-blur-md p-1 rounded-full`}
+                      className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-border-line-color/60 backdrop-blur-md p-1 rounded-full`}
                     >
                       <FiPlus className="text-xl text-white " />
                     </button>
