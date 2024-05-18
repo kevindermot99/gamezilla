@@ -34,35 +34,38 @@ function Home() {
   }
 
   const handleCartCount = (id) => {
-    const localStorageCount = localStorage.getItem("cartCount")
-    if(localStorageCount){
-      const cartCountArray = JSON.parse(localStorageCount)
+    const localStorageCount = localStorage.getItem("cartCount");
+    if (localStorageCount) {
+      const cartCountArray = JSON.parse(localStorageCount) || [];
 
       // increment cart and save to lcst
-      if(!cartCountArray.includes(id)){
-        cartCountArray.push(id)
-        localStorage.setItem("cartCount", JSON.stringify(cartCountArray))
-        setCartCount(cartCount+1)
-        toast("Item added to cart")
+      if (!cartCountArray.includes(id)) {
+        cartCountArray.push(id);
+        localStorage.setItem("cartCount", JSON.stringify(cartCountArray));
+        setCartCount(cartCount + 1);
+        toast("Item added to cart");
+      } else {
+        toast("Item already in yout cart");
       }
-      else{
-        toast("Item already in yout cart")
-      }
-
-    } else{
-      localStorage.setItem("cartCount", JSON.stringify([id]))
-      setCartCount(cartCount+1)
+    } else {
+      localStorage.setItem("cartCount", JSON.stringify([id]));
+      setCartCount(cartCount + 1);
     }
   };
 
-  // get count when page loads 
+  // get count when page loads
   useEffect(() => {
-    const storedCount = localStorage.getItem("cartCount")
-    if(storedCount){
-      const storedCountLength = JSON.parse(localStorage.getItem("cartCount"))
-      setCartCount(storedCountLength.length)
+    const storedCount = localStorage.getItem("cartCount");
+    if (storedCount) {
+      const storedCountLength = JSON.parse(localStorage.getItem("cartCount"));
+      setCartCount(storedCountLength.length);
     }
-  }, [])
+  }, []);
+
+  // update Count
+  const updateCount = (count) => {
+    setCartCount(count)
+  }
 
   // // resetting the scroll position
   // const { pathname } = useLocation();
@@ -83,11 +86,11 @@ function Home() {
     >
       <ToastContainer
         className="select-none"
-        position="bottom-right"
+        position="bottom-left"
         draggable
         autoClose={3000}
       />
-      <Menu cartCount={cartCount} />
+      <Menu cartCount={cartCount} updateCount={updateCount} />
       {/* <div className="hero absolute top-0 left-0 w-full h-full -z-10 select-none pointer-events-none opacity-[0] "></div> */}
 
       {/* <div className="mb-2 w-full h-0"></div> */}
@@ -211,7 +214,7 @@ function Home() {
             </h1>
             <div className="h-fit ">
               <div className="gridRespo ">
-                {Games.slice(0,14).map((game, index) => (
+                {Games.slice(0, 14).map((game, index) => (
                   <div
                     key={index}
                     className="group h-full w-full rounded-lg cursor-pointer mb-2 relative"
