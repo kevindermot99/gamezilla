@@ -6,12 +6,7 @@ export const AppVersion = {
 export const Genres = [
   {
     section: "Action Games",
-    genres: [
-      "Action",
-      "Fighting",
-      "Stealth",
-      "Survival",
-    ],
+    genres: ["Action", "Fighting", "Stealth", "Survival"],
   },
   {
     section: "Sports Games",
@@ -156,10 +151,7 @@ export const Games = [
     title: "Battlefield 4",
     description:
       "a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.",
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-    },
+    genres: ["Shooting", "Action", "First-person shooter"],
     downloads: "2924",
   },
   {
@@ -171,11 +163,7 @@ export const Games = [
     title: "Far Cry 3 ",
     description:
       "Create your own adventure in a single-player, open world island of danger and discovery as you journey through the dark side of humanity.",
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-      genre3: "Adventure",
-    },
+    genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "23992",
   },
   {
@@ -187,11 +175,7 @@ export const Games = [
     title: "Halo Infinite",
     description:
       "The next chapter of the legendary franchise begins with a new, epic sci-fi adventure.",
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-      genre3: "Adventure",
-    },
+    genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "85309",
   },
   {
@@ -203,11 +187,7 @@ export const Games = [
     title: "Call of Duty: Black Ops III",
     description:
       "takes place in 2065, 40 years after the events of Black Ops II, in a world facing upheaval from conflicts, climate change and new technologies",
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-      genre3: "Adventure",
-    },
+    genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "2947",
   },
   {
@@ -218,11 +198,7 @@ export const Games = [
       "https://store.ubisoft.com/on/demandware.static/-/Sites-masterCatalog/default/dw7387f247/images/large/5ecd2c925cdf9a1528a8c1d1.jpg",
     title: "Far Cry 6",
     description: `A 1967 guerrilla revolution that toppled the presidency of his father led to Yara's isolation from the rest of the world`,
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-      genre3: "Adventure",
-    },
+    genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "82384",
   },
   {
@@ -234,10 +210,7 @@ export const Games = [
     title: "God of War: Ragnarok",
     description:
       "This centers on Kratos, the God of War, and his now teenage son, Atreus, who are facing the conflict of the upcoming Ragnarök, due to the result of Kratos killing Norse God, Baldur, while setting on their to end tyranny reign of Odin, King of Asgard and while focusing off Atreus, who tries to uncover his origins.",
-    genres: {
-      genre1: "Action",
-      genre2: "Adventure",
-    },
+    genres: ["Adventure", "Action"],
     downloads: "75643",
   },
   {
@@ -249,10 +222,7 @@ export const Games = [
     title: "Hitman 3",
     description:
       "47 and Grey seek revenge on Providence for turning them both into assassins through childhood conditioning and genetic experimentation, while Diana is motivated by the death of her parents",
-    genres: {
-      genre1: "Action",
-      genre2: "Stealth",
-    },
+    genres: ["Action", "Stealth"],
     downloads: "129424",
   },
   {
@@ -264,11 +234,7 @@ export const Games = [
     title: "Final Fantasy XVI",
     description:
       "follows Clive Rosfield as he embarks on an epic journey of discovery and revenge",
-    genres: {
-      genre2: "Action",
-      genre1: "Role-playing",
-      genre2: "Adventure",
-    },
+    genres: ["Adventure", "Action", "Role-playing"],
     downloads: "24992",
   },
   {
@@ -279,10 +245,7 @@ export const Games = [
     title: "Horizon Forbidden West",
     description:
       " continues the story of Aloy (Ashly Burch), a young hunter of the Nora tribe and a clone of the Old World scientist Elisabet Sobeck, as she leads a band of companions on a quest to the frontier region known as the Forbidden West to find the source of a mysterious plague that kills all it infects",
-    genres: {
-      genre1: "Action",
-      genre2: "Adventure",
-    },
+    genres: ["Adventure", "Action"],
     downloads: "209860",
   },
   {
@@ -293,10 +256,7 @@ export const Games = [
     title: "Elden Ring",
     description:
       "takes place in the Lands Between, a fictional realm over which several demigods rule",
-    genres: {
-      genre1: "Action",
-      genre2: "Adventure",
-    },
+    genres: ["Adventure", "Action"],
     downloads: "448022",
   },
   {
@@ -308,11 +268,7 @@ export const Games = [
     title: "Just Cause 4",
     description:
       "Rico Rodriguez fights against a paramilitary group called the Black Hand who have very sinister plans to test experimental weather weaponry",
-    genres: {
-      genre1: "Action",
-      genre2: "Adventure",
-      genre2: "Third-person shooter",
-    },
+    genres: ["Adventure", "Action", "Third-person shooter"],
     downloads: "49234",
   },
   {
@@ -323,10 +279,7 @@ export const Games = [
     title: "Dying Light 2: Stay Human",
     description:
       "Aiden, a survivor of childhood experiments under the research of GRE, an organization faulted for the current zombie outbreak",
-    genres: {
-      genre1: "Action",
-      genre2: "horror",
-    },
+    genres: ["horror", "Action"],
     downloads: "580399",
   },
   {
@@ -337,10 +290,7 @@ export const Games = [
     title: "Need For Speed The Run",
     description:
       "Jack Rourke (Sean Faris), an experienced street racer, finds himself in serious trouble with the Mob due to a massive debt with them",
-    genres: {
-      genre1: "Action",
-      genre2: "Racing",
-    },
+    genres: ["Racing", "Action"],
     downloads: "495013",
   },
   {
@@ -352,10 +302,7 @@ export const Games = [
     title: "Call of Duty: Modern Warfare 2",
     description:
       "follows Task Force 141, a multinational special forces unit commanded by Captain Soap MacTavish as they hunt Vladimir Makarov, leader of the Russian Ultranationalist party",
-    genres: {
-      genre1: "Action",
-      genre2: "First-person shooter",
-    },
+    genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "1209322",
   },
   {
@@ -365,10 +312,7 @@ export const Games = [
       "https://assets1.ignimgs.com/2017/06/02/need-for-speed-payback-button-00-1496438898941.jpg",
     title: "Need For Speed payback",
     description: `After being double-crossed and forced into exile Tyler and his crew attempt to take down The House who control Fortune Valley's underworld`,
-    genres: {
-      genre1: "Racing",
-      genre2: "Advanture",
-    },
+    genres: ["Adventure", "Racing"],
     downloads: "966480",
   },
   {
@@ -380,10 +324,7 @@ export const Games = [
     title: "Resident Evil Village",
     description:
       "Face off against grotesque creatures and uncover dark secrets in this survival horror game.",
-    genres: {
-      genre1: "Survival",
-      genre2: "Horror",
-    },
+    genres: ["Horror", "Survival"],
     downloads: "134322",
   },
 ];
