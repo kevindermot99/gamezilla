@@ -123,7 +123,7 @@ function Menu({ cartCount, updateCount }) {
                     {cartItemsArray.map((item, index) => (
                       <div
                         key={index}
-                        className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-sm p-2 justify-start gap-2"
+                        className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
                         <div className="font-bold px-1 ">
                           {index+1}.
@@ -131,7 +131,7 @@ function Menu({ cartCount, updateCount }) {
                         <div className="flex gap-3 capitalize w-full h-full">
                           <img
                             src={Games.find((game) => game.id === item).poster}
-                            className="h-16 max-w-14 min-w-14 object-cover object-top"
+                            className="h-16 max-w-14 min-w-14 object-cover object-top rounded-md"
                             alt=""
                           />
                           <div className="px-1 w-full h-full flex flex-col justify-between items-start">
@@ -171,7 +171,7 @@ function Menu({ cartCount, updateCount }) {
               <span>$0.00</span>
             </p>
             <button
-              className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] px-4 rounded-md transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 cartItemsArray.length === 0
                   ? "cursor-not-allowed opacity-35"
                   : "opacity-100 cursor-pointer active:scale-95 "

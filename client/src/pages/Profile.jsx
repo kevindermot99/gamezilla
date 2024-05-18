@@ -125,7 +125,7 @@ function Profile({ userId, userName, userEmail }) {
         ></div>
         <form
           onSubmit={handleChangeEmail}
-          className={` absolute top-0 left-0 right-0 bottom-0 m-auto bg-white dark:bg-container-color h-fit w-fit p-7 z-20 rounded-sm ${
+          className={` absolute top-0 left-0 right-0 bottom-0 m-auto bg-white dark:bg-container-color h-fit w-fit p-7 z-20 rounded-md ${
             editProfile
               ? "transition duration-300 translate-y-0  "
               : "translate-y-16 "
@@ -145,7 +145,7 @@ function Profile({ userId, userName, userEmail }) {
               value={newUserName}
               onChange={(e) => setNewUserName(e.target.value)}
               placeholder="ex: KingKenny"
-              className="bg-stone-200  dark:bg-gray-300/10  text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
+              className="bg-stone-200  dark:bg-gray-300/10 rounded-md text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
             />
           </label>
           <label className="w-full flex flex-col mb-3">
@@ -160,7 +160,7 @@ function Profile({ userId, userName, userEmail }) {
               value={newEmail}
               onChange={(e) => setNewEmail(e.target.value)}
               placeholder="someone@gmail.com"
-              className="bg-stone-200  dark:bg-gray-300/10  text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
+              className="bg-stone-200  dark:bg-gray-300/10 rounded-md text-black dark:text-white  py-3 px-4 w-[300px] placeholder:text-text-color-light text-sm  "
             />
           </label>
           <div className="w-full flex justify-end gap-2 mt-5 ">
@@ -168,7 +168,7 @@ function Profile({ userId, userName, userEmail }) {
             <button
               type="submit"
               name="submit"
-              className={` select-none w-1/3 min-w-fit cursor-pointer h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` select-none w-1/3 min-w-fit rounded-md cursor-pointer h-[40px] px-6 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 emailAuthing && "pointer-events-none "
               }`}
             >
@@ -246,13 +246,13 @@ function Profile({ userId, userName, userEmail }) {
               </div>
               <div className="w-full flex items-center justify-center gap-3">
                 <button
-                  className={` w-full max-w-[200px] h-[40px] px-4 transition bg-stone-100 dark:bg-container-color text-black dark:text-white text-sm flex items-center justify-center font-medium mt-4`}
+                  className={` w-full max-w-[200px] h-[40px] rounded-md px-4 transition bg-stone-100 dark:bg-container-color text-black dark:text-white text-sm flex items-center justify-center font-medium mt-4`}
                 >
                   Settings
                 </button>
                 <button
                   onClick={handeLogout}
-                  className={` w-full max-w-[200px] h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
+                  className={` w-full max-w-[200px] h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
                     authing && "pointer-events-none "
                   }`}
                 >
@@ -271,7 +271,7 @@ function Profile({ userId, userName, userEmail }) {
               <p className="font-bold text-black dark:text-text-color text-[20px] h-fit leading-[28px] capitalize ">
                 wishlist <span className="text-base font-normal ">(0)</span>
               </p>
-              <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
+              <div className="flex flex-col justify-center items-center rounded-md bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
                 <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
                   <IoHeartDislikeOutline className="text-[40px]" />
                   <p className="text-sm">No items in your wishlist</p>
@@ -283,7 +283,7 @@ function Profile({ userId, userName, userEmail }) {
                 Purchase history{" "}
                 <span className="text-base font-normal ">(0)</span>
               </p>
-              <div className="flex flex-col justify-center items-center bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
+              <div className="flex flex-col justify-center items-center rounded-md bg-stone-100 dark:bg-container-color w-full h-full min-h-[300px] mt-5">
                 <div className="flex flex-col items-center justify-center gap-2 text-black/40 dark:text-text-color/40 ">
                   <VscHistory className="text-[40px]" />
                   <p className="text-sm">You haven't purchased any item yet</p>
