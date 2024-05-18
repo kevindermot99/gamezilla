@@ -21,6 +21,8 @@ import { IoBagOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 import { Games } from "../constants/data";
 import { IconTrash } from "@tabler/icons-react";
+import { PiGithubLogoLight } from "react-icons/pi";
+
 
 function Menu({ cartCount, updateCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -309,10 +311,11 @@ function Menu({ cartCount, updateCount }) {
             <a
               href="https://github.com/kevindermot99/gamezilla"
               target="_blank"
-              className="text-sm font-semibold flex items-center tracking-wide h-fit transition hover:text-main-color"
+              className="font-semibold flex items-center justify-center h-[35px] bg-stone-100 dark:bg-gray-400/15 hover:bg-stone-200 dark:hover:bg-gray-400/30 transition  text-black/95 dark:text-white/95 px-4 text-sm rounded-md"
               title={`Source Code`}
             >
-              SC <GoGitBranch className="ml-[5px]" />
+              {/* <PiGithubLogoLight className="text-[28px]" /> */}
+              <GoGitBranch className="mr-1 text-lg" /> GHub
             </a>
           </div>
         </div>

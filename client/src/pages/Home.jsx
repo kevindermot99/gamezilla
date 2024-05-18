@@ -101,8 +101,8 @@ function Home() {
       {/* Discover */}
       <div className={`w-full h-fit `}>
         {/* hero */}
-        <div className="w-full max-w-[1200px] px-5 mx-auto h-fit  flex items-start justify-start gap-1 ">
-          <div className="w-3/4 max-md:w-full min-h-full h-fit  ">
+        <div className="w-full max-w-[1200px] px-5 mx-auto h-fit  flex items-start justify-start gap-2 ">
+          <div className="w-3/4 max-md:w-full min-h-full h-fit ">
             <Swiper
               spaceBetween={0}
               effect={"creative"}
@@ -126,7 +126,7 @@ function Home() {
               className="h-[450px] w-full flex relative "
             >
               <div
-                className="autoplay-progress bg-text-color/10 dark:bg-body-color/40 backdrop-blur rounded-full text-white "
+                className="autoplay-progress bg-border-line-color/60  dark:bg-body-color/40 backdrop-blur rounded-full text-white "
                 slot="container-end"
               >
                 <svg
