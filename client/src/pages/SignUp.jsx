@@ -84,7 +84,7 @@ function SignUp() {
     <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
       <ToastContainer
         className="select-none"
-        position="bottom-right"
+        position="bottom-left"
         draggable
         autoClose={3000}
       />
