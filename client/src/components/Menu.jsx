@@ -22,6 +22,7 @@ import { BiCart } from "react-icons/bi";
 import { Games } from "../constants/data";
 import { IconTrash } from "@tabler/icons-react";
 import { PiGithubLogoLight } from "react-icons/pi";
+import { IoMdMenu } from "react-icons/io";
 
 function Menu({ cartCount, updateCount }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -191,7 +192,7 @@ function Menu({ cartCount, updateCount }) {
         </div>
       </div>
       <div
-        className={`sticky top-0 z-30 min-h-fit w-full px-[25px] py-0 h-[60px] bg-white shadow dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 `}
+        className={`sticky top-0 z-30 min-h-fit w-full px-[25px] py-0 h-[60px] bg-white dark:bg-body-color/90 dark:backdrop-blur-md text-body-color dark:text-text-color flex items-center gap-3 `}
       >
         <div className="w-full h-fit flex items-center justify-between gap-4">
           {/* <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
@@ -260,9 +261,10 @@ function Menu({ cartCount, updateCount }) {
           </div> */}
           <Link
             to="/"
-            className="font-bold text-2xl w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-1 "
+            className="font-bold text-2xl w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-2 "
           >
-            <img src={Logo} className="h-11" />
+            {/* <button><IoMdMenu /></button> */}
+            <img src={Logo} className="h-7" />
             Gamezilla
           </Link>
 

@@ -266,3 +266,12 @@ html {
 .scroll-disabled {
   overflow-y: hidden;
 }
+
+.swiper-button-prev, .swiper-button-next{
+  position: absolute;
+  top: 0;
+  right: 0 !important;
+  left: unset !important;
+  height: 10px;
+  z-index: 99999;
+}

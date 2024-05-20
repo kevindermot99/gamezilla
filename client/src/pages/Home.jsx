@@ -231,7 +231,7 @@ function Home() {
       </div>
 
       <div className=" h-full w-full relative flex justify-start items-start max-w-[1300px] px-7 mx-auto gap-2 ">
-        <div className="flex sticky top-[60px] w-[15%]">
+        <div className="flex sticky top-[60px] w-[15%] py-8 pr-2">
           <Sidebar />
         </div>
         <section className="w-[85%] h-fit flex flex-col">
@@ -253,7 +253,7 @@ function Home() {
                 {top5.map((game, index) => (
                   <SwiperSlide
                     key={index}
-                    className="h-full flex flex-col overflow-clip relative group w-full "
+                    className="h-full flex flex-col relative group w-full "
                   >
                     <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
                       <PosterImage
