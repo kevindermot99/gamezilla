@@ -264,7 +264,7 @@ function Menu({ cartCount, updateCount }) {
             className="font-bold text-2xl w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-2 "
           >
             {/* <button><IoMdMenu /></button> */}
-            <img src={Logo} className="h-7" />
+            {/* <img src={Logo} className="h-7" /> */}
             Gamezilla
           </Link>
 
