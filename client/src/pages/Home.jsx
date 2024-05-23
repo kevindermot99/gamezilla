@@ -24,6 +24,7 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import 'swiper/css/navigation';
 import SWPImage from "../components/SWPImage";
+import SwiperButtons from "../components/SwiperButtons";
 
 function Home() {
   const [cartCount, setCartCount] = useState(0);
@@ -244,16 +245,17 @@ function Home() {
               </h1>
               <Swiper
                 spaceBetween={10}
-                slidesPerView={6}
+                slidesPerView={"auto"}
                 loop={false}
                 className="h-fit w-full flex relative "
                 navigation={true} 
                 modules={[Navigation]}
+                
               >
                 {top5.map((game, index) => (
                   <SwiperSlide
                     key={index}
-                    className="h-full flex flex-col relative group w-full "
+                    className="h-full flex flex-col relative group w-full max-w-[180px]"
                   >
                     <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
                       <PosterImage
@@ -279,6 +281,8 @@ function Home() {
                     </button>
                   </SwiperSlide>
                 ))}
+
+                <SwiperButtons />
               </Swiper>
             </div>
 
