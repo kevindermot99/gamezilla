@@ -23,7 +23,7 @@ function Sidebar() {
           Most Downloaded
         </Link>
         <Link className={` capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-black dark:text-text-color-light transition dark:hover:text-white `}>
-          Played
+          Publishers
         </Link>
         <Link className={` capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-black dark:text-text-color-light transition dark:hover:text-white `}>
           FAQs
