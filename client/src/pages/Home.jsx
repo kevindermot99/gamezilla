@@ -22,7 +22,7 @@ import { Autoplay, EffectCreative, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 import SWPImage from "../components/SWPImage";
 import SwiperButtons from "../components/SwiperButtons";
 
@@ -240,17 +240,16 @@ function Home() {
           <div className={`w-full h-fit `}>
             {/* For you */}
             <div className="w-full h-fit pt-7 ">
-              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-5">
+              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
                 For You
               </h1>
               <Swiper
-                spaceBetween={10}
+                spaceBetween={5}
                 slidesPerView={"auto"}
                 loop={false}
                 className="h-fit w-full flex relative "
-                navigation={true} 
+                navigation={true}
                 modules={[Navigation]}
-                
               >
                 {top5.map((game, index) => (
                   <SwiperSlide
@@ -258,9 +257,52 @@ function Home() {
                     className="h-full flex flex-col relative group w-full max-w-[180px]"
                   >
                     <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
-                      <PosterImage
-                        src={game.poster}
-                      />
+                      <PosterImage src={game.poster} />
+                    </Link>
+
+                    <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                      Base Game
+                    </p>
+                    <p className="text-[14px] font-normal capitalize truncate pr-2 text-black dark:text-text-color">
+                      {game.title}
+                    </p>
+                    <p className="font-normal text-[13px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
+                      free
+                    </p>
+                    <button
+                      onClick={() => handleCartCount(game.id)}
+                      title="Add to cart"
+                      className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-border-line-color/60 backdrop-blur-md p-1 rounded-full`}
+                    >
+                      <FiPlus className="text-xl text-white " />
+                    </button>
+                  </SwiperSlide>
+                ))}
+
+                <SwiperButtons />
+              </Swiper>
+            </div>
+
+            {/* Tending*/}
+            <div className="w-full h-fit pt-4 ">
+              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
+                Trending
+              </h1>
+              <Swiper
+                spaceBetween={5}
+                slidesPerView={"auto"}
+                loop={false}
+                className="h-fit w-full flex relative "
+                navigation={true}
+                modules={[Navigation]}
+              >
+                {top5.map((game, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className="h-full flex flex-col relative group w-full max-w-[180px]"
+                  >
+                    <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
+                      <PosterImage src={game.poster} />
                     </Link>
 
                     <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
