@@ -192,7 +192,7 @@ function Menu({ cartCount, updateCount }) {
         </div>
       </div>
       <div
-        className={`sticky top-0 z-30 min-h-fit w-full px-[25px] py-0 h-[60px] bg-white dark:bg-body-color/90 dark:backdrop-blur-md text-body-color dark:text-text-color flex items-center gap-3 `}
+        className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-9 h-[60px] bg-white dark:bg-body-color/90 dark:backdrop-blur-md text-body-color dark:text-text-color flex items-center gap-3 `}
       >
         <div className="w-full h-fit flex items-center justify-between gap-4">
           {/* <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
@@ -261,7 +261,7 @@ function Menu({ cartCount, updateCount }) {
           </div> */}
           <Link
             to="/"
-            className="font-bold text-2xl w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-2 "
+            className="font-bold text-[30px] w-fit min-w-fit tracking-tighter flex items-center justify-center mr-3 gap-2 "
           >
             {/* <button><IoMdMenu /></button> */}
             {/* <img src={Logo} className="h-7" /> */}
@@ -272,7 +272,7 @@ function Menu({ cartCount, updateCount }) {
             <input
               type="search"
               name="search"
-              className="h-[35px] w-full bg-stone-100 dark:bg-gray-400/10  text-black dark:text-white placeholder:text-text-color-light  px-6 font-medium text-sm rounded-full  "
+              className="h-[39px] w-full bg-stone-100 dark:bg-gray-400/10  text-black dark:text-white placeholder:text-text-color-light  px-6 font-medium text-sm rounded-full  "
               autoComplete="off"
               placeholder="Search Game"
             />
