@@ -11,7 +11,7 @@ function Sidebar() {
           All Games
         </Link>
         <Link className={` capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-black dark:text-text-color-light transition dark:hover:text-white `}>
-          Collections
+          franchise
         </Link>
         <span className={`text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 mt-5 text-body-color dark:text-text-color `}>
           Quick access

@@ -330,39 +330,26 @@ function Home() {
 
             {/* Our Collections */}
             <div className="w-full h-fit pt-7">
-              <div className="w-full h-fit flex flex-col max-w-[1100px] px-5 mx-auto">
+              <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
                 <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
-                  Our Collections
+                franchise
                 </h1>
                 <div className="h-fit mt-5 ">
                   <div className="gridRespoCollection ">
-                    {Games.slice(0, 3).map((game, index) => (
-                      <div
+                    {Games.slice(0, 8).map((game, index) => (
+                      <Link
                         to={`/game/${game.id}`}
                         key={index}
-                        className="group h-full w-full rounded-lg mb-2 relative"
+                        className="group h-full w-full rounded-lg relative"
                       >
-                        <div className=" h-[160px] ">
-                          <CollectionImage
+                        <div className=" h-[160px] bg-container-color rounded-xl ">
+                          
+                          {/* <CollectionImage
                             src={game.banner}
                             title={game.title}
-                          />
+                          /> */}
                         </div>
-                        <p className="text-[16px] font-light capitalize line-clamp-1  text-body-color dark:text-text-color pt-3">
-                          {game.title}
-                        </p>
-                        <p className="font-normal text-sm line-clamp-2  text-body-color dark:text-text-color-light py-1">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Totam
-                        </p>
-
-                        <Link
-                          to={`/`}
-                          className="font-montserrat font-normal text-sm w-fit hover:underline text-text-color flex items-center justify-between pt-2 "
-                        >
-                          Discover
-                        </Link>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
