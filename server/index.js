@@ -92,7 +92,7 @@ app.post("/login", async (req, res) => {
           username: user.username,
         });
       } else {
-        res.status(403).json({ message: "Password incorrect!" });
+        res.status(403).json({ message: "incorrect Password!" });
       }
     } else {
       res.status(403).json({ message: "Account doesn't exist!" });

@@ -52,20 +52,20 @@ function SignUp() {
           window.location.reload();
         } else {
           // console.log(response.data.message)
-          toast(response.data.message, {
+          toast.error(response.data.message, {
             // toastId: "customId"
           });
           setAuthing(false);
         }
       } catch (error) {
         // console.log(error)
-        toast(error.response.data.message, {
+        toast.error(error.response.data.message, {
           // toastId: "customId"
         });
         setAuthing(false);
       }
     } else {
-      toast("Passwords doesn't match!", {
+      toast.error("Passwords doesn't match!", {
         // toastId: "customId"
       });
       setAuthing(false);

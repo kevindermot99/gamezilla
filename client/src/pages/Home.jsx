@@ -42,12 +42,12 @@ function Home() {
 
       // increment cart and save to lcst
       if (!cartCountArray.includes(id)) {
-        toast("Item added to cart");
+        toast.success(" Item added to cart");
         cartCountArray.push(id);
         localStorage.setItem("cartCount", JSON.stringify(cartCountArray));
         setCartCount(cartCount + 1);
       } else {
-        toast("Item already in yout cart");
+        toast.warn("Item already in yout cart");
       }
     } else {
       localStorage.setItem("cartCount", JSON.stringify([id]));

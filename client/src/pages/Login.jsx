@@ -35,7 +35,7 @@ function Login() {
       }
     } catch (error) {
       console.log(error);
-      toast(error.response.data.message, {
+      toast.error(error.response.data.message, {
         // toastId: "customId"
       });
       setAuthing(false);
@@ -72,7 +72,7 @@ function Login() {
     <div className="px-5 flex items-center justify-center min-h-[100vh]  w-full bg-white dark:bg-body-color pb-14">
       <ToastContainer
         className="select-none"
-        position="bottom-right"
+        position="bottom-left"
         draggable
         autoClose={3000}
       />
