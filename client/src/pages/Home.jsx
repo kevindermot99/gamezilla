@@ -123,7 +123,7 @@ function Home() {
             className="h-[450px] w-full flex relative "
           >
             <div
-              className="autoplay-progress bg-border-line-color/60 backdrop-blur rounded-full text-white "
+              className="autoplay-progress bg-text-color/20 backdrop-blur shadow rounded-full text-white "
               slot="container-end"
             >
               <svg
@@ -144,27 +144,27 @@ function Home() {
                 className="h-full w-full flex overflow-clip rounded-md relative "
               >
                 <SWPImage src={game.banner} />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/90 to-transparent flex flex-col items-start justify-end p-8 cursor-default ">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/40 dark:from-body-color/90 to-body-color/20  flex flex-col items-start justify-end p-8 cursor-default ">
                   <h1 className="text-[37px] leading-[40px] font-bold font-montserrat tracking-tight capitalize line-clamp-2 max-w-[80%] text-white">
                     {game.title}
                   </h1>
-                  <p className="text-[15px] leading-[20px] font-medium capitalize line-clamp-2 max-w-[70%] text-text-color pt-[6px]">
-                    {game.description}
-                  </p>
-                  <p className="flex items-center justify-start gap-3 mt-2">
+                  <p className="flex items-center justify-start gap-1 mt-2">
                     {game.genres.map((genre, index) => (
                       <span
                         key={index}
-                        className="text-sm font-medium text-text-color rounded-md capitalize  "
+                        className="text-xs font-medium bg-text-color/20 text-white px-3 py-1 rounded-lg capitalize shadow "
                       >
                         {genre}
                       </span>
                     ))}
                   </p>
+                  <p className="text-[15px] leading-[20px] font-medium capitalize line-clamp-2 max-w-[70%] text-text-color pt-[6px]">
+                    {game.description}
+                  </p>
                   <div className="w-full h-fit flex items-center justify-between mt-5">
                     <Link
                       to={`/`}
-                      className="bg-text-color/20 hover:bg-text-color/20 text-white font-semibold tracking-wider text-sm  py-[12px] px-12 rounded-md "
+                      className="bg-text-color/20 hover:bg-text-color/20 text-white font-semibold tracking-wider text-sm  py-[12px] px-12 rounded-md shadow "
                     >
                       GET
                     </Link>
