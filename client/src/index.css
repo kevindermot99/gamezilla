@@ -135,7 +135,8 @@ html {
 
 .Toastify__toast {
   position: relative;
-  background-color: #fff;
+  background-color: #ffffffd2;
+  backdrop-filter: blur(20px);
   padding: 0;
   margin: 0;
   margin-top: 8px;
