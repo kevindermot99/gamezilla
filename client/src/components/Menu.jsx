@@ -165,12 +165,8 @@ function Menu({ cartCount, updateCount }) {
             </div>
           </div>
           <div className="h-fit min-h-fit w-full p-5 ">
-            <p className="text-xs pb-2 text-right text-text-color-light">
-              You have{" "}
-              <span className="text-black dark:text-white font-bold">
-                {cartCount}
-              </span>{" "}
-              items in your cart
+            <p className="text-xs pb-2 text-right text-black font-semibold ">
+              You have {cartCount} items in your cart
             </p>
             <p className="pb-5 text-black dark:text-white flex justify-between items-center font-semibold text-sm">
               <span>Subtotal:</span>
@@ -179,7 +175,7 @@ function Menu({ cartCount, updateCount }) {
             <button
               className={` w-full h-[40px] px-4 rounded-md transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 cartItemsArray.length === 0
-                  ? "cursor-not-allowed opacity-35"
+                  ? "cursor-default opacity-35"
                   : "opacity-100 cursor-pointer active:scale-95 "
               }`}
             >
