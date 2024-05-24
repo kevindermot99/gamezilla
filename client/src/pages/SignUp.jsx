@@ -120,7 +120,7 @@ function SignUp() {
               required
               placeholder="Create username"
               autoComplete="off"
-              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm "
+              className=" bg-stone-200 rounded-md dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm "
             />
           </label>
           <label className="w-full flex flex-col mb-4">
@@ -133,7 +133,7 @@ function SignUp() {
               required
               placeholder="Create Password"
               autoComplete="off"
-              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
+              className=" bg-stone-200 rounded-md dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
             />
           </label>
           <label className="w-full flex flex-col mb-4">
@@ -146,7 +146,7 @@ function SignUp() {
               required
               placeholder="Re-enter Password"
               autoComplete="off"
-              className=" bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
+              className=" bg-stone-200 rounded-md dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
             />
           </label>
 
@@ -155,7 +155,7 @@ function SignUp() {
             <button
               type="submit"
               name="submit"
-              className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
             >
