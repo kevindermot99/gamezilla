@@ -106,7 +106,7 @@ function Login() {
               name="email"
               autoComplete="off"
               placeholder="username"
-              className="bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
+              className="bg-stone-200 dark:bg-border-line-color/60 rounded-md py-3 px-4 w-full placeholder:text-text-color-light text-sm  "
             />
           </label>
           <label className="w-full flex flex-col mb-3">
@@ -119,7 +119,7 @@ function Login() {
               name="password"
               id="password"
               placeholder="Password"
-              className="bg-stone-200  dark:bg-border-line-color/60  py-3 px-4 w-full placeholder:text-text-color-light text-sm   "
+              className="bg-stone-200  dark:bg-border-line-color/60 rounded-md py-3 px-4 w-full placeholder:text-text-color-light text-sm   "
             />
           </label>
           <label className="flex items-center justify-start select-none gap-2 cursor-pointer">
@@ -131,7 +131,7 @@ function Login() {
             <button
               type="submit"
               name="submit"
-              className={` w-full h-[40px] px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
                 authing && "pointer-events-none "
               }`}
             >
