@@ -221,7 +221,7 @@ function Menu({ cartCount, updateCount }) {
               >
                 genres
                 <IoChevronDownSharp />
-                <div className="h-0 group-hover:h-[350px]  w-full opacity-100 group-hover:opacity-100 z-30 bg-white shadow dark:bg-container-color absolute top-[65px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
+                <div className="h-0 group-hover:h-[350px] w-full opacity-100 group-hover:opacity-100 z-30 bg-white shadow-md dark:bg-container-color absolute top-[65px] left-0 right-0 mx-auto transition-all duration-200 cursor-default overflow-clip  ">
                   <div className="p-5 h-fit w-full max-w-[1200px] mx-auto flex items-start justify-center gap-[5%] ">
                     {Genres.map((genre, index) => (
                       <div
@@ -264,7 +264,7 @@ function Menu({ cartCount, updateCount }) {
               <input
                 type="search"
                 name="search"
-                className="h-[39px] w-full bg-stone-100 dark:bg-gray-400/10  text-black dark:text-white placeholder:text-text-color-light  px-6 font-medium text-sm rounded-full  "
+                className="h-[39px] font-DMsans w-full bg-stone-100 dark:bg-gray-400/10  text-black dark:text-white placeholder:text-text-color-light  px-6 font-medium text-sm rounded-full  "
                 autoComplete="off"
                 placeholder="Search Game"
               />
