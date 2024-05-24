@@ -260,13 +260,13 @@ function Home() {
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                    <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
-                    <p className="text-[14px] font-normal capitalize truncate pr-2 text-black dark:text-text-color">
+                    <p className="text-[16px] font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-normal text-[13px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
+                    <p className="font-normal font-DMsans text-[14px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[2px] capitalize">
                       free
                     </p>
                     <button
@@ -305,13 +305,13 @@ function Home() {
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal text-[10px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                    <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
-                    <p className="text-[14px] font-normal capitalize truncate pr-2 text-black dark:text-text-color">
+                    <p className="text-[16px] font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-normal text-[13px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[5px] capitalize">
+                    <p className="font-normal font-DMsans text-[14px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[2px] capitalize">
                       free
                     </p>
                     <button
