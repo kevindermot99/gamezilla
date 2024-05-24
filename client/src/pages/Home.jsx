@@ -332,7 +332,7 @@ function Home() {
             <div className="w-full h-fit pt-7">
               <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
                 <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
-                franchise
+                franchises
                 </h1>
                 <div className="h-fit mt-5 ">
                   <div className="gridRespoCollection ">
@@ -340,7 +340,7 @@ function Home() {
                       <Link
                         to={`/franchise/${franchise}`}
                         key={index}
-                        className="group h-[130px] w-full rounded-lg overflow-clip relative bg-black/70 dark:bg-container-color"
+                        className="group h-[130px] w-full rounded-xl overflow-clip relative bg-black/70 dark:bg-container-color"
                       >
                         <img src={franchise.url} className="absolute top-0 left-0 bottom-0 right-0 mx-auto w-full h-full object-cover object-center -z-0 scale-110 opacity-40 dark:opacity-20 blur-[4px] group-hover:opacity-70 dark:group-hover:opacity-70 transition duration-300 group-hover:scale-125" />
                         <div className="  absolute top-0 left-0 bottom-0 right-0 text-text-color rounded-xl flex justify-center items-center font-extrabold font-DMsans text-[27px] px-12  text-center leading-6 tracking-tight  ">

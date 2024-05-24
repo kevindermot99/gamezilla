@@ -213,7 +213,7 @@ function Menu({ cartCount, updateCount }) {
                 to={`/`}
                 className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
               >
-                franchise
+                franchises
               </Link>
 
               <button
