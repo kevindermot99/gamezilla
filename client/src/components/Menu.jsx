@@ -105,7 +105,7 @@ function Menu({ cartCount, updateCount }) {
               : "translate-x-[100%]"
           }`}
         >
-          <div className="w-full h-fit p-5 relative flex items-center justify-center shadow">
+          <div className="w-full h-fit p-[26px] relative flex items-center justify-center shadow">
             <button
               onClick={hideCartBar}
               className="text-black dark:text-white  bg-stone-200 dark:bg-gray-300/10 p-2 aspect-square rounded-full active:scale-75  transition duration-100 absolute top-0 bottom-0 left-5 h-fit m-auto"
@@ -165,7 +165,7 @@ function Menu({ cartCount, updateCount }) {
             </div>
           </div>
           <div className="h-fit min-h-fit w-full p-5 ">
-            <p className="text-xs pb-2 text-right text-black font-semibold ">
+            <p className="text-xs pb-2 text-right text-black dark:text-white font-semibold ">
               You have {cartCount} items in your cart
             </p>
             <p className="pb-5 text-black dark:text-white flex justify-between items-center font-semibold text-sm">
@@ -229,7 +229,7 @@ function Menu({ cartCount, updateCount }) {
                         key={index}
                         className="flex flex-col items-start justify-start bg-orange"
                       >
-                        <h1 className="text-sm text-black dark:text-white">
+                        <h1 className="text-[16px] font-semibold text-black dark:text-text-color ">
                           {genre.section}
                         </h1>
                         <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
@@ -237,7 +237,7 @@ function Menu({ cartCount, updateCount }) {
                             <Link
                               to={`/`}
                               key={index}
-                              className="text-border-line-color/80   dark:text-text-color/50 text-[1em] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  "
+                              className="text-border-line-color/80   dark:text-text-color/50 text-[16px] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  "
                             >
                               <span>&#x2022;</span>
                               {gen}
