@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Menu from "../components/Menu";
-import { Games } from "../constants/data";
+import { Franchise, Games } from "../constants/data";
 import { FaMedal } from "react-icons/fa6";
 import { FaRankingStar } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
@@ -336,18 +336,15 @@ function Home() {
                 </h1>
                 <div className="h-fit mt-5 ">
                   <div className="gridRespoCollection ">
-                    {Games.slice(0, 8).map((game, index) => (
+                    {Franchise.map((franchise, index) => (
                       <Link
-                        to={`/game/${game.id}`}
+                        to={`/franchise/${franchise}`}
                         key={index}
-                        className="group h-full w-full rounded-lg relative"
+                        className="group h-[130px] w-full rounded-lg overflow-clip relative bg-black/70 dark:bg-container-color"
                       >
-                        <div className=" h-[160px] bg-container-color rounded-xl ">
-                          
-                          {/* <CollectionImage
-                            src={game.banner}
-                            title={game.title}
-                          /> */}
+                        <img src={franchise.url} className="absolute top-0 left-0 bottom-0 right-0 mx-auto w-full h-full object-cover object-center -z-0 scale-110 opacity-40 dark:opacity-20 blur-[4px] group-hover:opacity-70 dark:group-hover:opacity-70 transition duration-300 group-hover:scale-125" />
+                        <div className="  absolute top-0 left-0 bottom-0 right-0 text-text-color rounded-xl flex justify-center items-center font-extrabold font-DMsans text-[27px] px-12  text-center leading-6 tracking-tight  ">
+                          {franchise.name}
                         </div>
                       </Link>
                     ))}

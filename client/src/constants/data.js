@@ -329,12 +329,37 @@ export const Games = [
   },
 ];
 
-export const users = [
+export const Franchise = [
   {
-    id: "QHNXEXCNBQGALHZXXA58",
-    userName: "Kevin Mboni",
-    email: "mbonimpayekevin@gmail.com",
-    role: "Host",
-    maturity: "Muture",
+    name: "Call Of Duty",
+    url: "https://api.win.gg/wp-content/uploads/2021/12/call-of-duty-ffranchise.jpg",
+  },
+  {
+    name: "Need For Speed",
+    url: "https://betasimracing.com/wp-content/uploads/2022/01/Need-for-Speed-Games.webp",
+  },
+  {
+    name: "FarCry",
+    url: "https://img.gg.deals/ba/d0/2bc74e7f42f5ca2378d1ab76580966fef706_307xr176.jpg",
+  },
+  {
+    name: "BatleField",
+    url: "https://pbs.twimg.com/media/GKusq8jWcAERsD2.jpg",
+  },
+  {
+    name: "Grand Theft Auto",
+    url: "https://c4.wallpaperflare.com/wallpaper/1017/397/309/michael-grand-theft-auto-v-franklin-trevor-wallpaper-preview.jpg",
+  },
+  {
+    name: "Tomb Raider",
+    url: "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/07/Tomb-Raider-1996-Lara-Croft---Tomb-Raider-Legend-Lara-Croft---Tomb-Raider-2013-Lara-Croft.jpg",
+  },
+  {
+    name: "Halo",
+    url: "https://i.ytimg.com/vi/k7AgBylCNbY/maxresdefault.jpg",
+  },
+  {
+    name: "Assassin's Creed",
+    url: "https://i.pinimg.com/736x/80/9a/ef/809aef03d9073c85893f4d95e65532fa.jpg",
   },
 ];

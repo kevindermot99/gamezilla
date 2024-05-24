@@ -256,10 +256,3 @@ html {
   font-weight: bold;
   color: black;
 }
-
-.mask1 {
-  -webkit-mask-image: url(https://www.ledr.com/colours/white.jpg);
-  mask-image: url(https://www.ledr.com/colours/white.jpg);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;    
-}
