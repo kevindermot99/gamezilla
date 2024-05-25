@@ -232,7 +232,7 @@ function Home() {
       </div>
 
       <div className=" h-full w-full relative flex justify-start items-start max-w-[1300px] px-7 mx-auto gap-2 ">
-        <div className="flex sticky top-[60px] w-[15%] py-8 pr-2">
+        <div className="flex sticky top-[60px] w-[15%] py-8 pr-2 max-md:hidden">
           <Sidebar />
         </div>
         <section className="w-[85%] h-fit flex flex-col">

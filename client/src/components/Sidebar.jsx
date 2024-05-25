@@ -13,27 +13,27 @@ function Sidebar() {
         Explore
       </span>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
-        Trending
+        Recently added
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Most Downloaded
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Wallpapers
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Terms of service
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         FAQs
       </Link>
@@ -45,17 +45,17 @@ function Sidebar() {
         Add Ons
       </span>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Mods
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         DLCs
       </Link>
       <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition dark:hover:text-white `}
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Patchs
       </Link>

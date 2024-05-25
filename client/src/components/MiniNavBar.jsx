@@ -12,7 +12,7 @@ function MiniNavBar() {
             to={`/`}
             className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${
               location.pathname === "/"
-                ? "text-black dark:text-white border-b-[2px] border-black dark:border-white "
+                ? "text-black dark:text-white border-b-[3px] border-main-color "
                 : "text-black/50 dark:text-text-color-light"
             }`}
           >
@@ -22,7 +22,7 @@ function MiniNavBar() {
             to={`/browse`}
             className={`px-3 h-[45px] flex items-center justify-center text-[15px] font-DMsans font-medium tracking-tight  ${
               location.pathname === "/browse"
-                ? "text-black dark:text-white border-b-[2px] border-black dark:border-white "
+                ? "text-black dark:text-white border-b-[3px] border-main-color "
                 : "text-black/50 dark:text-text-color-light"
             }`}
           >
