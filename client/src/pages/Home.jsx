@@ -218,7 +218,7 @@ function Home() {
                   <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                     {game.genres.slice(0, 2).map((gen, index) => (
                       <span
-                        className="whitespace-nowrap py-1 px-2 font-DMsans bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                        className="whitespace-nowrap py-1 px-2 font-DMsans ring-1 ring-stone-200 dark:ring-gray-700/50 bg-stone-100 dark:bg-gray-600/20 rounded-md  "
                         key={index}
                       >
                         {gen}
@@ -367,7 +367,7 @@ function Home() {
               </div>
             </div>
 
-            {/* Most downlaoded */}
+            {/* Recently Added */}
             <div className="flex flex-col w-full mt-7">
               <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
                 Recentlty Added
@@ -391,7 +391,7 @@ function Home() {
                       <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                         {game.genres.slice(0, 2).map((gen, index) => (
                           <span
-                            className="whitespace-nowrap py-1 px-2 font-DMsans bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                            className="whitespace-nowrap py-1 px-2 font-DMsans ring-1 ring-stone-200 dark:ring-gray-700/50 bg-stone-100 dark:bg-gray-600/20 rounded-md  "
                             key={index}
                           >
                             {gen}
@@ -443,10 +443,10 @@ function Home() {
               </div>
             </div>
 
-            {/* Most downlaoded */}
+            {/* Most Popular*/}
             <div className="flex flex-col w-full mt-7">
               <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
-                Recentlty Added
+                Most Popular
               </h1>
               <div className="smallGrid h-fit w-full ">
                 {Games.slice(0, 12).map((game, index) => (
@@ -467,7 +467,7 @@ function Home() {
                       <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                         {game.genres.slice(0, 2).map((gen, index) => (
                           <span
-                            className="whitespace-nowrap py-1 px-2 font-DMsans bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                            className="whitespace-nowrap py-1 px-2 font-DMsans ring-1 ring-stone-200 dark:ring-gray-700/50 bg-stone-100 dark:bg-gray-600/20 rounded-md  "
                             key={index}
                           >
                             {gen}

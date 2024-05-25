@@ -256,7 +256,7 @@ function Profile({ userId, userName, userEmail }) {
                 </button>
                 <button
                   onClick={handeLogout}
-                  className={` w-full max-w-[200px] h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium mt-4 ${
+                  className={` w-full max-w-[200px] h-[40px] rounded-md px-4 transition bg-main-color text-white text-sm flex items-center justify-center font-bold mt-4 ${
                     authing && "pointer-events-none "
                   }`}
                 >

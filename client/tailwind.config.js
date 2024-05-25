@@ -51,7 +51,7 @@ export default {
       },
       colors: {
         // "main-color": "#B931FC",
-        "main-color": "#0197f6",
+        "main-color": "#1493F6",
         "body-color": "#1E1F22",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",

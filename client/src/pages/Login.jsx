@@ -123,7 +123,7 @@ function Login() {
             />
           </label>
           <label className="flex items-center justify-start select-none gap-2 cursor-pointer">
-            <input type="checkbox" className=" accent-black dark:accent-white h-4 w-4" onClick={handleShowPassword} />
+            <input type="checkbox" className=" accent-main-color h-4 w-4" onClick={handleShowPassword} />
             <p className="text-black dark:text-text-color-light font-medium text-sm capitalize">Show password</p>
           </label>
           <div className="w-full flex gap-2 mb-4 mt-6 ">
@@ -131,7 +131,7 @@ function Login() {
             <button
               type="submit"
               name="submit"
-              className={` w-full h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] rounded-md px-4 transition bg-main-color text-white text-sm flex items-center justify-center font-bold ${
                 authing && "pointer-events-none "
               }`}
             >
@@ -153,7 +153,7 @@ function Login() {
             Don't have an account?{" "}
             <Link
               to="/signup"
-              className="text-black dark:text-white font-semibold underline"
+              className=" text-main-color font-semibold underline"
             >
               {" "}
               Sign up{" "}

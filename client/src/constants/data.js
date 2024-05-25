@@ -62,7 +62,7 @@ export const Games = [
     title: "Call of Duty: Black Ops I",
     description: `In the 1960s Cold War era, the game tracks CIA agent Alex Mason's quest to recover crucial memories, aiming to uncover a Soviet plot to unleash chemical weapons on the USA.`,
     genres: ["Shooting", "Action", "Adventure"],
-    downloads: "235135",
+    downloads: "2435135",
   },
   {
     id: "18",
@@ -96,7 +96,7 @@ export const Games = [
     title: "far cry 5",
     description: `the game revolves around the Project at Eden's Gate, a doomsday cult that has taken over the county at the command of its charismatic and powerful leader, Joseph Seed`,
     genres: ["Action", "Shooting", "Adventure", "Survival"],
-    downloads: "965744",
+    downloads: "5965744",
   },
   {
     id: "21",
@@ -153,7 +153,7 @@ export const Games = [
     description:
       "a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.",
     genres: ["Shooting", "Action", "First-person shooter"],
-    downloads: "2924",
+    downloads: "15232924",
   },
   {
     id: "2",
@@ -200,7 +200,7 @@ export const Games = [
     title: "Far Cry 6",
     description: `A 1967 guerrilla revolution that toppled the presidency of his father led to Yara's isolation from the rest of the world`,
     genres: ["Adventure", "Action", "First-person shooter"],
-    downloads: "82384",
+    downloads: "64282384",
   },
   {
     id: "6",
@@ -212,7 +212,7 @@ export const Games = [
     description:
       "This centers on Kratos, the God of War, and his now teenage son, Atreus, who are facing the conflict of the upcoming Ragnarök, due to the result of Kratos killing Norse God, Baldur, while setting on their to end tyranny reign of Odin, King of Asgard and while focusing off Atreus, who tries to uncover his origins.",
     genres: ["Adventure", "Action"],
-    downloads: "75643",
+    downloads: "475643",
   },
   {
     id: "7",

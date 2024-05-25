@@ -155,7 +155,7 @@ function SignUp() {
             <button
               type="submit"
               name="submit"
-              className={` w-full h-[40px] rounded-md px-4 transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] rounded-md px-4 transition bg-main-color text-white text-sm flex items-center justify-center font-bold ${
                 authing && "pointer-events-none "
               }`}
             >
@@ -171,7 +171,7 @@ function SignUp() {
           </div>
           <p className="text-sm font-light text-black dark:text-text-color-light self-center mt-2">
             Already have an account?{" "}
-            <Link to="/login" className="text-black dark:text-white font-semibold underline">
+            <Link to="/login" className="text-main-color font-semibold underline">
               {" "}
               Login{" "}
             </Link>

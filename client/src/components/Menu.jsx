@@ -177,7 +177,7 @@ function Menu({ cartCount, updateCount }) {
               <span className=" font-DMsans">$0.00</span>
             </p>
             <button
-              className={` w-full h-[40px] px-4 rounded-md transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
+              className={` w-full h-[40px] px-4 rounded-md transition text-white bg-main-color text-sm flex items-center justify-center font-bold ${
                 cartItemsArray.length === 0
                   ? "cursor-default opacity-35"
                   : "opacity-100 cursor-pointer active:scale-95 "
@@ -208,20 +208,20 @@ function Menu({ cartCount, updateCount }) {
             <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
               <Link
                 to={`/`}
-                className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
+                className={`text-[15px] capitalize hover:text-main-color text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
               >
                 All games
               </Link>
 
               <Link
                 to={`/`}
-                className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
+                className={`text-[15px] capitalize hover:text-main-color text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
               >
                 franchises
               </Link>
 
               <button
-                className={`group text-[15px] h-[60px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1 flex items-center gap-1`}
+                className={`group text-[15px] h-[60px] capitalize hover:text-main-color text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1 flex items-center gap-1`}
               >
                 genres
                 <IoChevronDownSharp />
@@ -233,7 +233,7 @@ function Menu({ cartCount, updateCount }) {
                         key={index}
                         className="flex flex-col items-start justify-start bg-orange"
                       >
-                        <h1 className="text-[16px] font-semibold text-black dark:text-text-color ">
+                        <h1 className="text-[16px] font-semibold font-DMsans text-body-color dark:text-text-color ">
                           {genre.section}
                         </h1>
                         <div className="flex flex-col items-start gap-3 justify-start mt-3 ">
@@ -241,7 +241,7 @@ function Menu({ cartCount, updateCount }) {
                             <Link
                               to={`/`}
                               key={index}
-                              className="text-border-line-color/80   dark:text-text-color/50 text-[16px] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-black dark:hover:text-white transition  "
+                              className="text-border-line-color/80 font-DMsans dark:text-text-color/50 text-[16px] line-clamp-2 max-w-[160px] flex gap-2 text-left cursor-pointer hover:text-main-color transition  "
                             >
                               <span>&#x2022;</span>
                               {gen}
@@ -256,7 +256,7 @@ function Menu({ cartCount, updateCount }) {
 
               <Link
                 to={`/`}
-                className={`text-[15px] capitalize text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
+                className={`text-[15px] capitalize hover:text-main-color text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors cursor-pointer py-2 px-1`}
               >
                 Support
               </Link>
