@@ -111,6 +111,14 @@ html {
   margin: 0 auto;
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.smallGrid {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 4px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
