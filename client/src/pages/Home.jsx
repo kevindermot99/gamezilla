@@ -339,7 +339,7 @@ function Home() {
                 </h1>
                 <div className="h-fit mt-5 ">
                   <div className="gridRespoCollection ">
-                    {Franchise.map((franchise, index) => (
+                    {Franchise.slice(0, 3).map((franchise, index) => (
                       <Link
                         to={`/franchise/${franchise}`}
                         key={index}
@@ -349,7 +349,85 @@ function Home() {
                           <PosterImage src={franchise.url} />
                           <div className="absolute bottom-2 left-2 py-2 px-4 capitalize flex items-center justify-start gap-2 bg-stone-500/60 dark:bg-stone-800/50 text-white shadow backdrop-blur-sm rounded-xl ">
                             <HiOutlineRectangleStack className="text-[20px]" />
-                            <span className="text-[14px]">contains 24 Games </span>
+                            <span className="text-[14px]">
+                              contains 24 Games{" "}
+                            </span>
+                          </div>
+                        </div>
+                        <p className="text-[18px] mt-3 font-DMsans font-bold uppercase truncate pr-2 text-left text-black dark:text-text-color">
+                          {franchise.name}
+                        </p>
+                        <p className="font-bold text-left font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light uppercase">
+                          {franchise.publisher}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Most downlaoded */}
+            <div className="flex flex-col w-full mt-7">
+              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
+                Recentlty Added
+              </h1>
+              <div className="smallGrid h-fit w-full ">
+                {Games.slice(0, 12).map((game, index) => (
+                  <div
+                    key={index}
+                    className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                  >
+                    <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
+                      <img
+                        src={game.poster}
+                        className="h-full w-full min-w-fit object-cover object-top bg-text-color-light/10 dark:bg-text-color-light/40 "
+                      />
+                    </div>
+                    <div>
+                      <h1 className="line-clamp-1 mb-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
+                        {game.title}
+                      </h1>
+                      <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
+                        {game.genres.slice(0, 2).map((gen, index) => (
+                          <span
+                            className="whitespace-nowrap py-1 px-2 font-DMsans bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                            key={index}
+                          >
+                            {gen}
+                          </span>
+                        ))}
+                      </p>
+                      <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1 text-text-color-light uppercase">
+                        $0.00
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Franchises */}
+            <div className="w-full h-fit pt-7">
+              <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
+                <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
+                  franchises
+                </h1>
+                <div className="h-fit mt-5 ">
+                  <div className="gridRespoCollection ">
+                    {Franchise.slice(3, 7).map((franchise, index) => (
+                      <Link
+                        to={`/franchise/${franchise}`}
+                        key={index}
+                        className="group w-full relative mb-5 "
+                      >
+                        <div className=" h-[170px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95 relative  ">
+                          <PosterImage src={franchise.url} />
+                          <div className="absolute bottom-2 left-2 py-2 px-4 capitalize flex items-center justify-start gap-2 bg-stone-500/60 dark:bg-stone-800/50 text-white shadow backdrop-blur-sm rounded-xl ">
+                            <HiOutlineRectangleStack className="text-[20px]" />
+                            <span className="text-[14px]">
+                              contains 24 Games{" "}
+                            </span>
                           </div>
                         </div>
                         <p className="text-[18px] mt-3 font-DMsans font-bold uppercase truncate pr-2 text-left text-black dark:text-text-color">
