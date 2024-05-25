@@ -179,7 +179,7 @@ function Menu({ cartCount, updateCount }) {
             <button
               className={` w-full h-[40px] px-4 rounded-md transition text-white bg-main-color text-sm flex items-center justify-center font-bold ${
                 cartItemsArray.length === 0
-                  ? "cursor-default opacity-35"
+                  ? "cursor-default opacity-85"
                   : "opacity-100 cursor-pointer active:scale-95 "
               }`}
             >

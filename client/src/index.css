@@ -190,9 +190,17 @@ html {
   width: 100%;
 }
 
+.hidescrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.hidescrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #66666634;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -202,10 +210,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #88888881;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: var(--main-color);
 }
 
 ::-webkit-scrollbar-track {

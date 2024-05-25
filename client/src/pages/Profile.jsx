@@ -83,7 +83,7 @@ function Profile({ userId, userName, userEmail }) {
       }
     } catch (err) {
       setEmailAuthing(false);
-      toast(err.response.data.message, {
+      toast.warn(err.response.data.message, {
         // toastId: "customId"
       });
     }
@@ -202,12 +202,12 @@ function Profile({ userId, userName, userEmail }) {
           </div>
         ) : (
           <>
-            <p className="relative font-bold flex w-full justify-center items-center text-black dark:text-text-color text-[20px] capitalize mb-5 ">
+            <p className="relative font-bold flex w-full justify-between items-center text-black dark:text-text-color text-[20px] capitalize mb-5 ">
               My profile
               <span
                 onClick={handleEditProfile}
                 title="edit profile"
-                className="absolute right-0 top-0 bottom-0 m-auto flex items-center justify-center h-[35px] aspect-square rounded-full cursor-pointer bg-stone-100 dark:bg-container-color hover:bg-stone-200 dark:hover:bg-gray-300/10 active:scale-90 "
+                className=" flex items-center justify-center h-[35px] aspect-square rounded-full cursor-pointer bg-stone-100 dark:bg-container-color hover:bg-stone-200 dark:hover:bg-gray-300/10 active:scale-90 "
               >
                 <GrEdit className="  font-medium text-[15px] " />
               </span>
@@ -231,7 +231,7 @@ function Profile({ userId, userName, userEmail }) {
                 )}
               </p>
               <div className="flex items-center justify-between gap-3 text-black dark:text-text-color w-fit mt-3">
-                <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+                <span className="w-fit min-w-[200px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer rounded-xl  ">
                   <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
                     33
                   </h1>
@@ -239,7 +239,7 @@ function Profile({ userId, userName, userEmail }) {
                     Games wishlisted
                   </p>
                 </span>
-                <span className="w-fit min-w-[170px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer   ">
+                <span className="w-fit min-w-[200px] flex flex-col justify-center items-center py-3 px-10 transition hover:bg-stone-100 dark:hover:bg-gray-300/10 cursor-pointer rounded-xl  ">
                   <h1 className="font-extrabold text-[22px] leading-[25px] truncate max-w-[90%]">
                     30.3K
                   </h1>
