@@ -13,7 +13,7 @@ import CollectionImage from "../components/CollectionImage";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaRegEye } from "react-icons/fa6";
 import MiniNavBar from "../components/MiniNavBar";
-import { HiOutlineRectangleStack } from "react-icons/hi2";
+import { HiMiniRectangleStack } from "react-icons/hi2";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -332,7 +332,7 @@ function Home() {
             </div>
 
             {/* Franchises */}
-            <div className="w-full h-fit pt-7">
+            <div className="w-full h-fit mt-16">
               <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
                 <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
                   franchises
@@ -348,7 +348,7 @@ function Home() {
                         <div className=" h-[170px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95 relative  ">
                           <PosterImage src={franchise.url} />
                           <div className="absolute bottom-2 left-2 py-2 px-4 capitalize flex items-center justify-start gap-2 bg-stone-500/60 dark:bg-stone-800/50 text-white shadow backdrop-blur-sm rounded-xl ">
-                            <HiOutlineRectangleStack className="text-[20px]" />
+                            <HiMiniRectangleStack className="text-[20px]" />
                             <span className="text-[14px]">
                               contains 24 Games{" "}
                             </span>
@@ -408,7 +408,7 @@ function Home() {
             </div>
 
             {/* Franchises */}
-            <div className="w-full h-fit pt-7">
+            <div className="w-full h-fit mt-16">
               <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
                 <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
                   franchises
@@ -424,7 +424,7 @@ function Home() {
                         <div className=" h-[170px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95 relative  ">
                           <PosterImage src={franchise.url} />
                           <div className="absolute bottom-2 left-2 py-2 px-4 capitalize flex items-center justify-start gap-2 bg-stone-500/60 dark:bg-stone-800/50 text-white shadow backdrop-blur-sm rounded-xl ">
-                            <HiOutlineRectangleStack className="text-[20px]" />
+                            <HiMiniRectangleStack className="text-[20px]" />
                             <span className="text-[14px]">
                               contains 24 Games{" "}
                             </span>
