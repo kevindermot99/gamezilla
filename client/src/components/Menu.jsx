@@ -126,7 +126,7 @@ function Menu({ cartCount, updateCount }) {
                         key={index}
                         className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
-                        <div className="font-bold px-1 ">{index + 1}.</div>
+                        <div className="font-bold font-DMsans px-1 ">{index + 1}.</div>
                         <div className="flex gap-3 capitalize w-full h-full">
                           <img
                             src={Games.find((game) => game.id === item).poster}
@@ -162,19 +162,19 @@ function Menu({ cartCount, updateCount }) {
                 ) : (
                   <span className="h-full w-full flex items-center justify-center flex-col gap-2">
                     <BsCart className="text-[40px]" />
-                    <p className="text-sm">Cart Empty</p>
+                    <p className="text-sm font-DMsans ">Cart Empty</p>
                   </span>
                 )}
               </div>
             </div>
           </div>
           <div className="h-fit min-h-fit w-full p-5 ">
-            <p className="text-xs pb-2 text-right text-black dark:text-white font-semibold ">
+            <p className="text-[14px] pb-2 text-right text-black dark:text-white font-semibold font-DMsans ">
               You have {cartCount} items in your cart
             </p>
-            <p className="pb-5 text-black dark:text-white flex justify-between items-center font-semibold text-sm">
-              <span>Subtotal:</span>
-              <span>$0.00</span>
+            <p className="pb-5 text-black dark:text-white flex justify-between items-center font-DMsans font-semibold text-sm">
+              <span className=" font-DMsans text-[15px]">Subtotal:</span>
+              <span className=" font-DMsans">$0.00</span>
             </p>
             <button
               className={` w-full h-[40px] px-4 rounded-md transition bg-black dark:bg-white text-white dark:text-black text-sm flex items-center justify-center font-medium ${
