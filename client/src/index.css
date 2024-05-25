@@ -238,14 +238,14 @@ html {
 
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: white;
+  background-color: var(--main-color);
   padding: 15px;
   border-radius: 50%;
   height: 35px !important;
   width: 35px !important;
-  color: #000 !important;
-  fill: black !important;
-  stroke: black !important;
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
   position: absolute;
   top: 40%;
 }
@@ -254,5 +254,5 @@ html {
 .swiper-button-next:after {
   font-size: 15px !important;
   font-weight: bold;
-  color: black;
+  color: white;
 }

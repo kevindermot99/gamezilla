@@ -238,6 +238,7 @@ function Home() {
         <section className="w-[85%] h-fit flex flex-col">
           {/* Discover */}
           <div className={`w-full h-fit `}>
+            
             {/* For you */}
             <div className="w-full h-fit pt-7 ">
               <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
@@ -263,11 +264,11 @@ function Home() {
                     <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
-                    <p className="text-[16px] font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
+                    <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-normal font-DMsans text-[14px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[2px] capitalize">
-                      free
+                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-main-color max-w-[90%] pt-[2px] capitalize">
+                      $0.00
                     </p>
                     <button
                       onClick={() => handleCartCount(game.id)}
@@ -282,7 +283,6 @@ function Home() {
                 <SwiperButtons />
               </Swiper>
             </div>
-
             {/* Tending*/}
             <div className="w-full h-fit pt-4 ">
               <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
@@ -308,11 +308,11 @@ function Home() {
                     <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
                       Base Game
                     </p>
-                    <p className="text-[16px] font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
+                    <p className="text-[16px] font-DMsans font-medium uppercase truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-normal font-DMsans text-[14px] line-clamp-2  text-black/70 dark:text-white/60 max-w-[90%] pt-[2px] capitalize">
-                      free
+                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-main-color max-w-[90%] pt-[2px] capitalize">
+                      $0.00
                     </p>
                     <button
                       onClick={() => handleCartCount(game.id)}
@@ -340,9 +340,9 @@ function Home() {
                       <Link
                         to={`/franchise/${franchise}`}
                         key={index}
-                        className="group w-full relative "
+                        className="group w-full relative mb-5 "
                       >
-                        <div className=" h-[130px] flex justify-center items-start overflow-clip rounded-xl transition opacity-80 group-hover:opacity-95  ">
+                        <div className=" h-[130px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95  ">
                           <PosterImage src={franchise.url} />
                         </div>
                         <p className="text-[18px] mt-3 font-DMsans font-bold uppercase truncate pr-2 text-center text-black dark:text-text-color">
