@@ -85,7 +85,7 @@ function Home() {
 
   return (
     <div
-      className={` relative h-fit max-sm:h-svh flex flex-col  text-text-color  `}
+      className={` relative h-full flex flex-col  text-text-color  `}
     >
       <ToastContainer
         className="select-none"

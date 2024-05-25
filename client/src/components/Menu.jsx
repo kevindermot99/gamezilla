@@ -99,7 +99,7 @@ function Menu({ cartCount, updateCount }) {
           className={`h-full w-full absolute top-0 left-0 right-0 bottom-0 m-auto z-10 bg-black/20 dark:bg-black/70 `}
         ></div>
         <div
-          className={`absolute top-0 right-0 bg-white dark:bg-body-color h-full max-h-[100vh] max-sm:h-svh w-[90%] max-w-[350px] z-20 flex flex-col justify-between ${
+          className={`absolute top-0 right-0 bg-white dark:bg-body-color h-full max-h-[100vh] w-[90%] max-w-[350px] z-20 flex flex-col justify-between ${
             cartbar
               ? "transition duration-300 translate-x-[0px] "
               : "translate-x-[100%]"

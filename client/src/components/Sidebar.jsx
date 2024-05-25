@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoCompass } from "react-icons/io5";
 import { HiViewGridAdd } from "react-icons/hi";
+import { BsPeopleFill } from "react-icons/bs";
 
 function Sidebar() {
   return (
-    <div className="w-full h-full overflow-y-auto overflow-x-hidden flex flex-col justify-start items-start pt-5 pr-4 hidescrollbar">
+    <div className="w-full h-full overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col justify-start items-start pt-5 pr-4 hidescrollbar">
       <span
         className={`flex items-center justify-start gap-1  text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 text-body-color dark:text-text-color `}
       >
@@ -67,7 +68,7 @@ function Sidebar() {
       <span
         className={`flex items-center justify-start gap-1  text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 mt-5 text-body-color dark:text-text-color `}
       >
-        <HiViewGridAdd className="text-[25px] min-w-fit" />
+        <BsPeopleFill className="text-[25px] min-w-fit" />
         Community
       </span>
       <Link
