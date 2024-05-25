@@ -194,7 +194,7 @@ function Home() {
         </div>
         <div className="w-[25%] max-md:hidden h-[450px]">
           <div className="h-[23px] flex items-start justify-start">
-            <h1 className="px-2 text-sm font-semibold leading-none text-black dark:text-text-color capitalize">
+            <h1 className="px-2 text-sm font-semibold font-DMsans leading-none text-body-color dark:text-text-color capitalize">
               Top 10 most downloaded
             </h1>
           </div>
@@ -202,7 +202,7 @@ function Home() {
             {top5.map((game, index) => (
               <div
                 key={index}
-                className="h-fit w-full p-1 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
               >
                 <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
                   <img
@@ -211,18 +211,21 @@ function Home() {
                   />
                 </div>
                 <div>
-                  <h1 className="line-clamp-1 mb-1 text-sm text-black dark:text-text-color capitalize font-medium ">
+                  <h1 className="line-clamp-1 mb-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
                     {game.title}
                   </h1>
                   <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                     {game.genres.slice(0, 2).map((gen, index) => (
                       <span
-                        className="whitespace-nowrap py-1 px-2 bg-stone-100 dark:bg-gray-600/20 rounded-md  "
+                        className="whitespace-nowrap py-1 px-2 font-DMsans bg-stone-100 dark:bg-gray-600/20 rounded-md  "
                         key={index}
                       >
                         {gen}
                       </span>
                     ))}
+                  </p>
+                  <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1 text-text-color-light uppercase">
+                    $0.00
                   </p>
                 </div>
               </div>
@@ -238,7 +241,6 @@ function Home() {
         <section className="w-[85%] h-fit flex flex-col">
           {/* Discover */}
           <div className={`w-full h-fit `}>
-            
             {/* For you */}
             <div className="w-full h-fit pt-7 ">
               <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
@@ -267,7 +269,7 @@ function Home() {
                     <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-main-color max-w-[90%] pt-[2px] capitalize">
+                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-text-color-light max-w-[90%] pt-[2px] capitalize">
                       $0.00
                     </p>
                     <button
@@ -311,7 +313,7 @@ function Home() {
                     <p className="text-[16px] font-DMsans font-medium uppercase truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-main-color max-w-[90%] pt-[2px] capitalize">
+                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-text-color-light max-w-[90%] pt-[2px] capitalize">
                       $0.00
                     </p>
                     <button

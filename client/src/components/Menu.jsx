@@ -136,12 +136,16 @@ function Menu({ cartCount, updateCount }) {
                           <div className="px-1 w-full h-full flex flex-col justify-between items-start">
                             <Link
                               to={`/`}
-                              className=" font-semibold line-clamp-2  max-w-[150px] hover:underline "
+                              className=" font-medium line-clamp-2 font-DMsans text-[15px] capitalize max-w-[150px] hover:underline "
                             >
+                              
                               {Games.find((game) => game.id === item).title}
                             </Link>
                             <div className="w-full h-fit flex justify-between items-end text-text-color-light ">
-                              <p className=" font-semibold ">$0.00</p>
+                              {/* <p className=" font-semibold ">$0.00</p> */}
+                              <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1  text-text-color-light uppercase">
+                                $0.00
+                              </p>
                               <button
                                 onClick={() => deleteItem(item)}
                                 className="active:scale-75 transition duration-150 cursor-pointer hover:text-black dark:hover:text-white p-1 rounded-md hover:bg-stone-200   hover:dark:bg-gray-400/10  "
