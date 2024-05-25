@@ -236,7 +236,7 @@ function Home() {
       </div>
 
       <div className=" h-full w-full relative grid grid-cols-5 max-md:grid-cols-1 max-w-[1300px] px-5 mx-auto gap-2 ">
-        <div className="flex sticky top-[45px] w-full h-[95vh] py-8 pr-2 max-md:hidden">
+        <div className="flex sticky top-[35px] w-full h-[90vh] pt-10 pr-2 max-md:hidden">
           <Sidebar />
         </div>
         <section className="w-full col-span-4 h-fit flex flex-col">
@@ -482,8 +482,6 @@ function Home() {
                 ))}
               </div>
             </div>
-
-            <div></div>
           </div>
         </section>
       </div>
