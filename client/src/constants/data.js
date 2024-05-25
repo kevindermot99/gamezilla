@@ -1,3 +1,4 @@
+
 export const AppVersion = {
   Version: "v1.0",
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
@@ -123,8 +124,8 @@ export const Games = [
   {
     id: "23",
     banner:
-      "https://w0.peakpx.com/wallpaper/761/527/HD-wallpaper-need-for-speed-unbound-need-for-speed-unbound-2022-games-ps5-games-xbox-games-pc-games.jpg",
-    poster:
+      "https://images.hdqwalls.com/wallpapers/2023-need-for-speed-unbound-ps4-65.jpg",
+      poster:
       "https://upload.wikimedia.org/wikipedia/en/d/db/Need_for_Speed_Unbound.png",
     title: "Need for Speed Unbound",
     description:
@@ -332,34 +333,34 @@ export const Games = [
 export const Franchise = [
   {
     name: "Call Of Duty",
-    url: "https://api.win.gg/wp-content/uploads/2021/12/call-of-duty-ffranchise.jpg",
+    url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-call-of-duty-purple-desktop-wallpaper-cover.jpg",
   },
   {
     name: "Need For Speed",
-    url: "https://betasimracing.com/wp-content/uploads/2022/01/Need-for-Speed-Games.webp",
+    url: "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/10/NFS-Unbound-with-Asap-Rocky-via-Hypebeast.jpg",
   },
   {
     name: "FarCry",
-    url: "https://img.gg.deals/ba/d0/2bc74e7f42f5ca2378d1ab76580966fef706_307xr176.jpg",
+    url: "https://images.hdqwalls.com/wallpapers/bthumb/dani-rojas-female-character-far-cry-6-ga.jpg",
   },
   {
     name: "BatleField",
-    url: "https://pbs.twimg.com/media/GKusq8jWcAERsD2.jpg",
+    url: "https://wallpapercg.com/media/ts_orig/16594.webp",
   },
   {
     name: "Grand Theft Auto",
-    url: "https://c4.wallpaperflare.com/wallpaper/1017/397/309/michael-grand-theft-auto-v-franklin-trevor-wallpaper-preview.jpg",
+    url: "https://wallpapers.com/images/hd/gta-sa-4k-gang-trio-rme9yz7wchacqw7m.jpg",
   },
   {
     name: "Tomb Raider",
-    url: "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/07/Tomb-Raider-1996-Lara-Croft---Tomb-Raider-Legend-Lara-Croft---Tomb-Raider-2013-Lara-Croft.jpg",
+    url: "https://searchthisweb.com/wallpaper/thumb/main_rise-of-the-tomb-raider_2560x1440_7vei5.jpg",
   },
   {
     name: "Halo",
-    url: "https://i.ytimg.com/vi/k7AgBylCNbY/maxresdefault.jpg",
+    url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-master-chief-halo-desktop-wallpaper-preview.jpg",
   },
   {
     name: "Assassin's Creed",
-    url: "https://i.pinimg.com/736x/80/9a/ef/809aef03d9073c85893f4d95e65532fa.jpg",
+    url: "https://wallpapers-clan.com/wp-content/uploads/2024/04/assassins-creed-aesthetic-desktop-wallpaper-preview.jpg",
   },
 ];

@@ -110,8 +110,8 @@ html {
   max-width: 1800px;
   margin: 0 auto;
   display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .Toastify__toast-container {

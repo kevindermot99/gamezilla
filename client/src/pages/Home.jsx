@@ -144,7 +144,7 @@ function Home() {
                 className="h-full w-full flex overflow-clip rounded-md relative "
               >
                 <SWPImage src={game.banner} />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/40 dark:from-body-color/90 to-body-color/20  flex flex-col items-start justify-end p-8 cursor-default ">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body-color/50  dark:from-body-color/90 to-body-color/20  flex flex-col items-start justify-end p-8 cursor-default ">
                   <h1 className="text-[37px] leading-[40px] font-bold font-montserrat tracking-tight capitalize line-clamp-2 max-w-[80%] text-white">
                     {game.title}
                   </h1>
@@ -340,12 +340,14 @@ function Home() {
                       <Link
                         to={`/franchise/${franchise}`}
                         key={index}
-                        className="group h-[130px] w-full rounded-xl overflow-clip relative bg-black/70 dark:bg-container-color"
+                        className="group w-full relative "
                       >
-                        <img src={franchise.url} className="absolute top-0 left-0 bottom-0 right-0 mx-auto w-full h-full object-cover object-center -z-0 scale-110 opacity-40 dark:opacity-20 blur-[4px] group-hover:opacity-70 dark:group-hover:opacity-70 transition duration-300 group-hover:scale-125" />
-                        <div className="  absolute top-0 left-0 bottom-0 right-0 text-text-color rounded-xl flex justify-center items-center font-extrabold font-DMsans text-[27px] px-12  text-center leading-6 tracking-tight  ">
-                          {franchise.name}
+                        <div className=" h-[130px] flex justify-center items-start overflow-clip rounded-xl  ">
+                        <PosterImage src={franchise.url} />
                         </div>
+                        <p className="text-[17px] mt-1 font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
+                          {franchise.name}
+                        </p>
                       </Link>
                     ))}
                   </div>
