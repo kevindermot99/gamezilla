@@ -13,6 +13,7 @@ import CollectionImage from "../components/CollectionImage";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaRegEye } from "react-icons/fa6";
 import MiniNavBar from "../components/MiniNavBar";
+import { HiOutlineRectangleStack } from "react-icons/hi2";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -344,8 +345,12 @@ function Home() {
                         key={index}
                         className="group w-full relative mb-5 "
                       >
-                        <div className=" h-[170px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95  ">
+                        <div className=" h-[170px] flex justify-center items-start overflow-clip rounded-xl transition dark:opacity-80 group-hover:opacity-95 relative  ">
                           <PosterImage src={franchise.url} />
+                          <div className="absolute bottom-2 left-2 py-2 px-4 capitalize flex items-center justify-start gap-2 bg-stone-500/60 dark:bg-stone-800/50 text-white shadow backdrop-blur-sm rounded-xl ">
+                            <HiOutlineRectangleStack className="text-[20px]" />
+                            <span className="text-[14px]">contains 24 Games </span>
+                          </div>
                         </div>
                         <p className="text-[18px] mt-3 font-DMsans font-bold uppercase truncate pr-2 text-left text-black dark:text-text-color">
                           {franchise.name}
@@ -360,14 +365,13 @@ function Home() {
               </div>
             </div>
 
-
             {/* Most downlaoded */}
             <div className="flex flex-col w-full mt-7">
-            <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
-                  Recentlty Added
-                </h1>
+              <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight flex items-center justify-between mt-3 text-body-color dark:text-text-color pb-3">
+                Recentlty Added
+              </h1>
               <div className="smallGrid h-fit w-full ">
-                {Games.slice(0,12).map((game, index) => (
+                {Games.slice(0, 12).map((game, index) => (
                   <div
                     key={index}
                     className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
