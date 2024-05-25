@@ -99,7 +99,7 @@ function Home() {
       <MiniNavBar />
 
       {/* hero */}
-      <div className="w-full mx-auto h-fit  flex items-start justify-start gap-2 max-w-[1300px] px-7">
+      <div className="w-full mx-auto h-fit  flex items-start justify-start gap-2 max-w-[1300px] px-5">
         <div className="w-[75%] max-md:w-full min-h-full h-fit ">
           <Swiper
             spaceBetween={100}
@@ -235,8 +235,8 @@ function Home() {
         </div>
       </div>
 
-      <div className=" h-full w-full relative flex justify-start items-start max-w-[1300px] px-7 mx-auto gap-2 ">
-        <div className="flex sticky top-[60px] w-[15%] py-8 pr-2 max-md:hidden">
+      <div className=" h-full w-full relative flex justify-start items-start max-w-[1300px] px-5 mx-auto gap-2 ">
+        <div className="flex sticky top-[45px] w-[15%] h-[100vh] py-8  pr-2 max-md:hidden">
           <Sidebar />
         </div>
         <section className="w-[85%] h-fit flex flex-col">

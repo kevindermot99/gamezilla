@@ -5,7 +5,7 @@ import { HiViewGridAdd } from "react-icons/hi";
 
 function Sidebar() {
   return (
-    <div className="w-full h-full overflow-y-auto max-h-[80vh] flex flex-col justify-start items-start">
+    <div className="w-full h-full overflow-y-auto flex flex-col justify-start items-start py-5">
       <span
         className={`flex items-center justify-start gap-1  text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 text-body-color dark:text-text-color `}
       >
@@ -30,12 +30,7 @@ function Sidebar() {
       <Link
         className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
-        Terms of service
-      </Link>
-      <Link
-        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
-      >
-        FAQs
+        Upcoming Releases
       </Link>
 
       <span
@@ -58,6 +53,42 @@ function Sidebar() {
         className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
       >
         Patchs
+      </Link>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        Skins
+      </Link>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        Maps
+      </Link>
+      <span
+        className={`flex items-center justify-start gap-1  text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 mt-5 text-body-color dark:text-text-color `}
+      >
+        <HiViewGridAdd className="text-[25px]" />
+        Community
+      </span>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        Reviews
+      </Link>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        Support & Feedback
+      </Link>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        Terms of service
+      </Link>
+      <Link
+        className={`flex items-center justify-start gap-1 capitalize text-base py-2 font-medium font-DMsans tracking-tight w-full rounded-md text-black/70 hover:text-main-color dark:text-text-color-light transition `}
+      >
+        FAQs
       </Link>
     </div>
   );
