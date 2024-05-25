@@ -244,7 +244,7 @@ function Home() {
                 For You
               </h1>
               <Swiper
-                spaceBetween={5}
+                spaceBetween={10}
                 slidesPerView={"auto"}
                 loop={false}
                 className="h-fit w-full flex relative "
@@ -289,7 +289,7 @@ function Home() {
                 Trending
               </h1>
               <Swiper
-                spaceBetween={5}
+                spaceBetween={10}
                 slidesPerView={"auto"}
                 loop={false}
                 className="h-fit w-full flex relative "
@@ -332,7 +332,7 @@ function Home() {
             <div className="w-full h-fit pt-7">
               <div className="w-full h-fit flex flex-col max-w-[1100px] mx-auto">
                 <h1 className="text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight  text-body-color dark:text-text-color">
-                franchises
+                  franchises
                 </h1>
                 <div className="h-fit mt-5 ">
                   <div className="gridRespoCollection ">
@@ -342,11 +342,14 @@ function Home() {
                         key={index}
                         className="group w-full relative "
                       >
-                        <div className=" h-[130px] flex justify-center items-start overflow-clip rounded-xl  ">
-                        <PosterImage src={franchise.url} />
+                        <div className=" h-[130px] flex justify-center items-start overflow-clip rounded-xl transition opacity-80 group-hover:opacity-95  ">
+                          <PosterImage src={franchise.url} />
                         </div>
-                        <p className="text-[17px] mt-1 font-DMsans font-medium capitalize truncate pr-2 text-black dark:text-text-color">
+                        <p className="text-[18px] mt-3 font-DMsans font-bold uppercase truncate pr-2 text-center text-black dark:text-text-color">
                           {franchise.name}
+                        </p>
+                        <p className="font-bold text-center font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light uppercase">
+                          {franchise.publisher}
                         </p>
                       </Link>
                     ))}

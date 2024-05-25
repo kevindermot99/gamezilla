@@ -334,33 +334,42 @@ export const Franchise = [
   {
     name: "Call Of Duty",
     url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-call-of-duty-purple-desktop-wallpaper-cover.jpg",
+    publisher: "Activision",
   },
   {
     name: "Need For Speed",
     url: "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/10/NFS-Unbound-with-Asap-Rocky-via-Hypebeast.jpg",
+    publisher: "Electronic Arts",
   },
   {
     name: "FarCry",
     url: "https://images.hdqwalls.com/wallpapers/bthumb/dani-rojas-female-character-far-cry-6-ga.jpg",
+    publisher: "Ubisoft",
   },
   {
-    name: "BatleField",
+    name: "Battlefield",
     url: "https://wallpapercg.com/media/ts_orig/16594.webp",
+    publisher: "Electronic Arts",
   },
   {
     name: "Grand Theft Auto",
     url: "https://wallpapers.com/images/hd/gta-sa-4k-gang-trio-rme9yz7wchacqw7m.jpg",
+    publisher: "Rockstar Games",
   },
   {
     name: "Tomb Raider",
     url: "https://searchthisweb.com/wallpaper/thumb/main_rise-of-the-tomb-raider_2560x1440_7vei5.jpg",
+    publisher: "Square Enix",
   },
   {
     name: "Halo",
     url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-master-chief-halo-desktop-wallpaper-preview.jpg",
+    publisher: "Xbox Game Studios",
   },
   {
     name: "Assassin's Creed",
     url: "https://wallpapers-clan.com/wp-content/uploads/2024/04/assassins-creed-aesthetic-desktop-wallpaper-preview.jpg",
+    publisher: "Ubisoft",
   },
 ];
+
