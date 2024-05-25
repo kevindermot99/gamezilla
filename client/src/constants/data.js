@@ -356,16 +356,16 @@ export const Franchise = [
     url: "https://wallpapers.com/images/hd/gta-sa-4k-gang-trio-rme9yz7wchacqw7m.jpg",
     publisher: "Rockstar Games",
   },
-  {
-    name: "Tomb Raider",
-    url: "https://searchthisweb.com/wallpaper/thumb/main_rise-of-the-tomb-raider_2560x1440_7vei5.jpg",
-    publisher: "Square Enix",
-  },
-  {
-    name: "Halo",
-    url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-master-chief-halo-desktop-wallpaper-preview.jpg",
-    publisher: "Xbox Game Studios",
-  },
+  // {
+  //   name: "Tomb Raider",
+  //   url: "https://searchthisweb.com/wallpaper/thumb/main_rise-of-the-tomb-raider_2560x1440_7vei5.jpg",
+  //   publisher: "Square Enix",
+  // },
+  // {
+  //   name: "Halo",
+  //   url: "https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-master-chief-halo-desktop-wallpaper-preview.jpg",
+  //   publisher: "Xbox Game Studios",
+  // },
   {
     name: "Assassin's Creed",
     url: "https://wallpapers-clan.com/wp-content/uploads/2024/04/assassins-creed-aesthetic-desktop-wallpaper-preview.jpg",
