@@ -8,12 +8,15 @@ function Footer() {
         <h1 className="font-DMsans font-extrabold text-[50px] text-center text-body-color dark:text-text-color ">
           Let's Talk !
         </h1>
-        <p className="font-DMsans text-base text-center text-body-color/80 dark:text-text-color/80 max-w-[450px] leading-5 mb-2   ">
+        <p className="font-DMsans text-base text-center text-body-color/80 dark:text-text-color/80 max-w-[450px] leading-5 mb-5   ">
         I am available for hire. Feel free to reach out to discuss potential opportunities and collaborations.
+        </p>
+        <p className="font-DMsans text-base text-center text-body-color/80 dark:text-text-color/50 max-w-[450px] leading-5 mb-2   ">
+        mbonimpayekevin@gmail.com
         </p>
         <a
           href="mailto:mbonimpayekevin@gmail.com"
-          className={`mt-4 w-[90%] mx-auto max-w-[210px] h-[40px] px-4 rounded-md transition text-white bg-main-color text-sm flex items-center justify-center font-bold  `}
+          className={`mt-2 w-[90%] mx-auto max-w-[210px] h-[40px] px-4 rounded-md transition text-white bg-main-color text-sm flex items-center justify-center font-bold  `}
           target="_blank"
           
         >
