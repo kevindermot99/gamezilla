@@ -64,7 +64,8 @@ export const Games = [
     genres: ["Shooting", "Action", "Adventure"],
     downloads: "2435135",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "18",
@@ -77,7 +78,8 @@ export const Games = [
     genres: ["Action", "Shooting", "Adventure"],
     downloads: "357548",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "19",
@@ -91,7 +93,8 @@ export const Games = [
     genres: ["Action", "Shooting", "Adventure"],
     downloads: "463578",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "20",
@@ -104,7 +107,8 @@ export const Games = [
     genres: ["Action", "Shooting", "Adventure", "Survival"],
     downloads: "5965744",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "21",
@@ -117,7 +121,8 @@ export const Games = [
     genres: ["Racing", "Adventure"],
     downloads: "226533",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "22",
@@ -131,7 +136,8 @@ export const Games = [
     genres: ["Racing", "Adventure"],
     downloads: "724654",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "23",
@@ -145,7 +151,8 @@ export const Games = [
     genres: ["Racing", "Adventure"],
     downloads: "32472772",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "24",
@@ -157,7 +164,8 @@ export const Games = [
     genres: ["Shooting", "Action", "Adventure"],
     downloads: "8304772",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "1",
@@ -171,7 +179,8 @@ export const Games = [
     genres: ["Shooting", "Action", "First-person shooter"],
     downloads: "15232924",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "2",
@@ -185,7 +194,8 @@ export const Games = [
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "23992",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "3",
@@ -199,7 +209,8 @@ export const Games = [
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "85309",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "4",
@@ -213,7 +224,8 @@ export const Games = [
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "2947",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "5",
@@ -226,7 +238,8 @@ export const Games = [
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "64282384",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "6",
@@ -240,7 +253,8 @@ export const Games = [
     genres: ["Adventure", "Action"],
     downloads: "475643",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "7",
@@ -254,7 +268,8 @@ export const Games = [
     genres: ["Action", "Stealth"],
     downloads: "129424",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "8",
@@ -268,7 +283,8 @@ export const Games = [
     genres: ["Adventure", "Action", "Role-playing"],
     downloads: "24992",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "9",
@@ -281,7 +297,8 @@ export const Games = [
     genres: ["Adventure", "Action"],
     downloads: "209860",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "10",
@@ -294,7 +311,8 @@ export const Games = [
     genres: ["Adventure", "Action"],
     downloads: "448022",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "11",
@@ -308,7 +326,8 @@ export const Games = [
     genres: ["Adventure", "Action", "Third-person shooter"],
     downloads: "49234",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "12",
@@ -321,7 +340,8 @@ export const Games = [
     genres: ["horror", "Action"],
     downloads: "580399",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "13",
@@ -334,7 +354,8 @@ export const Games = [
     genres: ["Racing", "Action"],
     downloads: "495013",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "14",
@@ -348,7 +369,8 @@ export const Games = [
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "1209322",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "15",
@@ -360,7 +382,8 @@ export const Games = [
     genres: ["Adventure", "Racing"],
     downloads: "966480",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
     id: "16",
@@ -374,7 +397,8 @@ export const Games = [
     genres: ["Horror", "Survival"],
     downloads: "134322",
     size: "24GB",
-    downloadBy: "Torrent"
+    downloadBy: "Torrent",
+    os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
 ];
 
