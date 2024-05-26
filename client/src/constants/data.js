@@ -63,6 +63,8 @@ export const Games = [
     description: `In the 1960s Cold War era, the game tracks CIA agent Alex Mason's quest to recover crucial memories, aiming to uncover a Soviet plot to unleash chemical weapons on the USA.`,
     genres: ["Shooting", "Action", "Adventure"],
     downloads: "2435135",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "18",
@@ -74,6 +76,8 @@ export const Games = [
       "follows the rise and fall of taxi driver-turned-mobster Tommy Angelo within the Salieri crime family.",
     genres: ["Action", "Shooting", "Adventure"],
     downloads: "357548",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "19",
@@ -86,6 +90,8 @@ export const Games = [
       "North Korean forces led by General Ri-Chan Kyong take control of the Lingshan Islands",
     genres: ["Action", "Shooting", "Adventure"],
     downloads: "463578",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "20",
@@ -97,6 +103,8 @@ export const Games = [
     description: `the game revolves around the Project at Eden's Gate, a doomsday cult that has taken over the county at the command of its charismatic and powerful leader, Joseph Seed`,
     genres: ["Action", "Shooting", "Adventure", "Survival"],
     downloads: "5965744",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "21",
@@ -108,6 +116,8 @@ export const Games = [
       "The player character arrives at Palm City, a city known for its racing roots and participates in the Speedhunter Showdown, a daytime event sanctioned by the government",
     genres: ["Racing", "Adventure"],
     downloads: "226533",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "22",
@@ -120,6 +130,8 @@ export const Games = [
       "A rivalry between cops and racers has broken out in Redview County.",
     genres: ["Racing", "Adventure"],
     downloads: "724654",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "23",
@@ -132,6 +144,8 @@ export const Games = [
       "Unable to stop a robbery at a family auto-shop, two friends are pushed to breaking point, giving the player an opportunity to make their mark on the streets earning rep to go from rookie to top racer by winning the Grand and reclaiming a stolen custom car.",
     genres: ["Racing", "Adventure"],
     downloads: "32472772",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "24",
@@ -142,6 +156,8 @@ export const Games = [
     description: `In a neon-lit city, hackers clash with corporations. Rebels fight for freedom in a dystopian future, where technology blurs the line between humanity and machine.`,
     genres: ["Shooting", "Action", "Adventure"],
     downloads: "8304772",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "1",
@@ -154,6 +170,8 @@ export const Games = [
       "a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.",
     genres: ["Shooting", "Action", "First-person shooter"],
     downloads: "15232924",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "2",
@@ -166,6 +184,8 @@ export const Games = [
       "Create your own adventure in a single-player, open world island of danger and discovery as you journey through the dark side of humanity.",
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "23992",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "3",
@@ -178,6 +198,8 @@ export const Games = [
       "The next chapter of the legendary franchise begins with a new, epic sci-fi adventure.",
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "85309",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "4",
@@ -190,6 +212,8 @@ export const Games = [
       "takes place in 2065, 40 years after the events of Black Ops II, in a world facing upheaval from conflicts, climate change and new technologies",
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "2947",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "5",
@@ -201,6 +225,8 @@ export const Games = [
     description: `A 1967 guerrilla revolution that toppled the presidency of his father led to Yara's isolation from the rest of the world`,
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "64282384",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "6",
@@ -213,6 +239,8 @@ export const Games = [
       "This centers on Kratos, the God of War, and his now teenage son, Atreus, who are facing the conflict of the upcoming Ragnarök, due to the result of Kratos killing Norse God, Baldur, while setting on their to end tyranny reign of Odin, King of Asgard and while focusing off Atreus, who tries to uncover his origins.",
     genres: ["Adventure", "Action"],
     downloads: "475643",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "7",
@@ -225,6 +253,8 @@ export const Games = [
       "47 and Grey seek revenge on Providence for turning them both into assassins through childhood conditioning and genetic experimentation, while Diana is motivated by the death of her parents",
     genres: ["Action", "Stealth"],
     downloads: "129424",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "8",
@@ -237,6 +267,8 @@ export const Games = [
       "follows Clive Rosfield as he embarks on an epic journey of discovery and revenge",
     genres: ["Adventure", "Action", "Role-playing"],
     downloads: "24992",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "9",
@@ -248,6 +280,8 @@ export const Games = [
       " continues the story of Aloy (Ashly Burch), a young hunter of the Nora tribe and a clone of the Old World scientist Elisabet Sobeck, as she leads a band of companions on a quest to the frontier region known as the Forbidden West to find the source of a mysterious plague that kills all it infects",
     genres: ["Adventure", "Action"],
     downloads: "209860",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "10",
@@ -259,6 +293,8 @@ export const Games = [
       "takes place in the Lands Between, a fictional realm over which several demigods rule",
     genres: ["Adventure", "Action"],
     downloads: "448022",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "11",
@@ -271,6 +307,8 @@ export const Games = [
       "Rico Rodriguez fights against a paramilitary group called the Black Hand who have very sinister plans to test experimental weather weaponry",
     genres: ["Adventure", "Action", "Third-person shooter"],
     downloads: "49234",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "12",
@@ -282,6 +320,8 @@ export const Games = [
       "Aiden, a survivor of childhood experiments under the research of GRE, an organization faulted for the current zombie outbreak",
     genres: ["horror", "Action"],
     downloads: "580399",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "13",
@@ -293,6 +333,8 @@ export const Games = [
       "Jack Rourke (Sean Faris), an experienced street racer, finds himself in serious trouble with the Mob due to a massive debt with them",
     genres: ["Racing", "Action"],
     downloads: "495013",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "14",
@@ -305,6 +347,8 @@ export const Games = [
       "follows Task Force 141, a multinational special forces unit commanded by Captain Soap MacTavish as they hunt Vladimir Makarov, leader of the Russian Ultranationalist party",
     genres: ["Adventure", "Action", "First-person shooter"],
     downloads: "1209322",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "15",
@@ -315,6 +359,8 @@ export const Games = [
     description: `After being double-crossed and forced into exile Tyler and his crew attempt to take down The House who control Fortune Valley's underworld`,
     genres: ["Adventure", "Racing"],
     downloads: "966480",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
   {
     id: "16",
@@ -327,6 +373,8 @@ export const Games = [
       "Face off against grotesque creatures and uncover dark secrets in this survival horror game.",
     genres: ["Horror", "Survival"],
     downloads: "134322",
+    size: "24GB",
+    downloadBy: "Torrent"
   },
 ];
 
