@@ -84,9 +84,7 @@ function Home() {
   };
 
   return (
-    <div
-      className={` relative h-full flex flex-col  text-text-color  `}
-    >
+    <div className={` relative h-full flex flex-col  text-text-color  `}>
       <ToastContainer
         className="select-none"
         position="bottom-left"
@@ -203,7 +201,7 @@ function Home() {
             {top5.map((game, index) => (
               <div
                 key={index}
-                className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
               >
                 <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
                   <img
@@ -212,9 +210,19 @@ function Home() {
                   />
                 </div>
                 <div>
-                  <h1 className="line-clamp-1 mb-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
+                  <h1 className="line-clamp-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
                     {game.title}
                   </h1>
+                  <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                    <span className="pr-1">{game.size}</span>
+                    <span className="flex items-center justify-center text-md">
+                      &#x2022;
+                    </span>
+                    <span className="flex items-center">
+                      <LiaDownloadSolid className="text-[14px]  " />
+                      {numberFormat(game.downloads)}
+                    </span>
+                  </p>
                   <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                     {game.genres.slice(0, 2).map((gen, index) => (
                       <span
@@ -224,9 +232,6 @@ function Home() {
                         {gen}
                       </span>
                     ))}
-                  </p>
-                  <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1 text-text-color-light uppercase">
-                    $0.00
                   </p>
                 </div>
               </div>
@@ -260,25 +265,35 @@ function Home() {
                     key={index}
                     className="h-full flex flex-col relative group w-full max-w-[180px]"
                   >
-                    <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
+                    <Link
+                      to={`/game/${game.id}`}
+                      className="transition group-hover:opacity-90 dark:opacity-80 w-full"
+                    >
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
-                      Base Game
+                    <p className="font-normal font-DMsans text-[13px] line-clamp-1  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                      {game.downloadBy}
                     </p>
                     <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-text-color-light max-w-[90%] pt-[2px] capitalize">
-                      $0.00
+                    <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pt-[2px] capitalize flex items-center justify-start gap-2 ">
+                      <span className="pr-1">{game.size}</span>
+                      <span className="flex items-center justify-center text-md">
+                        &#x2022;
+                      </span>
+                      <span className="flex items-center">
+                        <LiaDownloadSolid className="text-[14px]  " />
+                        {numberFormat(game.downloads)}
+                      </span>
                     </p>
                     <button
                       onClick={() => handleCartCount(game.id)}
                       title="Add to cart"
                       className={`absolute top-4 z-10 right-2 hover:scale-105 transition duration-300 opacity-0 group-hover:-translate-y-2 group-hover:opacity-100 bg-border-line-color/60 backdrop-blur-md p-1 rounded-full`}
                     >
-                      <FiPlus className="text-xl text-white " />
+                      <FiPlus className="text-xl   text-white " />
                     </button>
                   </SwiperSlide>
                 ))}
@@ -308,14 +323,21 @@ function Home() {
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal font-DMsans text-[12px] line-clamp-2  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
-                      Base Game
+                    <p className="font-normal font-DMsans text-[13px] line-clamp-1  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                      {game.downloadBy}
                     </p>
-                    <p className="text-[16px] font-DMsans font-medium uppercase truncate pr-2 text-black dark:text-text-color">
+                    <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
                     </p>
-                    <p className="font-semibold font-DMsans text-[14px] line-clamp-2 text-text-color-light max-w-[90%] pt-[2px] capitalize">
-                      $0.00
+                    <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pt-[2px] capitalize flex items-center justify-start gap-2 ">
+                      <span className="pr-1">{game.size}</span>
+                      <span className="flex items-center justify-center text-md">
+                        &#x2022;
+                      </span>
+                      <span className="flex items-center">
+                        <LiaDownloadSolid className="text-[14px]  " />
+                        {numberFormat(game.downloads)}
+                      </span>
                     </p>
                     <button
                       onClick={() => handleCartCount(game.id)}
@@ -376,7 +398,7 @@ function Home() {
                 {Games.slice(0, 12).map((game, index) => (
                   <div
                     key={index}
-                    className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                    className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
                   >
                     <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
                       <img
@@ -385,9 +407,19 @@ function Home() {
                       />
                     </div>
                     <div>
-                      <h1 className="line-clamp-1 mb-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
+                      <h1 className="line-clamp-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
                         {game.title}
                       </h1>
+                      <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                        <span className="pr-1">{game.size}</span>
+                        <span className="flex items-center justify-center text-md">
+                          &#x2022;
+                        </span>
+                        <span className="flex items-center">
+                          <LiaDownloadSolid className="text-[14px]  " />
+                          {numberFormat(game.downloads)}
+                        </span>
+                      </p>
                       <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                         {game.genres.slice(0, 2).map((gen, index) => (
                           <span
@@ -397,9 +429,6 @@ function Home() {
                             {gen}
                           </span>
                         ))}
-                      </p>
-                      <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1 text-text-color-light uppercase">
-                        $0.00
                       </p>
                     </div>
                   </div>
@@ -452,7 +481,7 @@ function Home() {
                 {Games.slice(0, 12).map((game, index) => (
                   <div
                     key={index}
-                    className="h-fit w-full py-1 px-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
+                    className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
                   >
                     <div className=" h-[70px] w-[60px] min-w-[60px] overflow-clip flex justify-center rounded-md">
                       <img
@@ -461,9 +490,19 @@ function Home() {
                       />
                     </div>
                     <div>
-                      <h1 className="line-clamp-1 mb-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
+                      <h1 className="line-clamp-1 text-[15px] font-DMsans text-black dark:text-text-color capitalize font-medium ">
                         {game.title}
                       </h1>
+                      <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                        <span className="pr-1">{game.size}</span>
+                        <span className="flex items-center justify-center text-md">
+                          &#x2022;
+                        </span>
+                        <span className="flex items-center">
+                          <LiaDownloadSolid className="text-[14px]  " />
+                          {numberFormat(game.downloads)}
+                        </span>
+                      </p>
                       <p className=" flex flex-nowrap text-black/50 dark:text-white/60 text-[11px] gap-2 ">
                         {game.genres.slice(0, 2).map((gen, index) => (
                           <span
@@ -473,9 +512,6 @@ function Home() {
                             {gen}
                           </span>
                         ))}
-                      </p>
-                      <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1 text-text-color-light uppercase">
-                        $0.00
                       </p>
                     </div>
                   </div>

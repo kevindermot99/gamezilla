@@ -55,7 +55,6 @@ export default {
         "body-color": "#1E1F22",
         "border-line-color": "#343434",
         "text-color": "#ebebeb",
-        "text-color": "#ebebeb",
         "text-color-light": "#808080",
         "container-color": "#26272B",
         "footer-color": "#1B1C1D",
