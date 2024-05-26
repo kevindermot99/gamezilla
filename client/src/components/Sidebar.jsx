@@ -6,7 +6,7 @@ import { BsPeopleFill } from "react-icons/bs";
 
 function Sidebar() {
   return (
-    <div className="w-full h-full overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col justify-start items-start pt-5 pr-4 hidescrollbar">
+    <div className="w-full h-full overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col justify-start items-start py-5 pr-4 hidescrollbar">
       <span
         className={`flex items-center justify-start gap-1  text-lg capitalize font-DMsans font-medium w-full text-left tracking-tight py-2 text-body-color dark:text-text-color `}
       >
