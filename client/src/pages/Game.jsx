@@ -206,8 +206,8 @@ function Game() {
               ))}
             </div>
           </div>
-          <div className="w-full min-w-[330px] mt-[15px] max-w-fit h-fit flex items-center gap-3 flex-col justify-start p-12 sticky top-[110px] bg-stone-100 dark:bg-container-color/80 rounded-2xl overflow-hidden ">
-            <img src={OpendGame.poster} className="-z-10 absolute top-0 left-0 right-0 blur-md opacity-5 dark:opacity-10 object-cover object-top h-full w-full" />
+          <div className="w-full min-w-[330px] mt-[15px] max-w-fit h-fit flex items-center gap-3 flex-col justify-start py-12 px-8 sticky top-[110px] rounded-2xl overflow-hidden ">
+            {/* <img src={OpendGame.poster} className="-z-10 absolute top-0 left-0 right-0 blur-md opacity-5 dark:opacity-10 object-cover object-top h-full w-full" /> */}
             <div className="transition pointer-events-none select-none group-hover:opacity-90 dark:opacity-80 w-full max-w-[180px] shadow-xl ">
               <PosterImage src={OpendGame.poster} />
             </div>

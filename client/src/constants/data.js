@@ -65,6 +65,7 @@ export const Games = [
     downloads: "2435135",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -79,6 +80,7 @@ export const Games = [
     downloads: "357548",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -94,6 +96,7 @@ export const Games = [
     downloads: "463578",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -108,6 +111,7 @@ export const Games = [
     downloads: "5965744",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -122,6 +126,7 @@ export const Games = [
     downloads: "226533",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -137,6 +142,7 @@ export const Games = [
     downloads: "724654",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -152,6 +158,7 @@ export const Games = [
     downloads: "32472772",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -165,6 +172,7 @@ export const Games = [
     downloads: "8304772",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -180,6 +188,7 @@ export const Games = [
     downloads: "15232924",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -195,6 +204,7 @@ export const Games = [
     downloads: "23992",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -210,6 +220,7 @@ export const Games = [
     downloads: "85309",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -225,6 +236,7 @@ export const Games = [
     downloads: "2947",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -239,6 +251,7 @@ export const Games = [
     downloads: "64282384",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -254,6 +267,7 @@ export const Games = [
     downloads: "475643",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -269,6 +283,7 @@ export const Games = [
     downloads: "129424",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -284,6 +299,7 @@ export const Games = [
     downloads: "24992",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -298,6 +314,7 @@ export const Games = [
     downloads: "209860",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -312,6 +329,7 @@ export const Games = [
     downloads: "448022",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -327,6 +345,7 @@ export const Games = [
     downloads: "49234",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -341,6 +360,7 @@ export const Games = [
     downloads: "580399",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -355,6 +375,7 @@ export const Games = [
     downloads: "495013",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -370,6 +391,7 @@ export const Games = [
     downloads: "1209322",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -383,6 +405,7 @@ export const Games = [
     downloads: "966480",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -398,6 +421,7 @@ export const Games = [
     downloads: "134322",
     size: "24GB",
     downloadBy: "Torrent",
+    price: 19.99,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
 ];
