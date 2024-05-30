@@ -31,6 +31,7 @@ function Menu({ cartCount, updateCount }) {
   const [cartbar, setCartbar] = useState(false);
   const [cartItemsArray, setCartItemsArray] = useState([]);
   const [itemData, setItemData] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0);
 
   // checking logged in user
   useEffect(() => {
@@ -88,6 +89,17 @@ function Menu({ cartCount, updateCount }) {
     }
   };
 
+  useEffect(() => {
+    setTotalPrice(calculateTotalPrice());
+  }, [cartItemsArray]);
+
+  const calculateTotalPrice = () => {
+    return cartItemsArray.reduce((acc, item) => {
+      const game = Games.find((game) => game.id === item);
+      return acc + (game ? game.price : 0);
+    }, 0);
+  };
+
   return (
     <>
       <div
@@ -126,7 +138,9 @@ function Menu({ cartCount, updateCount }) {
                         key={index}
                         className=" w-full flex items-center bg-stone-100  dark:bg-container-color rounded-md p-2 justify-start gap-2"
                       >
-                        <div className="font-bold font-DMsans px-1 ">{index + 1}.</div>
+                        <div className="font-bold font-DMsans px-1 ">
+                          {index + 1}.
+                        </div>
                         <div className="flex gap-3 capitalize w-full h-full">
                           <img
                             src={Games.find((game) => game.id === item).poster}
@@ -138,13 +152,15 @@ function Menu({ cartCount, updateCount }) {
                               to={`/`}
                               className=" font-medium line-clamp-2 font-DMsans text-[15px] capitalize max-w-[150px] hover:underline "
                             >
-                              
                               {Games.find((game) => game.id === item).title}
                             </Link>
                             <div className="w-full h-fit flex justify-between items-end text-text-color-light ">
                               {/* <p className=" font-semibold ">$0.00</p> */}
                               <p className="font-bold text-left font-DMsans text-[13px] line-clamp-1 my-1  text-text-color-light uppercase">
-                                $0.00
+                                $
+                                {Games.find(
+                                  (game) => game.id === item
+                                ).price.toFixed(2)}
                               </p>
                               <button
                                 onClick={() => deleteItem(item)}
@@ -174,7 +190,7 @@ function Menu({ cartCount, updateCount }) {
             </p>
             <p className="pb-5 text-black dark:text-white flex justify-between items-center font-DMsans font-semibold text-sm">
               <span className=" font-DMsans text-[15px]">Subtotal:</span>
-              <span className=" font-DMsans">$0.00</span>
+              <span className=" font-DMsans">${totalPrice.toFixed(2)}</span>
             </p>
             <button
               className={` w-full h-[40px] px-4 rounded-md transition text-white bg-main-color text-sm flex items-center justify-center font-bold ${

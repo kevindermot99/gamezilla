@@ -214,6 +214,10 @@ function Home() {
                     {game.title}
                   </h1>
                   <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                    <span className="pr-1">${game.price}</span>
+                    <span className="flex items-center justify-center text-md">
+                      &#x2022;
+                    </span>
                     <span className="pr-1">{game.size}</span>
                     <span className="flex items-center justify-center text-md">
                       &#x2022;
@@ -272,8 +276,9 @@ function Home() {
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal font-DMsans text-[13px] line-clamp-1  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                    <p className="font-normal font-DMsans text-[13px] flex items-center justify-between line-clamp-1  text-body-color/90 dark:text-text-color-light pt-[10px] uppercase">
                       {game.downloadBy}
+                      <span className="pr-1">${game.price}</span>
                     </p>
                     <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
@@ -323,8 +328,9 @@ function Home() {
                       <PosterImage src={game.poster} />
                     </Link>
 
-                    <p className="font-normal font-DMsans text-[13px] line-clamp-1  text-body-color/90 dark:text-text-color-light max-w-[90%] pt-[10px] uppercase">
+                    <p className="font-normal font-DMsans text-[13px] flex items-center justify-between line-clamp-1  text-body-color/90 dark:text-text-color-light pt-[10px] uppercase">
                       {game.downloadBy}
+                      <span className="pr-1">${game.price}</span>
                     </p>
                     <p className="text-[16px] uppercase font-DMsans font-medium truncate pr-2 text-black dark:text-text-color">
                       {game.title}
@@ -411,6 +417,10 @@ function Home() {
                         {game.title}
                       </h1>
                       <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                        <span className="pr-1">${game.price}</span>
+                        <span className="flex items-center justify-center text-md">
+                          &#x2022;
+                        </span>
                         <span className="pr-1">{game.size}</span>
                         <span className="flex items-center justify-center text-md">
                           &#x2022;
@@ -494,6 +504,10 @@ function Home() {
                         {game.title}
                       </h1>
                       <p className="font-normal font-DMsans text-[13px] line-clamp-2 text-text-color-light pb-[5px] capitalize flex items-center justify-start gap-2 ">
+                        <span className="pr-1">${game.price}</span>
+                        <span className="flex items-center justify-center text-md">
+                          &#x2022;
+                        </span>
                         <span className="pr-1">{game.size}</span>
                         <span className="flex items-center justify-center text-md">
                           &#x2022;
