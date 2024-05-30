@@ -12,7 +12,7 @@ function PosterImage({ src, title }) {
   };
   return (
     <div
-      className={`relative flex w-full h-[220px] overflow-clip rounded-xl cursor-pointer group `}
+      className={`relative flex w-full h-[230px] overflow-clip rounded-xl cursor-pointer group `}
       title={title}
     >
       {loading && (
