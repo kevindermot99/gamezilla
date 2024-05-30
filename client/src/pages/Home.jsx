@@ -199,7 +199,8 @@ function Home() {
           </div>
           <div className=" flex flex-col gap-1 h-[427px] overflow-y-auto snap-y snap-mandatory pr-1 overscroll-contain ">
             {top5.map((game, index) => (
-              <div
+              <Link
+              to={`/game/${game.id}`}
                 key={index}
                 className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
               >
@@ -238,7 +239,7 @@ function Home() {
                     ))}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -324,7 +325,10 @@ function Home() {
                     key={index}
                     className="h-full flex flex-col relative group w-full max-w-[180px]"
                   >
-                    <Link className="transition group-hover:opacity-90 dark:opacity-80 w-full">
+                    <Link
+                      to={`/game/${game.id}`}
+                      className="transition group-hover:opacity-90 dark:opacity-80 w-full"
+                    >
                       <PosterImage src={game.poster} />
                     </Link>
 
@@ -402,7 +406,8 @@ function Home() {
               </h1>
               <div className="smallGrid h-fit w-full ">
                 {Games.slice(0, 12).map((game, index) => (
-                  <div
+                  <Link
+                    to={`/game/${game.id}`}
                     key={index}
                     className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
                   >
@@ -441,7 +446,7 @@ function Home() {
                         ))}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -489,7 +494,8 @@ function Home() {
               </h1>
               <div className="smallGrid h-fit w-full ">
                 {Games.slice(0, 12).map((game, index) => (
-                  <div
+                  <Link
+                    to={`/game/${game.id}`}
                     key={index}
                     className="h-fit w-full p-2 snap-start flex items-center gap-2 relative cursor-pointer rounded-md hover:bg-stone-100 dark:hover:bg-container-color/90 "
                   >
@@ -528,7 +534,7 @@ function Home() {
                         ))}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
