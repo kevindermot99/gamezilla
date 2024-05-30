@@ -223,7 +223,7 @@ function Menu({ cartCount, updateCount }) {
 
             <div className="w-fit min-w-fit h-full flex items-center justify-start gap-4 ">
               <Link
-                to={`/`}
+                to={`/Allgames`}
                 className={`text-[15px] capitalize hover:text-main-color text-black dark:text-text-color/80 font-DMsans font-medium tracking-tight transition-colors h-full cursor-pointer py-2 px-1`}
               >
                 All games
