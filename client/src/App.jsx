@@ -8,6 +8,7 @@ import Game from "./pages/Game";
 import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import axios from "axios";
+import Allgames from "./pages/Allgames";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<Home userName={userName} />} />
           <Route path="/browse" element={<Browse />} />
           <Route path="/profile/:id" element={<Profile userId={userId} userName={userName} userEmail={userEmail} />} />
+          <Route path="/Allgames" element={<Allgames />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
