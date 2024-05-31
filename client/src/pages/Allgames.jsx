@@ -93,15 +93,15 @@ function Allgames() {
       />
       <Menu cartCount={cartCount} updateCount={updateCount} />
 
-      <div className=" h-full w-full relative grid grid-cols-5 max-md:grid-cols-1 max-w-[1300px] px-5 mx-auto gap-2 ">
-        <div className="flex sticky top-[75px] w-full h-[90vh] pr-2 max-md:hidden">
+      <div className=" h-full w-full relative  max-md:grid-cols-1 max-w-[1200px] px-5 mx-auto gap-2 ">
+        {/* <div className="flex sticky top-[75px] w-full h-[90vh] pr-2 max-md:hidden">
           <Sidebar />
-        </div>
-        <section className="w-full col-span-4 h-fit flex flex-col">
+        </div> */}
+        <section className="w-full h-fit flex flex-col">
           <div className={`w-full h-fit `}>
             {/* Games */}
             <div className="w-full h-fit pt-3 ">
-              <div className=" font-DMsans w-full min-h-[180px] flex items-center justify-center flex-col bg-stone-100 dark:bg-container-color rounded-3xl  ">
+              <div className=" font-DMsans w-full min-h-[230px] flex items-center justify-center flex-col rounded-3xl  ">
                 <p className="font-bold text-[30px] text-body-color dark:text-text-color-light tracking-tighter uppercase">
                 # All Games
                 </p>
