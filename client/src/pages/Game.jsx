@@ -104,11 +104,11 @@ function Game() {
       />
       <Menu cartCount={cartCount} updateCount={updateCount} />
 
-      <div className="h-full w-full relative grid grid-cols-5 max-md:grid-cols-1 max-w-[1300px] px-5 mx-auto gap-2">
-        <div className="flex sticky top-[75px] w-full h-[90vh] pr-2 max-md:hidden">
+      <div className="h-full w-full relative  max-md:grid-cols-1 max-w-[1200px] px-5 mx-auto gap-2">
+        {/* <div className="flex sticky top-[75px] w-full h-[90vh] pr-2 max-md:hidden">
           <Sidebar />
-        </div>
-        <section className="w-full col-span-4 h-full flex p-5 text-body-color dark:text-text-color/80 relative gap-10 ">
+        </div> */}
+        <section className="w-full h-full flex p-5 text-body-color dark:text-text-color/80 relative gap-10 ">
           
           <div className="w-full flex flex-col mb-10 ">
             <h1 className="font-light text-[45px] font-DMsans  ">
