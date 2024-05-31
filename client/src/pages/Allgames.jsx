@@ -98,9 +98,8 @@ function Allgames() {
           <Sidebar />
         </div>
         <section className="w-full col-span-4 h-fit flex flex-col">
-          {/* Discover */}
           <div className={`w-full h-fit `}>
-            {/* For you */}
+            {/* Games */}
             <div className="w-full h-fit pt-3 ">
               <div className=" font-DMsans w-full min-h-[180px] flex items-center justify-center flex-col bg-stone-100 dark:bg-container-color rounded-3xl  ">
                 <p className="font-bold text-[30px] text-body-color dark:text-text-color-light tracking-tighter uppercase">
