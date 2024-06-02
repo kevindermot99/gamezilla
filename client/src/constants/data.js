@@ -1,4 +1,5 @@
-
+// importing trailers
+import cyberpunk from '../assets/cyberpunk.mp4'
 export const AppVersion = {
   Version: "v1.0",
   LinkToRepo: "https://github.com/kevindermot99/Pagez",
@@ -66,6 +67,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -81,6 +83,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -97,6 +100,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -112,6 +116,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -127,6 +132,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -143,6 +149,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -159,6 +166,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -173,6 +181,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: cyberpunk,
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -189,6 +198,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -205,6 +215,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -221,6 +232,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -237,6 +249,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -252,6 +265,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -268,6 +282,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -284,6 +299,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -300,6 +316,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -315,6 +332,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -330,6 +348,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -346,6 +365,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -361,6 +381,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -376,6 +397,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -392,6 +414,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -406,6 +429,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
   {
@@ -422,6 +446,7 @@ export const Games = [
     size: "24GB",
     downloadBy: "Torrent",
     price: 19.99,
+    trailer: "",
     os: ["Windows 10 or above", "Steam", "X-Box", "Playstations (from 4)"],
   },
 ];
