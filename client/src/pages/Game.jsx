@@ -9,7 +9,6 @@ import { HiDownload } from "react-icons/hi";
 import { GrStorage } from "react-icons/gr";
 import { FaRegFileLines } from "react-icons/fa6";
 import VideoJS from "../components/VideoJS";
-import video from "../assets/sample.mp4";
 import { MdOutlineAddTask } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 import PosterImage from "../components/PosterImage";
@@ -69,7 +68,7 @@ function Game() {
     fluid: true,
     sources: [
       {
-        src: video,
+        src: OpendGame.trailer,
         type: "video/mp4",
       },
     ],
