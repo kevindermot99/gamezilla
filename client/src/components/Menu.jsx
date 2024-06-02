@@ -32,6 +32,7 @@ function Menu({ cartCount, updateCount }) {
   const [cartItemsArray, setCartItemsArray] = useState([]);
   const [itemData, setItemData] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
+  const [Warning, setWarning] = useState(false)
 
   // checking logged in user
   useEffect(() => {
@@ -100,11 +101,17 @@ function Menu({ cartCount, updateCount }) {
     }, 0);
   };
 
+  const handleCheckout = () => {
+    window.alert("Warning: You cannot download these games because we do not have the rights to distribute them.");
+}
+
   return (
     <>
+      
+      {/* cart */}
       <div
         className={`fixed top-0 left-0 w-full h-full -z-10 
-      ${cartbar ? "transition duration-300 opacity-100 z-50 " : " opacity-0"}`}
+        ${cartbar ? "transition duration-300 opacity-100 z-40 " : " opacity-0"}`}
       >
         <div
           onClick={hideCartBar}
@@ -198,15 +205,17 @@ function Menu({ cartCount, updateCount }) {
                   ? "cursor-default opacity-85"
                   : "opacity-100 cursor-pointer active:scale-95 "
               }`}
+              onClick={handleCheckout}
             >
               <div className="flex items-center justify-center gap-1">
                 <IoBagOutline className="text-lg " />
-                <span className="capitalize">proceed to download</span>
+                <span className="capitalize">proceed to checkout</span>
               </div>
             </button>
           </div>
         </div>
       </div>
+
       <div
         className={`sticky top-0 z-30 min-h-fit w-full px-[24px] py-9 h-[60px] bg-white dark:bg-container-color text-body-color dark:text-text-color flex items-center gap-3 `}
       >
