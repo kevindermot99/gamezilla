@@ -137,7 +137,7 @@ function Home() {
                 className="font-montserrat text-sm   "
               ></span>
             </div>
-            {top5.map((game, index) => (
+            {Games.map((game, index) => (
               <SwiperSlide
                 key={index}
                 className="h-full w-full flex overflow-clip rounded-md relative "
