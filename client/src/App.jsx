@@ -9,6 +9,7 @@ import Browse from "./pages/Browse";
 import Profile from "./pages/Profile";
 import axios from "axios";
 import Allgames from "./pages/Allgames";
+import { }
 
 
 function App() {
